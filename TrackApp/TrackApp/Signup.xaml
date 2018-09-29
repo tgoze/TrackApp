@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackApp.Signup">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="email(school email recommended)" />
+            <Entry x:Name="email" />
+            <Label Text="Password" />
+            <Entry x:Name="password" IsPassword="True" />
+            <Label Text="Confirm Password" />
+            <Entry x:Name="passwordConfirm" IsPassword="True"  />
+            <Label Text="First Name" />
+            <Entry x:Name="firstName" />
+            <Label Text="Last Name" />
+            <Entry x:Name="lastName" />
+            <Button Text="Next" Clicked="VerifyStoreData"/>
+           
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

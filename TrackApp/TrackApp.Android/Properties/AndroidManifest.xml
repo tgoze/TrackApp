@@ -2,4 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.TrackApp">
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
     <application android:label="TrackApp.Android"></application>
+  <service android:name="md5a0cbbf8da641ae5a4c781aaf35e00a86.DemoService" />
 </manifest>
