@@ -17,52 +17,56 @@ namespace TrackApp
         {
             this.Title = "HomePage";
 
-            this.ItemsSource = new ActivityData[]
+            Xamarin.Forms.Button beepButton = new Xamarin.Forms.Button
             {
-                new ActivityData("Run", "pathtoimage"),
-                new ActivityData("History", "pathtoimage"),
-                new ActivityData("Settings", "pathtoimage")              
+                Text = "Click beep",
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.Center                
             };
+            beepButton.Clicked += BeepButton_Clicked;
 
-            this.ItemTemplate = new DataTemplate(() => {
-                return new ActivityPage();
-            });
+            this.Children.Add(new ContentPage
+            {
+                Title = "Run",
+                Content = new StackLayout
+                {
+                    HeightRequest = 100f,
+                    VerticalOptions = LayoutOptions.Center,                    
+                    Children =
+                    {
+                        beepButton       
+                    }
+                }                          
+            }
+            );
+
+            this.Children.Add(new ContentPage
+            {
+                Title = "History",
+                Content = new StackLayout
+                {                                    
+                }
+            }
+            );
+
+            this.Children.Add(new ContentPage
+            {
+                Title = "Settings",
+                Content = new StackLayout
+                {
+                }
+            }
+            );
 
             InitializeComponent();
+
+            // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }
-    }
 
-    class ActivityPage : ContentPage
-    {
-        public ActivityPage ()
+        private void BeepButton_Clicked(object sender, EventArgs e)
         {
-            this.SetBinding(ContentPage.TitleProperty, "Name");
-            this.SetBinding(ContentPage.IconProperty, "Icon");
-            BoxView boxView = new BoxView
-            {
-                WidthRequest = 100,
-                HeightRequest = 100,
-                HorizontalOptions = LayoutOptions.Center
-            };
-            this.Content = boxView;
+            DependencyService.Get<IBeep>().playBeep();
         }
-    }
-
-    class ActivityData
-    {
-        public ActivityData (string name, string icon)
-        {
-            this.Name = name;
-            this.Icon = icon;
-        }
-
-        public string Name { private set; get; }
-        public string Icon { private set; get; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
-    }
+    }            
 }
