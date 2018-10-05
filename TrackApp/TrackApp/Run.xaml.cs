@@ -19,7 +19,7 @@ namespace TrackApp
 
         private void BeepButton_Clicked(object sender, EventArgs e)
         {
-            DependencyService.Get<IBeep>().playBeep();
+            DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
         }
     }
 }
