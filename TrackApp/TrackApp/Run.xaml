@@ -4,10 +4,15 @@
              x:Class="TrackApp.Run">
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="Beep"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                Clicked="BeepButton_Clicked"/>
+            <!-- Place new controls here -->
+            <Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+            <Label x:Name="SplitLbl" Text="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
+            <Label x:Name="TotalLbl" Text="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
+            <Button x:Name="StartBtn" Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="StartBtn_Clicked"></Button>
+            <Button x:Name="StopBtn" Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False" Clicked="StopBtn_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
