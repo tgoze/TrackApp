@@ -756,7 +756,7 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f01014b
 			public const int maxActionInlineWidth = 2130772299;
-						
+			
 			// aapt resource value: 0x7f01010a
 			public const int maxButtonHeight = 2130772234;
 			
@@ -1235,7 +1235,6 @@ namespace TrackApp.Droid
 		public partial class Boolean
 		{
 			
-
 			// aapt resource value: 0x7f0f0000
 			public const int abc_action_bar_embed_tabs = 2131689472;
 			
@@ -2185,7 +2184,7 @@ namespace TrackApp.Droid
 			public const int abc_ic_search_api_material = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-      public const int abc_ic_star_black_16dp = 2130837535;
+			public const int abc_ic_star_black_16dp = 2130837535;
 			
 			// aapt resource value: 0x7f020020
 			public const int abc_ic_star_black_36dp = 2130837536;
@@ -3030,7 +3029,7 @@ namespace TrackApp.Droid
 		
 		public partial class Id
 		{
-
+			
 			// aapt resource value: 0x7f0a0032
 			public const int ALT = 2131361842;
 			
@@ -3592,7 +3591,7 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a00c7
 			public const int toolbar = 2131361991;
 			
-  		// aapt resource value: 0x7f0a003e
+			// aapt resource value: 0x7f0a003e
 			public const int top = 2131361854;
 			
 			// aapt resource value: 0x7f0a006e
@@ -4171,6 +4170,7 @@ namespace TrackApp.Droid
 		
 		public partial class Style
 		{
+			
 			// aapt resource value: 0x7f0d00a4
 			public const int AlertDialog_AppCompat = 2131558564;
 			
@@ -4721,7 +4721,7 @@ namespace TrackApp.Droid
 			public const int Platform_V11_AppCompat_Light = 2131558448;
 			
 			// aapt resource value: 0x7f0d0037
-  		public const int Platform_V14_AppCompat = 2131558455;
+			public const int Platform_V14_AppCompat = 2131558455;
 			
 			// aapt resource value: 0x7f0d0038
 			public const int Platform_V14_AppCompat_Light = 2131558456;
