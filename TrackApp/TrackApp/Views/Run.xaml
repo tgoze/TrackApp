@@ -7,7 +7,7 @@
             <Button Text="Beep"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"
-                Clicked="BeepButton_Clicked"/>
+                Command="{Binding AudioCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
