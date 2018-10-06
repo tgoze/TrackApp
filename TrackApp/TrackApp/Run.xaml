@@ -5,12 +5,18 @@
     <ContentPage.Content>
         <StackLayout>
             <!-- Place new controls here -->
-            <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+            <Label Text="Target time (min): " HorizontalOptions="Start" VerticalOptions="CenterAndExpand" />
+            <Entry x:Name="TargetTimeMinEntry" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Placeholder="Target time (min)"></Entry>
 
-            <Label x:Name="SplitLbl" Text="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
-            <Label x:Name="TotalLbl" Text="0" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
+            <Label Text="Target time (sec):" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"></Label>
+            <Entry x:Name="TargetTimeSecEntry" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Text="0"></Entry>
+            
+            <Label x:Name="NumOfSplitsLbl" HorizontalOptions="Start" VerticalOptions="CenterAndExpand">Number of splits:</Label>
+            <Entry x:Name="NumOfSplitsEntry" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" Placeholder="Splits"></Entry>
+
+            <Label x:Name="SplitLbl" Text="Current split: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
+            <Label x:Name="TotalLbl" Text="Total time: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
+            
             <Button x:Name="StartBtn" Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="StartBtn_Clicked"></Button>
             <Button x:Name="StopBtn" Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False" Clicked="StopBtn_Clicked"></Button>
         </StackLayout>

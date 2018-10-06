@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Text;
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,14 +19,26 @@ namespace TrackApp
             InitializeComponent();
         }
 
-        protected void StartBeeper(int timeInterval)
+        protected void StartBeeper()
         {
-            Device.StartTimer(TimeSpan.FromSeconds(timeInterval), () =>
-            {
-                SplitLbl.Text = (splitCount += timeInterval).ToString();
-                TotalLbl.Text = (totalCount += timeInterval).ToString();
+            int.TryParse(TargetTimeMinEntry.Text, out int targetTimeMin);
+            int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
+            int.TryParse(NumOfSplitsEntry.Text, out int numOfSplits);
 
-                DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
+            int timeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits;
+
+            Regex timeFormat = new Regex(@"(\d\d)(\d\d)");
+
+            Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+            {
+                splitCount++;
+                totalCount++; 
+
+                SplitLbl.Text = "Current split: " + ((splitCount / 60)).ToString("D2") + ":" + (splitCount % 60).ToString("D2");
+                TotalLbl.Text = "Total time: " + ((totalCount / 60)).ToString("D2") + ":" + (totalCount % 60).ToString("D2");
+
+                if (totalCount % timeInterval == 0)
+                    DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
 
                 return continueTimer;
             });
@@ -37,7 +50,7 @@ namespace TrackApp
             {
                 StartBtn.Text = "Split";
                 StopBtn.IsEnabled = true;
-                StartBeeper(2);
+                StartBeeper();
                 continueTimer = true;
             } else
             {
