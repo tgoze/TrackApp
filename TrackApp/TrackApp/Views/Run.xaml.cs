@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using TrackApp.ViewModels;
+
 namespace TrackApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -15,11 +17,7 @@ namespace TrackApp
 		public Run ()
 		{
             InitializeComponent ();
-		}
-
-        private void BeepButton_Clicked(object sender, EventArgs e)
-        {
-            DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
-        }
+            BindingContext = new RunViewModel();
+		}        
     }
 }
