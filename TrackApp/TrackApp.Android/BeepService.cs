@@ -15,17 +15,17 @@ using Xamarin.Forms;
 
 using TrackApp.Droid;
 
-[assembly: Dependency(typeof(BeepService))]
+//[assembly: Dependency(typeof(BeepService))]
 namespace TrackApp.Droid
 {
-    public class BeepService : IBeep
-    {
-        private MediaPlayer mediaPlayer; 
-        public bool playBeep()
-        {
-            mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, Resource.Raw.beep);
-            mediaPlayer.Start();
-            return true;
-        }
-    }
+    //public class BeepService : IBeep
+    //{
+    //    private MediaPlayer mediaPlayer; 
+    //   // public bool playBeep()
+    //    //{
+    //        //mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, Resource.Raw.beep);
+    //        //mediaPlayer.Start();
+    //        //return true;
+    //    //}
+    //}
 }
