@@ -23,7 +23,10 @@ namespace TrackApp
         {
             int.TryParse(TargetTimeMinEntry.Text, out int targetTimeMin);
             int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
-            int.TryParse(NumOfSplitsEntry.Text, out int numOfSplits);
+            int.TryParse(TotalDistanceEntry.Text, out int maxDistance);
+            int.TryParse(SplitDistanceEntry.Text, out int splitDistance);
+
+            int numOfSplits = maxDistance / splitDistance;
 
             int timeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits;
 
@@ -62,6 +65,19 @@ namespace TrackApp
         {
             StartBtn.Text = "Start";
             continueTimer = false;
+            
+            
+            if (StopBtn.Text.Equals("Reset")) {
+                TargetTimeMinEntry.Text = "";
+                TargetTimeSecEntry.Text = "";
+                TotalDistanceEntry.Text = "";
+                SplitDistanceEntry.Text = "";
+                
+                StopBtn.Text = "Stop";
+
+
+            }
+            StopBtn.Text = "Reset";
         }
 
         private void BeepButton_Clicked(object sender, EventArgs e)
