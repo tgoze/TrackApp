@@ -55,6 +55,7 @@ namespace TrackApp
                 StopBtn.IsEnabled = true;
                 StartBeeper();
                 continueTimer = true;
+                StopBtn.Text = "Stop";
             } else
             {
                 splitCount = 0;
@@ -72,8 +73,13 @@ namespace TrackApp
                 TargetTimeSecEntry.Text = "";
                 TotalDistanceEntry.Text = "";
                 SplitDistanceEntry.Text = "";
-                
+
+                splitCount = 0;
+                totalCount = 0;
+
                 StopBtn.Text = "Stop";
+                SplitLbl.Text = "Current split: " + ((splitCount / 60)).ToString("D2") + ":" + (splitCount % 60).ToString("D2");
+                TotalLbl.Text = "Total time: " + ((totalCount / 60)).ToString("D2") + ":" + (totalCount % 60).ToString("D2");
 
 
             }
