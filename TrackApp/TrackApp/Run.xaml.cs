@@ -60,6 +60,7 @@ namespace TrackApp
 
         private void StopBtn_Clicked(object sender, EventArgs e)
         {
+            StartBtn.Text = "Start";
             continueTimer = false;
         }
 
