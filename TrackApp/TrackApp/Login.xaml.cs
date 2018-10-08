@@ -16,17 +16,17 @@ namespace TrackApp
 		{
 			InitializeComponent ();
 		}
-        void OnSignupButtonClicked (Object sender, EventArgs e)
+        async void OnSignupButtonClickedAsync (Object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Signup());
         }
         void OnLoginButtonClicked(Object sender, EventArgs e)
         {
-
+            var EmailValue = usernameEntry.Text;
+            var PasswordValue = passwordEntry.Text;
+            //validate
+            //load info from json
         }
-        void OnSkipButtonClicked(Object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -14,7 +14,7 @@
             <Entry x:Name="firstName" />
             <Label Text="Last Name" />
             <Entry x:Name="lastName" />
-            <Button Text="Next" Clicked="VerifyStoreData"/>
+            <Button Text="Next" Clicked="NextSignupAsync"/>
            
             
         </StackLayout>

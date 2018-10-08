@@ -14,8 +14,10 @@ namespace TrackApp
             InitializeComponent();
         }
 
-
-       
+        private async Task Button_ClickedAsync(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Login());
+        }
     }
    
 }

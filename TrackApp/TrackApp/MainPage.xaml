@@ -6,9 +6,10 @@
     
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Hello" 
+        <Button Text="Hello" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand"
+           Clicked="Button_ClickedAsync"/>
     </StackLayout>
 
 </ContentPage>

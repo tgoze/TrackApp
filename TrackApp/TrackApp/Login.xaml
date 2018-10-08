@@ -10,8 +10,8 @@
         <Label Text="Password" HorizontalOptions="Center" />
         <Entry x:Name="passwordEntry" IsPassword="true" />
         <Button Text="Login" Clicked="OnLoginButtonClicked" />
-        <Button Text="Signup" Clicked="OnSignupButtonClicked" />
-        <Button Text="Skip" Clicked="OnSkipButtonClicked" />
+        <Button Text="Signup" Clicked="OnSignupButtonClickedAsync" />
+        
         
     </StackLayout>
 
