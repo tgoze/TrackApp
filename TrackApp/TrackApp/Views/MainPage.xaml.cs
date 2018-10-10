@@ -15,10 +15,10 @@ namespace TrackApp
     {
         public MainPage ()
         {
-            this.Title = "HomePage";                        
-
+            //this.Title = "HomePage";
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-
+        
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }

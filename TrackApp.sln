@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackApp.Android", "TrackAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackApp.iOS", "TrackApp\TrackApp.iOS\TrackApp.iOS.csproj", "{FA9D0A97-C515-4427-A1C1-7B2B6AF40A50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackApp", "TrackApp\TrackApp\TrackApp.csproj", "{AFDE0DAD-0EC1-4CD3-91AF-B94475E58864}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackApp", "TrackApp\TrackApp\TrackApp.csproj", "{AFDE0DAD-0EC1-4CD3-91AF-B94475E58864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,14 +9,14 @@ using Xamarin.Forms.Xaml;
 
 namespace TrackApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Login : ContentPage
-	{
-		public Login ()
-		{
-			InitializeComponent ();
-		}
-        async void OnSignupButtonClickedAsync (Object sender, EventArgs e)
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Login : ContentPage
+    {
+        public Login()
+        {
+            InitializeComponent();
+        }
+        async void OnSignupButtonClickedAsync(Object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Signup());
         }
@@ -27,6 +27,5 @@ namespace TrackApp
             //validate
             //load info from json
         }
-       
     }
 }

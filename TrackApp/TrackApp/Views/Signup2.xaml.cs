@@ -17,10 +17,10 @@ namespace TrackApp
         private string firstName;
         private string lastName;
 
-        public Signup2 ()
-		{
-			InitializeComponent ();
-		}
+        public Signup2()
+        {
+            InitializeComponent();
+        }
 
         public Signup2(string email, string password, string firstName, string lastName)
         {

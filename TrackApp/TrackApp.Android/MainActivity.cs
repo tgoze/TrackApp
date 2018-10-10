@@ -6,7 +6,6 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Content;
 
 namespace TrackApp.Droid
 {
@@ -23,6 +22,4 @@ namespace TrackApp.Droid
             LoadApplication(new App());
         }
     }
-
- 
 }
