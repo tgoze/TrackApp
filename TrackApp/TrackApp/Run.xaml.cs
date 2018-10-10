@@ -23,7 +23,10 @@ namespace TrackApp
         {
             int.TryParse(TargetTimeMinEntry.Text, out int targetTimeMin);
             int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
-            int.TryParse(NumOfSplitsEntry.Text, out int numOfSplits);
+            int.TryParse(TotalDistanceEntry.Text, out int maxDistance);
+            int.TryParse(SplitDistanceEntry.Text, out int splitDistance);
+
+            int numOfSplits = maxDistance / splitDistance;
 
             int timeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits;
 
@@ -52,6 +55,7 @@ namespace TrackApp
                 StopBtn.IsEnabled = true;
                 StartBeeper();
                 continueTimer = true;
+                StopBtn.Text = "Stop";
             } else
             {
                 splitCount = 0;
@@ -60,7 +64,26 @@ namespace TrackApp
 
         private void StopBtn_Clicked(object sender, EventArgs e)
         {
+            StartBtn.Text = "Start";
             continueTimer = false;
+            
+            
+            if (StopBtn.Text.Equals("Reset")) {
+                TargetTimeMinEntry.Text = "";
+                TargetTimeSecEntry.Text = "";
+                TotalDistanceEntry.Text = "";
+                SplitDistanceEntry.Text = "";
+
+                splitCount = 0;
+                totalCount = 0;
+
+                StopBtn.Text = "Stop";
+                SplitLbl.Text = "Current split: " + ((splitCount / 60)).ToString("D2") + ":" + (splitCount % 60).ToString("D2");
+                TotalLbl.Text = "Total time: " + ((totalCount / 60)).ToString("D2") + ":" + (totalCount % 60).ToString("D2");
+
+
+            }
+            StopBtn.Text = "Reset";
         }
 
         private void BeepButton_Clicked(object sender, EventArgs e)
