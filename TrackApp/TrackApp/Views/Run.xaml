@@ -1,13 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              x:Class="TrackApp.Run">
     <ContentPage.Content>
         <StackLayout>
+
+            <progressBar:SfCircularProgressBar Progress="75" 
+                                               VerticalOptions="CenterAndExpand"
+                                               HorizontalOptions="CenterAndExpand">
+                <progressBar:SfCircularProgressBar.Content>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label x:Name="CustomContentProgressBarLabel" Grid.Row="0"
+                               TextColor="#007cee" 
+                               Text="{Binding Progress,StringFormat='{0}'}" 
+                               HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="End">
+                        </Label>
+                    </Grid>
+                </progressBar:SfCircularProgressBar.Content>
+            </progressBar:SfCircularProgressBar>
+
             <Button Text="Beep"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                Command="{Binding AudioCommand}"/>
+                    VerticalOptions="End"
+                    Command="{Binding AudioCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
