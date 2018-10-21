@@ -18,8 +18,8 @@ namespace TrackApp
 
         private bool continueTimer = false;
 
-        private double totalCount = 0;
-        private double splitCount = 0;
+        private long totalCount = 0;
+        private long splitCount = 0;
 
         public Run()
 		{
@@ -37,15 +37,12 @@ namespace TrackApp
             int numOfSplits = maxDistance / splitDistance;
 
             int targetTimeSec = 0;
-            int splitTimeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits;
+            int splitTimeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits * 1000;
 
             Device.StartTimer(TimeSpan.FromSeconds(TIMER_INTERVAL), () =>
             {
                 splitCount++;
                 totalCount++;
-
-                splitDistanceTimeSpan = TimeSpan.FromMilliseconds(splitCount);
-                totalDistanceTimeSpan = TimeSpan.FromMilliseconds(totalCount);
 
                 //SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 600) / 10).ToString("N3");
                 //TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 600) / 10).ToString("N3");
