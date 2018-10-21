@@ -14,10 +14,91 @@ namespace TrackApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Run : ContentPage
 	{
-		public Run ()
+        private const double TIMER_INTERVAL = 0.001;
+
+        private bool continueTimer = false;
+
+        private double totalCount = 0;
+        private double splitCount = 0;
+
+        public Run()
 		{
-            InitializeComponent ();
+            InitializeComponent();
             BindingContext = new RunViewModel();
-		}        
+		}
+
+        protected void StartBeeper()
+        {
+            int.TryParse(TargetTimeMinEntry.Text, out int targetTimeMin);
+            //int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
+            int.TryParse(TotalDistanceEntry.Text, out int maxDistance);
+            int.TryParse(SplitDistanceEntry.Text, out int splitDistance);
+
+            int numOfSplits = maxDistance / splitDistance;
+
+            int targetTimeSec = 0;
+            int splitTimeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits;
+
+            Device.StartTimer(TimeSpan.FromSeconds(TIMER_INTERVAL), () =>
+            {
+                splitCount++;
+                totalCount++;
+
+                splitDistanceTimeSpan = TimeSpan.FromMilliseconds(splitCount);
+                totalDistanceTimeSpan = TimeSpan.FromMilliseconds(totalCount);
+
+                //SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 600) / 10).ToString("N3");
+                //TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 600) / 10).ToString("N3");
+
+                SplitLbl.Text = "Current split: " + TimeSpan.FromMilliseconds(splitCount).Minutes + ":" + TimeSpan.FromMilliseconds(splitCount).Seconds;
+                TotalLbl.Text = "Total time: " + totalCount;
+
+                if (totalCount % splitTimeInterval == 0)
+                    DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
+
+                return continueTimer;
+            });
+        }
+
+        private void StartBtn_Clicked(object sender, EventArgs e)
+        {
+            if (StartBtn.Text.Equals("Start"))
+            {
+                StartBtn.Text = "Split";
+                StopBtn.IsEnabled = true;
+                StartBeeper();
+                continueTimer = true;
+                StopBtn.Text = "Stop";
+            }
+            else
+            {
+                splitCount = 0;
+            }
+        }
+
+        private void StopBtn_Clicked(object sender, EventArgs e)
+        {
+            StartBtn.Text = "Start";
+            continueTimer = false;
+
+
+            if (StopBtn.Text.Equals("Reset"))
+            {
+                TargetTimeMinEntry.Text = "";
+                //TargetTimeSecEntry.Text = "";
+                TotalDistanceEntry.Text = "";
+                SplitDistanceEntry.Text = "";
+
+                splitCount = 0;
+                totalCount = 0;
+
+                StopBtn.Text = "Stop";
+                SplitLbl.Text = "Current split: " + ((splitCount / 60)).ToString("D2") + ":" + (splitCount % 60).ToString("D2");
+                TotalLbl.Text = "Total time: " + ((totalCount / 60)).ToString("D2") + ":" + (totalCount % 60).ToString("D2");
+
+
+            }
+            StopBtn.Text = "Reset";
+        }
     }
 }
