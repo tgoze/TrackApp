@@ -6,8 +6,10 @@ namespace TrackApp.Models
 {
     class Split
     {
-        public int SplitId { get; set; }
-        public int RunId { get; set; }
+        public int Id { get; set; }
         public TimeSpan SplitTime { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
+        public DateTime DeletedAt { get; set; }
     }
 }

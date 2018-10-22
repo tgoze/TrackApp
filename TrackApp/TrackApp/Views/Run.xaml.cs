@@ -14,7 +14,7 @@ namespace TrackApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Run : ContentPage
 	{
-        private const double TIMER_INTERVAL = 0.001;
+        private const double TIMER_INTERVAL_MILLISECONDS = 1;
 
         private bool continueTimer = false;
 
@@ -37,9 +37,9 @@ namespace TrackApp
             int numOfSplits = maxDistance / splitDistance;
 
             int targetTimeSec = 0;
-            int splitTimeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits * 1000;
+            int splitTimeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits * 100;
 
-            Device.StartTimer(TimeSpan.FromSeconds(TIMER_INTERVAL), () =>
+            Device.StartTimer(TimeSpan.FromMilliseconds(TIMER_INTERVAL_MILLISECONDS), () =>
             {
                 splitCount++;
                 totalCount++;
@@ -47,8 +47,12 @@ namespace TrackApp
                 //SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 600) / 10).ToString("N3");
                 //TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 600) / 10).ToString("N3");
 
-                SplitLbl.Text = "Current split: " + TimeSpan.FromMilliseconds(splitCount).Minutes + ":" + TimeSpan.FromMilliseconds(splitCount).Seconds;
-                TotalLbl.Text = "Total time: " + totalCount;
+                SplitLbl.Text = "Current split: " + TimeSpan.FromMilliseconds(splitCount).Minutes 
+                        + ":" + TimeSpan.FromMilliseconds(splitCount).Seconds 
+                        + "." + TimeSpan.FromMilliseconds(splitCount).Milliseconds;
+                TotalLbl.Text = "Total time: " + TimeSpan.FromMilliseconds(totalCount).Minutes
+                        + ":" + TimeSpan.FromMilliseconds(totalCount).Seconds
+                        + "." + TimeSpan.FromMilliseconds(totalCount).Milliseconds;
 
                 if (totalCount % splitTimeInterval == 0)
                     DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
