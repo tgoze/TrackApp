@@ -3,9 +3,9 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
             xmlns:tabs="clr-namespace:TrackApp"
             x:Class="TrackApp.MainPage"            
-            BackgroundColor="Gray"
-            BarBackgroundColor="DimGray"
-            BarTextColor="White">
+            BackgroundColor="#d8dbe2"
+            BarBackgroundColor="#a9bcd0"
+            BarTextColor="#1b1b1e">
 
     <TabbedPage.Children>
 

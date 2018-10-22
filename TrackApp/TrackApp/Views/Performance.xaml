@@ -2,16 +2,40 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:local="clr-namespace:TrackApp.Models"
              x:Class="TrackApp.Performance">
+
+    <ContentPage.BindingContext>
+        <local:BookInfoRepository />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
+
         <StackLayout>
             <progressBar:SfCircularProgressBar Progress="75"
-                                               VerticalOptions="Start" 
-                                               HorizontalOptions="StartAndExpand"
-                                               SizeChanged="
-                                               
-                                               />
-           
+                                               VerticalOptions="CenterAndExpand" 
+                                               HorizontalOptions="CenterAndExpand"
+                                               ScaleX="2"
+                                               ScaleY="2"
+                                                >
+            </progressBar:SfCircularProgressBar>
+
+            <syncfusion:SfListView  
+                   ItemsSource="{Binding BookInfo}"
+                   ItemSize="100">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.4*" />
+                                <RowDefinition Height="0.6*" />
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
+                            <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
+                        </Grid>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
