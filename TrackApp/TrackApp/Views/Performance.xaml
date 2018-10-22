@@ -10,32 +10,36 @@
         <local:BookInfoRepository />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-
-        <StackLayout>
-            <progressBar:SfCircularProgressBar Progress="75"
-                                               VerticalOptions="CenterAndExpand" 
-                                               HorizontalOptions="CenterAndExpand"
-                                               ScaleX="2"
-                                               ScaleY="2"
-                                                >
-            </progressBar:SfCircularProgressBar>
-
+        <StackLayout Margin="10" Spacing="6">
+           
+                <progressBar:SfCircularProgressBar Progress="14.54"
+                                                   VerticalOptions="CenterAndExpand" 
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   ScaleX="2.5"
+                                                   ScaleY="2.5"
+                                               
+                                                    >
+                </progressBar:SfCircularProgressBar>
+                
             <syncfusion:SfListView  
                    ItemsSource="{Binding BookInfo}"
-                   ItemSize="100">
+                   ItemSize="40">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Padding="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.4*" />
-                                <RowDefinition Height="0.6*" />
-                            </Grid.RowDefinitions>
+                        <Grid Padding="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*" />
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="0.2*" />
+                            </Grid.ColumnDefinitions>
                             <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
-                            <Label Grid.Row="1" Text="{Binding BookDescription}" TextColor="Teal" FontSize="15"/>
+                            <Label Grid.Column="1" Text="00.00" FontAttributes="Bold" TextColor="Teal" FontSize="21" />
+                            <Button Grid.Column="2" Text="Split" TextColor="Teal" FontSize="10" VerticalOptions="StartAndExpand" Padding="0"/>
                         </Grid>
                     </DataTemplate>
                 </syncfusion:SfListView.ItemTemplate>
             </syncfusion:SfListView>
+        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
