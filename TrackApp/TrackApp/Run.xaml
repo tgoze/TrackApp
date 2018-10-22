@@ -1,38 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              x:Class="TrackApp.Run">
     <ContentPage.Content>
         <StackLayout>
-            <progressBar:SfCircularProgressBar Progress="75" 
-                                               VerticalOptions="CenterAndExpand"
-                                               HorizontalOptions="CenterAndExpand">
-                <progressBar:SfCircularProgressBar.Content>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="3*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Label x:Name="CustomContentProgressBarLabel" Grid.Row="0"
-                               TextColor="#007cee" 
-                               Text="{Binding Progress,StringFormat='{0}'}" 
-                               HorizontalTextAlignment="Center" 
-                               VerticalTextAlignment="End">
-                        </Label>
-                    </Grid>
-                </progressBar:SfCircularProgressBar.Content>
-            </progressBar:SfCircularProgressBar>
-
-            <Button Text="Beep"
-                    VerticalOptions="End"
-                    Command="{Binding AudioCommand}"/>
             <!-- Place new controls here -->
             <Label Text="Target time (min): " HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
             <Entry x:Name="TargetTimeMinEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="Target time (min)"></Entry>
 
-            <!--<Label Text="Target time (sec):" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>-->
-            <!--<Entry x:Name="TargetTimeSecEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="0"></Entry>-->
+            <Label Text="Target time (sec):" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+            <Entry x:Name="TargetTimeSecEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="0"></Entry>
 
             <Label x:Name="TotalDistanceLbl" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">Run Distance (meters)</Label>
             <Entry x:Name="TotalDistanceEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="100"></Entry>
@@ -42,7 +19,7 @@
 
             <Label x:Name="SplitLbl" Text="Current split: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
             <Label x:Name="TotalLbl" Text="Total time: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
-
+            
             <Button x:Name="StartBtn" Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="StartBtn_Clicked"></Button>
             <Button x:Name="StopBtn" Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False" Clicked="StopBtn_Clicked"></Button>
         </StackLayout>

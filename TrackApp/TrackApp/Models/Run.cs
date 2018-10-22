@@ -8,7 +8,7 @@ namespace TrackApp.Models
     {
         public int RunId { get; set; }
         public int UserId { get; set; }
-        public int eventId { get; set; }
+        public int EventId { get; set; }
         public TimeSpan OriginalTime { get; set; }
         public TimeSpan UpdatedTime { get; set; }
         public TimeSpan PredictedTime { get; set; }
