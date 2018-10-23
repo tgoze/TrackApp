@@ -11,14 +11,32 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <AbsoluteLayout>
-           
-                <Label Text="14.52">
-                </Label>
-                
-            <syncfusion:SfListView Scale="4"
+
+            <Label Text="14.52" FontSize="48"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       AbsoluteLayout.LayoutBounds="5,25,1,1"   
+                       AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"
+                       />
+
+
+            <Button Text="Start"
+                       AbsoluteLayout.LayoutBounds=".15,.2,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"   />
+            
+            <Button Text="Split"
+                       AbsoluteLayout.LayoutBounds=".85,.2,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"  />
+
+
+
+
+            <syncfusion:SfListView
              Margin="0,10,0,0"
-             AbsoluteLayout.LayoutBounds="1,.5,50,50"
-             AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+             
+             
+             AbsoluteLayout.LayoutBounds="0.1,0.95,1,.7"   
+             AbsoluteLayout.LayoutFlags="XProportional, YProportional, WidthProportional, HeightProportional"
                                                
                                  
                    ItemsSource="{Binding BookInfo}"
