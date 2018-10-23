@@ -21,12 +21,12 @@
 
 
             <Button Text="Start"
-                       AbsoluteLayout.LayoutBounds="1,50,1,1"   
-                         />
+                       AbsoluteLayout.LayoutBounds=".15,.2,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"   />
             
             <Button Text="Split"
-                       AbsoluteLayout.LayoutBounds="30,50,1,1"   
-                        />
+                       AbsoluteLayout.LayoutBounds=".85,.2,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"  />
 
 
 
