@@ -10,18 +10,35 @@
         <local:BookInfoRepository />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="10" Spacing="6">
-           
-                <progressBar:SfCircularProgressBar Progress="14.54"
-                                                   VerticalOptions="CenterAndExpand" 
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   ScaleX="2.5"
-                                                   ScaleY="2.5"
+        <AbsoluteLayout>
+
+            <Label Text="14.52" FontSize="48"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       AbsoluteLayout.LayoutBounds="5,25,1,1"   
+                       AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"
+                       />
+
+
+            <Button Text="Start"
+                       AbsoluteLayout.LayoutBounds="1,50,1,1"   
+                         />
+            
+            <Button Text="Split"
+                       AbsoluteLayout.LayoutBounds="30,50,1,1"   
+                        />
+
+
+
+
+            <syncfusion:SfListView
+             Margin="0,10,0,0"
+             
+             
+             AbsoluteLayout.LayoutBounds="0.1,0.95,1,.7"   
+             AbsoluteLayout.LayoutFlags="XProportional, YProportional, WidthProportional, HeightProportional"
                                                
-                                                    >
-                </progressBar:SfCircularProgressBar>
-                
-            <syncfusion:SfListView  
+                                 
                    ItemsSource="{Binding BookInfo}"
                    ItemSize="40">
                 <syncfusion:SfListView.ItemTemplate>
@@ -40,6 +57,6 @@
                 </syncfusion:SfListView.ItemTemplate>
             </syncfusion:SfListView>
         
-        </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
