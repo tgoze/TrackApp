@@ -10,18 +10,17 @@
         <local:BookInfoRepository />
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout Margin="10" Spacing="6">
+        <AbsoluteLayout>
            
-                <progressBar:SfCircularProgressBar Progress="14.54"
-                                                   VerticalOptions="CenterAndExpand" 
-                                                   HorizontalOptions="CenterAndExpand"
-                                                   ScaleX="2.5"
-                                                   ScaleY="2.5"
-                                               
-                                                    >
-                </progressBar:SfCircularProgressBar>
+                <Label Text="14.52">
+                </Label>
                 
-            <syncfusion:SfListView  
+            <syncfusion:SfListView Scale="4"
+             Margin="0,10,0,0"
+             AbsoluteLayout.LayoutBounds="1,.5,50,50"
+             AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                                               
+                                 
                    ItemsSource="{Binding BookInfo}"
                    ItemSize="40">
                 <syncfusion:SfListView.ItemTemplate>
@@ -40,6 +39,6 @@
                 </syncfusion:SfListView.ItemTemplate>
             </syncfusion:SfListView>
         
-        </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
