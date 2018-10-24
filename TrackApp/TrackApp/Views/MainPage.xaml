@@ -5,11 +5,12 @@
             x:Class="TrackApp.MainPage"            
             BackgroundColor="#d8dbe2"
             BarBackgroundColor="#a9bcd0"
-            BarTextColor="#1b1b1e">
+            BarTextColor="#1b1b1e"
+            >
 
     <TabbedPage.Children>
 
-        <tabs:Run Title="Run"/>
+        <tabs:Run Title="Run" />
         <tabs:Performance Title="Performance"/>
         <tabs:Settings Title="Settings"/>
         

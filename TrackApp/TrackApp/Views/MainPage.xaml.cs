@@ -21,6 +21,7 @@ namespace TrackApp
 
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+           //On<Xamarin.Forms.PlatformConfiguration.Android().
         }
     }            
 }
