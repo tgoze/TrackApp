@@ -1,4 +1,9 @@
-﻿using System;
+using Syncfusion.SfPicker.XForms.iOS;
+using Syncfusion.XForms.iOS.Buttons;
+using Syncfusion.XForms.iOS.ComboBox;
+using Syncfusion.XForms.iOS.DataForm;
+using Syncfusion.XForms.iOS.MaskedEdit;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,7 +27,12 @@ namespace TrackApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            global::Xamarin.Forms.Forms.Init();
+global::Xamarin.Forms.Forms.Init();
+SfPickerRenderer.Init();
+SfCheckBoxRenderer.Init();
+SfComboBoxRenderer.Init();
+SfDataFormRenderer.Init();
+SfMaskedEditRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -26,6 +26,240 @@ namespace TrackApp.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_inner_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_inner_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_outer_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_indeterminate_to_checked_box_outer_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_indeterminate_to_checked_icon_null_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_indeterminate_to_checked_icon_null_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_icon_null_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_checked_icon_null_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::TrackApp.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.@checked = global::TrackApp.Droid.Resource.Attribute.@checked;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.cornerradius = global::TrackApp.Droid.Resource.Attribute.cornerradius;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.isthreestate = global::TrackApp.Droid.Resource.Attribute.isthreestate;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentBackColor = global::TrackApp.Droid.Resource.Attribute.segmentBackColor;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentBorderColor = global::TrackApp.Droid.Resource.Attribute.segmentBorderColor;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentBorderThickness = global::TrackApp.Droid.Resource.Attribute.segmentBorderThickness;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentColor = global::TrackApp.Droid.Resource.Attribute.segmentColor;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentCornerRadius = global::TrackApp.Droid.Resource.Attribute.segmentCornerRadius;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentDisplayMode = global::TrackApp.Droid.Resource.Attribute.segmentDisplayMode;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentPosition = global::TrackApp.Droid.Resource.Attribute.segmentPosition;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentSelectedIndex = global::TrackApp.Droid.Resource.Attribute.segmentSelectedIndex;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentStrokeThickness = global::TrackApp.Droid.Resource.Attribute.segmentStrokeThickness;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentedHeight = global::TrackApp.Droid.Resource.Attribute.segmentedHeight;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentedPadding = global::TrackApp.Droid.Resource.Attribute.segmentedPadding;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.segmentedWidth = global::TrackApp.Droid.Resource.Attribute.segmentedWidth;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Attribute.state_indeterminate = global::TrackApp.Droid.Resource.Attribute.state_indeterminate;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Color.control_checkable_material = global::TrackApp.Droid.Resource.Color.control_checkable_material;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Dimension.disabledAlpha = global::TrackApp.Droid.Resource.Dimension.disabledAlpha;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox = global::TrackApp.Droid.Resource.Drawable.btn_checkbox;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_checked = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_checked;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_checked_to_indeterminate_animation = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_checked_to_indeterminate_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_checked_to_unchecked_animation = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_indeterminate = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_indeterminate;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_indeterminate_to_checked_animation = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_indeterminate_to_checked_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_indeterminate_to_unchecked_animation = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_indeterminate_to_unchecked_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_unchecked = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_unchecked;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_unchecked_to_checked_animation = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Drawable.btn_checkbox_unchecked_to_indeterminate_animation = global::TrackApp.Droid.Resource.Drawable.btn_checkbox_unchecked_to_indeterminate_animation;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.border = global::TrackApp.Droid.Resource.Id.border;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.bottom = global::TrackApp.Droid.Resource.Id.bottom;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.@checked = global::TrackApp.Droid.Resource.Id.@checked;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.fill = global::TrackApp.Droid.Resource.Id.fill;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.image = global::TrackApp.Droid.Resource.Id.image;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.imagewithtext = global::TrackApp.Droid.Resource.Id.imagewithtext;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.indeterminate = global::TrackApp.Droid.Resource.Id.indeterminate;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.text = global::TrackApp.Droid.Resource.Id.text;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.top = global::TrackApp.Droid.Resource.Id.top;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Id.@unchecked = global::TrackApp.Droid.Resource.Id.@unchecked;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_0 = global::TrackApp.Droid.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_0;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_1 = global::TrackApp.Droid.Resource.Interpolator.btn_checkbox_checked_animation_interpolator_1;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_indeterminate_animation_interpolator_1 = global::TrackApp.Droid.Resource.Interpolator.btn_checkbox_indeterminate_animation_interpolator_1;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_0 = global::TrackApp.Droid.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_0;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_1 = global::TrackApp.Droid.Resource.Interpolator.btn_checkbox_unchecked_animation_interpolator_1;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.DrawableStates = global::TrackApp.Droid.Resource.Styleable.DrawableStates;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.DrawableStates_state_indeterminate = global::TrackApp.Droid.Resource.Styleable.DrawableStates_state_indeterminate;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox = global::TrackApp.Droid.Resource.Styleable.SfCheckBox;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox_checked = global::TrackApp.Droid.Resource.Styleable.SfCheckBox_checked;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox_cornerradius = global::TrackApp.Droid.Resource.Styleable.SfCheckBox_cornerradius;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfCheckBox_isthreestate = global::TrackApp.Droid.Resource.Styleable.SfCheckBox_isthreestate;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentBackColor = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentBackColor;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentBorderColor = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentBorderColor;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentBorderThickness = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentBorderThickness;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentColor = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentColor;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentCornerRadius = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentCornerRadius;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentDisplayMode = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentDisplayMode;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentPosition = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentPosition;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentSelectedIndex = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentSelectedIndex;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentStrokeThickness = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentStrokeThickness;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentedHeight = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentedHeight;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentedPadding = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentedPadding;
+			global::Syncfusion.Buttons.XForms.Android.Resource.Styleable.SfSegmentedControl_segmentedWidth = global::TrackApp.Droid.Resource.Styleable.SfSegmentedControl_segmentedWidth;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::TrackApp.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::TrackApp.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.layoutManager = global::TrackApp.Droid.Resource.Attribute.layoutManager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.reverseLayout = global::TrackApp.Droid.Resource.Attribute.reverseLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.spanCount = global::TrackApp.Droid.Resource.Attribute.spanCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Attribute.stackFromEnd = global::TrackApp.Droid.Resource.Attribute.stackFromEnd;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::TrackApp.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::TrackApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::TrackApp.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.dropdownbuttonimage = global::TrackApp.Droid.Resource.Drawable.dropdownbuttonimage;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Drawable.Icon = global::TrackApp.Droid.Resource.Drawable.Icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.Itemname = global::TrackApp.Droid.Resource.Id.Itemname;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.icon = global::TrackApp.Droid.Resource.Id.icon;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Id.item_touch_helper_previous_elevation = global::TrackApp.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.CustomizedImageView = global::TrackApp.Droid.Resource.Layout.CustomizedImageView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.CustomizedView = global::TrackApp.Droid.Resource.Layout.CustomizedView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Layout.sfcomboBox_layout = global::TrackApp.Droid.Resource.Layout.sfcomboBox_layout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView = global::TrackApp.Droid.Resource.Styleable.RecyclerView;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_descendantFocusability = global::TrackApp.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_android_orientation = global::TrackApp.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_layoutManager = global::TrackApp.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_reverseLayout = global::TrackApp.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_spanCount = global::TrackApp.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_stackFromEnd = global::TrackApp.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.allowNull = global::TrackApp.Droid.Resource.Attribute.allowNull;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.borderColor = global::TrackApp.Droid.Resource.Attribute.borderColor;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.culture = global::TrackApp.Droid.Resource.Attribute.culture;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.enableGroupSeparator = global::TrackApp.Droid.Resource.Attribute.enableGroupSeparator;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.fontSize = global::TrackApp.Droid.Resource.Attribute.fontSize;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.maximumDecimalDigits = global::TrackApp.Droid.Resource.Attribute.maximumDecimalDigits;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.numberFormat = global::TrackApp.Droid.Resource.Attribute.numberFormat;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.numericTextBoxValue = global::TrackApp.Droid.Resource.Attribute.numericTextBoxValue;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.parsingMode = global::TrackApp.Droid.Resource.Attribute.parsingMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.percentDisplayMode = global::TrackApp.Droid.Resource.Attribute.percentDisplayMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.selectAllOnFocus = global::TrackApp.Droid.Resource.Attribute.selectAllOnFocus;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.valueChangeMode = global::TrackApp.Droid.Resource.Attribute.valueChangeMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.watermark = global::TrackApp.Droid.Resource.Attribute.watermark;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Attribute.watermarkColor = global::TrackApp.Droid.Resource.Attribute.watermarkColor;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Drawable.GroupCollapse = global::TrackApp.Droid.Resource.Drawable.GroupCollapse;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Drawable.GroupExpander = global::TrackApp.Droid.Resource.Drawable.GroupExpander;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Id.compute = global::TrackApp.Droid.Resource.Id.compute;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Id.decimalMode = global::TrackApp.Droid.Resource.Id.decimalMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Id.doubleMode = global::TrackApp.Droid.Resource.Id.doubleMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Id.onKeyFocus = global::TrackApp.Droid.Resource.Id.onKeyFocus;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Id.onLostFocus = global::TrackApp.Droid.Resource.Id.onLostFocus;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Id.value = global::TrackApp.Droid.Resource.Id.value;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Layout.Spinner_item = global::TrackApp.Droid.Resource.Layout.Spinner_item;
+			global::Syncfusion.XForms.Android.DataForm.Resource.String.library_name = global::TrackApp.Droid.Resource.String.library_name;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_allowNull = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_allowNull;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_borderColor = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_borderColor;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_culture = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_culture;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_enableGroupSeparator = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_enableGroupSeparator;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_fontSize = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_fontSize;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_numberFormat = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_numberFormat;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_numericTextBoxValue = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_numericTextBoxValue;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_parsingMode = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_parsingMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_percentDisplayMode = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_percentDisplayMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_selectAllOnFocus = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_selectAllOnFocus;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_valueChangeMode = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_valueChangeMode;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_watermark = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_watermark;
+			global::Syncfusion.XForms.Android.DataForm.Resource.Styleable.SfNumericTextBox_watermarkColor = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_watermarkColor;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.allowNull = global::TrackApp.Droid.Resource.Attribute.allowNull;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.borderColor = global::TrackApp.Droid.Resource.Attribute.borderColor;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.culture = global::TrackApp.Droid.Resource.Attribute.culture;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.enableGroupSeparator = global::TrackApp.Droid.Resource.Attribute.enableGroupSeparator;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.fontSize = global::TrackApp.Droid.Resource.Attribute.fontSize;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.maximumDecimalDigits = global::TrackApp.Droid.Resource.Attribute.maximumDecimalDigits;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.numberFormat = global::TrackApp.Droid.Resource.Attribute.numberFormat;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.numericTextBoxValue = global::TrackApp.Droid.Resource.Attribute.numericTextBoxValue;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.parsingMode = global::TrackApp.Droid.Resource.Attribute.parsingMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.percentDisplayMode = global::TrackApp.Droid.Resource.Attribute.percentDisplayMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.selectAllOnFocus = global::TrackApp.Droid.Resource.Attribute.selectAllOnFocus;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.valueChangeMode = global::TrackApp.Droid.Resource.Attribute.valueChangeMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.watermark = global::TrackApp.Droid.Resource.Attribute.watermark;
+			global::Com.Syncfusion.Numerictextbox.Resource.Attribute.watermarkColor = global::TrackApp.Droid.Resource.Attribute.watermarkColor;
+			global::Com.Syncfusion.Numerictextbox.Resource.Id.compute = global::TrackApp.Droid.Resource.Id.compute;
+			global::Com.Syncfusion.Numerictextbox.Resource.Id.decimalMode = global::TrackApp.Droid.Resource.Id.decimalMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Id.doubleMode = global::TrackApp.Droid.Resource.Id.doubleMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Id.onKeyFocus = global::TrackApp.Droid.Resource.Id.onKeyFocus;
+			global::Com.Syncfusion.Numerictextbox.Resource.Id.onLostFocus = global::TrackApp.Droid.Resource.Id.onLostFocus;
+			global::Com.Syncfusion.Numerictextbox.Resource.Id.value = global::TrackApp.Droid.Resource.Id.value;
+			global::Com.Syncfusion.Numerictextbox.Resource.String.library_name = global::TrackApp.Droid.Resource.String.library_name;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_allowNull = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_allowNull;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_borderColor = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_borderColor;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_culture = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_culture;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_enableGroupSeparator = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_enableGroupSeparator;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_fontSize = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_fontSize;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_maximumDecimalDigits;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_numberFormat = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_numberFormat;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_numericTextBoxValue = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_numericTextBoxValue;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_parsingMode = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_parsingMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_percentDisplayMode = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_percentDisplayMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_selectAllOnFocus = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_selectAllOnFocus;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_valueChangeMode = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_valueChangeMode;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_watermark = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_watermark;
+			global::Com.Syncfusion.Numerictextbox.Resource.Styleable.SfNumericTextBox_watermarkColor = global::TrackApp.Droid.Resource.Styleable.SfNumericTextBox_watermarkColor;
+			global::Com.Syncfusion.Numericupdown.Resource.String.library_name = global::TrackApp.Droid.Resource.String.library_name;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerBackgroundColor = global::TrackApp.Droid.Resource.Attribute.pickerBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerBorderColor = global::TrackApp.Droid.Resource.Attribute.pickerBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderBackgroundColor = global::TrackApp.Droid.Resource.Attribute.pickerColumnHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderHeight = global::TrackApp.Droid.Resource.Attribute.pickerColumnHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderTextColor = global::TrackApp.Droid.Resource.Attribute.pickerColumnHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerColumnHeaderTextSize = global::TrackApp.Droid.Resource.Attribute.pickerColumnHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerEnableLooping = global::TrackApp.Droid.Resource.Attribute.pickerEnableLooping;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerFooterHeight = global::TrackApp.Droid.Resource.Attribute.pickerFooterHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderBackgroundColor = global::TrackApp.Droid.Resource.Attribute.pickerHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderHeight = global::TrackApp.Droid.Resource.Attribute.pickerHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderText = global::TrackApp.Droid.Resource.Attribute.pickerHeaderText;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderTextColor = global::TrackApp.Droid.Resource.Attribute.pickerHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeaderTextSize = global::TrackApp.Droid.Resource.Attribute.pickerHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerHeight = global::TrackApp.Droid.Resource.Attribute.pickerHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerIsOpen = global::TrackApp.Droid.Resource.Attribute.pickerIsOpen;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerItemHeight = global::TrackApp.Droid.Resource.Attribute.pickerItemHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerMode = global::TrackApp.Droid.Resource.Attribute.pickerMode;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerSelectedItemTextSize = global::TrackApp.Droid.Resource.Attribute.pickerSelectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerSelectedItemTextcolor = global::TrackApp.Droid.Resource.Attribute.pickerSelectedItemTextcolor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerSelectionBorderColor = global::TrackApp.Droid.Resource.Attribute.pickerSelectionBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerShowColumnHeader = global::TrackApp.Droid.Resource.Attribute.pickerShowColumnHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerShowFooter = global::TrackApp.Droid.Resource.Attribute.pickerShowFooter;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerShowHeader = global::TrackApp.Droid.Resource.Attribute.pickerShowHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerUnselectedItemTextColor = global::TrackApp.Droid.Resource.Attribute.pickerUnselectedItemTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerUnselectedItemTextSize = global::TrackApp.Droid.Resource.Attribute.pickerUnselectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Attribute.pickerWidth = global::TrackApp.Droid.Resource.Attribute.pickerWidth;
+			global::Com.Syncfusion.SfPicker.Resource.Id.Default = global::TrackApp.Droid.Resource.Id.Default;
+			global::Com.Syncfusion.SfPicker.Resource.Id.Dialog = global::TrackApp.Droid.Resource.Id.Dialog;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker = global::TrackApp.Droid.Resource.Styleable.SfPicker;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerBackgroundColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerBorderColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderBackgroundColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderHeight = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderTextColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerColumnHeaderTextSize = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerColumnHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerEnableLooping = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerEnableLooping;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerFooterHeight = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerFooterHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderBackgroundColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerHeaderBackgroundColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderHeight = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerHeaderHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderText = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerHeaderText;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderTextColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerHeaderTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeaderTextSize = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerHeaderTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerHeight = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerIsOpen = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerIsOpen;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerItemHeight = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerItemHeight;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerMode = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerMode;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerSelectedItemTextSize = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerSelectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerSelectedItemTextcolor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerSelectedItemTextcolor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerSelectionBorderColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerSelectionBorderColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerShowColumnHeader = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerShowColumnHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerShowFooter = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerShowFooter;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerShowHeader = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerShowHeader;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerUnselectedItemTextColor = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerUnselectedItemTextColor;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerUnselectedItemTextSize = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerUnselectedItemTextSize;
+			global::Com.Syncfusion.SfPicker.Resource.Styleable.SfPicker_pickerWidth = global::TrackApp.Droid.Resource.Styleable.SfPicker_pickerWidth;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::TrackApp.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -63,22 +297,73 @@ namespace TrackApp.Droid
 			public const int abc_slide_out_top = 2131034121;
 			
 			// aapt resource value: 0x7f05000a
-			public const int design_bottom_sheet_slide_in = 2131034122;
+			public const int btn_checkbox_indeterminate_to_checked_box_inner_merged_animation = 2131034122;
 			
 			// aapt resource value: 0x7f05000b
-			public const int design_bottom_sheet_slide_out = 2131034123;
+			public const int btn_checkbox_indeterminate_to_checked_box_outer_merged_animation = 2131034123;
 			
 			// aapt resource value: 0x7f05000c
-			public const int design_snackbar_in = 2131034124;
+			public const int btn_checkbox_indeterminate_to_checked_icon_null_animation = 2131034124;
 			
 			// aapt resource value: 0x7f05000d
-			public const int design_snackbar_out = 2131034125;
+			public const int btn_checkbox_to_checked_box_inner_merged_animation = 2131034125;
 			
 			// aapt resource value: 0x7f05000e
-			public const int tooltip_enter = 2131034126;
+			public const int btn_checkbox_to_checked_box_outer_merged_animation = 2131034126;
 			
 			// aapt resource value: 0x7f05000f
-			public const int tooltip_exit = 2131034127;
+			public const int btn_checkbox_to_checked_icon_null_animation = 2131034127;
+			
+			// aapt resource value: 0x7f050010
+			public const int btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation = 2131034128;
+			
+			// aapt resource value: 0x7f050011
+			public const int btn_checkbox_to_indeterminate_from_checked_icon_null_animation = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public const int btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation = 2131034130;
+			
+			// aapt resource value: 0x7f050013
+			public const int btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation = 2131034131;
+			
+			// aapt resource value: 0x7f050014
+			public const int btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation = 2131034132;
+			
+			// aapt resource value: 0x7f050015
+			public const int btn_checkbox_to_unchecked_box_inner_merged_animation = 2131034133;
+			
+			// aapt resource value: 0x7f050016
+			public const int btn_checkbox_to_unchecked_check_path_merged_animation = 2131034134;
+			
+			// aapt resource value: 0x7f050017
+			public const int btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation = 2131034135;
+			
+			// aapt resource value: 0x7f050018
+			public const int btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation = 2131034136;
+			
+			// aapt resource value: 0x7f050019
+			public const int btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation = 2131034137;
+			
+			// aapt resource value: 0x7f05001a
+			public const int btn_checkbox_to_unchecked_icon_null_animation = 2131034138;
+			
+			// aapt resource value: 0x7f05001b
+			public const int design_bottom_sheet_slide_in = 2131034139;
+			
+			// aapt resource value: 0x7f05001c
+			public const int design_bottom_sheet_slide_out = 2131034140;
+			
+			// aapt resource value: 0x7f05001d
+			public const int design_snackbar_in = 2131034141;
+			
+			// aapt resource value: 0x7f05001e
+			public const int design_snackbar_out = 2131034142;
+			
+			// aapt resource value: 0x7f05001f
+			public const int tooltip_enter = 2131034143;
+			
+			// aapt resource value: 0x7f050020
+			public const int tooltip_exit = 2131034144;
 			
 			static Animation()
 			{
@@ -223,6 +508,9 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0100b5
 			public const int alertDialogTheme = 2130772149;
 			
+			// aapt resource value: 0x7f010196
+			public const int allowNull = 2130772374;
+			
 			// aapt resource value: 0x7f0100cb
 			public const int allowStacking = 2130772171;
 			
@@ -289,6 +577,9 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f01011f
 			public const int behavior_skipCollapsed = 2130772255;
 			
+			// aapt resource value: 0x7f010197
+			public const int borderColor = 2130772375;
+			
 			// aapt resource value: 0x7f01013f
 			public const int borderWidth = 2130772287;
 			
@@ -354,6 +645,9 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f0100bd
 			public const int checkboxStyle = 2130772157;
+			
+			// aapt resource value: 0x7f01019e
+			public const int @checked = 2130772382;
 			
 			// aapt resource value: 0x7f0100be
 			public const int checkedTextViewStyle = 2130772158;
@@ -454,6 +748,9 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0100b0
 			public const int controlBackground = 2130772144;
 			
+			// aapt resource value: 0x7f01019d
+			public const int cornerradius = 2130772381;
+			
 			// aapt resource value: 0x7f010160
 			public const int counterEnabled = 2130772320;
 			
@@ -465,6 +762,9 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f010162
 			public const int counterTextAppearance = 2130772322;
+			
+			// aapt resource value: 0x7f010199
+			public const int culture = 2130772377;
 			
 			// aapt resource value: 0x7f010031
 			public const int customNavigationLayout = 2130772017;
@@ -516,6 +816,9 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f01003e
 			public const int elevation = 2130772030;
+			
+			// aapt resource value: 0x7f010190
+			public const int enableGroupSeparator = 2130772368;
 			
 			// aapt resource value: 0x7f01015e
 			public const int errorEnabled = 2130772318;
@@ -595,6 +898,9 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f01016c
 			public const int fontProviderQuery = 2130772332;
 			
+			// aapt resource value: 0x7f010195
+			public const int fontSize = 2130772373;
+			
 			// aapt resource value: 0x7f010170
 			public const int fontStyle = 2130772336;
 			
@@ -660,6 +966,9 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f010024
 			public const int isLightTheme = 2130772004;
+			
+			// aapt resource value: 0x7f01019c
+			public const int isthreestate = 2130772380;
 			
 			// aapt resource value: 0x7f010146
 			public const int itemBackground = 2130772294;
@@ -760,6 +1069,9 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f01010a
 			public const int maxButtonHeight = 2130772234;
 			
+			// aapt resource value: 0x7f010193
+			public const int maximumDecimalDigits = 2130772371;
+			
 			// aapt resource value: 0x7f0100d7
 			public const int measureWithLargestChild = 2130772183;
 			
@@ -817,8 +1129,14 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f010026
 			public const int navigationMode = 2130772006;
 			
+			// aapt resource value: 0x7f010191
+			public const int numberFormat = 2130772369;
+			
 			// aapt resource value: 0x7f0100db
 			public const int numericModifiers = 2130772187;
+			
+			// aapt resource value: 0x7f01019a
+			public const int numericTextBoxValue = 2130772378;
 			
 			// aapt resource value: 0x7f0100e6
 			public const int overlapAnchor = 2130772198;
@@ -844,6 +1162,9 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0100a5
 			public const int panelMenuListWidth = 2130772133;
 			
+			// aapt resource value: 0x7f01018d
+			public const int parsingMode = 2130772365;
+			
 			// aapt resource value: 0x7f010167
 			public const int passwordToggleContentDescription = 2130772327;
 			
@@ -858,6 +1179,87 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f010169
 			public const int passwordToggleTintMode = 2130772329;
+			
+			// aapt resource value: 0x7f01018e
+			public const int percentDisplayMode = 2130772366;
+			
+			// aapt resource value: 0x7f010174
+			public const int pickerBackgroundColor = 2130772340;
+			
+			// aapt resource value: 0x7f010184
+			public const int pickerBorderColor = 2130772356;
+			
+			// aapt resource value: 0x7f010181
+			public const int pickerColumnHeaderBackgroundColor = 2130772353;
+			
+			// aapt resource value: 0x7f01017d
+			public const int pickerColumnHeaderHeight = 2130772349;
+			
+			// aapt resource value: 0x7f01018c
+			public const int pickerColumnHeaderTextColor = 2130772364;
+			
+			// aapt resource value: 0x7f010188
+			public const int pickerColumnHeaderTextSize = 2130772360;
+			
+			// aapt resource value: 0x7f010179
+			public const int pickerEnableLooping = 2130772345;
+			
+			// aapt resource value: 0x7f010176
+			public const int pickerFooterHeight = 2130772342;
+			
+			// aapt resource value: 0x7f010180
+			public const int pickerHeaderBackgroundColor = 2130772352;
+			
+			// aapt resource value: 0x7f010175
+			public const int pickerHeaderHeight = 2130772341;
+			
+			// aapt resource value: 0x7f010185
+			public const int pickerHeaderText = 2130772357;
+			
+			// aapt resource value: 0x7f01018b
+			public const int pickerHeaderTextColor = 2130772363;
+			
+			// aapt resource value: 0x7f010187
+			public const int pickerHeaderTextSize = 2130772359;
+			
+			// aapt resource value: 0x7f010177
+			public const int pickerHeight = 2130772343;
+			
+			// aapt resource value: 0x7f010178
+			public const int pickerIsOpen = 2130772344;
+			
+			// aapt resource value: 0x7f01017e
+			public const int pickerItemHeight = 2130772350;
+			
+			// aapt resource value: 0x7f010173
+			public const int pickerMode = 2130772339;
+			
+			// aapt resource value: 0x7f01018a
+			public const int pickerSelectedItemTextSize = 2130772362;
+			
+			// aapt resource value: 0x7f01017f
+			public const int pickerSelectedItemTextcolor = 2130772351;
+			
+			// aapt resource value: 0x7f010183
+			public const int pickerSelectionBorderColor = 2130772355;
+			
+			// aapt resource value: 0x7f01017c
+			public const int pickerShowColumnHeader = 2130772348;
+			
+			// aapt resource value: 0x7f01017b
+			public const int pickerShowFooter = 2130772347;
+			
+			// aapt resource value: 0x7f01017a
+			public const int pickerShowHeader = 2130772346;
+			
+			// aapt resource value: 0x7f010182
+			public const int pickerUnselectedItemTextColor = 2130772354;
+			
+			// aapt resource value: 0x7f010189
+			public const int pickerUnselectedItemTextSize = 2130772361;
+			
+			// aapt resource value: 0x7f010186
+			public const int pickerWidth = 2130772358;
 			
 			// aapt resource value: 0x7f010091
 			public const int popupMenuStyle = 2130772113;
@@ -922,6 +1324,45 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0100c4
 			public const int seekBarStyle = 2130772164;
 			
+			// aapt resource value: 0x7f0101a0
+			public const int segmentBackColor = 2130772384;
+			
+			// aapt resource value: 0x7f0101a1
+			public const int segmentBorderColor = 2130772385;
+			
+			// aapt resource value: 0x7f0101a2
+			public const int segmentBorderThickness = 2130772386;
+			
+			// aapt resource value: 0x7f0101a3
+			public const int segmentColor = 2130772387;
+			
+			// aapt resource value: 0x7f0101a8
+			public const int segmentCornerRadius = 2130772392;
+			
+			// aapt resource value: 0x7f0101aa
+			public const int segmentDisplayMode = 2130772394;
+			
+			// aapt resource value: 0x7f0101a9
+			public const int segmentPosition = 2130772393;
+			
+			// aapt resource value: 0x7f01019f
+			public const int segmentSelectedIndex = 2130772383;
+			
+			// aapt resource value: 0x7f0101a7
+			public const int segmentStrokeThickness = 2130772391;
+			
+			// aapt resource value: 0x7f0101a5
+			public const int segmentedHeight = 2130772389;
+			
+			// aapt resource value: 0x7f0101a4
+			public const int segmentedPadding = 2130772388;
+			
+			// aapt resource value: 0x7f0101a6
+			public const int segmentedWidth = 2130772390;
+			
+			// aapt resource value: 0x7f010194
+			public const int selectAllOnFocus = 2130772372;
+			
 			// aapt resource value: 0x7f010089
 			public const int selectableItemBackground = 2130772105;
 			
@@ -972,6 +1413,9 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f01011a
 			public const int state_collapsible = 2130772250;
+			
+			// aapt resource value: 0x7f01019b
+			public const int state_indeterminate = 2130772379;
 			
 			// aapt resource value: 0x7f010132
 			public const int statusBarBackground = 2130772274;
@@ -1189,8 +1633,17 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f010140
 			public const int useCompatPadding = 2130772288;
 			
+			// aapt resource value: 0x7f01018f
+			public const int valueChangeMode = 2130772367;
+			
 			// aapt resource value: 0x7f0100f2
 			public const int voiceIcon = 2130772210;
+			
+			// aapt resource value: 0x7f010192
+			public const int watermark = 2130772370;
+			
+			// aapt resource value: 0x7f010198
+			public const int watermarkColor = 2130772376;
 			
 			// aapt resource value: 0x7f010056
 			public const int windowActionBar = 2130772054;
@@ -1398,11 +1851,14 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0e004d
 			public const int colorPrimaryDark = 2131624013;
 			
+			// aapt resource value: 0x7f0e0063
+			public const int control_checkable_material = 2131624035;
+			
 			// aapt resource value: 0x7f0e0040
 			public const int design_bottom_navigation_shadow_color = 2131624000;
 			
-			// aapt resource value: 0x7f0e0063
-			public const int design_error = 2131624035;
+			// aapt resource value: 0x7f0e0064
+			public const int design_error = 2131624036;
 			
 			// aapt resource value: 0x7f0e0041
 			public const int design_fab_shadow_end_color = 2131624001;
@@ -1428,8 +1884,8 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0e0048
 			public const int design_snackbar_background_color = 2131624008;
 			
-			// aapt resource value: 0x7f0e0064
-			public const int design_tint_password_toggle = 2131624036;
+			// aapt resource value: 0x7f0e0065
+			public const int design_tint_password_toggle = 2131624037;
 			
 			// aapt resource value: 0x7f0e0016
 			public const int dim_foreground_disabled_material_dark = 2131623958;
@@ -1554,11 +2010,11 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0e003a
 			public const int switch_thumb_disabled_material_light = 2131623994;
 			
-			// aapt resource value: 0x7f0e0065
-			public const int switch_thumb_material_dark = 2131624037;
-			
 			// aapt resource value: 0x7f0e0066
-			public const int switch_thumb_material_light = 2131624038;
+			public const int switch_thumb_material_dark = 2131624038;
+			
+			// aapt resource value: 0x7f0e0067
+			public const int switch_thumb_material_light = 2131624039;
 			
 			// aapt resource value: 0x7f0e003b
 			public const int switch_thumb_normal_material_dark = 2131623995;
@@ -1944,6 +2400,9 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f09008f
 			public const int design_tab_text_size_2line = 2131296399;
+			
+			// aapt resource value: 0x7f0900a4
+			public const int disabledAlpha = 2131296420;
 			
 			// aapt resource value: 0x7f090059
 			public const int disabled_alpha_material_dark = 2131296345;
@@ -2342,680 +2801,728 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02012f
-			public const int avd_hide_password_1 = 2130837807;
+			// aapt resource value: 0x7f02013f
+			public const int avd_hide_password_1 = 2130837823;
 			
-			// aapt resource value: 0x7f020130
-			public const int avd_hide_password_2 = 2130837808;
+			// aapt resource value: 0x7f020140
+			public const int avd_hide_password_2 = 2130837824;
 			
-			// aapt resource value: 0x7f020131
-			public const int avd_hide_password_3 = 2130837809;
+			// aapt resource value: 0x7f020141
+			public const int avd_hide_password_3 = 2130837825;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020132
-			public const int avd_show_password_1 = 2130837810;
+			// aapt resource value: 0x7f020142
+			public const int avd_show_password_1 = 2130837826;
 			
-			// aapt resource value: 0x7f020133
-			public const int avd_show_password_2 = 2130837811;
+			// aapt resource value: 0x7f020143
+			public const int avd_show_password_2 = 2130837827;
 			
-			// aapt resource value: 0x7f020134
-			public const int avd_show_password_3 = 2130837812;
+			// aapt resource value: 0x7f020144
+			public const int avd_show_password_3 = 2130837828;
 			
 			// aapt resource value: 0x7f020055
-			public const int design_bottom_navigation_item_background = 2130837589;
+			public const int btn_checkbox = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int design_fab_background = 2130837590;
+			public const int btn_checkbox_checked = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int design_ic_visibility = 2130837591;
+			public const int btn_checkbox_checked_to_indeterminate_animation = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int design_ic_visibility_off = 2130837592;
+			public const int btn_checkbox_checked_to_unchecked_animation = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int design_password_eye = 2130837593;
+			public const int btn_checkbox_indeterminate = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int design_snackbar_background = 2130837594;
+			public const int btn_checkbox_indeterminate_to_checked_animation = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int ic_audiotrack_dark = 2130837595;
+			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int ic_audiotrack_light = 2130837596;
+			public const int btn_checkbox_unchecked = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_dialog_close_dark = 2130837597;
+			public const int btn_checkbox_unchecked_to_checked_animation = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_dialog_close_light = 2130837598;
+			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_group_collapse_00 = 2130837599;
+			public const int design_bottom_navigation_item_background = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_group_collapse_01 = 2130837600;
+			public const int design_fab_background = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_group_collapse_02 = 2130837601;
+			public const int design_ic_visibility = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_group_collapse_03 = 2130837602;
+			public const int design_ic_visibility_off = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_group_collapse_04 = 2130837603;
+			public const int design_password_eye = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_group_collapse_05 = 2130837604;
+			public const int design_snackbar_background = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_group_collapse_06 = 2130837605;
+			public const int dropdownbuttonimage = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_group_collapse_07 = 2130837606;
+			public const int GroupCollapse = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_group_collapse_08 = 2130837607;
+			public const int GroupExpander = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_group_collapse_09 = 2130837608;
+			public const int ic_audiotrack_dark = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_group_collapse_10 = 2130837609;
+			public const int ic_audiotrack_light = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_group_collapse_11 = 2130837610;
+			public const int ic_dialog_close_dark = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_group_collapse_12 = 2130837611;
+			public const int ic_dialog_close_light = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_group_collapse_13 = 2130837612;
+			public const int ic_group_collapse_00 = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_group_collapse_14 = 2130837613;
+			public const int ic_group_collapse_01 = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_group_collapse_15 = 2130837614;
+			public const int ic_group_collapse_02 = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_group_expand_00 = 2130837615;
+			public const int ic_group_collapse_03 = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_group_expand_01 = 2130837616;
+			public const int ic_group_collapse_04 = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_group_expand_02 = 2130837617;
+			public const int ic_group_collapse_05 = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_group_expand_03 = 2130837618;
+			public const int ic_group_collapse_06 = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_group_expand_04 = 2130837619;
+			public const int ic_group_collapse_07 = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_group_expand_05 = 2130837620;
+			public const int ic_group_collapse_08 = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_group_expand_06 = 2130837621;
+			public const int ic_group_collapse_09 = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_group_expand_07 = 2130837622;
+			public const int ic_group_collapse_10 = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_group_expand_08 = 2130837623;
+			public const int ic_group_collapse_11 = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int ic_group_expand_09 = 2130837624;
+			public const int ic_group_collapse_12 = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int ic_group_expand_10 = 2130837625;
+			public const int ic_group_collapse_13 = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int ic_group_expand_11 = 2130837626;
+			public const int ic_group_collapse_14 = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int ic_group_expand_12 = 2130837627;
+			public const int ic_group_collapse_15 = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int ic_group_expand_13 = 2130837628;
+			public const int ic_group_expand_00 = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int ic_group_expand_14 = 2130837629;
+			public const int ic_group_expand_01 = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int ic_group_expand_15 = 2130837630;
+			public const int ic_group_expand_02 = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int ic_media_pause_dark = 2130837631;
+			public const int ic_group_expand_03 = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int ic_media_pause_light = 2130837632;
+			public const int ic_group_expand_04 = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int ic_media_play_dark = 2130837633;
+			public const int ic_group_expand_05 = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int ic_media_play_light = 2130837634;
+			public const int ic_group_expand_06 = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int ic_media_stop_dark = 2130837635;
+			public const int ic_group_expand_07 = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int ic_media_stop_light = 2130837636;
+			public const int ic_group_expand_08 = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int ic_mr_button_connected_00_dark = 2130837637;
+			public const int ic_group_expand_09 = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int ic_mr_button_connected_00_light = 2130837638;
+			public const int ic_group_expand_10 = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int ic_mr_button_connected_01_dark = 2130837639;
+			public const int ic_group_expand_11 = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int ic_mr_button_connected_01_light = 2130837640;
+			public const int ic_group_expand_12 = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int ic_mr_button_connected_02_dark = 2130837641;
+			public const int ic_group_expand_13 = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int ic_mr_button_connected_02_light = 2130837642;
+			public const int ic_group_expand_14 = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int ic_mr_button_connected_03_dark = 2130837643;
+			public const int ic_group_expand_15 = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int ic_mr_button_connected_03_light = 2130837644;
+			public const int ic_media_pause_dark = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int ic_mr_button_connected_04_dark = 2130837645;
+			public const int ic_media_pause_light = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int ic_mr_button_connected_04_light = 2130837646;
+			public const int ic_media_play_dark = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int ic_mr_button_connected_05_dark = 2130837647;
+			public const int ic_media_play_light = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int ic_mr_button_connected_05_light = 2130837648;
+			public const int ic_media_stop_dark = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int ic_mr_button_connected_06_dark = 2130837649;
+			public const int ic_media_stop_light = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int ic_mr_button_connected_06_light = 2130837650;
+			public const int ic_mr_button_connected_00_dark = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int ic_mr_button_connected_07_dark = 2130837651;
+			public const int ic_mr_button_connected_00_light = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int ic_mr_button_connected_07_light = 2130837652;
+			public const int ic_mr_button_connected_01_dark = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int ic_mr_button_connected_08_dark = 2130837653;
+			public const int ic_mr_button_connected_01_light = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int ic_mr_button_connected_08_light = 2130837654;
+			public const int ic_mr_button_connected_02_dark = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int ic_mr_button_connected_09_dark = 2130837655;
+			public const int ic_mr_button_connected_02_light = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int ic_mr_button_connected_09_light = 2130837656;
+			public const int ic_mr_button_connected_03_dark = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int ic_mr_button_connected_10_dark = 2130837657;
+			public const int ic_mr_button_connected_03_light = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int ic_mr_button_connected_10_light = 2130837658;
+			public const int ic_mr_button_connected_04_dark = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int ic_mr_button_connected_11_dark = 2130837659;
+			public const int ic_mr_button_connected_04_light = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int ic_mr_button_connected_11_light = 2130837660;
+			public const int ic_mr_button_connected_05_dark = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int ic_mr_button_connected_12_dark = 2130837661;
+			public const int ic_mr_button_connected_05_light = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int ic_mr_button_connected_12_light = 2130837662;
+			public const int ic_mr_button_connected_06_dark = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int ic_mr_button_connected_13_dark = 2130837663;
+			public const int ic_mr_button_connected_06_light = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int ic_mr_button_connected_13_light = 2130837664;
+			public const int ic_mr_button_connected_07_dark = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int ic_mr_button_connected_14_dark = 2130837665;
+			public const int ic_mr_button_connected_07_light = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int ic_mr_button_connected_14_light = 2130837666;
+			public const int ic_mr_button_connected_08_dark = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int ic_mr_button_connected_15_dark = 2130837667;
+			public const int ic_mr_button_connected_08_light = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int ic_mr_button_connected_15_light = 2130837668;
+			public const int ic_mr_button_connected_09_dark = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int ic_mr_button_connected_16_dark = 2130837669;
+			public const int ic_mr_button_connected_09_light = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int ic_mr_button_connected_16_light = 2130837670;
+			public const int ic_mr_button_connected_10_dark = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int ic_mr_button_connected_17_dark = 2130837671;
+			public const int ic_mr_button_connected_10_light = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int ic_mr_button_connected_17_light = 2130837672;
+			public const int ic_mr_button_connected_11_dark = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int ic_mr_button_connected_18_dark = 2130837673;
+			public const int ic_mr_button_connected_11_light = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int ic_mr_button_connected_18_light = 2130837674;
+			public const int ic_mr_button_connected_12_dark = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int ic_mr_button_connected_19_dark = 2130837675;
+			public const int ic_mr_button_connected_12_light = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int ic_mr_button_connected_19_light = 2130837676;
+			public const int ic_mr_button_connected_13_dark = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int ic_mr_button_connected_20_dark = 2130837677;
+			public const int ic_mr_button_connected_13_light = 2130837677;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int ic_mr_button_connected_20_light = 2130837678;
+			public const int ic_mr_button_connected_14_dark = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int ic_mr_button_connected_21_dark = 2130837679;
+			public const int ic_mr_button_connected_14_light = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int ic_mr_button_connected_21_light = 2130837680;
+			public const int ic_mr_button_connected_15_dark = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int ic_mr_button_connected_22_dark = 2130837681;
+			public const int ic_mr_button_connected_15_light = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int ic_mr_button_connected_22_light = 2130837682;
+			public const int ic_mr_button_connected_16_dark = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int ic_mr_button_connected_23_dark = 2130837683;
+			public const int ic_mr_button_connected_16_light = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int ic_mr_button_connected_23_light = 2130837684;
+			public const int ic_mr_button_connected_17_dark = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int ic_mr_button_connected_24_dark = 2130837685;
+			public const int ic_mr_button_connected_17_light = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int ic_mr_button_connected_24_light = 2130837686;
+			public const int ic_mr_button_connected_18_dark = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int ic_mr_button_connected_25_dark = 2130837687;
+			public const int ic_mr_button_connected_18_light = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int ic_mr_button_connected_25_light = 2130837688;
+			public const int ic_mr_button_connected_19_dark = 2130837688;
 			
 			// aapt resource value: 0x7f0200b9
-			public const int ic_mr_button_connected_26_dark = 2130837689;
+			public const int ic_mr_button_connected_19_light = 2130837689;
 			
 			// aapt resource value: 0x7f0200ba
-			public const int ic_mr_button_connected_26_light = 2130837690;
+			public const int ic_mr_button_connected_20_dark = 2130837690;
 			
 			// aapt resource value: 0x7f0200bb
-			public const int ic_mr_button_connected_27_dark = 2130837691;
+			public const int ic_mr_button_connected_20_light = 2130837691;
 			
 			// aapt resource value: 0x7f0200bc
-			public const int ic_mr_button_connected_27_light = 2130837692;
+			public const int ic_mr_button_connected_21_dark = 2130837692;
 			
 			// aapt resource value: 0x7f0200bd
-			public const int ic_mr_button_connected_28_dark = 2130837693;
+			public const int ic_mr_button_connected_21_light = 2130837693;
 			
 			// aapt resource value: 0x7f0200be
-			public const int ic_mr_button_connected_28_light = 2130837694;
+			public const int ic_mr_button_connected_22_dark = 2130837694;
 			
 			// aapt resource value: 0x7f0200bf
-			public const int ic_mr_button_connected_29_dark = 2130837695;
+			public const int ic_mr_button_connected_22_light = 2130837695;
 			
 			// aapt resource value: 0x7f0200c0
-			public const int ic_mr_button_connected_29_light = 2130837696;
+			public const int ic_mr_button_connected_23_dark = 2130837696;
 			
 			// aapt resource value: 0x7f0200c1
-			public const int ic_mr_button_connected_30_dark = 2130837697;
+			public const int ic_mr_button_connected_23_light = 2130837697;
 			
 			// aapt resource value: 0x7f0200c2
-			public const int ic_mr_button_connected_30_light = 2130837698;
+			public const int ic_mr_button_connected_24_dark = 2130837698;
 			
 			// aapt resource value: 0x7f0200c3
-			public const int ic_mr_button_connecting_00_dark = 2130837699;
+			public const int ic_mr_button_connected_24_light = 2130837699;
 			
 			// aapt resource value: 0x7f0200c4
-			public const int ic_mr_button_connecting_00_light = 2130837700;
+			public const int ic_mr_button_connected_25_dark = 2130837700;
 			
 			// aapt resource value: 0x7f0200c5
-			public const int ic_mr_button_connecting_01_dark = 2130837701;
+			public const int ic_mr_button_connected_25_light = 2130837701;
 			
 			// aapt resource value: 0x7f0200c6
-			public const int ic_mr_button_connecting_01_light = 2130837702;
+			public const int ic_mr_button_connected_26_dark = 2130837702;
 			
 			// aapt resource value: 0x7f0200c7
-			public const int ic_mr_button_connecting_02_dark = 2130837703;
+			public const int ic_mr_button_connected_26_light = 2130837703;
 			
 			// aapt resource value: 0x7f0200c8
-			public const int ic_mr_button_connecting_02_light = 2130837704;
+			public const int ic_mr_button_connected_27_dark = 2130837704;
 			
 			// aapt resource value: 0x7f0200c9
-			public const int ic_mr_button_connecting_03_dark = 2130837705;
+			public const int ic_mr_button_connected_27_light = 2130837705;
 			
 			// aapt resource value: 0x7f0200ca
-			public const int ic_mr_button_connecting_03_light = 2130837706;
+			public const int ic_mr_button_connected_28_dark = 2130837706;
 			
 			// aapt resource value: 0x7f0200cb
-			public const int ic_mr_button_connecting_04_dark = 2130837707;
+			public const int ic_mr_button_connected_28_light = 2130837707;
 			
 			// aapt resource value: 0x7f0200cc
-			public const int ic_mr_button_connecting_04_light = 2130837708;
+			public const int ic_mr_button_connected_29_dark = 2130837708;
 			
 			// aapt resource value: 0x7f0200cd
-			public const int ic_mr_button_connecting_05_dark = 2130837709;
+			public const int ic_mr_button_connected_29_light = 2130837709;
 			
 			// aapt resource value: 0x7f0200ce
-			public const int ic_mr_button_connecting_05_light = 2130837710;
+			public const int ic_mr_button_connected_30_dark = 2130837710;
 			
 			// aapt resource value: 0x7f0200cf
-			public const int ic_mr_button_connecting_06_dark = 2130837711;
+			public const int ic_mr_button_connected_30_light = 2130837711;
 			
 			// aapt resource value: 0x7f0200d0
-			public const int ic_mr_button_connecting_06_light = 2130837712;
+			public const int ic_mr_button_connecting_00_dark = 2130837712;
 			
 			// aapt resource value: 0x7f0200d1
-			public const int ic_mr_button_connecting_07_dark = 2130837713;
+			public const int ic_mr_button_connecting_00_light = 2130837713;
 			
 			// aapt resource value: 0x7f0200d2
-			public const int ic_mr_button_connecting_07_light = 2130837714;
+			public const int ic_mr_button_connecting_01_dark = 2130837714;
 			
 			// aapt resource value: 0x7f0200d3
-			public const int ic_mr_button_connecting_08_dark = 2130837715;
+			public const int ic_mr_button_connecting_01_light = 2130837715;
 			
 			// aapt resource value: 0x7f0200d4
-			public const int ic_mr_button_connecting_08_light = 2130837716;
+			public const int ic_mr_button_connecting_02_dark = 2130837716;
 			
 			// aapt resource value: 0x7f0200d5
-			public const int ic_mr_button_connecting_09_dark = 2130837717;
+			public const int ic_mr_button_connecting_02_light = 2130837717;
 			
 			// aapt resource value: 0x7f0200d6
-			public const int ic_mr_button_connecting_09_light = 2130837718;
+			public const int ic_mr_button_connecting_03_dark = 2130837718;
 			
 			// aapt resource value: 0x7f0200d7
-			public const int ic_mr_button_connecting_10_dark = 2130837719;
+			public const int ic_mr_button_connecting_03_light = 2130837719;
 			
 			// aapt resource value: 0x7f0200d8
-			public const int ic_mr_button_connecting_10_light = 2130837720;
+			public const int ic_mr_button_connecting_04_dark = 2130837720;
 			
 			// aapt resource value: 0x7f0200d9
-			public const int ic_mr_button_connecting_11_dark = 2130837721;
+			public const int ic_mr_button_connecting_04_light = 2130837721;
 			
 			// aapt resource value: 0x7f0200da
-			public const int ic_mr_button_connecting_11_light = 2130837722;
+			public const int ic_mr_button_connecting_05_dark = 2130837722;
 			
 			// aapt resource value: 0x7f0200db
-			public const int ic_mr_button_connecting_12_dark = 2130837723;
+			public const int ic_mr_button_connecting_05_light = 2130837723;
 			
 			// aapt resource value: 0x7f0200dc
-			public const int ic_mr_button_connecting_12_light = 2130837724;
+			public const int ic_mr_button_connecting_06_dark = 2130837724;
 			
 			// aapt resource value: 0x7f0200dd
-			public const int ic_mr_button_connecting_13_dark = 2130837725;
+			public const int ic_mr_button_connecting_06_light = 2130837725;
 			
 			// aapt resource value: 0x7f0200de
-			public const int ic_mr_button_connecting_13_light = 2130837726;
+			public const int ic_mr_button_connecting_07_dark = 2130837726;
 			
 			// aapt resource value: 0x7f0200df
-			public const int ic_mr_button_connecting_14_dark = 2130837727;
+			public const int ic_mr_button_connecting_07_light = 2130837727;
 			
 			// aapt resource value: 0x7f0200e0
-			public const int ic_mr_button_connecting_14_light = 2130837728;
+			public const int ic_mr_button_connecting_08_dark = 2130837728;
 			
 			// aapt resource value: 0x7f0200e1
-			public const int ic_mr_button_connecting_15_dark = 2130837729;
+			public const int ic_mr_button_connecting_08_light = 2130837729;
 			
 			// aapt resource value: 0x7f0200e2
-			public const int ic_mr_button_connecting_15_light = 2130837730;
+			public const int ic_mr_button_connecting_09_dark = 2130837730;
 			
 			// aapt resource value: 0x7f0200e3
-			public const int ic_mr_button_connecting_16_dark = 2130837731;
+			public const int ic_mr_button_connecting_09_light = 2130837731;
 			
 			// aapt resource value: 0x7f0200e4
-			public const int ic_mr_button_connecting_16_light = 2130837732;
+			public const int ic_mr_button_connecting_10_dark = 2130837732;
 			
 			// aapt resource value: 0x7f0200e5
-			public const int ic_mr_button_connecting_17_dark = 2130837733;
+			public const int ic_mr_button_connecting_10_light = 2130837733;
 			
 			// aapt resource value: 0x7f0200e6
-			public const int ic_mr_button_connecting_17_light = 2130837734;
+			public const int ic_mr_button_connecting_11_dark = 2130837734;
 			
 			// aapt resource value: 0x7f0200e7
-			public const int ic_mr_button_connecting_18_dark = 2130837735;
+			public const int ic_mr_button_connecting_11_light = 2130837735;
 			
 			// aapt resource value: 0x7f0200e8
-			public const int ic_mr_button_connecting_18_light = 2130837736;
+			public const int ic_mr_button_connecting_12_dark = 2130837736;
 			
 			// aapt resource value: 0x7f0200e9
-			public const int ic_mr_button_connecting_19_dark = 2130837737;
+			public const int ic_mr_button_connecting_12_light = 2130837737;
 			
 			// aapt resource value: 0x7f0200ea
-			public const int ic_mr_button_connecting_19_light = 2130837738;
+			public const int ic_mr_button_connecting_13_dark = 2130837738;
 			
 			// aapt resource value: 0x7f0200eb
-			public const int ic_mr_button_connecting_20_dark = 2130837739;
+			public const int ic_mr_button_connecting_13_light = 2130837739;
 			
 			// aapt resource value: 0x7f0200ec
-			public const int ic_mr_button_connecting_20_light = 2130837740;
+			public const int ic_mr_button_connecting_14_dark = 2130837740;
 			
 			// aapt resource value: 0x7f0200ed
-			public const int ic_mr_button_connecting_21_dark = 2130837741;
+			public const int ic_mr_button_connecting_14_light = 2130837741;
 			
 			// aapt resource value: 0x7f0200ee
-			public const int ic_mr_button_connecting_21_light = 2130837742;
+			public const int ic_mr_button_connecting_15_dark = 2130837742;
 			
 			// aapt resource value: 0x7f0200ef
-			public const int ic_mr_button_connecting_22_dark = 2130837743;
+			public const int ic_mr_button_connecting_15_light = 2130837743;
 			
 			// aapt resource value: 0x7f0200f0
-			public const int ic_mr_button_connecting_22_light = 2130837744;
+			public const int ic_mr_button_connecting_16_dark = 2130837744;
 			
 			// aapt resource value: 0x7f0200f1
-			public const int ic_mr_button_connecting_23_dark = 2130837745;
+			public const int ic_mr_button_connecting_16_light = 2130837745;
 			
 			// aapt resource value: 0x7f0200f2
-			public const int ic_mr_button_connecting_23_light = 2130837746;
+			public const int ic_mr_button_connecting_17_dark = 2130837746;
 			
 			// aapt resource value: 0x7f0200f3
-			public const int ic_mr_button_connecting_24_dark = 2130837747;
+			public const int ic_mr_button_connecting_17_light = 2130837747;
 			
 			// aapt resource value: 0x7f0200f4
-			public const int ic_mr_button_connecting_24_light = 2130837748;
+			public const int ic_mr_button_connecting_18_dark = 2130837748;
 			
 			// aapt resource value: 0x7f0200f5
-			public const int ic_mr_button_connecting_25_dark = 2130837749;
+			public const int ic_mr_button_connecting_18_light = 2130837749;
 			
 			// aapt resource value: 0x7f0200f6
-			public const int ic_mr_button_connecting_25_light = 2130837750;
+			public const int ic_mr_button_connecting_19_dark = 2130837750;
 			
 			// aapt resource value: 0x7f0200f7
-			public const int ic_mr_button_connecting_26_dark = 2130837751;
+			public const int ic_mr_button_connecting_19_light = 2130837751;
 			
 			// aapt resource value: 0x7f0200f8
-			public const int ic_mr_button_connecting_26_light = 2130837752;
+			public const int ic_mr_button_connecting_20_dark = 2130837752;
 			
 			// aapt resource value: 0x7f0200f9
-			public const int ic_mr_button_connecting_27_dark = 2130837753;
+			public const int ic_mr_button_connecting_20_light = 2130837753;
 			
 			// aapt resource value: 0x7f0200fa
-			public const int ic_mr_button_connecting_27_light = 2130837754;
+			public const int ic_mr_button_connecting_21_dark = 2130837754;
 			
 			// aapt resource value: 0x7f0200fb
-			public const int ic_mr_button_connecting_28_dark = 2130837755;
+			public const int ic_mr_button_connecting_21_light = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int ic_mr_button_connecting_28_light = 2130837756;
+			public const int ic_mr_button_connecting_22_dark = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int ic_mr_button_connecting_29_dark = 2130837757;
+			public const int ic_mr_button_connecting_22_light = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int ic_mr_button_connecting_29_light = 2130837758;
+			public const int ic_mr_button_connecting_23_dark = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int ic_mr_button_connecting_30_dark = 2130837759;
+			public const int ic_mr_button_connecting_23_light = 2130837759;
 			
 			// aapt resource value: 0x7f020100
-			public const int ic_mr_button_connecting_30_light = 2130837760;
+			public const int ic_mr_button_connecting_24_dark = 2130837760;
 			
 			// aapt resource value: 0x7f020101
-			public const int ic_mr_button_disabled_dark = 2130837761;
+			public const int ic_mr_button_connecting_24_light = 2130837761;
 			
 			// aapt resource value: 0x7f020102
-			public const int ic_mr_button_disabled_light = 2130837762;
+			public const int ic_mr_button_connecting_25_dark = 2130837762;
 			
 			// aapt resource value: 0x7f020103
-			public const int ic_mr_button_disconnected_dark = 2130837763;
+			public const int ic_mr_button_connecting_25_light = 2130837763;
 			
 			// aapt resource value: 0x7f020104
-			public const int ic_mr_button_disconnected_light = 2130837764;
+			public const int ic_mr_button_connecting_26_dark = 2130837764;
 			
 			// aapt resource value: 0x7f020105
-			public const int ic_mr_button_grey = 2130837765;
+			public const int ic_mr_button_connecting_26_light = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int ic_vol_type_speaker_dark = 2130837766;
+			public const int ic_mr_button_connecting_27_dark = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int ic_vol_type_speaker_group_dark = 2130837767;
+			public const int ic_mr_button_connecting_27_light = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int ic_vol_type_speaker_group_light = 2130837768;
+			public const int ic_mr_button_connecting_28_dark = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int ic_vol_type_speaker_light = 2130837769;
+			public const int ic_mr_button_connecting_28_light = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int ic_vol_type_tv_dark = 2130837770;
+			public const int ic_mr_button_connecting_29_dark = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int ic_vol_type_tv_light = 2130837771;
+			public const int ic_mr_button_connecting_29_light = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int mr_button_connected_dark = 2130837772;
+			public const int ic_mr_button_connecting_30_dark = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int mr_button_connected_light = 2130837773;
+			public const int ic_mr_button_connecting_30_light = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int mr_button_connecting_dark = 2130837774;
+			public const int ic_mr_button_disabled_dark = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int mr_button_connecting_light = 2130837775;
+			public const int ic_mr_button_disabled_light = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int mr_button_dark = 2130837776;
+			public const int ic_mr_button_disconnected_dark = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int mr_button_light = 2130837777;
+			public const int ic_mr_button_disconnected_light = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int mr_dialog_close_dark = 2130837778;
+			public const int ic_mr_button_grey = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int mr_dialog_close_light = 2130837779;
+			public const int ic_vol_type_speaker_dark = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int mr_dialog_material_background_dark = 2130837780;
+			public const int ic_vol_type_speaker_group_dark = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int mr_dialog_material_background_light = 2130837781;
+			public const int ic_vol_type_speaker_group_light = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int mr_group_collapse = 2130837782;
+			public const int ic_vol_type_speaker_light = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int mr_group_expand = 2130837783;
+			public const int ic_vol_type_tv_dark = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int mr_media_pause_dark = 2130837784;
+			public const int ic_vol_type_tv_light = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int mr_media_pause_light = 2130837785;
+			public const int Icon = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int mr_media_play_dark = 2130837786;
+			public const int inputlayout_togglecollapseicon = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int mr_media_play_light = 2130837787;
+			public const int inputlayout_togglevisibleicon = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int mr_media_stop_dark = 2130837788;
+			public const int mr_button_connected_dark = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int mr_media_stop_light = 2130837789;
+			public const int mr_button_connected_light = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int mr_vol_type_audiotrack_dark = 2130837790;
+			public const int mr_button_connecting_dark = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int mr_vol_type_audiotrack_light = 2130837791;
+			public const int mr_button_connecting_light = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int navigation_empty_icon = 2130837792;
+			public const int mr_button_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int notification_action_background = 2130837793;
+			public const int mr_button_light = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int notification_bg = 2130837794;
+			public const int mr_dialog_close_dark = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int notification_bg_low = 2130837795;
+			public const int mr_dialog_close_light = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int notification_bg_low_normal = 2130837796;
+			public const int mr_dialog_material_background_dark = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int notification_bg_low_pressed = 2130837797;
+			public const int mr_dialog_material_background_light = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int notification_bg_normal = 2130837798;
+			public const int mr_group_collapse = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int notification_bg_normal_pressed = 2130837799;
+			public const int mr_group_expand = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int notification_icon_background = 2130837800;
-			
-			// aapt resource value: 0x7f02012d
-			public const int notification_template_icon_bg = 2130837805;
-			
-			// aapt resource value: 0x7f02012e
-			public const int notification_template_icon_low_bg = 2130837806;
+			public const int mr_media_pause_dark = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int notification_tile_bg = 2130837801;
+			public const int mr_media_pause_light = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int notify_panel_notification_icon_bg = 2130837802;
+			public const int mr_media_play_dark = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int tooltip_frame_dark = 2130837803;
+			public const int mr_media_play_light = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int tooltip_frame_light = 2130837804;
+			public const int mr_media_stop_dark = 2130837804;
+			
+			// aapt resource value: 0x7f02012d
+			public const int mr_media_stop_light = 2130837805;
+			
+			// aapt resource value: 0x7f02012e
+			public const int mr_vol_type_audiotrack_dark = 2130837806;
+			
+			// aapt resource value: 0x7f02012f
+			public const int mr_vol_type_audiotrack_light = 2130837807;
+			
+			// aapt resource value: 0x7f020130
+			public const int navigation_empty_icon = 2130837808;
+			
+			// aapt resource value: 0x7f020131
+			public const int notification_action_background = 2130837809;
+			
+			// aapt resource value: 0x7f020132
+			public const int notification_bg = 2130837810;
+			
+			// aapt resource value: 0x7f020133
+			public const int notification_bg_low = 2130837811;
+			
+			// aapt resource value: 0x7f020134
+			public const int notification_bg_low_normal = 2130837812;
+			
+			// aapt resource value: 0x7f020135
+			public const int notification_bg_low_pressed = 2130837813;
+			
+			// aapt resource value: 0x7f020136
+			public const int notification_bg_normal = 2130837814;
+			
+			// aapt resource value: 0x7f020137
+			public const int notification_bg_normal_pressed = 2130837815;
+			
+			// aapt resource value: 0x7f020138
+			public const int notification_icon_background = 2130837816;
+			
+			// aapt resource value: 0x7f02013d
+			public const int notification_template_icon_bg = 2130837821;
+			
+			// aapt resource value: 0x7f02013e
+			public const int notification_template_icon_low_bg = 2130837822;
+			
+			// aapt resource value: 0x7f020139
+			public const int notification_tile_bg = 2130837817;
+			
+			// aapt resource value: 0x7f02013a
+			public const int notify_panel_notification_icon_bg = 2130837818;
+			
+			// aapt resource value: 0x7f02013b
+			public const int tooltip_frame_dark = 2130837819;
+			
+			// aapt resource value: 0x7f02013c
+			public const int tooltip_frame_light = 2130837820;
 			
 			static Drawable()
 			{
@@ -3036,8 +3543,17 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0033
 			public const int CTRL = 2131361843;
 			
+			// aapt resource value: 0x7f0a005a
+			public const int Default = 2131361882;
+			
+			// aapt resource value: 0x7f0a005b
+			public const int Dialog = 2131361883;
+			
 			// aapt resource value: 0x7f0a0034
 			public const int FUNCTION = 2131361844;
+			
+			// aapt resource value: 0x7f0a0098
+			public const int Itemname = 2131361944;
 			
 			// aapt resource value: 0x7f0a0035
 			public const int META = 2131361845;
@@ -3048,41 +3564,41 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0037
 			public const int SYM = 2131361847;
 			
-			// aapt resource value: 0x7f0a00b6
-			public const int action0 = 2131361974;
+			// aapt resource value: 0x7f0a00c4
+			public const int action0 = 2131361988;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int action_bar = 2131361916;
+			// aapt resource value: 0x7f0a0089
+			public const int action_bar = 2131361929;
 			
 			// aapt resource value: 0x7f0a0001
 			public const int action_bar_activity_content = 2131361793;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int action_bar_container = 2131361915;
+			// aapt resource value: 0x7f0a0088
+			public const int action_bar_container = 2131361928;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int action_bar_root = 2131361911;
+			// aapt resource value: 0x7f0a0084
+			public const int action_bar_root = 2131361924;
 			
 			// aapt resource value: 0x7f0a0002
 			public const int action_bar_spinner = 2131361794;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int action_bar_subtitle = 2131361883;
+			// aapt resource value: 0x7f0a0069
+			public const int action_bar_subtitle = 2131361897;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int action_bar_title = 2131361882;
+			// aapt resource value: 0x7f0a0068
+			public const int action_bar_title = 2131361896;
 			
-			// aapt resource value: 0x7f0a00b3
-			public const int action_container = 2131361971;
+			// aapt resource value: 0x7f0a00c1
+			public const int action_container = 2131361985;
 			
-			// aapt resource value: 0x7f0a007d
-			public const int action_context_bar = 2131361917;
+			// aapt resource value: 0x7f0a008a
+			public const int action_context_bar = 2131361930;
 			
-			// aapt resource value: 0x7f0a00ba
-			public const int action_divider = 2131361978;
+			// aapt resource value: 0x7f0a00c8
+			public const int action_divider = 2131361992;
 			
-			// aapt resource value: 0x7f0a00b4
-			public const int action_image = 2131361972;
+			// aapt resource value: 0x7f0a00c2
+			public const int action_image = 2131361986;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -3090,29 +3606,29 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0004
 			public const int action_menu_presenter = 2131361796;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int action_mode_bar = 2131361913;
+			// aapt resource value: 0x7f0a0086
+			public const int action_mode_bar = 2131361926;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int action_mode_bar_stub = 2131361912;
+			// aapt resource value: 0x7f0a0085
+			public const int action_mode_bar_stub = 2131361925;
 			
-			// aapt resource value: 0x7f0a005c
-			public const int action_mode_close_button = 2131361884;
-			
-			// aapt resource value: 0x7f0a00b5
-			public const int action_text = 2131361973;
+			// aapt resource value: 0x7f0a006a
+			public const int action_mode_close_button = 2131361898;
 			
 			// aapt resource value: 0x7f0a00c3
-			public const int actions = 2131361987;
+			public const int action_text = 2131361987;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int activity_chooser_view_content = 2131361885;
+			// aapt resource value: 0x7f0a00d1
+			public const int actions = 2131362001;
+			
+			// aapt resource value: 0x7f0a006b
+			public const int activity_chooser_view_content = 2131361899;
 			
 			// aapt resource value: 0x7f0a0027
 			public const int add = 2131361831;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int alertTitle = 2131361904;
+			// aapt resource value: 0x7f0a007d
+			public const int alertTitle = 2131361917;
 			
 			// aapt resource value: 0x7f0a0052
 			public const int all = 2131361874;
@@ -3132,14 +3648,17 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0057
 			public const int blocking = 2131361879;
 			
+			// aapt resource value: 0x7f0a0065
+			public const int border = 2131361893;
+			
 			// aapt resource value: 0x7f0a003d
 			public const int bottom = 2131361853;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int buttonPanel = 2131361891;
+			// aapt resource value: 0x7f0a0070
+			public const int buttonPanel = 2131361904;
 			
-			// aapt resource value: 0x7f0a00b7
-			public const int cancel_action = 2131361975;
+			// aapt resource value: 0x7f0a00c5
+			public const int cancel_action = 2131361989;
 			
 			// aapt resource value: 0x7f0a0045
 			public const int center = 2131361861;
@@ -3150,11 +3669,14 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0047
 			public const int center_vertical = 2131361863;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int checkbox = 2131361907;
+			// aapt resource value: 0x7f0a0080
+			public const int checkbox = 2131361920;
 			
-			// aapt resource value: 0x7f0a00bf
-			public const int chronometer = 2131361983;
+			// aapt resource value: 0x7f0a0062
+			public const int @checked = 2131361890;
+			
+			// aapt resource value: 0x7f0a00cd
+			public const int chronometer = 2131361997;
 			
 			// aapt resource value: 0x7f0a004e
 			public const int clip_horizontal = 2131361870;
@@ -3165,53 +3687,62 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0039
 			public const int collapseActionView = 2131361849;
 			
-			// aapt resource value: 0x7f0a008d
-			public const int container = 2131361933;
+			// aapt resource value: 0x7f0a005e
+			public const int compute = 2131361886;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int contentPanel = 2131361894;
+			// aapt resource value: 0x7f0a009b
+			public const int container = 2131361947;
 			
-			// aapt resource value: 0x7f0a008e
-			public const int coordinator = 2131361934;
+			// aapt resource value: 0x7f0a0073
+			public const int contentPanel = 2131361907;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int custom = 2131361901;
-			
-			// aapt resource value: 0x7f0a006c
-			public const int customPanel = 2131361900;
+			// aapt resource value: 0x7f0a009c
+			public const int coordinator = 2131361948;
 			
 			// aapt resource value: 0x7f0a007a
-			public const int decor_content_parent = 2131361914;
+			public const int custom = 2131361914;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int default_activity_button = 2131361888;
+			// aapt resource value: 0x7f0a0079
+			public const int customPanel = 2131361913;
 			
-			// aapt resource value: 0x7f0a0090
-			public const int design_bottom_sheet = 2131361936;
+			// aapt resource value: 0x7f0a005c
+			public const int decimalMode = 2131361884;
 			
-			// aapt resource value: 0x7f0a0097
-			public const int design_menu_item_action_area = 2131361943;
+			// aapt resource value: 0x7f0a0087
+			public const int decor_content_parent = 2131361927;
 			
-			// aapt resource value: 0x7f0a0096
-			public const int design_menu_item_action_area_stub = 2131361942;
+			// aapt resource value: 0x7f0a006d
+			public const int default_activity_button = 2131361901;
 			
-			// aapt resource value: 0x7f0a0095
-			public const int design_menu_item_text = 2131361941;
+			// aapt resource value: 0x7f0a009e
+			public const int design_bottom_sheet = 2131361950;
 			
-			// aapt resource value: 0x7f0a0094
-			public const int design_navigation_view = 2131361940;
+			// aapt resource value: 0x7f0a00a5
+			public const int design_menu_item_action_area = 2131361957;
+			
+			// aapt resource value: 0x7f0a00a4
+			public const int design_menu_item_action_area_stub = 2131361956;
+			
+			// aapt resource value: 0x7f0a00a3
+			public const int design_menu_item_text = 2131361955;
+			
+			// aapt resource value: 0x7f0a00a2
+			public const int design_navigation_view = 2131361954;
 			
 			// aapt resource value: 0x7f0a0020
 			public const int disableHome = 2131361824;
 			
-			// aapt resource value: 0x7f0a007e
-			public const int edit_query = 2131361918;
+			// aapt resource value: 0x7f0a005d
+			public const int doubleMode = 2131361885;
+			
+			// aapt resource value: 0x7f0a008b
+			public const int edit_query = 2131361931;
 			
 			// aapt resource value: 0x7f0a0030
 			public const int end = 2131361840;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int end_padder = 2131361989;
+			// aapt resource value: 0x7f0a00d3
+			public const int end_padder = 2131362003;
 			
 			// aapt resource value: 0x7f0a003f
 			public const int enterAlways = 2131361855;
@@ -3222,11 +3753,11 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0041
 			public const int exitUntilCollapsed = 2131361857;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int expand_activities_button = 2131361886;
+			// aapt resource value: 0x7f0a006c
+			public const int expand_activities_button = 2131361900;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int expanded_menu = 2131361906;
+			// aapt resource value: 0x7f0a007f
+			public const int expanded_menu = 2131361919;
 			
 			// aapt resource value: 0x7f0a0050
 			public const int fill = 2131361872;
@@ -3252,20 +3783,26 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0021
 			public const int homeAsUp = 2131361825;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int icon = 2131361890;
+			// aapt resource value: 0x7f0a006f
+			public const int icon = 2131361903;
 			
-			// aapt resource value: 0x7f0a00c4
-			public const int icon_group = 2131361988;
+			// aapt resource value: 0x7f0a00d2
+			public const int icon_group = 2131362002;
 			
 			// aapt resource value: 0x7f0a003a
 			public const int ifRoom = 2131361850;
 			
-			// aapt resource value: 0x7f0a005f
-			public const int image = 2131361887;
+			// aapt resource value: 0x7f0a0066
+			public const int image = 2131361894;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int info = 2131361984;
+			// aapt resource value: 0x7f0a0067
+			public const int imagewithtext = 2131361895;
+			
+			// aapt resource value: 0x7f0a0063
+			public const int indeterminate = 2131361891;
+			
+			// aapt resource value: 0x7f0a00ce
+			public const int info = 2131361998;
 			
 			// aapt resource value: 0x7f0a0059
 			public const int italic = 2131361881;
@@ -3273,8 +3810,8 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0000
 			public const int item_touch_helper_previous_elevation = 2131361792;
 			
-			// aapt resource value: 0x7f0a008c
-			public const int largeLabel = 2131361932;
+			// aapt resource value: 0x7f0a009a
+			public const int largeLabel = 2131361946;
 			
 			// aapt resource value: 0x7f0a0049
 			public const int left = 2131361865;
@@ -3288,17 +3825,17 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a001d
 			public const int listMode = 2131361821;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int list_item = 2131361889;
+			// aapt resource value: 0x7f0a006e
+			public const int list_item = 2131361902;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int masked = 2131361994;
+			// aapt resource value: 0x7f0a00d8
+			public const int masked = 2131362008;
 			
-			// aapt resource value: 0x7f0a00b9
-			public const int media_actions = 2131361977;
+			// aapt resource value: 0x7f0a00c7
+			public const int media_actions = 2131361991;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int message = 2131361992;
+			// aapt resource value: 0x7f0a00d6
+			public const int message = 2131362006;
 			
 			// aapt resource value: 0x7f0a0031
 			public const int middle = 2131361841;
@@ -3306,86 +3843,86 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0053
 			public const int mini = 2131361875;
 			
-			// aapt resource value: 0x7f0a00a5
-			public const int mr_art = 2131361957;
-			
-			// aapt resource value: 0x7f0a009a
-			public const int mr_chooser_list = 2131361946;
-			
-			// aapt resource value: 0x7f0a009d
-			public const int mr_chooser_route_desc = 2131361949;
-			
-			// aapt resource value: 0x7f0a009b
-			public const int mr_chooser_route_icon = 2131361947;
-			
-			// aapt resource value: 0x7f0a009c
-			public const int mr_chooser_route_name = 2131361948;
-			
-			// aapt resource value: 0x7f0a0099
-			public const int mr_chooser_title = 2131361945;
-			
-			// aapt resource value: 0x7f0a00a2
-			public const int mr_close = 2131361954;
+			// aapt resource value: 0x7f0a00b3
+			public const int mr_art = 2131361971;
 			
 			// aapt resource value: 0x7f0a00a8
-			public const int mr_control_divider = 2131361960;
+			public const int mr_chooser_list = 2131361960;
 			
-			// aapt resource value: 0x7f0a00ae
-			public const int mr_control_playback_ctrl = 2131361966;
-			
-			// aapt resource value: 0x7f0a00b1
-			public const int mr_control_subtitle = 2131361969;
-			
-			// aapt resource value: 0x7f0a00b0
-			public const int mr_control_title = 2131361968;
-			
-			// aapt resource value: 0x7f0a00af
-			public const int mr_control_title_container = 2131361967;
-			
-			// aapt resource value: 0x7f0a00a3
-			public const int mr_custom_control = 2131361955;
-			
-			// aapt resource value: 0x7f0a00a4
-			public const int mr_default_control = 2131361956;
-			
-			// aapt resource value: 0x7f0a009f
-			public const int mr_dialog_area = 2131361951;
-			
-			// aapt resource value: 0x7f0a009e
-			public const int mr_expandable_area = 2131361950;
-			
-			// aapt resource value: 0x7f0a00b2
-			public const int mr_group_expand_collapse = 2131361970;
-			
-			// aapt resource value: 0x7f0a00a6
-			public const int mr_media_main_control = 2131361958;
-			
-			// aapt resource value: 0x7f0a00a1
-			public const int mr_name = 2131361953;
-			
-			// aapt resource value: 0x7f0a00a7
-			public const int mr_playback_control = 2131361959;
-			
-			// aapt resource value: 0x7f0a00a0
-			public const int mr_title_bar = 2131361952;
+			// aapt resource value: 0x7f0a00ab
+			public const int mr_chooser_route_desc = 2131361963;
 			
 			// aapt resource value: 0x7f0a00a9
-			public const int mr_volume_control = 2131361961;
+			public const int mr_chooser_route_icon = 2131361961;
 			
 			// aapt resource value: 0x7f0a00aa
-			public const int mr_volume_group_list = 2131361962;
+			public const int mr_chooser_route_name = 2131361962;
 			
-			// aapt resource value: 0x7f0a00ac
-			public const int mr_volume_item_icon = 2131361964;
+			// aapt resource value: 0x7f0a00a7
+			public const int mr_chooser_title = 2131361959;
+			
+			// aapt resource value: 0x7f0a00b0
+			public const int mr_close = 2131361968;
+			
+			// aapt resource value: 0x7f0a00b6
+			public const int mr_control_divider = 2131361974;
+			
+			// aapt resource value: 0x7f0a00bc
+			public const int mr_control_playback_ctrl = 2131361980;
+			
+			// aapt resource value: 0x7f0a00bf
+			public const int mr_control_subtitle = 2131361983;
+			
+			// aapt resource value: 0x7f0a00be
+			public const int mr_control_title = 2131361982;
+			
+			// aapt resource value: 0x7f0a00bd
+			public const int mr_control_title_container = 2131361981;
+			
+			// aapt resource value: 0x7f0a00b1
+			public const int mr_custom_control = 2131361969;
+			
+			// aapt resource value: 0x7f0a00b2
+			public const int mr_default_control = 2131361970;
 			
 			// aapt resource value: 0x7f0a00ad
-			public const int mr_volume_slider = 2131361965;
+			public const int mr_dialog_area = 2131361965;
+			
+			// aapt resource value: 0x7f0a00ac
+			public const int mr_expandable_area = 2131361964;
+			
+			// aapt resource value: 0x7f0a00c0
+			public const int mr_group_expand_collapse = 2131361984;
+			
+			// aapt resource value: 0x7f0a00b4
+			public const int mr_media_main_control = 2131361972;
+			
+			// aapt resource value: 0x7f0a00af
+			public const int mr_name = 2131361967;
+			
+			// aapt resource value: 0x7f0a00b5
+			public const int mr_playback_control = 2131361973;
+			
+			// aapt resource value: 0x7f0a00ae
+			public const int mr_title_bar = 2131361966;
+			
+			// aapt resource value: 0x7f0a00b7
+			public const int mr_volume_control = 2131361975;
+			
+			// aapt resource value: 0x7f0a00b8
+			public const int mr_volume_group_list = 2131361976;
+			
+			// aapt resource value: 0x7f0a00ba
+			public const int mr_volume_item_icon = 2131361978;
+			
+			// aapt resource value: 0x7f0a00bb
+			public const int mr_volume_slider = 2131361979;
 			
 			// aapt resource value: 0x7f0a0028
 			public const int multiply = 2131361832;
 			
-			// aapt resource value: 0x7f0a0093
-			public const int navigation_header_container = 2131361939;
+			// aapt resource value: 0x7f0a00a1
+			public const int navigation_header_container = 2131361953;
 			
 			// aapt resource value: 0x7f0a003b
 			public const int never = 2131361851;
@@ -3396,20 +3933,26 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a001e
 			public const int normal = 2131361822;
 			
-			// aapt resource value: 0x7f0a00c2
-			public const int notification_background = 2131361986;
+			// aapt resource value: 0x7f0a00d0
+			public const int notification_background = 2131362000;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int notification_main_column = 2131361980;
+			// aapt resource value: 0x7f0a00ca
+			public const int notification_main_column = 2131361994;
 			
-			// aapt resource value: 0x7f0a00bb
-			public const int notification_main_column_container = 2131361979;
+			// aapt resource value: 0x7f0a00c9
+			public const int notification_main_column_container = 2131361993;
+			
+			// aapt resource value: 0x7f0a0060
+			public const int onKeyFocus = 2131361888;
+			
+			// aapt resource value: 0x7f0a0061
+			public const int onLostFocus = 2131361889;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int parallax = 2131361868;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int parentPanel = 2131361893;
+			// aapt resource value: 0x7f0a0072
+			public const int parentPanel = 2131361906;
 			
 			// aapt resource value: 0x7f0a000b
 			public const int parent_matrix = 2131361803;
@@ -3423,17 +3966,17 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0007
 			public const int progress_horizontal = 2131361799;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int radio = 2131361909;
+			// aapt resource value: 0x7f0a0082
+			public const int radio = 2131361922;
 			
 			// aapt resource value: 0x7f0a004a
 			public const int right = 2131361866;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int right_icon = 2131361985;
+			// aapt resource value: 0x7f0a00cf
+			public const int right_icon = 2131361999;
 			
-			// aapt resource value: 0x7f0a00bd
-			public const int right_side = 2131361981;
+			// aapt resource value: 0x7f0a00cb
+			public const int right_side = 2131361995;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -3450,53 +3993,53 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0042
 			public const int scroll = 2131361858;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int scrollIndicatorDown = 2131361899;
+			// aapt resource value: 0x7f0a0078
+			public const int scrollIndicatorDown = 2131361912;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int scrollIndicatorUp = 2131361895;
+			// aapt resource value: 0x7f0a0074
+			public const int scrollIndicatorUp = 2131361908;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int scrollView = 2131361896;
+			// aapt resource value: 0x7f0a0075
+			public const int scrollView = 2131361909;
 			
 			// aapt resource value: 0x7f0a0055
 			public const int scrollable = 2131361877;
 			
-			// aapt resource value: 0x7f0a0080
-			public const int search_badge = 2131361920;
+			// aapt resource value: 0x7f0a008d
+			public const int search_badge = 2131361933;
 			
-			// aapt resource value: 0x7f0a007f
-			public const int search_bar = 2131361919;
+			// aapt resource value: 0x7f0a008c
+			public const int search_bar = 2131361932;
+			
+			// aapt resource value: 0x7f0a008e
+			public const int search_button = 2131361934;
+			
+			// aapt resource value: 0x7f0a0093
+			public const int search_close_btn = 2131361939;
+			
+			// aapt resource value: 0x7f0a008f
+			public const int search_edit_frame = 2131361935;
+			
+			// aapt resource value: 0x7f0a0095
+			public const int search_go_btn = 2131361941;
+			
+			// aapt resource value: 0x7f0a0090
+			public const int search_mag_icon = 2131361936;
+			
+			// aapt resource value: 0x7f0a0091
+			public const int search_plate = 2131361937;
+			
+			// aapt resource value: 0x7f0a0092
+			public const int search_src_text = 2131361938;
+			
+			// aapt resource value: 0x7f0a0096
+			public const int search_voice_btn = 2131361942;
+			
+			// aapt resource value: 0x7f0a0097
+			public const int select_dialog_listview = 2131361943;
 			
 			// aapt resource value: 0x7f0a0081
-			public const int search_button = 2131361921;
-			
-			// aapt resource value: 0x7f0a0086
-			public const int search_close_btn = 2131361926;
-			
-			// aapt resource value: 0x7f0a0082
-			public const int search_edit_frame = 2131361922;
-			
-			// aapt resource value: 0x7f0a0088
-			public const int search_go_btn = 2131361928;
-			
-			// aapt resource value: 0x7f0a0083
-			public const int search_mag_icon = 2131361923;
-			
-			// aapt resource value: 0x7f0a0084
-			public const int search_plate = 2131361924;
-			
-			// aapt resource value: 0x7f0a0085
-			public const int search_src_text = 2131361925;
-			
-			// aapt resource value: 0x7f0a0089
-			public const int search_voice_btn = 2131361929;
-			
-			// aapt resource value: 0x7f0a008a
-			public const int select_dialog_listview = 2131361930;
-			
-			// aapt resource value: 0x7f0a0074
-			public const int shortcut = 2131361908;
+			public const int shortcut = 2131361921;
 			
 			// aapt resource value: 0x7f0a0023
 			public const int showCustom = 2131361827;
@@ -3507,23 +4050,23 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0025
 			public const int showTitle = 2131361829;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int sliding_tabs = 2131361990;
+			// aapt resource value: 0x7f0a00d4
+			public const int sliding_tabs = 2131362004;
 			
-			// aapt resource value: 0x7f0a008b
-			public const int smallLabel = 2131361931;
+			// aapt resource value: 0x7f0a0099
+			public const int smallLabel = 2131361945;
 			
-			// aapt resource value: 0x7f0a0092
-			public const int snackbar_action = 2131361938;
+			// aapt resource value: 0x7f0a00a0
+			public const int snackbar_action = 2131361952;
 			
-			// aapt resource value: 0x7f0a0091
-			public const int snackbar_text = 2131361937;
+			// aapt resource value: 0x7f0a009f
+			public const int snackbar_text = 2131361951;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int snap = 2131361859;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int spacer = 2131361892;
+			// aapt resource value: 0x7f0a0071
+			public const int spacer = 2131361905;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int split_action_bar = 2131361800;
@@ -3540,14 +4083,14 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a004b
 			public const int start = 2131361867;
 			
-			// aapt resource value: 0x7f0a00b8
-			public const int status_bar_latest_event_content = 2131361976;
+			// aapt resource value: 0x7f0a00c6
+			public const int status_bar_latest_event_content = 2131361990;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int submenuarrow = 2131361910;
+			// aapt resource value: 0x7f0a0083
+			public const int submenuarrow = 2131361923;
 			
-			// aapt resource value: 0x7f0a0087
-			public const int submit_area = 2131361927;
+			// aapt resource value: 0x7f0a0094
+			public const int submit_area = 2131361940;
 			
 			// aapt resource value: 0x7f0a001f
 			public const int tabMode = 2131361823;
@@ -3561,14 +4104,14 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a001b
 			public const int text2 = 2131361819;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int textSpacerNoButtons = 2131361898;
+			// aapt resource value: 0x7f0a0077
+			public const int textSpacerNoButtons = 2131361911;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int textSpacerNoTitle = 2131361897;
+			// aapt resource value: 0x7f0a0076
+			public const int textSpacerNoTitle = 2131361910;
 			
-			// aapt resource value: 0x7f0a0098
-			public const int text_input_password_toggle = 2131361944;
+			// aapt resource value: 0x7f0a00a6
+			public const int text_input_password_toggle = 2131361958;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int textinput_counter = 2131361812;
@@ -3576,29 +4119,29 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0015
 			public const int textinput_error = 2131361813;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int time = 2131361982;
+			// aapt resource value: 0x7f0a00cc
+			public const int time = 2131361996;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int title = 2131361820;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int titleDividerNoCustom = 2131361905;
+			// aapt resource value: 0x7f0a007e
+			public const int titleDividerNoCustom = 2131361918;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int title_template = 2131361903;
+			// aapt resource value: 0x7f0a007c
+			public const int title_template = 2131361916;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int toolbar = 2131361991;
+			// aapt resource value: 0x7f0a00d5
+			public const int toolbar = 2131362005;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int top = 2131361854;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int topPanel = 2131361902;
+			// aapt resource value: 0x7f0a007b
+			public const int topPanel = 2131361915;
 			
-			// aapt resource value: 0x7f0a008f
-			public const int touch_outside = 2131361935;
+			// aapt resource value: 0x7f0a009d
+			public const int touch_outside = 2131361949;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int transition_current_scene = 2131361807;
@@ -3615,6 +4158,9 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0013
 			public const int transition_transform = 2131361811;
 			
+			// aapt resource value: 0x7f0a0064
+			public const int @unchecked = 2131361892;
+			
 			// aapt resource value: 0x7f0a002d
 			public const int uniform = 2131361837;
 			
@@ -3624,14 +4170,17 @@ namespace TrackApp.Droid
 			// aapt resource value: 0x7f0a0026
 			public const int useLogo = 2131361830;
 			
+			// aapt resource value: 0x7f0a005f
+			public const int value = 2131361887;
+			
 			// aapt resource value: 0x7f0a0016
 			public const int view_offset_helper = 2131361814;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int visible = 2131361993;
+			// aapt resource value: 0x7f0a00d7
+			public const int visible = 2131362007;
 			
-			// aapt resource value: 0x7f0a00ab
-			public const int volume_item_container = 2131361963;
+			// aapt resource value: 0x7f0a00b9
+			public const int volume_item_container = 2131361977;
 			
 			// aapt resource value: 0x7f0a003c
 			public const int withText = 2131361852;
@@ -3705,10 +4254,25 @@ namespace TrackApp.Droid
 		{
 			
 			// aapt resource value: 0x7f070000
-			public const int mr_fast_out_slow_in = 2131165184;
+			public const int btn_checkbox_checked_animation_interpolator_0 = 2131165184;
 			
 			// aapt resource value: 0x7f070001
-			public const int mr_linear_out_slow_in = 2131165185;
+			public const int btn_checkbox_checked_animation_interpolator_1 = 2131165185;
+			
+			// aapt resource value: 0x7f070002
+			public const int btn_checkbox_indeterminate_animation_interpolator_1 = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int btn_checkbox_unchecked_animation_interpolator_0 = 2131165187;
+			
+			// aapt resource value: 0x7f070004
+			public const int btn_checkbox_unchecked_animation_interpolator_1 = 2131165188;
+			
+			// aapt resource value: 0x7f070005
+			public const int mr_fast_out_slow_in = 2131165189;
+			
+			// aapt resource value: 0x7f070006
+			public const int mr_linear_out_slow_in = 2131165190;
 			
 			static Interpolator()
 			{
@@ -3802,130 +4366,145 @@ namespace TrackApp.Droid
 			public const int abc_select_dialog_material = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int design_bottom_navigation_item = 2130968602;
+			public const int CustomizedImageView = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int design_bottom_sheet_dialog = 2130968603;
+			public const int CustomizedView = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int design_layout_snackbar = 2130968604;
+			public const int design_bottom_navigation_item = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_layout_snackbar_include = 2130968605;
+			public const int design_bottom_sheet_dialog = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_layout_tab_icon = 2130968606;
+			public const int design_layout_snackbar = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_tab_text = 2130968607;
+			public const int design_layout_snackbar_include = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_menu_item_action_area = 2130968608;
+			public const int design_layout_tab_icon = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_navigation_item = 2130968609;
+			public const int design_layout_tab_text = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_navigation_item_header = 2130968610;
+			public const int design_menu_item_action_area = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_navigation_item_separator = 2130968611;
+			public const int design_navigation_item = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item_subheader = 2130968612;
+			public const int design_navigation_item_header = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_menu = 2130968613;
+			public const int design_navigation_item_separator = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_menu_item = 2130968614;
+			public const int design_navigation_item_subheader = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_text_input_password_icon = 2130968615;
+			public const int design_navigation_menu = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int mr_chooser_dialog = 2130968616;
+			public const int design_navigation_menu_item = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int mr_chooser_list_item = 2130968617;
+			public const int design_text_input_password_icon = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int mr_controller_material_dialog_b = 2130968618;
+			public const int mr_chooser_dialog = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int mr_controller_volume_item = 2130968619;
+			public const int mr_chooser_list_item = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int mr_playback_control = 2130968620;
+			public const int mr_controller_material_dialog_b = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int mr_volume_control = 2130968621;
+			public const int mr_controller_volume_item = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_action = 2130968622;
+			public const int mr_playback_control = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_action_tombstone = 2130968623;
+			public const int mr_volume_control = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_action = 2130968624;
+			public const int notification_action = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_media_cancel_action = 2130968625;
+			public const int notification_action_tombstone = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media = 2130968626;
+			public const int notification_media_action = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media_custom = 2130968627;
+			public const int notification_media_cancel_action = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_narrow = 2130968628;
+			public const int notification_template_big_media = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_big_media_narrow_custom = 2130968629;
+			public const int notification_template_big_media_custom = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_custom_big = 2130968630;
+			public const int notification_template_big_media_narrow = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_icon_group = 2130968631;
+			public const int notification_template_big_media_narrow_custom = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_lines_media = 2130968632;
+			public const int notification_template_custom_big = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_media = 2130968633;
+			public const int notification_template_icon_group = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_media_custom = 2130968634;
+			public const int notification_template_lines_media = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_part_chronometer = 2130968635;
+			public const int notification_template_media = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int notification_template_part_time = 2130968636;
+			public const int notification_template_media_custom = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int select_dialog_item_material = 2130968637;
+			public const int notification_template_part_chronometer = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_multichoice_material = 2130968638;
+			public const int notification_template_part_time = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int select_dialog_singlechoice_material = 2130968639;
+			public const int rounded_shape = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int support_simple_spinner_dropdown_item = 2130968640;
+			public const int select_dialog_item_material = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int Tabbar = 2130968641;
+			public const int select_dialog_multichoice_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int Toolbar = 2130968642;
+			public const int select_dialog_singlechoice_material = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int tooltip = 2130968643;
+			public const int sfcomboBox_layout = 2130968643;
+			
+			// aapt resource value: 0x7f040044
+			public const int Spinner_item = 2130968644;
+			
+			// aapt resource value: 0x7f040045
+			public const int support_simple_spinner_dropdown_item = 2130968645;
+			
+			// aapt resource value: 0x7f040046
+			public const int Tabbar = 2130968646;
+			
+			// aapt resource value: 0x7f040047
+			public const int Toolbar = 2130968647;
+			
+			// aapt resource value: 0x7f040048
+			public const int tooltip = 2130968648;
 			
 			static Layout()
 			{
@@ -4073,6 +4652,9 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 0x7f0b0035
 			public const int character_counter_pattern = 2131427381;
+			
+			// aapt resource value: 0x7f0b003c
+			public const int library_name = 2131427388;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int mr_button_content_description = 2131427328;
@@ -6462,6 +7044,12 @@ namespace TrackApp.Droid
 			// aapt resource value: 2
 			public const int DesignTheme_textColorError = 2;
 			
+			public static int[] DrawableStates = new int[] {
+					2130772379};
+			
+			// aapt resource value: 0
+			public const int DrawableStates_state_indeterminate = 0;
+			
 			public static int[] DrawerArrowToggle = new int[] {
 					2130772175,
 					2130772176,
@@ -7043,6 +7631,234 @@ namespace TrackApp.Droid
 			
 			// aapt resource value: 12
 			public const int SearchView_voiceIcon = 12;
+			
+			public static int[] SfCheckBox = new int[] {
+					2130772380,
+					2130772381,
+					2130772382};
+			
+			// aapt resource value: 2
+			public const int SfCheckBox_checked = 2;
+			
+			// aapt resource value: 1
+			public const int SfCheckBox_cornerradius = 1;
+			
+			// aapt resource value: 0
+			public const int SfCheckBox_isthreestate = 0;
+			
+			public static int[] SfNumericTextBox = new int[] {
+					2130772365,
+					2130772366,
+					2130772367,
+					2130772368,
+					2130772369,
+					2130772370,
+					2130772371,
+					2130772372,
+					2130772373,
+					2130772374,
+					2130772375,
+					2130772376,
+					2130772377,
+					2130772378};
+			
+			// aapt resource value: 9
+			public const int SfNumericTextBox_allowNull = 9;
+			
+			// aapt resource value: 10
+			public const int SfNumericTextBox_borderColor = 10;
+			
+			// aapt resource value: 12
+			public const int SfNumericTextBox_culture = 12;
+			
+			// aapt resource value: 3
+			public const int SfNumericTextBox_enableGroupSeparator = 3;
+			
+			// aapt resource value: 8
+			public const int SfNumericTextBox_fontSize = 8;
+			
+			// aapt resource value: 6
+			public const int SfNumericTextBox_maximumDecimalDigits = 6;
+			
+			// aapt resource value: 4
+			public const int SfNumericTextBox_numberFormat = 4;
+			
+			// aapt resource value: 13
+			public const int SfNumericTextBox_numericTextBoxValue = 13;
+			
+			// aapt resource value: 0
+			public const int SfNumericTextBox_parsingMode = 0;
+			
+			// aapt resource value: 1
+			public const int SfNumericTextBox_percentDisplayMode = 1;
+			
+			// aapt resource value: 7
+			public const int SfNumericTextBox_selectAllOnFocus = 7;
+			
+			// aapt resource value: 2
+			public const int SfNumericTextBox_valueChangeMode = 2;
+			
+			// aapt resource value: 5
+			public const int SfNumericTextBox_watermark = 5;
+			
+			// aapt resource value: 11
+			public const int SfNumericTextBox_watermarkColor = 11;
+			
+			public static int[] SfPicker = new int[] {
+					2130772339,
+					2130772340,
+					2130772341,
+					2130772342,
+					2130772343,
+					2130772344,
+					2130772345,
+					2130772346,
+					2130772347,
+					2130772348,
+					2130772349,
+					2130772350,
+					2130772351,
+					2130772352,
+					2130772353,
+					2130772354,
+					2130772355,
+					2130772356,
+					2130772357,
+					2130772358,
+					2130772359,
+					2130772360,
+					2130772361,
+					2130772362,
+					2130772363,
+					2130772364};
+			
+			// aapt resource value: 1
+			public const int SfPicker_pickerBackgroundColor = 1;
+			
+			// aapt resource value: 17
+			public const int SfPicker_pickerBorderColor = 17;
+			
+			// aapt resource value: 14
+			public const int SfPicker_pickerColumnHeaderBackgroundColor = 14;
+			
+			// aapt resource value: 10
+			public const int SfPicker_pickerColumnHeaderHeight = 10;
+			
+			// aapt resource value: 25
+			public const int SfPicker_pickerColumnHeaderTextColor = 25;
+			
+			// aapt resource value: 21
+			public const int SfPicker_pickerColumnHeaderTextSize = 21;
+			
+			// aapt resource value: 6
+			public const int SfPicker_pickerEnableLooping = 6;
+			
+			// aapt resource value: 3
+			public const int SfPicker_pickerFooterHeight = 3;
+			
+			// aapt resource value: 13
+			public const int SfPicker_pickerHeaderBackgroundColor = 13;
+			
+			// aapt resource value: 2
+			public const int SfPicker_pickerHeaderHeight = 2;
+			
+			// aapt resource value: 18
+			public const int SfPicker_pickerHeaderText = 18;
+			
+			// aapt resource value: 24
+			public const int SfPicker_pickerHeaderTextColor = 24;
+			
+			// aapt resource value: 20
+			public const int SfPicker_pickerHeaderTextSize = 20;
+			
+			// aapt resource value: 4
+			public const int SfPicker_pickerHeight = 4;
+			
+			// aapt resource value: 5
+			public const int SfPicker_pickerIsOpen = 5;
+			
+			// aapt resource value: 11
+			public const int SfPicker_pickerItemHeight = 11;
+			
+			// aapt resource value: 0
+			public const int SfPicker_pickerMode = 0;
+			
+			// aapt resource value: 23
+			public const int SfPicker_pickerSelectedItemTextSize = 23;
+			
+			// aapt resource value: 12
+			public const int SfPicker_pickerSelectedItemTextcolor = 12;
+			
+			// aapt resource value: 16
+			public const int SfPicker_pickerSelectionBorderColor = 16;
+			
+			// aapt resource value: 9
+			public const int SfPicker_pickerShowColumnHeader = 9;
+			
+			// aapt resource value: 8
+			public const int SfPicker_pickerShowFooter = 8;
+			
+			// aapt resource value: 7
+			public const int SfPicker_pickerShowHeader = 7;
+			
+			// aapt resource value: 15
+			public const int SfPicker_pickerUnselectedItemTextColor = 15;
+			
+			// aapt resource value: 22
+			public const int SfPicker_pickerUnselectedItemTextSize = 22;
+			
+			// aapt resource value: 19
+			public const int SfPicker_pickerWidth = 19;
+			
+			public static int[] SfSegmentedControl = new int[] {
+					2130772383,
+					2130772384,
+					2130772385,
+					2130772386,
+					2130772387,
+					2130772388,
+					2130772389,
+					2130772390,
+					2130772391,
+					2130772392,
+					2130772393,
+					2130772394};
+			
+			// aapt resource value: 1
+			public const int SfSegmentedControl_segmentBackColor = 1;
+			
+			// aapt resource value: 2
+			public const int SfSegmentedControl_segmentBorderColor = 2;
+			
+			// aapt resource value: 3
+			public const int SfSegmentedControl_segmentBorderThickness = 3;
+			
+			// aapt resource value: 4
+			public const int SfSegmentedControl_segmentColor = 4;
+			
+			// aapt resource value: 9
+			public const int SfSegmentedControl_segmentCornerRadius = 9;
+			
+			// aapt resource value: 11
+			public const int SfSegmentedControl_segmentDisplayMode = 11;
+			
+			// aapt resource value: 10
+			public const int SfSegmentedControl_segmentPosition = 10;
+			
+			// aapt resource value: 0
+			public const int SfSegmentedControl_segmentSelectedIndex = 0;
+			
+			// aapt resource value: 8
+			public const int SfSegmentedControl_segmentStrokeThickness = 8;
+			
+			// aapt resource value: 6
+			public const int SfSegmentedControl_segmentedHeight = 6;
+			
+			// aapt resource value: 5
+			public const int SfSegmentedControl_segmentedPadding = 5;
+			
+			// aapt resource value: 7
+			public const int SfSegmentedControl_segmentedWidth = 7;
 			
 			public static int[] SnackbarLayout = new int[] {
 					16843039,

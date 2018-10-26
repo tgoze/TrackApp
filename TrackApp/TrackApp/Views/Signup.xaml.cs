@@ -1,35 +1,30 @@
-﻿using System;
+﻿using Syncfusion.XForms.DataForm;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TrackApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace TrackApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Signup : ContentPage
-	{
-        int MinimumCharInPassword = 8;
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Signup : ContentPage
+    {
         public Signup()
         {
             InitializeComponent();
+            BindingContext = new ViewModels.SignupViewModel(Navigation);
         }
 
-        private async void NextSignupAsync(object sender, EventArgs e)
-        {
-            String Password = password.Text;
-            String Email = email.Text;
-            String FirstName = firstName.Text;
-            String LastName = lastName.Text;
 
-            if (Password.Length < MinimumCharInPassword)
-            {
-                //error
-            }
-            await Navigation.PushAsync(new Signup2(Email, Password, FirstName, LastName));
-        }
+
+       
+        
     }
 }
