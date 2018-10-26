@@ -55,8 +55,8 @@
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfProgressBar">
       <Version>16.3.0.21</Version>
+    <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
@@ -97,7 +97,6 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TrackApp\TrackApp.csproj">
@@ -110,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\button.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\runner_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
