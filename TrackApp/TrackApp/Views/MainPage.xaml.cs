@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using TrackApp.Models;
+using TrackApp.Models.dao;
 
 namespace TrackApp
 {
@@ -15,10 +17,14 @@ namespace TrackApp
     {
         public MainPage ()
         {
-            //this.Title = "HomePage";
+            Title = "HomePage";                        
+
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-        
+
+            //User user = UserDao.GetUser(0);
+            List<Role> role = RoleDao.GetAllRoles();
+
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
            //On<Xamarin.Forms.PlatformConfiguration.Android().
