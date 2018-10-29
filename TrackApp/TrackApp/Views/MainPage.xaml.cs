@@ -24,6 +24,9 @@ namespace TrackApp
 
             //User user = UserDao.GetUser(1);
             //List<Role> role = RoleDao.GetAllRoles();
+=======
+            List<Role> role = RoleDao.GetAllRoles();
+>>>>>>> Auto stash before merge of "ddalton" and "origin/beta"
 
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
