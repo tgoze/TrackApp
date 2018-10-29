@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TrackApp.Models
 {
-    class Event
+    class Password
     {
-        public int EventId { get; set; }
-        public string EventName { get; set; }
+        public int Id { get; set; }
+        public string PasswordString { get; set; }
     }
 }
