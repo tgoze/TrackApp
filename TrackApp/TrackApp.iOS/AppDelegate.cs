@@ -28,12 +28,12 @@ namespace TrackApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-global::Xamarin.Forms.Forms.Init();
-SfPickerRenderer.Init();
-SfCheckBoxRenderer.Init();
-SfComboBoxRenderer.Init();
-SfDataFormRenderer.Init();
-SfMaskedEditRenderer.Init();
+            global::Xamarin.Forms.Forms.Init();
+            SfPickerRenderer.Init();
+            SfCheckBoxRenderer.Init();
+            SfComboBoxRenderer.Init();
+            SfDataFormRenderer.Init();
+            SfMaskedEditRenderer.Init();
             Syncfusion.XForms.iOS.ProgressBar.SfCircularProgressBarRenderer.Init();
             SfListViewRenderer.Init();
             LoadApplication(new App());
