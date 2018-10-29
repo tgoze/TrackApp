@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrackApp.Run">
@@ -8,8 +8,8 @@
             <Label Text="Target time (min): " HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
             <Entry x:Name="TargetTimeMinEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="Target time (min)"></Entry>
 
-            <!--<Label Text="Target time (sec):" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>-->
-            <!--<Entry x:Name="TargetTimeSecEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="0"></Entry>-->
+            <Label Text="Target time (sec):" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+            <Entry x:Name="TargetTimeSecEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="0"></Entry>
 
             <Label x:Name="TotalDistanceLbl" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">Run Distance (meters)</Label>
             <Entry x:Name="TotalDistanceEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="100"></Entry>
@@ -19,7 +19,7 @@
 
             <Label x:Name="SplitLbl" Text="Current split: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
             <Label x:Name="TotalLbl" Text="Total time: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
-
+            
             <Button x:Name="StartBtn" Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="StartBtn_Clicked"></Button>
             <Button x:Name="StopBtn" Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False" Clicked="StopBtn_Clicked"></Button>
         </StackLayout>

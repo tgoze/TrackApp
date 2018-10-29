@@ -1,60 +1,46 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
+using System.Text.RegularExpressions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using TrackApp.ViewModels;
-
 namespace TrackApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Run : ContentPage
-	{
-        private const double TIMER_INTERVAL_MILLISECONDS = 1;
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Run : ContentPage
+    {
+        private const double TIME_INTERVAL = 0.01;
 
         private bool continueTimer = false;
 
-        private long totalCount = 0;
-        private long splitCount = 0;
+        private double totalCount = 0;
+        private double splitCount = 0;
 
         public Run()
-		{
+        {
             InitializeComponent();
-            BindingContext = new RunViewModel();
-		}
+        }
 
         protected void StartBeeper()
         {
             int.TryParse(TargetTimeMinEntry.Text, out int targetTimeMin);
-            //int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
+            int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
             int.TryParse(TotalDistanceEntry.Text, out int maxDistance);
             int.TryParse(SplitDistanceEntry.Text, out int splitDistance);
 
             int numOfSplits = maxDistance / splitDistance;
 
-            int targetTimeSec = 0;
-            int splitTimeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits * 100;
+            int timeInterval = (targetTimeMin * 60 + targetTimeSec) / numOfSplits;
 
-            Device.StartTimer(TimeSpan.FromMilliseconds(TIMER_INTERVAL_MILLISECONDS), () =>
+            Device.StartTimer(TimeSpan.FromSeconds(TIME_INTERVAL), () =>
             {
                 splitCount++;
-                totalCount++;
+                totalCount++; 
 
-                //SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 600) / 10).ToString("N3");
-                //TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 600) / 10).ToString("N3");
+                SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 6000) / 100).ToString("N3");
+                TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 6000) / 100).ToString("N3");
 
-                SplitLbl.Text = "Current split: " + TimeSpan.FromMilliseconds(splitCount).Minutes 
-                        + ":" + TimeSpan.FromMilliseconds(splitCount).Seconds 
-                        + "." + TimeSpan.FromMilliseconds(splitCount).Milliseconds;
-                TotalLbl.Text = "Total time: " + TimeSpan.FromMilliseconds(totalCount).Minutes
-                        + ":" + TimeSpan.FromMilliseconds(totalCount).Seconds
-                        + "." + TimeSpan.FromMilliseconds(totalCount).Milliseconds;
-
-                if (totalCount % splitTimeInterval == 0)
+                if (totalCount % timeInterval == 0)
                     DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
 
                 return continueTimer;
@@ -70,8 +56,7 @@ namespace TrackApp
                 StartBeeper();
                 continueTimer = true;
                 StopBtn.Text = "Stop";
-            }
-            else
+            } else
             {
                 splitCount = 0;
             }
@@ -81,12 +66,11 @@ namespace TrackApp
         {
             StartBtn.Text = "Start";
             continueTimer = false;
-
-
-            if (StopBtn.Text.Equals("Reset"))
-            {
+            
+            
+            if (StopBtn.Text.Equals("Reset")) {
                 TargetTimeMinEntry.Text = "";
-                //TargetTimeSecEntry.Text = "";
+                TargetTimeSecEntry.Text = "";
                 TotalDistanceEntry.Text = "";
                 SplitDistanceEntry.Text = "";
 
@@ -100,6 +84,11 @@ namespace TrackApp
 
             }
             StopBtn.Text = "Reset";
+        }
+
+        private void BeepButton_Clicked(object sender, EventArgs e)
+        {
+            DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
         }
     }
 }
