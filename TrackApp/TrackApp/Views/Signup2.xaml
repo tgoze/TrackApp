@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackApp.Signup2"
+             BackgroundColor="Gray"
+            >
+    <ContentPage.Content>
+        <StackLayout 
+            VerticalOptions="CenterAndExpand">
+            <Label Text="Height op" />
+            <Entry x:Name="feet" />
+            <Entry x:Name="inches" />
+            <Label Text="Weight (op" />
+            <Entry x:Name="weight" />
+            <Label Text="Grade level (op)"/>
+            <Picker x:Name="gradeLevel" Title="Select your Grade Level">
+                <Picker.ItemsSource >
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Freshman</x:String>
+                        <x:String>Sophmore</x:String>
+                        <x:String>Junior</x:String>
+                        <x:String>Senior</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Next" Clicked="VerifyCreateAccount"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
