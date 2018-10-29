@@ -12,19 +12,34 @@ namespace TrackApp.Models.dao
 
         }
 
-        protected static User GetUser(int id)
+        public new void CreateUser(User user)
+        {
+            client.DownloadString(Dao.CreateUser + JsonConvert.SerializeObject(user));
+        }
+
+        public static User GetUser(int id)
         {
             return JsonConvert.DeserializeObject<User>(client.DownloadString(GetUserById + id));
         }
 
-        protected static User GetUser(string username)
+        public static User GetUser(string username)
         {
             return JsonConvert.DeserializeObject<User>(client.DownloadString(GetUserByUsername + username));
         }
 
-        protected static void DeleteUser(int id)
+        public static void UpdateUser(int id)
+        {
+            client.UploadString(UpdateUserById, JsonConvert.SerializeObject(id));
+        }
+
+        public static void DeleteUser(int id)
         {
             client.DownloadString(DeleteUserById + id);
+        }
+
+        public static List<Team> GetTeamsByUser(int userId)
+        {
+            return JsonConvert.DeserializeObject<List<Team>>(client.DownloadString(GetTeamsByUserId + userId));
         }
     }
 }
