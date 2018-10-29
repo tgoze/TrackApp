@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:TrackApp"
+             x:Class="TrackApp.Login"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             Title="Login">
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="Center" Margin="30" >
+            <inputLayout:SfTextInputLayout
+                Hint="Email"
+                HelperText="Enter Your Email"
+                ContainerType="Outlined"
+                >
+                <Entry 
+                Keyboard="Email" 
+                IsSpellCheckEnabled="False" 
+                IsTextPredictionEnabled="False" 
+                Text="{Binding Email}"
+                x:Name="emailEntry" />
+            </inputLayout:SfTextInputLayout >
+            <Label x:Name="EmailError" TextColor="Red" Text="{Binding EmailError}"/>
+           <!-- <Entry  Keyboard="Email" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" Placeholder="Username" BackgroundColor="White" x:Name="usernameEntry" />
+            -->
+            <inputLayout:SfTextInputLayout
+                Hint="Password"
+                HelperText="Enter Your Password"
+                ContainerType="Outlined"
+                EnablePasswordVisibilityToggle="True"
+                >
+                <Entry      
+                IsSpellCheckEnabled="False" 
+                IsTextPredictionEnabled="False" 
+                IsPassword="True"
+                Text="{Binding Password}"
+                x:Name="passwordEntry" />
+            </inputLayout:SfTextInputLayout>
+            <Label x:Name="PasswordError" TextColor="Red" Text="{Binding PasswordError}"/>
+            <!-- <Entry x:Name="passwordEntry" IsPassword="true" />-->
+            <Button 
+                    Command="{Binding LoginCommand}"
+                    TextColor="White"
+                    Text="Login" 
+                    Clicked="OnLoginButtonClicked" 
+                    CornerRadius="30" 
+                    Margin="5,0"
+                    BackgroundColor="#0000ff"/>
+
+            <Button 
+                    Command="{Binding SignupCommand}"
+                    TextColor="White"
+                    Text="Signup" 
+                    CornerRadius="30" 
+                    Margin="5,0"
+                    BackgroundColor="#0000ff"/>
+
+            <Button 
+                
+                Command="{Binding ForgotPasswordCommand}"
+                VerticalOptions="End"
+                TextColor="White"
+                CornerRadius="30" 
+                Margin="5,0"
+                Text="Forgot Password? Click Me." 
+                 BackgroundColor="#0000ff"
+                    />
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

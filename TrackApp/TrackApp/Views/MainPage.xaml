@@ -12,7 +12,7 @@
         <tabs:Run Title="Run" />
         <tabs:Performance Title="Performance"/>
         <tabs:Settings Title="Settings"/>
-        
+        <tabs:Login Title="Login"/>
     </TabbedPage.Children>
     
 </TabbedPage>
