@@ -1,12 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:local="clr-namespace:TrackApp.Models"
+             
+             xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+             xmlns:local1="clr-namespace:TrackApp.ViewModels"
              x:Class="TrackApp.Performance">
+
+    <ContentPage.BindingContext>
+        <local:BookInfoRepository/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local1:IndexToColorConverter x:Key="IndexToColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <AbsoluteLayout>
+
+            <Label Text="14.52" FontSize="48"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       AbsoluteLayout.LayoutBounds="5,25,1,1"   
+                       AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"
+                       />
+
+
+            <Button Text="Start"
+                       AbsoluteLayout.LayoutBounds=".15,.2,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"/>
+            
+            <Button Text="Split"
+                       AbsoluteLayout.LayoutBounds=".85,.2,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"/>
+
+
+
+
+            <syncfusion:SfListView x:Name="listViewX"
+             Margin="0,0,0,0"
+             
+             
+             AbsoluteLayout.LayoutBounds="0.1,0.99,1,.7"   
+             AbsoluteLayout.LayoutFlags="XProportional, YProportional, WidthProportional, HeightProportional"
+                   
+                AutoFitMode="Height"              
+                   ItemsSource="{Binding BookInfo}"
+                   ItemSize="40">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5,0,0,0"
+                              BackgroundColor="{Binding .,Converter={StaticResource IndexToColorConverter},ConverterParameter={x:Reference Name=listViewX}}"
+                              
+                              >
+                            
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*"  />
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="0.2*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Black" FontSize="21" VerticalOptions="Center" />
+
+                            <Label Grid.Column="1" Text="00.00" FontAttributes="Bold" TextColor="Black" FontSize="21" VerticalOptions="Center" />
+                            <Button Grid.Column="2" Text="Split" TextColor="Black" FontSize="14" VerticalOptions="StartAndExpand" Padding="0"/>
+                            
+                        </Grid>
+                        
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+        
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
