@@ -21,6 +21,7 @@ namespace TrackApp
             NewRunBtn.Clicked += ShowPopup;
             StartNewRunBtn.Clicked += StartRun;
             CancelNewRunBtn.Clicked += HidePopup;
+            TimeLabel.FontSize += 32;
         }
            
         private void ShowPopup(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace TrackApp
         private void StartRun(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
-            StartNewRunBtn.Text = "Stop";
+            NewRunBtn.Text = "Stop";
         }
     }
 }
