@@ -19,7 +19,7 @@ namespace TrackApp.ViewModels
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
 
-        public string _CurrentTime = "0:00 00";
+        public string _CurrentTime = "0:00.00";
         public string CurrentTime
         {
             set
@@ -37,11 +37,22 @@ namespace TrackApp.ViewModels
         {
             AudioCommand = new Command(PlayBeep);
             StartRunCommand = new Command(StartRun);
+            StopRunCommand = new Command(StopRun);
+            ResetRunCommand = new Command(ResetRun);
         }
 
         public Command AudioCommand { get; }
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
+        public Command ResetRunCommand { get; }
+
+        private void ResetRun()
+        {
+            CurrentTime = "0:00.00";
+            //GoalTimeInput = "";
+            
+
+    }
 
         private void PlayBeep()
         {
@@ -63,10 +74,7 @@ namespace TrackApp.ViewModels
 
         protected void StartBeeper(int GoalTime, int MaxDistance, int SplitDistance)
         {
-            //int.TryParse(TargetTimeMinEntry.Text, out int GoalTime);
-            //int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
-            //int.TryParse(TotalDistanceEntry.Text, out int MaxDistance);
-            //int.TryParse(SplitDistanceEntry.Text, out int SplitDistance);
+            
 
             int NumOfSplits = MaxDistance / SplitDistance;
 
@@ -78,10 +86,7 @@ namespace TrackApp.ViewModels
                 SplitCount++;
                 TotalCount++;                
 
-                //SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 600) / 10).ToString("N3");
-                //TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 600) / 10).ToString("N3");
-
-                //SplitLbl.Text = "Current split: " + TimeSpan.FromMilliseconds(splitCount).Minutes + ":" + TimeSpan.FromMilliseconds(splitCount).Seconds;
+                
                 CurrentTime = TimeSpan.FromMilliseconds(TotalCount).Minutes
                     + ":" + TimeSpan.FromMilliseconds(TotalCount).Seconds
                     + " " + TimeSpan.FromMilliseconds(TotalCount).Milliseconds; 

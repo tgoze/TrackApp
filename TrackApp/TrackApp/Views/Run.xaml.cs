@@ -17,16 +17,34 @@ namespace TrackApp
         public Run()
 		{
             InitializeComponent();
+            
             BindingContext = new RunViewModel();
             NewRunBtn.Clicked += ShowPopup;
             StartNewRunBtn.Clicked += StartRun;
             CancelNewRunBtn.Clicked += HidePopup;
             TimeLabel.FontSize += 32;
+            progressBar.Minimum = 0;
+            progressBar.Maximum = 60;
         }
            
         private void ShowPopup(object sender, EventArgs e)
-        {          
-            NewRunPopup.IsVisible = true;            
+        {       
+            
+            if ("Stop".Equals(NewRunBtn.Text))
+            {
+                NewRunBtn.Text = "Start";
+                //NewRunBtn.SetBinding(Button.CommandProperty, "StartRunCommand");
+                ResetRunBtn.IsVisible = true;
+
+            } else
+            {
+                NewRunPopup.IsVisible = true;
+                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
+                ResetRunBtn.IsVisible = false;
+
+
+            }
+                     
         }
 
         private void HidePopup(object sender, EventArgs e)
