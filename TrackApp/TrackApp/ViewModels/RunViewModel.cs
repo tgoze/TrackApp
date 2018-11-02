@@ -49,7 +49,13 @@ namespace TrackApp.ViewModels
         private void ResetRun()
         {
             CurrentTime = "0:00.00";
-            //GoalTimeInput = "";
+            SplitCount = 0;
+            SplitDistanceInput = 0;
+            GoalTimeInput = "";
+            RunDistanceInput = 0;
+            TotalCount = 0;
+           // _CurrentTime = 0;
+            
             
 
     }
@@ -89,7 +95,7 @@ namespace TrackApp.ViewModels
                 
                 CurrentTime = TimeSpan.FromMilliseconds(TotalCount).Minutes
                     + ":" + TimeSpan.FromMilliseconds(TotalCount).Seconds
-                    + " " + TimeSpan.FromMilliseconds(TotalCount).Milliseconds; 
+                    + "." + TimeSpan.FromMilliseconds(TotalCount).Milliseconds; 
 
                 if (TotalCount % SplitTimeInterval == 0)
                     DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");

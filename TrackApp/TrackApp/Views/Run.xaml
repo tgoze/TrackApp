@@ -8,7 +8,7 @@
              x:Class="TrackApp.Run">
     <AbsoluteLayout x:Name="layout">
 
-        <progressBar:SfCircularProgressBar x:Name="progressBar" IsIndeterminate="True" Progress="{Binding CurrentTime, Mode=TwoWay}" ProgressColor="#58a4b0"
+        <progressBar:SfCircularProgressBar x:Name="progressBar" IsIndeterminate="True" Progress="{Binding CurrentTime, Mode=OneWay}" ProgressColor="#58a4b0"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
                                            IndicatorInnerRadius=".77"
@@ -70,6 +70,7 @@
                             ContainerType="Outlined">
                             <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"
                                 Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
+                                
                                 Keyboard="Numeric"
                                 Mask="00:00" />
                         </SfInputLayout:SfTextInputLayout>
@@ -81,7 +82,7 @@
                                 x:Name="RunDistanceInput"
                                 FormatString="meters"
                                 MaximumNumberDecimalDigits="0"                                
-                                Value="{Binding RunDistanceInput, Mode=TwoWay}"/>
+                                Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
                         <SfInputLayout:SfTextInputLayout
                             Grid.Row="2"
@@ -91,7 +92,7 @@
                                 x:Name="SplitDistanceInput"
                                 FormatString="meters"
                                 MaximumNumberDecimalDigits="0"
-                                Value="{Binding SplitDistanceInput, Mode=TwoWay}"/>
+                                Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
                     </Grid>
                 </StackLayout>

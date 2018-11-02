@@ -22,6 +22,7 @@ namespace TrackApp
             NewRunBtn.Clicked += ShowPopup;
             StartNewRunBtn.Clicked += StartRun;
             CancelNewRunBtn.Clicked += HidePopup;
+            ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 32;
             progressBar.Minimum = 0;
             progressBar.Maximum = 60;
@@ -40,7 +41,7 @@ namespace TrackApp
             {
                 NewRunPopup.IsVisible = true;
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-                ResetRunBtn.IsVisible = false;
+                
 
 
             }
@@ -51,11 +52,19 @@ namespace TrackApp
         {
             NewRunPopup.IsVisible = false;
         }
-        
+
+        private void ResetRun(object sender, EventArgs e)
+        {
+            ResetRunBtn.IsVisible = false;
+        }
+
         private void StartRun(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
             NewRunBtn.Text = "Stop";
+            GoalTimeInput.Value = "";
+            RunDistanceInput.Value = "";
+            SplitDistanceInput.Value = "";
         }
     }
 }
