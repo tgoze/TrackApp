@@ -10,12 +10,12 @@ namespace TrackApp.Models.dao
         public RoleDao() : base()
         {}
 
-        public static List<Role> GetAllRoles()
-        {
-            List<Role> temp = JsonConvert.DeserializeObject<List<Role>>(client.DownloadString(Url + Dao.GetAllRoles));
+        //public static List<Role> GetAllRoles()
+        //{
+        //    List<Role> temp = JsonConvert.DeserializeObject<List<Role>>(client.DownloadString(Url + Dao.GetAllRoles));
 
-            return temp;
-        }
+        //    return temp;
+        //}
 
     }
 }

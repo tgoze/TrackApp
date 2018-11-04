@@ -7,7 +7,7 @@ namespace TrackApp.ViewModels
 {
     public class RunViewModel : INotifyPropertyChanged
     {
-        private const double TIMER_INTERVAL_MILLISECONDS = 1;
+        private const double TIMER_INTERVAL_MILLISECONDS = 0.1;
 
         private bool ContinueTimer = false;        
 
