@@ -22,11 +22,20 @@ namespace TrackApp
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
+<<<<<<< refs/remotes/origin/beta
             //User user = UserDao.GetUser(1);
+=======
+            //User user = UserDao.GetUser(0);
+<<<<<<< refs/remotes/origin/amarkovic
+<<<<<<< refs/remotes/origin/amarkovic
+>>>>>>> Trying to fix timer bug
             //List<Role> role = RoleDao.GetAllRoles();
 =======
             List<Role> role = RoleDao.GetAllRoles();
 >>>>>>> Auto stash before merge of "ddalton" and "origin/beta"
+=======
+            //List<Role> role = RoleDao.GetAllRoles();
+>>>>>>> Trying to fix timer bug
 
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);

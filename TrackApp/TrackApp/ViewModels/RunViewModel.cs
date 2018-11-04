@@ -7,10 +7,18 @@ namespace TrackApp.ViewModels
 {
     public class RunViewModel : INotifyPropertyChanged
     {
+<<<<<<< refs/remotes/origin/amarkovic
         // Properties for stopwatch        
         public int SplitTimeIntervalSec { get; set; }
         private int NumOfSplits;
         private StopwatchService SwService;       
+=======
+        private const double TIMER_INTERVAL_MILLISECONDS = 0.1;
+
+        private bool ContinueTimer = false;        
+
+        Stopwatch StopWatch = new Stopwatch();
+>>>>>>> Trying to fix timer bug
 
         // Properties for UI 
         public event PropertyChangedEventHandler PropertyChanged;
