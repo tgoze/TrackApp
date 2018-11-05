@@ -18,8 +18,36 @@ namespace TrackApp.ViewModels
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
+        public int _MaxTime = 0;
+        public int MaxTime
+        {
+            set
+            {
+                _MaxTime = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MaxTime"));
+            }
+            get
+            {
+                return _MaxTime;
+            }
+        }
 
-        public string _CurrentTime = "0:00 00";
+        public double _CurrentProgress = 0;
+        public double CurrentProgress
+        {
+            set
+            {
+                _CurrentProgress = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentProgress"));
+            }
+
+            get
+            {
+                return _CurrentProgress;
+            }
+        }
+
+        public string _CurrentTime = "0:00.00";
         public string CurrentTime
         {
             set
@@ -37,11 +65,30 @@ namespace TrackApp.ViewModels
         {
             AudioCommand = new Command(PlayBeep);
             StartRunCommand = new Command(StartRun);
+            StopRunCommand = new Command(StopRun);
+            ResetRunCommand = new Command(ResetRun);
         }
 
         public Command AudioCommand { get; }
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
+        public Command ResetRunCommand { get; }
+
+        private void ResetRun()
+        {
+            CurrentTime = "0:00:00";
+            CurrentProgress = 0;
+            MaxTime = 0;
+            SplitCount = 0;
+            SplitDistanceInput = 0;
+            GoalTimeInput = "";
+            RunDistanceInput = 0;
+            TotalCount = 0;
+           // _CurrentTime = 0;
+            
+            
+
+    }
 
         private void PlayBeep()
         {
@@ -63,28 +110,24 @@ namespace TrackApp.ViewModels
 
         protected void StartBeeper(int GoalTime, int MaxDistance, int SplitDistance)
         {
-            //int.TryParse(TargetTimeMinEntry.Text, out int GoalTime);
-            //int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
-            //int.TryParse(TotalDistanceEntry.Text, out int MaxDistance);
-            //int.TryParse(SplitDistanceEntry.Text, out int SplitDistance);
+            string[] TimeInputs = GoalTimeInput.Split(':');
 
             int NumOfSplits = MaxDistance / SplitDistance;
 
             int GoalTimeSec = 0;
             int SplitTimeInterval = (GoalTime * 60 + GoalTimeSec) / NumOfSplits * 100;
 
+            MaxTime = SplitTimeInterval;
+
             Device.StartTimer(TimeSpan.FromMilliseconds(TIMER_INTERVAL_MILLISECONDS), () =>
             {
                 SplitCount++;
-                TotalCount++;                
+                TotalCount++;
 
-                //SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 600) / 10).ToString("N3");
-                //TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 600) / 10).ToString("N3");
-
-                //SplitLbl.Text = "Current split: " + TimeSpan.FromMilliseconds(splitCount).Minutes + ":" + TimeSpan.FromMilliseconds(splitCount).Seconds;
+                CurrentProgress = TimeSpan.FromMilliseconds(TotalCount).Milliseconds;
                 CurrentTime = TimeSpan.FromMilliseconds(TotalCount).Minutes
                     + ":" + TimeSpan.FromMilliseconds(TotalCount).Seconds
-                    + " " + TimeSpan.FromMilliseconds(TotalCount).Milliseconds; 
+                    + "." + TimeSpan.FromMilliseconds(TotalCount).Milliseconds; 
 
                 if (TotalCount % SplitTimeInterval == 0)
                     DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
@@ -93,43 +136,6 @@ namespace TrackApp.ViewModels
             });            
         }
 
-        //    private void StartBtn_Clicked(object sender, EventArgs e)
-        //    {
-        //        if (StartBtn.Text.Equals("Start"))
-        //        {
-        //            StartBtn.Text = "Split";
-        //            StopBtn.IsEnabled = true;
-        //            StartBeeper();
-        //            continueTimer = true;
-        //            StopBtn.Text = "Stop";
-        //        }
-        //        else
-        //        {
-        //            splitCount = 0;
-        //        }
-        //    }
-
-        //    private void StopBtn_Clicked(object sender, EventArgs e)
-        //    {
-        //        StartBtn.Text = "Start";
-        //        continueTimer = false;
-
-
-        //        if (StopBtn.Text.Equals("Reset"))
-        //        {
-        //            TargetTimeMinEntry.Text = "";
-        //            //TargetTimeSecEntry.Text = "";
-        //            TotalDistanceEntry.Text = "";
-        //            SplitDistanceEntry.Text = "";
-
-        //            splitCount = 0;
-        //            totalCount = 0;
-
-        //            StopBtn.Text = "Stop";
-        //            SplitLbl.Text = "Current split: " + ((splitCount / 60)).ToString("D2") + ":" + (splitCount % 60).ToString("D2");
-        //            TotalLbl.Text = "Total time: " + ((totalCount / 60)).ToString("D2") + ":" + (totalCount % 60).ToString("D2");
-        //        }
-        //        StopBtn.Text = "Reset";
-        //    }
+      
     }
 }

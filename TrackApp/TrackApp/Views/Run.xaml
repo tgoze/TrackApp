@@ -8,69 +8,56 @@
              x:Class="TrackApp.Run">
     <AbsoluteLayout x:Name="layout">
 
-        <progressBar:SfCircularProgressBar Progress="75" ProgressColor="#58a4b0"
-                                               VerticalOptions="CenterAndExpand"
-                                               HorizontalOptions="CenterAndExpand">
+
+
+
+
+        <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=OneWay}" Maximum="{Binding MaxTime, Mode=OneWay}" ProgressColor="#58a4b0"
+                                           AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
+                                           AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
+                                           IndicatorInnerRadius=".77"
+                                           IndicatorOuterRadius=".7"
+                                           
+                                              >
+            
             <progressBar:SfCircularProgressBar.Content>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Label x:Name="TimeLabel" Grid.Row="0"
+                
+                    <Label x:Name="TimeLabel"
                             TextColor="#58a4b0" 
                             Text="{Binding CurrentTime, Mode=TwoWay}"
-                            FontSize="Large"
-                            HorizontalTextAlignment="Center" 
-                            VerticalTextAlignment="Center">
+                            
+                            >
                     </Label>
-                    <Button x:Name="NewRunBtn" Grid.Row="1"
+               
+                    
+                
+            </progressBar:SfCircularProgressBar.Content>
+        </progressBar:SfCircularProgressBar>
+        <Button x:Name="NewRunBtn" Grid.Row="1"
                             Text="Start"
                             BackgroundColor="#a9bcd0"
                             TextColor="White"
-                            WidthRequest="60" HeightRequest="60" BorderRadius="30"                            
-                            VerticalOptions="Start" 
-                            HorizontalOptions="FillAndExpand"/>
-                </Grid>
-            </progressBar:SfCircularProgressBar.Content>
-        </progressBar:SfCircularProgressBar>
+                               
+                            AbsoluteLayout.LayoutBounds=".5,.6,.5,.1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            />
+        <Button x:Name="ResetRunBtn" Grid.Row="1"
+                Text="Reset"
+                BackgroundColor="#a9bcd0"
+                TextColor="White"
+                IsVisible="False"
+                Command="{Binding ResetRunCommand}" 
+                AbsoluteLayout.LayoutBounds=".5,.8,.5,.1"
+                AbsoluteLayout.LayoutFlags="All"
+                />
+        
 
-        <!--<Button Text="Beep"
-                    VerticalOptions="End"
-                    Command="{Binding AudioCommand}"/>-->
-
-        <!--<Label Text="Target time (min): " HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
-        <Entry x:Name="TargetTimeMinEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="Target time (min)"></Entry>
-
-
-        -->
-        <!--<Label Text="Target time (sec):" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>-->
-        <!--
-        <Entry x:Name="TargetTimeSecEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Text="0"></Entry>
-
-
-        <Label x:Name="TotalDistanceLbl" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">Run Distance (meters)</Label>
-        <Entry x:Name="TotalDistanceEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="100"></Entry>
-
-        <Label x:Name="SplitDistanceLbl" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">Split Distance (meters)</Label>
-        <Entry x:Name="SplitDistanceEntry" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Placeholder="100"></Entry>
-
-        <Label x:Name="SplitLbl" Text="Current split: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
-        <Label x:Name="TotalLbl" Text="Total time: 00:00" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
-
-        <Button x:Name="StartBtn" Text="Start" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="StartBtn_Clicked"></Button>
-        <Button x:Name="StopBtn" Text="Stop" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" IsEnabled="False" Clicked="StopBtn_Clicked"></Button>-->
-
-        <!--Popup content TODO: UIViewController???? -->
         <ContentView x:Name="NewRunPopup" 
              BackgroundColor="#C0808080" 
              Padding="10, 0" 
              IsVisible="false" 
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
-             AbsoluteLayout.LayoutFlags="All">
+             AbsoluteLayout.LayoutFlags="HeightProportional,WidthProportional">
             <StackLayout VerticalOptions="Center" 
                  HorizontalOptions="Center">
                 <StackLayout Orientation="Vertical" 
@@ -89,7 +76,9 @@
                             Hint="Goal Time"
                             ContainerType="Outlined">
                             <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"
-                                Value="{Binding GoalTimeInput, Mode=TwoWay}"
+                                                      
+                                Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
+                                
                                 Keyboard="Numeric"
                                 Mask="00:00" />
                         </SfInputLayout:SfTextInputLayout>
@@ -101,7 +90,7 @@
                                 x:Name="RunDistanceInput"
                                 FormatString="meters"
                                 MaximumNumberDecimalDigits="0"                                
-                                Value="{Binding RunDistanceInput, Mode=TwoWay}"/>
+                                Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
                         <SfInputLayout:SfTextInputLayout
                             Grid.Row="2"
@@ -111,7 +100,7 @@
                                 x:Name="SplitDistanceInput"
                                 FormatString="meters"
                                 MaximumNumberDecimalDigits="0"
-                                Value="{Binding SplitDistanceInput, Mode=TwoWay}"/>
+                                Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
                     </Grid>
                 </StackLayout>
@@ -133,5 +122,6 @@
                 </Grid>
             </StackLayout>
         </ContentView>
+
     </AbsoluteLayout>
 </ContentPage>

@@ -17,26 +17,56 @@ namespace TrackApp
         public Run()
 		{
             InitializeComponent();
+            
             BindingContext = new RunViewModel();
             NewRunBtn.Clicked += ShowPopup;
             StartNewRunBtn.Clicked += StartRun;
             CancelNewRunBtn.Clicked += HidePopup;
+            ResetRunBtn.Clicked += ResetRun;
+            TimeLabel.FontSize += 32;
+            progressBar.Minimum = 0;
+            
+            
         }
            
         private void ShowPopup(object sender, EventArgs e)
-        {          
-            NewRunPopup.IsVisible = true;            
+        {       
+            
+            if ("Stop".Equals(NewRunBtn.Text))
+            {
+                NewRunBtn.Text = "Start";
+                //NewRunBtn.SetBinding(Button.CommandProperty, "StartRunCommand");
+                ResetRunBtn.IsVisible = true;
+
+            } else
+            {
+                NewRunPopup.IsVisible = true;
+                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
+               
+
+
+
+            }
+                     
         }
 
         private void HidePopup(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
         }
-        
+
+        private void ResetRun(object sender, EventArgs e)
+        {
+            ResetRunBtn.IsVisible = false;
+        }
+
         private void StartRun(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
-            StartNewRunBtn.Text = "Stop";
+            NewRunBtn.Text = "Stop";
+            GoalTimeInput.Value = "";
+            RunDistanceInput.Value = "";
+            SplitDistanceInput.Value = "";
         }
     }
 }
