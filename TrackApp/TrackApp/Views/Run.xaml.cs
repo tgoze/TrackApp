@@ -25,7 +25,8 @@ namespace TrackApp
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 32;
             progressBar.Minimum = 0;
-            progressBar.Maximum = 60;
+            
+            
         }
            
         private void ShowPopup(object sender, EventArgs e)
@@ -41,7 +42,8 @@ namespace TrackApp
             {
                 NewRunPopup.IsVisible = true;
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-                
+               
+
 
 
             }

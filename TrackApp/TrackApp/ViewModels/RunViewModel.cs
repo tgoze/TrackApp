@@ -18,6 +18,34 @@ namespace TrackApp.ViewModels
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
+        public int _MaxTime = 0;
+        public int MaxTime
+        {
+            set
+            {
+                _MaxTime = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MaxTime"));
+            }
+            get
+            {
+                return _MaxTime;
+            }
+        }
+
+        public double _CurrentProgress = 0;
+        public double CurrentProgress
+        {
+            set
+            {
+                _CurrentProgress = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentProgress"));
+            }
+
+            get
+            {
+                return _CurrentProgress;
+            }
+        }
 
         public string _CurrentTime = "0:00.00";
         public string CurrentTime
@@ -48,7 +76,9 @@ namespace TrackApp.ViewModels
 
         private void ResetRun()
         {
-            CurrentTime = "0:00.00";
+            CurrentTime = "0:00:00";
+            CurrentProgress = 0;
+            MaxTime = 0;
             SplitCount = 0;
             SplitDistanceInput = 0;
             GoalTimeInput = "";
@@ -80,19 +110,21 @@ namespace TrackApp.ViewModels
 
         protected void StartBeeper(int GoalTime, int MaxDistance, int SplitDistance)
         {
-            
+            string[] TimeInputs = GoalTimeInput.Split(':');
 
             int NumOfSplits = MaxDistance / SplitDistance;
 
             int GoalTimeSec = 0;
             int SplitTimeInterval = (GoalTime * 60 + GoalTimeSec) / NumOfSplits * 100;
 
+            MaxTime = SplitTimeInterval;
+
             Device.StartTimer(TimeSpan.FromMilliseconds(TIMER_INTERVAL_MILLISECONDS), () =>
             {
                 SplitCount++;
-                TotalCount++;                
+                TotalCount++;
 
-                
+                CurrentProgress = TimeSpan.FromMilliseconds(TotalCount).Milliseconds;
                 CurrentTime = TimeSpan.FromMilliseconds(TotalCount).Minutes
                     + ":" + TimeSpan.FromMilliseconds(TotalCount).Seconds
                     + "." + TimeSpan.FromMilliseconds(TotalCount).Milliseconds; 
@@ -104,43 +136,6 @@ namespace TrackApp.ViewModels
             });            
         }
 
-        //    private void StartBtn_Clicked(object sender, EventArgs e)
-        //    {
-        //        if (StartBtn.Text.Equals("Start"))
-        //        {
-        //            StartBtn.Text = "Split";
-        //            StopBtn.IsEnabled = true;
-        //            StartBeeper();
-        //            continueTimer = true;
-        //            StopBtn.Text = "Stop";
-        //        }
-        //        else
-        //        {
-        //            splitCount = 0;
-        //        }
-        //    }
-
-        //    private void StopBtn_Clicked(object sender, EventArgs e)
-        //    {
-        //        StartBtn.Text = "Start";
-        //        continueTimer = false;
-
-
-        //        if (StopBtn.Text.Equals("Reset"))
-        //        {
-        //            TargetTimeMinEntry.Text = "";
-        //            //TargetTimeSecEntry.Text = "";
-        //            TotalDistanceEntry.Text = "";
-        //            SplitDistanceEntry.Text = "";
-
-        //            splitCount = 0;
-        //            totalCount = 0;
-
-        //            StopBtn.Text = "Stop";
-        //            SplitLbl.Text = "Current split: " + ((splitCount / 60)).ToString("D2") + ":" + (splitCount % 60).ToString("D2");
-        //            TotalLbl.Text = "Total time: " + ((totalCount / 60)).ToString("D2") + ":" + (totalCount % 60).ToString("D2");
-        //        }
-        //        StopBtn.Text = "Reset";
-        //    }
+      
     }
 }

@@ -8,13 +8,18 @@
              x:Class="TrackApp.Run">
     <AbsoluteLayout x:Name="layout">
 
-        <progressBar:SfCircularProgressBar x:Name="progressBar" IsIndeterminate="True" Progress="{Binding CurrentTime, Mode=OneWay}" ProgressColor="#58a4b0"
+
+
+
+
+        <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=OneWay}" Maximum="{Binding MaxTime, Mode=OneWay}" ProgressColor="#58a4b0"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
                                            IndicatorInnerRadius=".77"
                                            IndicatorOuterRadius=".7"
                                            
                                               >
+            
             <progressBar:SfCircularProgressBar.Content>
                 
                     <Label x:Name="TimeLabel"
@@ -23,6 +28,7 @@
                             
                             >
                     </Label>
+               
                     
                 
             </progressBar:SfCircularProgressBar.Content>
@@ -44,6 +50,7 @@
                 AbsoluteLayout.LayoutBounds=".5,.8,.5,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 />
+        
 
         <ContentView x:Name="NewRunPopup" 
              BackgroundColor="#C0808080" 
@@ -69,6 +76,7 @@
                             Hint="Goal Time"
                             ContainerType="Outlined">
                             <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"
+                                                      
                                 Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
                                 
                                 Keyboard="Numeric"
