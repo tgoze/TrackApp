@@ -71,12 +71,14 @@ namespace TrackApp.ViewModels
             StartRunCommand = new Command(StartRun);
             StopRunCommand = new Command(StopRun);
             ResetRunCommand = new Command(ResetRun);
+            ContinueRunCommand = new Command(ContinueRun);
         }
 
         public Command AudioCommand { get; }
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
+        public Command ContinueRunCommand { get; }
 
         private void ResetRun()
         {
@@ -90,13 +92,14 @@ namespace TrackApp.ViewModels
             GoalTimeInput = "";
             RunDistanceInput = 0;
             TotalCount = 0;
-           // _CurrentTime = 0;                        
         }
 
         private void PlayBeep()
         {
             DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
         }
+
+        
 
         private void StartRun()
         {                    
@@ -113,6 +116,10 @@ namespace TrackApp.ViewModels
         {            
             ContinueTimer = false;
             StopWatch.Stop();            
+        }
+        private void ContinueRun()
+        {
+            ContinueTimer = true;
         }
 
         protected void StartBeeper(int goalTime, int maxDistance, int splitDistance)
@@ -142,6 +149,7 @@ namespace TrackApp.ViewModels
                     wait = false;
                 }                    
 
+                CurrentProgress = TimeSpan.FromMilliseconds(TotalCount).Milliseconds;
                 return ContinueTimer;
             });
         }        
