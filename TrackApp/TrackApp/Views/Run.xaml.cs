@@ -34,18 +34,21 @@ namespace TrackApp
             
             if ("Stop".Equals(NewRunBtn.Text))
             {
-                NewRunBtn.Text = "Start";
+                NewRunBtn.Text = "Continue";
+                NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
                 //NewRunBtn.SetBinding(Button.CommandProperty, "StartRunCommand");
                 ResetRunBtn.IsVisible = true;
+
+            } else if ("Continue".Equals(NewRunBtn.Text))
+            {
+                NewRunBtn.Text = "Stop";
+                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
+                ResetRunBtn.IsVisible = false;
 
             } else
             {
                 NewRunPopup.IsVisible = true;
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-               
-
-
-
             }
                      
         }
@@ -57,6 +60,7 @@ namespace TrackApp
 
         private void ResetRun(object sender, EventArgs e)
         {
+            NewRunBtn.Text = "Start";
             ResetRunBtn.IsVisible = false;
         }
 
