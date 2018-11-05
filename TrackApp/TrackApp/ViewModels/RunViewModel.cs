@@ -22,8 +22,8 @@ namespace TrackApp.ViewModels
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
 
-        public int _MaxTime = 0;
-        public int MaxTime
+        public double _MaxTime = 0;
+        public double MaxTime
         {
             set
             {
@@ -134,7 +134,9 @@ namespace TrackApp.ViewModels
             bool wait = false;
 
             Device.StartTimer(TimeSpan.FromMilliseconds(TIMER_INTERVAL_MILLISECONDS), () =>
-            {                            
+            {
+                MaxTime = splitTimeInterval;
+                CurrentProgress = StopWatch.Elapsed.Seconds;
                 CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
                 
                 if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)

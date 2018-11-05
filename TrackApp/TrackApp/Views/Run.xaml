@@ -12,7 +12,7 @@
 
 
 
-        <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=OneWay}" Maximum="{Binding MaxTime, Mode=OneWay}" ProgressColor="#58a4b0"
+        <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=TwoWay}" Maximum="{Binding MaxTime, Mode=TwoWay}" ProgressColor="#58a4b0"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
                                            IndicatorInnerRadius=".77"
