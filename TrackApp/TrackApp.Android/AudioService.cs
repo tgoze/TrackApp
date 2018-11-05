@@ -15,15 +15,22 @@ namespace TrackApp.Droid
         }
 
         public void PlayAudioFile(string fileName)
-        {
+        {            
             var player = new MediaPlayer();
             var fd = global::Android.App.Application.Context.Assets.OpenFd(fileName);
+
+            // Events to start audio file and release it (needed for repeated plays)
             player.Prepared += (s, e) =>
             {
                 player.Start();
+            };        
+            player.Completion += (s, e) =>
+            {
+                player.Release();
             };
+
             player.SetDataSource(fd.FileDescriptor, fd.StartOffset, fd.Length);
-            player.Prepare();
+            player.Prepare();            
         }
     }
 }
