@@ -156,20 +156,23 @@ namespace TrackApp.ViewModels
                     StopRun();
                     return ContinueTimer;
                 }
-
-                if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
-                {
-                    if (!wait)
-                    {
-                        PlayBeep();
-                        wait = true;
-                    }
-                }
                 else
                 {
-                    wait = false;
-                }               
-                return ContinueTimer;
+
+                    if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
+                    {
+                        if (!wait)
+                        {
+                            PlayBeep();
+                            wait = true;
+                        }
+                    }
+                    else
+                    {
+                        wait = false;
+                    }
+                    return ContinueTimer;
+                }
             });
         }
     }

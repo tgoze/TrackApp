@@ -23,8 +23,10 @@ namespace TrackApp
             StartNewRunBtn.Clicked += StartRun;
             CancelNewRunBtn.Clicked += HidePopup;
             ResetRunBtn.Clicked += ResetRun;
-            TimeLabel.FontSize += 32;
-            progressBar.Minimum = 0;                        
+            TimeLabel.FontSize += 28;
+            progressBar.Minimum = 0;
+            
+            
         }
            
         private void ShowPopup(object sender, EventArgs e)
