@@ -9,10 +9,7 @@ namespace TrackApp.ViewModels
     {
         private const double TIMER_INTERVAL_MILLISECONDS = 1;
 
-        private bool ContinueTimer = false;
-
-        private long TotalCount = 0;
-        private long SplitCount = 0;
+        private bool ContinueTimer = false;        
 
         Stopwatch StopWatch = new Stopwatch();
 
@@ -34,7 +31,23 @@ namespace TrackApp.ViewModels
             {
                 return _MaxTime;
             }
+        }        
+
+        public int _NumOfSplits = 0;
+        public int NumOfSplits
+        {
+            set
+            {
+                _NumOfSplits = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NumOfSplits"));
+            }
+            get
+            {
+                return _NumOfSplits;
+            }
         }
+
+        int SplitTimeInterval;
 
         public double _CurrentProgress = 0;
         public double CurrentProgress
@@ -80,26 +93,22 @@ namespace TrackApp.ViewModels
         public Command ResetRunCommand { get; }
         public Command ContinueRunCommand { get; }
 
+        private void PlayBeep()
+        {
+            DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
+        }
+
         private void ResetRun()
         {
             StopWatch.Stop();
             StopWatch.Reset();
             CurrentTime = "00:00.00";
             CurrentProgress = 0;
-            MaxTime = 0;
-            SplitCount = 0;
+            MaxTime = 0;            
             SplitDistanceInput = 0;
             GoalTimeInput = "";
-            RunDistanceInput = 0;
-            TotalCount = 0;
-        }
-
-        private void PlayBeep()
-        {
-            DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
-        }
-
-        
+            RunDistanceInput = 0;            
+        }         
 
         private void StartRun()
         {                    
@@ -108,52 +117,60 @@ namespace TrackApp.ViewModels
             int.TryParse(TimeInputs[0], out int goalTimeMin);
             int.TryParse(TimeInputs[1], out int goalTimeSec);
             int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;
-            // Start the stopwatch with beeper
-            StartBeeper(goalTimeSeconds, RunDistanceInput, SplitDistanceInput);                        
+            
+            // Start the stopwatch with beeper                    
+            NumOfSplits = RunDistanceInput / SplitDistanceInput;
+            MaxTime = goalTimeSeconds;
+            SplitTimeInterval = goalTimeSeconds / NumOfSplits;            
+            StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
         }
 
         private void StopRun()
         {            
             ContinueTimer = false;
-            StopWatch.Stop();            
+            if (StopWatch.IsRunning)
+                StopWatch.Stop();                   
         }
+
         private void ContinueRun()
         {
-            ContinueTimer = true;
-        }
-
-        protected void StartBeeper(int goalTime, int maxDistance, int splitDistance)
+            if (!StopWatch.IsRunning)
+                StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
+        }        
+        
+        protected void StartDeviceStopwatch(double repeatInterval, int splitTimeInterval)
         {
-            int numOfSplits = maxDistance / splitDistance;            
-            int splitTimeInterval = goalTime / numOfSplits;
-
-            ContinueTimer = true;
-            StopWatch.Start();
-
-            // Had to use this variable because checking StopWatch.Elapsed was acting strange
+            // Had to use this variable because Stopwatch and Device.StartTimer don't interact well
             bool wait = false;
 
-            Device.StartTimer(TimeSpan.FromMilliseconds(TIMER_INTERVAL_MILLISECONDS), () =>
+            ContinueTimer = true;
+            StopWatch.Start();      
+            
+            Device.StartTimer(TimeSpan.FromMilliseconds(repeatInterval), () =>
             {
-                MaxTime = splitTimeInterval;
                 CurrentProgress = StopWatch.Elapsed.Seconds;
                 CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
-                
+
+                if (MaxTime <= StopWatch.Elapsed.Seconds)
+                {
+                    StopRun();
+                    return ContinueTimer;
+                }
+
                 if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
-                {                    
+                {
                     if (!wait)
                     {
                         PlayBeep();
                         wait = true;
-                    }                    
-                } else
+                    }
+                }
+                else
                 {
                     wait = false;
-                }                    
-
-                CurrentProgress = TimeSpan.FromMilliseconds(TotalCount).Milliseconds;
+                }               
                 return ContinueTimer;
             });
-        }        
+        }
     }
 }
