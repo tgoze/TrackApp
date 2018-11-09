@@ -61,6 +61,7 @@ namespace TrackApp
         private void ResetRun(object sender, EventArgs e)
         {
             NewRunBtn.Text = "Start";
+            NewRunBtn.RemoveBinding(Button.CommandProperty);
             ResetRunBtn.IsVisible = false;
         }
 

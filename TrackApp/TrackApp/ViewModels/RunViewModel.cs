@@ -1,23 +1,33 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace TrackApp.ViewModels
 {
     public class RunViewModel : INotifyPropertyChanged
     {
-        private const double TIMER_INTERVAL_MILLISECONDS = 1;
-
-        private bool ContinueTimer = false;        
-
+        // Properties for stopwatch
+        TimeSpan Interval = TimeSpan.FromMilliseconds(1);
+        int SplitTimeIntervalSec;
+        CancellationTokenSource cts;
         Stopwatch StopWatch = new Stopwatch();
+        bool WaitToBeep = false;       
 
+        // Properties for UI 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
+
+        public Command AudioCommand { get; }
+        public Command StartRunCommand { get; }
+        public Command StopRunCommand { get; }
+        public Command ResetRunCommand { get; }
+        public Command ContinueRunCommand { get; }
 
         public double _MaxTime = 0;
         public double MaxTime
@@ -45,9 +55,7 @@ namespace TrackApp.ViewModels
             {
                 return _NumOfSplits;
             }
-        }
-
-        int SplitTimeInterval;
+        }        
 
         public double _CurrentProgress = 0;
         public double CurrentProgress
@@ -85,23 +93,18 @@ namespace TrackApp.ViewModels
             StopRunCommand = new Command(StopRun);
             ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
-        }
-
-        public Command AudioCommand { get; }
-        public Command StartRunCommand { get; }
-        public Command StopRunCommand { get; }
-        public Command ResetRunCommand { get; }
-        public Command ContinueRunCommand { get; }
+        }        
 
         private void PlayBeep()
         {
-            DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
+            DependencyService.Get<IAudio>().PlayAudioFile("beep.mp3");
         }
 
         private void ResetRun()
-        {
-            StopWatch.Stop();
+        {            
             StopWatch.Reset();
+            cts.Cancel();
+            
             CurrentTime = "00:00.00";
             CurrentProgress = 0;
             MaxTime = 0;            
@@ -121,59 +124,51 @@ namespace TrackApp.ViewModels
             // Start the stopwatch with beeper                    
             NumOfSplits = RunDistanceInput / SplitDistanceInput;
             MaxTime = goalTimeSeconds;
-            SplitTimeInterval = goalTimeSeconds / NumOfSplits;            
-            StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
+            SplitTimeIntervalSec = goalTimeSeconds / NumOfSplits;
+            cts = new CancellationTokenSource();
+            StartStopwatch(Interval, SplitTimeIntervalSec, cts.Token);
         }
 
         private void StopRun()
-        {            
-            ContinueTimer = false;
+        {                        
             if (StopWatch.IsRunning)
-                StopWatch.Stop();                   
+                StopWatch.Stop();           
         }
 
         private void ContinueRun()
         {
             if (!StopWatch.IsRunning)
-                StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
-        }        
-        
-        protected void StartDeviceStopwatch(double repeatInterval, int splitTimeInterval)
-        {
-            // Had to use this variable because Stopwatch and Device.StartTimer don't interact well
-            bool wait = false;
+                StopWatch.Start();
+        }
 
-            ContinueTimer = true;
-            StopWatch.Start();      
-            
-            Device.StartTimer(TimeSpan.FromMilliseconds(repeatInterval), () =>
+        private void StartStopwatch(TimeSpan repeatInterval, int splitTimeInterval, CancellationToken cancellationToken)        
+        {            
+            var task = WatchStopwatchAsync(repeatInterval, splitTimeInterval, cancellationToken);
+            StopWatch.Start();
+        }
+
+        private async Task WatchStopwatchAsync(TimeSpan interval, int splitTimeInterval, CancellationToken cancellationToken)
+        {
+            while (true)
             {
                 CurrentProgress = StopWatch.Elapsed.Seconds;
                 CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
-
-                if (MaxTime <= StopWatch.Elapsed.Seconds)
+                
+                if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
                 {
-                    StopRun();
-                    return ContinueTimer;
+                    if (!WaitToBeep)
+                    {
+                        PlayBeep();
+                        WaitToBeep = true;
+                    }
                 }
                 else
                 {
-
-                    if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
-                    {
-                        if (!wait)
-                        {
-                            PlayBeep();
-                            wait = true;
-                        }
-                    }
-                    else
-                    {
-                        wait = false;
-                    }
-                    return ContinueTimer;
+                    WaitToBeep = false;
                 }
-            });
-        }
+                
+                await Task.Delay(interval, cancellationToken);                
+            }
+        }         
     }
 }
