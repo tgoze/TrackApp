@@ -151,13 +151,8 @@ namespace TrackApp.ViewModels
                 CurrentProgress = StopWatch.Elapsed.Seconds;
                 CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
 
-                if (MaxTime <= StopWatch.Elapsed.Seconds)
-                {
-                    StopRun();
-                    return ContinueTimer;
-                }
-                else
-                {
+                
+                
 
                     if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
                     {
@@ -172,7 +167,7 @@ namespace TrackApp.ViewModels
                         wait = false;
                     }
                     return ContinueTimer;
-                }
+                
             });
         }
     }

@@ -25,6 +25,7 @@ namespace TrackApp
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
+            SplitField.FontSize += 12;
             
             
         }
@@ -36,7 +37,7 @@ namespace TrackApp
             {
                 NewRunBtn.Text = "Continue";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
-                //NewRunBtn.SetBinding(Button.CommandProperty, "StartRunCommand");
+                
                 ResetRunBtn.IsVisible = true;
 
             } else if ("Continue".Equals(NewRunBtn.Text))

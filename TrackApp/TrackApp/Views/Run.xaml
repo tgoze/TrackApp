@@ -53,7 +53,16 @@
                 AbsoluteLayout.LayoutBounds=".5,.8,.5,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 />
-        
+
+        <Label x:Name="SplitField"
+               IsVisible="False"
+               Grid.Row="1"
+               Text="{Binding Split, Mode=TwoWay}"
+               AbsoluteLayout.LayoutBounds=".5,.95,.5,.1"
+               AbsoluteLayout.LayoutFlags="All"
+               HorizontalOptions="CenterAndExpand"
+               />
+
 
         <ContentView x:Name="NewRunPopup" 
              BackgroundColor="#C0808080" 
