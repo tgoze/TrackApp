@@ -77,6 +77,17 @@ namespace TrackApp.ViewModels
                 return _CurrentTime;
             }
         }
+        public string SplitTime 
+        {
+            set
+            {
+                SplitTime = CurrentTime;
+            }
+            get
+            {
+                return SplitTime;
+            }
+        }
 
         public RunViewModel()
         {
