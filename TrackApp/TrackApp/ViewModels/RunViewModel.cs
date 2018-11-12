@@ -112,21 +112,26 @@ namespace TrackApp.ViewModels
         }
 
         private void ResetRun()
-        {            
-            StopWatch.Reset();
-            cts.Cancel();
+        {
+            
             
             CurrentTime = "00:00.00";
+            _CurrentTime = "00.00.00";
             CurrentProgress = 0;
             MaxTime = 0;            
             SplitDistanceInput = 0;
             GoalTimeInput = "";
-            RunDistanceInput = 0;            
+            RunDistanceInput = 0;
+
+            StopWatch.Stop();
+            StopWatch.Reset();
+            cts.Cancel();
         }         
 
         private void StartRun()
-        {                    
+        {
             // Parse the input to seconds
+            StopWatch.Reset();
             string[] TimeInputs = GoalTimeInput.Split(':');
             int.TryParse(TimeInputs[0], out int goalTimeMin);
             int.TryParse(TimeInputs[1], out int goalTimeSec);

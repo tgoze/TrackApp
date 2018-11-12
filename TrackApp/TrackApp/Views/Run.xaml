@@ -14,7 +14,7 @@
 
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=TwoWay}" 
                                            Maximum="{Binding MaxTime, Mode=TwoWay}" 
-                                           SegmentCount="{Binding NumOfSplits, Mode=TwoWay}"
+                                           
                                            ProgressColor="#58a4b0"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
@@ -28,6 +28,7 @@
                     <Label x:Name="TimeLabel"
                             TextColor="#58a4b0" 
                             Text="{Binding CurrentTime, Mode=TwoWay}"
+                           
                             
                             >
                     </Label>
@@ -49,7 +50,7 @@
                 BackgroundColor="#a9bcd0"
                 TextColor="White"
                 IsEnabled="False"
-                Command="{Binding ResetRunCommand}" 
+                
                 AbsoluteLayout.LayoutBounds=".5,.8,.5,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 />
@@ -57,7 +58,7 @@
         <Label x:Name="SplitField"
                IsVisible="False"
                Grid.Row="1"
-               Text="{Binding Split, Mode=TwoWay}"
+               Text="00:00:00"
                AbsoluteLayout.LayoutBounds=".5,.95,.5,.1"
                AbsoluteLayout.LayoutFlags="All"
                HorizontalOptions="CenterAndExpand"
