@@ -7,9 +7,9 @@ namespace TrackApp.ViewModels
 {
     public class RunViewModel : INotifyPropertyChanged
     {
-        private const double TIMER_INTERVAL_MILLISECONDS = 0.1;
+        private const double TIMER_INTERVAL_MILLISECONDS = 1;
 
-        private bool ContinueTimer = false;        
+        private bool ContinueTimer = false;
 
         Stopwatch StopWatch = new Stopwatch();
 
@@ -31,7 +31,7 @@ namespace TrackApp.ViewModels
             {
                 return _MaxTime;
             }
-        }        
+        }
 
         public int _NumOfSplits = 0;
         public int NumOfSplits
@@ -104,96 +104,76 @@ namespace TrackApp.ViewModels
             StopWatch.Reset();
             CurrentTime = "00:00.00";
             CurrentProgress = 0;
-            MaxTime = 0;            
+            MaxTime = 0;
             SplitDistanceInput = 0;
             GoalTimeInput = "";
-            RunDistanceInput = 0;            
-        }         
+            RunDistanceInput = 0;
+        }
 
         private void StartRun()
-        {                    
+        {
+            // Parse the input to seconds
             string[] TimeInputs = GoalTimeInput.Split(':');
-            int.TryParse(TimeInputs[0], out int GoalTime);
-            StartBeeper(GoalTime, RunDistanceInput, SplitDistanceInput);
-            ContinueTimer = true;            
+            int.TryParse(TimeInputs[0], out int goalTimeMin);
+            int.TryParse(TimeInputs[1], out int goalTimeSec);
+            int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;
+
+            // Start the stopwatch with beeper                    
+            NumOfSplits = RunDistanceInput / SplitDistanceInput;
+            MaxTime = goalTimeSeconds;
+            SplitTimeInterval = goalTimeSeconds / NumOfSplits;
+            StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
         }
 
         private void StopRun()
-        {            
+        {
             ContinueTimer = false;
             if (StopWatch.IsRunning)
-                StopWatch.Stop();                   
+                StopWatch.Stop();
         }
 
-        protected void StartBeeper(int GoalTime, int MaxDistance, int SplitDistance)
+        private void ContinueRun()
         {
-            //int.TryParse(TargetTimeMinEntry.Text, out int GoalTime);
-            //int.TryParse(TargetTimeSecEntry.Text, out int targetTimeSec);
-            //int.TryParse(TotalDistanceEntry.Text, out int MaxDistance);
-            //int.TryParse(SplitDistanceEntry.Text, out int SplitDistance);
-
-            int NumOfSplits = MaxDistance / SplitDistance;
-
-            int GoalTimeSec = 0;
-            int SplitTimeInterval = (GoalTime * 60 + GoalTimeSec) / NumOfSplits * 100;
-
-            Device.StartTimer(TimeSpan.FromMilliseconds(TIMER_INTERVAL_MILLISECONDS), () =>
-            {
-                SplitCount++;
-                TotalCount++;                
-
-                //SplitLbl.Text = "Current split: " + (splitCount % 360000).ToString("N0") + ":" + ((splitCount % 600) / 10).ToString("N3");
-                //TotalLbl.Text = "Total time: " + (totalCount % 360000).ToString("N0") + ":" + ((totalCount % 600) / 10).ToString("N3");
-
-                //SplitLbl.Text = "Current split: " + TimeSpan.FromMilliseconds(splitCount).Minutes + ":" + TimeSpan.FromMilliseconds(splitCount).Seconds;
-                CurrentTime = TimeSpan.FromMilliseconds(TotalCount).Minutes
-                    + ":" + TimeSpan.FromMilliseconds(TotalCount).Seconds
-                    + " " + TimeSpan.FromMilliseconds(TotalCount).Milliseconds; 
-
-                if (TotalCount % SplitTimeInterval == 0)
-                    DependencyService.Get<IAudio>().PlayAudioFile("button.mp3");
-
-                return ContinueTimer;
-            });            
+            if (!StopWatch.IsRunning)
+                StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
         }
 
-        //    private void StartBtn_Clicked(object sender, EventArgs e)
-        //    {
-        //        if (StartBtn.Text.Equals("Start"))
-        //        {
-        //            StartBtn.Text = "Split";
-        //            StopBtn.IsEnabled = true;
-        //            StartBeeper();
-        //            continueTimer = true;
-        //            StopBtn.Text = "Stop";
-        //        }
-        //        else
-        //        {
-        //            splitCount = 0;
-        //        }
-        //    }
+        protected void StartDeviceStopwatch(double repeatInterval, int splitTimeInterval)
+        {
+            // Had to use this variable because Stopwatch and Device.StartTimer don't interact well
+            bool wait = false;
 
-        //    private void StopBtn_Clicked(object sender, EventArgs e)
-        //    {
-        //        StartBtn.Text = "Start";
-        //        continueTimer = false;
+            ContinueTimer = true;
+            StopWatch.Start();
 
+            Device.StartTimer(TimeSpan.FromMilliseconds(repeatInterval), () =>
+            {
+                CurrentProgress = StopWatch.Elapsed.Seconds;
+                CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
 
-        //        if (StopBtn.Text.Equals("Reset"))
-        //        {
-        //            TargetTimeMinEntry.Text = "";
-        //            //TargetTimeSecEntry.Text = "";
-        //            TotalDistanceEntry.Text = "";
-        //            SplitDistanceEntry.Text = "";
+                if (MaxTime <= StopWatch.Elapsed.Seconds)
+                {
+                    StopRun();
+                    return ContinueTimer;
+                }
+                else
+                {
 
-        //            splitCount = 0;
-        //            totalCount = 0;
-
-        //            StopBtn.Text = "Stop";
-        //            SplitLbl.Text = "Current split: " + ((splitCount / 60)).ToString("D2") + ":" + (splitCount % 60).ToString("D2");
-        //            TotalLbl.Text = "Total time: " + ((totalCount / 60)).ToString("D2") + ":" + (totalCount % 60).ToString("D2");
-        //        }
-        //        StopBtn.Text = "Reset";
-        //    }
+                    if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
+                    {
+                        if (!wait)
+                        {
+                            PlayBeep();
+                            wait = true;
+                        }
+                    }
+                    else
+                    {
+                        wait = false;
+                    }
+                    return ContinueTimer;
+                }
+            });
+        }
     }
 }

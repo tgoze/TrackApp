@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Text;
 
 namespace TrackApp.Models.dao
@@ -14,12 +15,18 @@ namespace TrackApp.Models.dao
 
         public new void CreateUser(User user)
         {
-            client.DownloadString(Dao.CreateUser + JsonConvert.SerializeObject(user));
+            //client.DownloadString(Dao.CreateUser + JsonConvert.SerializeObject(user));
         }
 
         public static User GetUser(int id)
         {
-            return JsonConvert.DeserializeObject<User>(client.DownloadString(GetUserById + id));
+            
+            //client1.QueryString = new NameValueCollection
+            //{
+            //    { "userId", id.ToString() }
+            //};
+
+            return JsonConvert.DeserializeObject<User>(client.DownloadString(GetUserById));
         }
 
         public static User GetUser(string username)
@@ -29,12 +36,12 @@ namespace TrackApp.Models.dao
 
         public static void UpdateUser(int id)
         {
-            client.UploadString(UpdateUserById, JsonConvert.SerializeObject(id));
+            //client.UploadString(UpdateUserById, JsonConvert.SerializeObject(id));
         }
 
         public static void DeleteUser(int id)
         {
-            client.DownloadString(DeleteUserById + id);
+            //client.DownloadString(DeleteUserById + id);
         }
 
         public static List<Team> GetTeamsByUser(int userId)
