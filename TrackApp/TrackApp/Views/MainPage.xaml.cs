@@ -23,8 +23,12 @@ namespace TrackApp
             InitializeComponent();
 
 <<<<<<< refs/remotes/origin/beta
+<<<<<<< refs/remotes/origin/beta
             //User user = UserDao.GetUser(1);
 =======
+=======
+<<<<<<< refs/remotes/origin/amarkovic
+>>>>>>> Adjusted DAO to reflect changes in webservice
             //User user = UserDao.GetUser(0);
 <<<<<<< refs/remotes/origin/amarkovic
 <<<<<<< refs/remotes/origin/amarkovic
@@ -36,6 +40,10 @@ namespace TrackApp
 =======
             //List<Role> role = RoleDao.GetAllRoles();
 >>>>>>> Trying to fix timer bug
+=======
+            //User user = UserDao.GetUser(1);
+            List<Role> role = RoleDao.GetAllRoles();
+>>>>>>> Adjusted DAO to reflect changes in webservice
 
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);

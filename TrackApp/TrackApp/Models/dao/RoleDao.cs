@@ -13,6 +13,7 @@ namespace TrackApp.Models.dao
 =======
 <<<<<<< refs/remotes/origin/amarkovic
 <<<<<<< refs/remotes/origin/amarkovic
+<<<<<<< refs/remotes/origin/amarkovic
         //public static List<Role> GetAllRoles()
         //{
         //    List<Role> temp = JsonConvert.DeserializeObject<List<Role>>(client.DownloadString(Url + Dao.GetAllRoles));
@@ -36,7 +37,19 @@ namespace TrackApp.Models.dao
         //    return temp;
         //}
 >>>>>>> Trying to fix timer bug
+<<<<<<< refs/remotes/origin/beta
 >>>>>>> Trying to fix timer bug
+=======
+=======
+        public static List<Role> GetAllRoles()
+        {
+            string temp2 = Regex.Unescape(client1.GetStringAsync(Dao.GetAllRoles).Result.Replace("\n", string.Empty));
+            List<Role> temp = JsonConvert.DeserializeObject<List<Role>>(temp2, new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat });
+
+            return temp;
+        }
+>>>>>>> Adjusted DAO to reflect changes in webservice
+>>>>>>> Adjusted DAO to reflect changes in webservice
 
     }
 }

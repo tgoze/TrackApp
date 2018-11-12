@@ -22,11 +22,21 @@ namespace TrackApp.Models.dao
 
         public static User GetUser(int id)
         {
+<<<<<<< refs/remotes/origin/beta
             var query = HttpUtility.ParseQueryString(string.Empty);
             query["userId"] = id.ToString();
 
             string temp = Regex.Unescape(client1.GetStringAsync(GetUserById + "?" + query.ToString()).Result);
             return JsonConvert.DeserializeObject<User>(temp);
+=======
+            
+            //client1.QueryString = new NameValueCollection
+            //{
+            //    { "userId", id.ToString() }
+            //};
+
+            return JsonConvert.DeserializeObject<User>(client.DownloadString(GetUserById));
+>>>>>>> Adjusted DAO to reflect changes in webservice
         }
 
         public static User GetUser(string username)

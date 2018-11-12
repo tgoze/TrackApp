@@ -8,14 +8,18 @@ namespace TrackApp.ViewModels
     public class RunViewModel : INotifyPropertyChanged
     {
 <<<<<<< refs/remotes/origin/amarkovic
+<<<<<<< refs/remotes/origin/amarkovic
         // Properties for stopwatch        
         public int SplitTimeIntervalSec { get; set; }
         private int NumOfSplits;
         private StopwatchService SwService;       
 =======
         private const double TIMER_INTERVAL_MILLISECONDS = 0.1;
+=======
+        private const double TIMER_INTERVAL_MILLISECONDS = 1;
+>>>>>>> Adjusted DAO to reflect changes in webservice
 
-        private bool ContinueTimer = false;        
+        private bool ContinueTimer = false;
 
         Stopwatch StopWatch = new Stopwatch();
 >>>>>>> Trying to fix timer bug
@@ -45,7 +49,27 @@ namespace TrackApp.ViewModels
             {
                 return _MaxTime;
             }
+<<<<<<< refs/remotes/origin/amarkovic
         }                    
+=======
+        }
+
+        public int _NumOfSplits = 0;
+        public int NumOfSplits
+        {
+            set
+            {
+                _NumOfSplits = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("NumOfSplits"));
+            }
+            get
+            {
+                return _NumOfSplits;
+            }
+        }
+
+        int SplitTimeInterval;
+>>>>>>> Adjusted DAO to reflect changes in webservice
 
         public double _CurrentProgress = 0;
         public double CurrentProgress
@@ -122,6 +146,7 @@ namespace TrackApp.ViewModels
             SplitDistanceInput = 0;
             GoalTimeInput = "";
             RunDistanceInput = 0;
+<<<<<<< refs/remotes/origin/amarkovic
         }
 
         private void StopRun()
@@ -144,5 +169,74 @@ namespace TrackApp.ViewModels
                 return continueUpdating;
             });
         }            
+=======
+        }
+
+        private void StartRun()
+        {
+            // Parse the input to seconds
+            string[] TimeInputs = GoalTimeInput.Split(':');
+            int.TryParse(TimeInputs[0], out int goalTimeMin);
+            int.TryParse(TimeInputs[1], out int goalTimeSec);
+            int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;
+
+            // Start the stopwatch with beeper                    
+            NumOfSplits = RunDistanceInput / SplitDistanceInput;
+            MaxTime = goalTimeSeconds;
+            SplitTimeInterval = goalTimeSeconds / NumOfSplits;
+            StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
+        }
+
+        private void StopRun()
+        {
+            ContinueTimer = false;
+            if (StopWatch.IsRunning)
+                StopWatch.Stop();
+        }
+
+        private void ContinueRun()
+        {
+            if (!StopWatch.IsRunning)
+                StartDeviceStopwatch(TIMER_INTERVAL_MILLISECONDS, SplitTimeInterval);
+        }
+
+        protected void StartDeviceStopwatch(double repeatInterval, int splitTimeInterval)
+        {
+            // Had to use this variable because Stopwatch and Device.StartTimer don't interact well
+            bool wait = false;
+
+            ContinueTimer = true;
+            StopWatch.Start();
+
+            Device.StartTimer(TimeSpan.FromMilliseconds(repeatInterval), () =>
+            {
+                CurrentProgress = StopWatch.Elapsed.Seconds;
+                CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
+
+                if (MaxTime <= StopWatch.Elapsed.Seconds)
+                {
+                    StopRun();
+                    return ContinueTimer;
+                }
+                else
+                {
+
+                    if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
+                    {
+                        if (!wait)
+                        {
+                            PlayBeep();
+                            wait = true;
+                        }
+                    }
+                    else
+                    {
+                        wait = false;
+                    }
+                    return ContinueTimer;
+                }
+            });
+        }
+>>>>>>> Adjusted DAO to reflect changes in webservice
     }
 }
