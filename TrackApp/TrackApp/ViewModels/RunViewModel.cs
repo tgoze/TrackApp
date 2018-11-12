@@ -116,7 +116,7 @@ namespace TrackApp.ViewModels
             
             
             CurrentTime = "00:00.00";
-            _CurrentTime = "00.00.00";
+           // _CurrentTime = "00.00.00";
             CurrentProgress = 0;
             MaxTime = 0;            
             SplitDistanceInput = 0;
@@ -168,7 +168,7 @@ namespace TrackApp.ViewModels
             while (true)
             {
                 CurrentProgress = StopWatch.Elapsed.Seconds;
-                CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
+                CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\:ff");
                 
                 if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
                 {
