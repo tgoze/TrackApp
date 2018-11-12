@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Xamarin.Forms;
+using Xamarin.Forms; 
 using Xamarin.Forms.Xaml;
 
 using TrackApp.ViewModels;
@@ -13,7 +13,9 @@ namespace TrackApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Run : ContentPage
-	{                      
+	{
+        public String Signal = "Start";
+
         public Run()
 		{
             InitializeComponent();
@@ -30,18 +32,18 @@ namespace TrackApp
         }
            
         private void ShowPopup(object sender, EventArgs e)
-        {       
-            
-            if ("Stop".Equals(NewRunBtn.Text))
+        {           
+            if ("Stop".Equals(Signal))
             {
-                NewRunBtn.Text = "Continue";
+                Signal = "Continue";
+                NewRunBtn.Image = "baseline_play_arrow_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
-                //NewRunBtn.SetBinding(Button.CommandProperty, "StartRunCommand");
                 ResetRunBtn.IsVisible = true;
 
-            } else if ("Continue".Equals(NewRunBtn.Text))
+            } else if ("Continue".Equals(Signal))
             {
-                NewRunBtn.Text = "Stop";
+                Signal = "Stop";
+                NewRunBtn.Image = "baseline_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
                 ResetRunBtn.IsVisible = false;
 
@@ -60,14 +62,16 @@ namespace TrackApp
 
         private void ResetRun(object sender, EventArgs e)
         {
-            NewRunBtn.Text = "Start";
+            NewRunBtn.Image = "baseline_play_arrow_white_48.png";
+            Signal = "Start";
             ResetRunBtn.IsVisible = false;
         }
 
         private void StartRun(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
-            NewRunBtn.Text = "Stop";
+            NewRunBtn.Image = "baseline_pause_white_48.png";
+            Signal = "Stop";
             GoalTimeInput.Value = "";
             RunDistanceInput.Value = "";
             SplitDistanceInput.Value = "";

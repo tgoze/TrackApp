@@ -7,54 +7,43 @@
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
              x:Class="TrackApp.Run">
     <AbsoluteLayout x:Name="layout">
-
-
-
-
-
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=TwoWay}" 
                                            Maximum="{Binding MaxTime, Mode=TwoWay}" 
                                            SegmentCount="{Binding NumOfSplits, Mode=TwoWay}"
-                                           ProgressColor="#58a4b0"
+                                           ProgressColor="#373f51"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
-                                           IndicatorInnerRadius=".77"
-                                           IndicatorOuterRadius=".7"
-                                           
-                                              >
-            
+                                           IndicatorInnerRadius=".75"
+                                           IndicatorOuterRadius=".7">
             <progressBar:SfCircularProgressBar.Content>
-                
-                    <Label x:Name="TimeLabel"
-                            TextColor="#58a4b0" 
-                            Text="{Binding CurrentTime, Mode=TwoWay}"
-                            
-                            >
-                    </Label>
-               
-                    
-                
+                <Label x:Name="TimeLabel"
+                        TextColor="#373f51"
+                        Text="{Binding CurrentTime, Mode=TwoWay}">
+                </Label>
             </progressBar:SfCircularProgressBar.Content>
         </progressBar:SfCircularProgressBar>
-        <Button x:Name="NewRunBtn" Grid.Row="1"
-                            Text="Start"
-                            BackgroundColor="#a9bcd0"
-                            TextColor="White"
-                               
-                            AbsoluteLayout.LayoutBounds=".5,.6,.5,.1"
-                            AbsoluteLayout.LayoutFlags="All"
-                            />
-        <Button x:Name="ResetRunBtn" Grid.Row="1"
-                Text="Reset"
-                BackgroundColor="#a9bcd0"
-                TextColor="White"
-                IsVisible="False"
-                Command="{Binding ResetRunCommand}" 
-                AbsoluteLayout.LayoutBounds=".5,.8,.5,.1"
-                AbsoluteLayout.LayoutFlags="All"
-                />
         
+        <Button x:Name="NewRunBtn" 
+                Grid.Row="1"
+                Style="{StaticResource CircleButtonStart}">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="baseline_play_arrow_white_48.png"
+                            iOS=""/>
+            </Button.Image>
+        </Button>
 
+        <Button x:Name="ResetRunBtn" 
+                Grid.Row="1"
+                Style="{StaticResource CircleButtonReset}"
+                Command="{Binding ResetRunCommand}">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="baseline_replay_white_48.png"
+                            iOS=""/>
+            </Button.Image>
+        </Button>
+        
         <ContentView x:Name="NewRunPopup" 
              BackgroundColor="#C0808080" 
              Padding="10, 0" 
@@ -114,14 +103,25 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Button x:Name="StartNewRunBtn" 
-                            Text="Start Run" 
                             BackgroundColor="#373f51" 
-                            TextColor="White"
                             HorizontalOptions="CenterAndExpand"                             
                             Grid.Column="0"
-                            Command="{Binding StartRunCommand}"></Button>
-                    <Button x:Name="CancelNewRunBtn" Text="Cancel" BackgroundColor="#a9bcd0" TextColor="White" 
-                            HorizontalOptions="CenterAndExpand" Grid.Column="1"></Button>
+                            Command="{Binding StartRunCommand}">
+                        <Button.Image>
+                            <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="baseline_play_arrow_white_48.png"
+                            iOS=""/>
+                        </Button.Image>
+                    </Button>
+                    <Button x:Name="CancelNewRunBtn" 
+                            BackgroundColor="#9b2b2b"  
+                            Grid.Column="1">
+                        <Button.Image>
+                            <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="baseline_cancel_white_48.png"
+                            iOS=""/>
+                        </Button.Image>
+                    </Button>
                 </Grid>
             </StackLayout>
         </ContentView>
