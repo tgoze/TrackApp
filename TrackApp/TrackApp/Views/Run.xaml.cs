@@ -14,10 +14,10 @@ namespace TrackApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Run : ContentPage
 	{
+        int SplitMin = 0;
+        int SplitSec = 0;
+        int SplitMil = 0;
         public String Signal = "Start";
-        decimal SplitMin = 0m;
-        decimal SplitSec = 0m;
-
         public Run()
 		{
             InitializeComponent();
@@ -82,27 +82,33 @@ namespace TrackApp
                 ResetRunBtn.Text = "Split";
                 ResetRunBtn.SetBinding(Button.CommandProperty, "Throwaway");
                 ResetRunBtn.IsEnabled = false;
-                SplitMin = 0m;
-                SplitSec = 0m;
+                SplitMin = 0;
+                SplitSec = 0;
+                SplitMil = 0;
                 SplitField.IsVisible = false;
             } else if (ResetRunBtn.Text.Equals("Split"))
             {
                 string[] CurrentTimeInputs = TimeLabel.Text.Split(':');
 
-                decimal.TryParse(CurrentTimeInputs[0], out decimal CurrentTimeMin);
-                decimal.TryParse(CurrentTimeInputs[1], out decimal CurrentTimeSec);
+                int.TryParse(CurrentTimeInputs[0], out int CurrentTimeMin);
+                int.TryParse(CurrentTimeInputs[1], out int CurrentTimeSec);
+                int.TryParse(CurrentTimeInputs[2], out int CurrentTimeMil);
 
 
-
-                decimal NewSplitMin = CurrentTimeMin - SplitMin;
-                decimal NewSplitSec = CurrentTimeSec - SplitSec;
-                decimal Current = Convert.ToDecimal("" + CurrentTimeMin + CurrentTimeSec);
-                decimal Split = Convert.ToDecimal("" + SplitMin + SplitSec);
-                decimal CurSplit = Current - Split;
+                TimeSpan current = new TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
+                TimeSpan split = new TimeSpan(0, 0, SplitMin, SplitSec, SplitMil);
+                TimeSpan NewSplit = current - split;
+                //decimal NewSplitMin = CurrentTimeMin - SplitMin;
+                //decimal NewSplitSec = CurrentTimeSec - SplitSec;
+                //decimal NewSplit = Convert.ToDecimal("" + NewSplitMin + NewSplitSec);
+                //decimal Current = Convert.ToDecimal("" + CurrentTimeMin + CurrentTimeSec);
+                // decimal Split = Convert.ToDecimal("" + SplitMin + SplitSec);
+                // decimal CurSplit = Current - Split;
                 SplitMin = CurrentTimeMin;
                 SplitSec = CurrentTimeSec;
+                SplitMil = CurrentTimeMil;
                 SplitField.IsVisible = true;
-                SplitField.Text = CurSplit.ToString();
+                SplitField.Text = NewSplit.ToString(@"mm\:ss\:ff");
             }
         }
 
