@@ -28,7 +28,7 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="baseline_play_arrow_white_48.png"
-                            iOS=""/>
+                            iOS="baseline_play_arrow_white_48pt_3x.png"/>
             </Button.Image>
         </Button>
 
@@ -49,7 +49,7 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="baseline_replay_white_48.png"
-                            iOS=""/>
+                            iOS="baseline_replay_white_48pt_3x.png"/>
             </Button.Image>
         </Button>
         
@@ -119,7 +119,7 @@
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                             Android="baseline_play_arrow_white_48.png"
-                            iOS=""/>
+                            iOS="baseline_play_arrow_white_48pt_3x.png"/>
                         </Button.Image>
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
@@ -128,7 +128,7 @@
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                             Android="baseline_cancel_white_48.png"
-                            iOS=""/>
+                            iOS="baseline_cancel_white_48pt_3x.png"/>
                         </Button.Image>
                     </Button>
                 </Grid>
