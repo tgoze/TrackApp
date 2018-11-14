@@ -15,7 +15,7 @@
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
                                            Maximum="{Binding MaxTime}"                                           
                                            ProgressColor="#58a4b0"
-                                           AnimationDuration="30"
+                                           AnimationDuration="900"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
                                            IndicatorInnerRadius=".77"

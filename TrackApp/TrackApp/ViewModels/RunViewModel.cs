@@ -100,7 +100,7 @@ namespace TrackApp.ViewModels
             NumOfSplits = RunDistanceInput / SplitDistanceInput;                        
             SplitTimeIntervalSec = goalTimeSeconds / NumOfSplits;
             //MaxTime = goalTimeSeconds;
-            MaxTime = SplitTimeIntervalSec;
+            MaxTime = SplitTimeIntervalSec * 1000;
 
             SwService = new StopwatchService(SplitTimeIntervalSec);            
             SwService.Start();
@@ -134,7 +134,7 @@ namespace TrackApp.ViewModels
             {
                 CurrentTime = SwService.ToString();
 
-                CurrentProgress = SwService.StopWatch.Elapsed.Seconds % SplitTimeIntervalSec;
+                CurrentProgress = (SwService.StopWatch.Elapsed.Seconds * 1000) % SplitTimeIntervalSec;
                 return continueUpdating;
             });
         }            
