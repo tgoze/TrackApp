@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,9 +20,7 @@ namespace TrackApp
             CancelNewRunBtn.Clicked += HidePopup;
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 28;
-            progressBar.Minimum = 0;
-            
-            
+            progressBar.Minimum = 0;                        
         }
            
         private void ShowPopup(object sender, EventArgs e)
