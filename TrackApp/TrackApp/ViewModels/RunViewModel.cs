@@ -1,20 +1,15 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
+using TrackApp.Helper;
 using Xamarin.Forms;
 
 namespace TrackApp.ViewModels
 {
     public class RunViewModel : INotifyPropertyChanged
     {
-        // Properties for stopwatch
-        TimeSpan Interval = TimeSpan.FromMilliseconds(1);
-        int SplitTimeIntervalSec;
-        CancellationTokenSource cts;
-        Stopwatch StopWatch = new Stopwatch();
-        bool WaitToBeep = false;       
+        // Properties for stopwatch        
+        int SplitTimeIntervalSec;                        
+        private StopwatchService SwService;       
 
         // Properties for UI 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -22,8 +17,7 @@ namespace TrackApp.ViewModels
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
-
-        public Command AudioCommand { get; }
+        
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
@@ -72,12 +66,12 @@ namespace TrackApp.ViewModels
             }
         }
 
-        public string _CurrentTime = "0:00.00";
+        public string _CurrentTime = "0:00.00"; 
         public string CurrentTime
         {
             set
             {
-                _CurrentTime = value;
+                _CurrentTime = value;                
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CurrentTime"));
             }
             get
@@ -98,35 +92,12 @@ namespace TrackApp.ViewModels
         }
 
         public RunViewModel()
-        {
-            AudioCommand = new Command(PlayBeep);
+        {            
             StartRunCommand = new Command(StartRun);
             StopRunCommand = new Command(StopRun);
             ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
-        }        
-
-        private void PlayBeep()
-        {
-            DependencyService.Get<IAudio>().PlayAudioFile("beep.mp3");
-        }
-
-        private void ResetRun()
-        {
-            
-            
-            CurrentTime = "00:00.00";
-           // _CurrentTime = "00.00.00";
-            CurrentProgress = 0;
-            MaxTime = 0;            
-            SplitDistanceInput = 0;
-            GoalTimeInput = "";
-            RunDistanceInput = 0;
-
-            StopWatch.Stop();
-            StopWatch.Reset();
-            cts.Cancel();
-        }         
+        }                    
 
         private void StartRun()
         {
@@ -138,53 +109,46 @@ namespace TrackApp.ViewModels
             int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;
             
             // Start the stopwatch with beeper                    
-            NumOfSplits = RunDistanceInput / SplitDistanceInput;
-            MaxTime = goalTimeSeconds;
+            NumOfSplits = RunDistanceInput / SplitDistanceInput;                        
             SplitTimeIntervalSec = goalTimeSeconds / NumOfSplits;
-            cts = new CancellationTokenSource();
-            StartStopwatch(Interval, SplitTimeIntervalSec, cts.Token);
+            //MaxTime = goalTimeSeconds;
+            MaxTime = SplitTimeIntervalSec * 1000;
+
+            SwService = new StopwatchService(SplitTimeIntervalSec);            
+            SwService.Start();
+            UpdateTime(true);
+        }
+
+        private void ResetRun()
+        {
+            SwService.Reset();
+            CurrentTime = "0:00.00";
+            CurrentProgress = 0;
+            MaxTime = 0;
+            SplitDistanceInput = 0;
+            GoalTimeInput = "";
+            RunDistanceInput = 0;
         }
 
         private void StopRun()
-        {                        
-            if (StopWatch.IsRunning)
-                StopWatch.Stop();           
+        {            
+            SwService.Stop();  
         }
 
         private void ContinueRun()
-        {
-            if (!StopWatch.IsRunning)
-                StopWatch.Start();
+        { 
+            SwService.Continue();
         }
 
-        private void StartStopwatch(TimeSpan repeatInterval, int splitTimeInterval, CancellationToken cancellationToken)        
-        {            
-            var task = WatchStopwatchAsync(repeatInterval, splitTimeInterval, cancellationToken);
-            StopWatch.Start();
-        }
-
-        private async Task WatchStopwatchAsync(TimeSpan interval, int splitTimeInterval, CancellationToken cancellationToken)
+        private void UpdateTime(bool continueUpdating)
         {
-            while (true)
+            Device.StartTimer(TimeSpan.FromTicks(1), () => 
             {
-                CurrentProgress = StopWatch.Elapsed.Seconds;
-                CurrentTime = StopWatch.Elapsed.ToString(@"mm\:ss\:ff");
-                
-                if (StopWatch.Elapsed.Seconds % splitTimeInterval == 0 && StopWatch.Elapsed.Seconds != 0)
-                {
-                    if (!WaitToBeep)
-                    {
-                        PlayBeep();
-                        WaitToBeep = true;
-                    }
-                }
-                else
-                {
-                    WaitToBeep = false;
-                }
-                
-                await Task.Delay(interval, cancellationToken);                
-            }
-        }         
+                CurrentTime = SwService.ToString();
+
+                CurrentProgress = (SwService.StopWatch.Elapsed.Seconds * 1000) % SplitTimeIntervalSec;
+                return continueUpdating;
+            });
+        }            
     }
 }
