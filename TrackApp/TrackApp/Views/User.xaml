@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             xmlns:syncmaskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             x:Class="TrackApp.User"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding DisplayMessage}" FontAttributes="Bold" FontSize="32" HorizontalOptions="CenterAndExpand" VerticalOptions="End" TextColor="#a9bcd0" />
+            <Label Text="{Binding Email}" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="End" TextColor="#a9bcd0" />
+
+            <!--<Label Text="User Info"
+                HorizontalOptions="CenterAndExpand" />
+            <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{Binding DisplayMessage}" FontAttributes="Italic" FontSize="Small" />
+                </FormattedString>
+                </Label.FormattedText>
+            </Label>>-->
+            <Grid 
+                VerticalOptions="Center"
+                Margin="20">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <!--
+                <Label Text="Height:" Grid.Row="0" Grid.Column="0" />
+                <Label Text="Weight:" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Email:" Grid.Row="2" Grid.Column="0"/>
+-->
+
+                <inputLayout:SfTextInputLayout
+                Hint="Height"
+                HelperText="Update Your Height"
+                ContainerType="Outlined"
+                Grid.Row="0" 
+                Grid.Column="0"
+                >
+                    <syncmaskededit:SfMaskedEdit x:Name="HeightMaskedEdit" Mask="0'00&quot;" />
+                </inputLayout:SfTextInputLayout>
+
+                <inputLayout:SfTextInputLayout
+                Hint="Weight"
+                HelperText="Update Your Weight(pounds)"
+                ContainerType="Outlined"
+                Grid.Row="1" 
+                Grid.Column="0"
+                >
+                    <Entry   
+                Keyboard="Numeric"
+                Text="{Binding Weight}"
+                x:Name="WeightEntry" />
+                </inputLayout:SfTextInputLayout>
+
+                <Button 
+                
+                Command="{Binding UpdateHeightCommand}"
+                VerticalOptions="Center"
+                TextColor="White"
+                CornerRadius="30" 
+                Margin="5,0"
+                Text="Update" 
+                 BackgroundColor="#0000ff"
+                     Grid.Row="0" 
+                Grid.Column="1"
+                    />
+
+                <Button 
+                Command="{Binding UpdateWeightCommand}"
+                VerticalOptions="Center"
+                TextColor="White"
+                CornerRadius="30" 
+                Margin="5,0"
+                Text="Update" 
+                 BackgroundColor="#0000ff"
+                     Grid.Row="1" 
+                Grid.Column="1"
+                    />
+
+            </Grid>
+            
+             <Picker x:Name="gradeLevel" Title="Update your Grade Level"
+                Margin="20,0">
+                    <Picker.ItemsSource >
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>Freshman</x:String>
+                            <x:String>Sophmore</x:String>
+                            <x:String>Junior</x:String>
+                            <x:String>Senior</x:String>
+                        </ListCollection:List>
+                    </Picker.ItemsSource>
+                </Picker>
+            
+            <Button 
+                Command="{Binding ChangePasswordCommand}"
+                TextColor="White"
+                CornerRadius="30" 
+                Margin="20,0"
+                Text="Change Password" 
+                 BackgroundColor="#0000ff"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
