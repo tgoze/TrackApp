@@ -6,22 +6,22 @@
         <ResourceDictionary>
             <Style x:Key="CircleButtonStart" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#373f51"/>
-                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="TextColor" Value="#373f51"/>
                 <Setter Property="WidthRequest" Value="60"/>
                 <Setter Property="HeightRequest" Value="60"/>
                 <Setter Property="CornerRadius" Value="30"/>
-                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".5,.9,.15,.1"/>
-                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
             </Style>
             <Style x:Key="CircleButtonReset" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#9b2b2b"/>
-                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="TextColor" Value="#9b2b2b"/>
                 <Setter Property="IsVisible" Value="False"/>
                 <Setter Property="WidthRequest" Value="60"/>
                 <Setter Property="HeightRequest" Value="60"/>
                 <Setter Property="CornerRadius" Value="30"/>
-                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".9,.9,.15,.1"/>
-                <Setter Property="AbsoluteLayout.LayoutFlags" Value="All"/>
+            </Style>
+            <Style x:Key="SplitField" TargetType="Label">
+                <Setter Property="IsVisible" Value="False"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

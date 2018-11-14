@@ -17,7 +17,8 @@ namespace TrackApp
         int SplitMin = 0;
         int SplitSec = 0;
         int SplitMil = 0;
-        public String Signal = "Start";
+        public String startBtnSignal = "Start";
+        public String resetBtnSignal = "Reset";
         public Run()
 		{
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace TrackApp
             BindingContext = new RunViewModel();
             NewRunBtn.Clicked += ShowPopup;
             StartNewRunBtn.Clicked += StartRun;
-            CancelNewRunBtn.Clicked += HidePopup;
+            CancelNewRunBtn.Clicked += HidePopup; 
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
@@ -37,18 +38,19 @@ namespace TrackApp
            
         private void ShowPopup(object sender, EventArgs e)
         {           
-            if ("Stop".Equals(Signal))
+            if ("Stop".Equals(startBtnSignal))
             {
-                Signal = "Continue";
+                startBtnSignal = "Continue";
                 NewRunBtn.Image = "baseline_play_arrow_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
                 ResetRunBtn.IsVisible = true;
-                ResetRunBtn.Text = "Reset";
+                resetBtnSignal = "Reset";
+                ResetRunBtn.Image = "baseline_replay_white_48.png";
                 ResetRunBtn.SetBinding(Button.CommandProperty, "ResetRunCommand");
 
-            } else if ("Continue".Equals(Signal))
+            } else if ("Continue".Equals(startBtnSignal))
             {
-                Signal = "Stop";
+                startBtnSignal = "Stop";
                 NewRunBtn.Image = "baseline_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
@@ -73,20 +75,21 @@ namespace TrackApp
         private void ResetRun(object sender, EventArgs e)
         {
             NewRunBtn.Image = "baseline_play_arrow_white_48.png";
-            Signal = "Start";
+            startBtnSignal = "Start";
             ResetRunBtn.IsVisible = false;
 
-            if (ResetRunBtn.Text.Equals("Reset"))
+            if ("Reset".Equals(resetBtnSignal))
             {
-                NewRunBtn.Text = "Start";
-                ResetRunBtn.Text = "Split";
+                startBtnSignal = "Start";
+                resetBtnSignal = "Split";
+                ResetRunBtn.Image = "baseline_outlined_flag_white_48.png";
                 ResetRunBtn.SetBinding(Button.CommandProperty, "Throwaway");
                 ResetRunBtn.IsEnabled = false;
                 SplitMin = 0;
                 SplitSec = 0;
                 SplitMil = 0;
                 SplitField.IsVisible = false;
-            } else if (ResetRunBtn.Text.Equals("Split"))
+            } else if ("Split".Equals(resetBtnSignal))
             {
                 string[] CurrentTimeInputs = TimeLabel.Text.Split(':');
 
@@ -116,7 +119,7 @@ namespace TrackApp
         {
             NewRunPopup.IsVisible = false;
             NewRunBtn.Image = "baseline_pause_white_48.png";
-            Signal = "Stop";
+            startBtnSignal = "Stop";
             GoalTimeInput.Value = "";
             RunDistanceInput.Value = "";
             SplitDistanceInput.Value = "";

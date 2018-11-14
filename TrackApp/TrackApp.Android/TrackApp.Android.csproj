@@ -111,9 +111,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_replay_24.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TrackApp\TrackApp.csproj">
       <Project>{1307D320-AD44-4ABF-BF42-BBEBD94310A6}</Project>
       <Name>TrackApp</Name>
@@ -126,13 +123,7 @@
     <AndroidResource Include="Resources\layout\rounded_shape.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\runner_icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\beep.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_play_arrow_24.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\baseline_play_arrow_white_48.png" />
@@ -144,19 +135,25 @@
     <AndroidResource Include="Resources\drawable-hdpi\baseline_directions_run_white_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_directions_run_24.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_pause_24.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\baseline_pause_white_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\baseline_cancel_24.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_cancel_white_48.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\baseline_cancel_white_48.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_outlined_flag_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_group_work_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_person_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_check_circle_white_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

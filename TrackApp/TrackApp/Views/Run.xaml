@@ -24,7 +24,9 @@
         
         <Button x:Name="NewRunBtn" 
                 Grid.Row="1"
-                Style="{StaticResource CircleButtonStart}">
+                Style="{StaticResource CircleButtonStart}"
+                AbsoluteLayout.LayoutBounds=".5,.9,.16,.1"
+                AbsoluteLayout.LayoutFlags="All">
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="baseline_play_arrow_white_48.png"
@@ -33,19 +35,20 @@
         </Button>
 
         <Label x:Name="SplitField"
-               IsVisible="False"
                Grid.Row="1"
                Text="00:00:00"
-               AbsoluteLayout.LayoutBounds=".5,.95,.5,.1"
-               AbsoluteLayout.LayoutFlags="All"
-               HorizontalOptions="CenterAndExpand"
-               />
+               Style="{StaticResource SplitField}"
+               AbsoluteLayout.LayoutBounds=".5,.65,.5,.1"
+               AbsoluteLayout.LayoutFlags="All"/>
 
 
         <Button x:Name="ResetRunBtn" 
                 Grid.Row="1"
                 Style="{StaticResource CircleButtonReset}"
-                Command="{Binding ResetRunCommand}">
+                AbsoluteLayout.LayoutBounds=".9,.9,.16,.1"
+                AbsoluteLayout.LayoutFlags="All"
+                Command="{Binding ResetRunCommand}"
+                >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="baseline_replay_white_48.png"
@@ -54,13 +57,12 @@
         </Button>
         
         <ContentView x:Name="NewRunPopup" 
-             BackgroundColor="#C0808080" 
-             Padding="10, 0" 
+             BackgroundColor="#C0808080"
+             Padding="25, 0" 
              IsVisible="false" 
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
              AbsoluteLayout.LayoutFlags="HeightProportional,WidthProportional">
-            <StackLayout VerticalOptions="Center" 
-                 HorizontalOptions="Center">
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                 <StackLayout Orientation="Vertical" 
                              HeightRequest="300" 
                              WidthRequest="200" 
@@ -72,63 +74,59 @@
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <SfInputLayout:SfTextInputLayout
-                            Grid.Row="0"
-                            Hint="Goal Time"
-                            ContainerType="Outlined">
-                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"
-                                                      
-                                Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
-                                
-                                Keyboard="Numeric"
-                                Mask="00:00" />
+                        <SfInputLayout:SfTextInputLayout Grid.Row="0"
+                                                         Hint="Goal Time"
+                                                         ContainerType="Outlined">
+                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
+                                                       Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
+                                                       Keyboard="Numeric"
+                                                       Mask="00:00" />
                         </SfInputLayout:SfTextInputLayout>
-                        <SfInputLayout:SfTextInputLayout
-                            Grid.Row="1"
-                            Hint="Run Distance"
-                            ContainerType="Outlined">
-                            <SfNumericInput:SfNumericTextBox 
-                                x:Name="RunDistanceInput"
-                                FormatString="meters"
-                                MaximumNumberDecimalDigits="0"                                
-                                Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
+                        <SfInputLayout:SfTextInputLayout Grid.Row="1"
+                                                         Hint="Run Distance"
+                                                         ContainerType="Outlined">
+                            <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
+                                                             FormatString="meters"
+                                                             MaximumNumberDecimalDigits="0" 
+                                                             Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
-                        <SfInputLayout:SfTextInputLayout
-                            Grid.Row="2"
-                            Hint="Split Distance"
-                            ContainerType="Outlined">
-                            <SfNumericInput:SfNumericTextBox 
-                                x:Name="SplitDistanceInput"
-                                FormatString="meters"
-                                MaximumNumberDecimalDigits="0"
-                                Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
+                        <SfInputLayout:SfTextInputLayout Grid.Row="2"
+                                                         Hint="Split Distance"
+                                                         ContainerType="Outlined">
+                            <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
+                                                             FormatString="meters"
+                                                             MaximumNumberDecimalDigits="0"
+                                                             Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
                     </Grid>
                 </StackLayout>
-                <Grid Padding="0" Margin="0" ColumnSpacing="0"
-                      BackgroundColor="#d8dbe2">
+                <Grid Padding="0" Margin="0" ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Button x:Name="StartNewRunBtn" 
-                            BackgroundColor="#373f51" 
-                            HorizontalOptions="CenterAndExpand"                             
+                            Style="{StaticResource CircleButtonStart}"                             
                             Grid.Column="0"
+                            AbsoluteLayout.LayoutBounds="0,0,.16,.1"
+                            AbsoluteLayout.LayoutFlags="All"
                             Command="{Binding StartRunCommand}">
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="baseline_play_arrow_white_48.png"
-                            iOS="baseline_play_arrow_white_48pt_3x.png"/>
+                                        Android="baseline_check_circle_white_48.png"
+                                        iOS="baseline_check_circle_white_48pt_3x.png"/>
                         </Button.Image>
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
-                            BackgroundColor="#9b2b2b"  
+                            Style="{StaticResource CircleButtonReset}"
+                            IsVisible="True"
+                            AbsoluteLayout.LayoutBounds="0,0,.16,.1"
+                            AbsoluteLayout.LayoutFlags="All"
                             Grid.Column="1">
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="baseline_cancel_white_48.png"
-                            iOS="baseline_cancel_white_48pt_3x.png"/>
+                                        Android="baseline_cancel_white_48.png"
+                                        iOS="baseline_cancel_white_48pt_3x.png"/>   
                         </Button.Image>
                     </Button>
                 </Grid>
