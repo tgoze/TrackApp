@@ -35,12 +35,12 @@ namespace TrackApp
             if ("Stop".Equals(startBtnSignal))
             {
                 startBtnSignal = "Continue";
-                NewRunBtn.Image = "baseline_play_arrow_white_48.png";
+                NewRunBtn.Image = "round_play_arrow_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
             } else if ("Continue".Equals(startBtnSignal))
             {
                 startBtnSignal = "Stop";
-                NewRunBtn.Image = "baseline_pause_white_48.png";
+                NewRunBtn.Image = "round_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
                 
@@ -59,7 +59,7 @@ namespace TrackApp
         private void ResetRun(object sender, EventArgs e)
         {
             startBtnSignal = "Start";
-            NewRunBtn.Image = "baseline_play_arrow_white_48.png";
+            NewRunBtn.Image = "round_play_arrow_white_48.png";
 
             ResetRunBtn.IsVisible = false;
 
@@ -95,7 +95,7 @@ namespace TrackApp
             NewRunPopup.IsVisible = false;
 
             startBtnSignal = "Stop";
-            NewRunBtn.Image = "baseline_pause_white_48.png";
+            NewRunBtn.Image = "round_pause_white_48.png";
             NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
             GoalTimeInput.Value = "";

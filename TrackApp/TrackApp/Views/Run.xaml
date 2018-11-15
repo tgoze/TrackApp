@@ -34,8 +34,8 @@
                 AbsoluteLayout.LayoutFlags="All">
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="baseline_play_arrow_white_48.png"
-                            iOS="baseline_play_arrow_white_48pt_3x.png"/>
+                            Android="round_play_arrow_white_48.png"
+                            iOS="round_play_arrow_white_48pt_3x.png"/>
             </Button.Image>
         </Button>
 
@@ -53,8 +53,8 @@
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="baseline_replay_white_48.png"
-                            iOS="baseline_replay_white_48pt_3x.png"/>
+                            Android="round_replay_white_48.png"
+                            iOS="round_replay_white_48pt_3x.png"/>
             </Button.Image>
         </Button>
 
@@ -66,8 +66,8 @@
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="baseline_flag_white_48.png"
-                            iOS="baseline_flag_white_48pt_3x.pngg"/>
+                            Android="round_flag_white_48.png"
+                            iOS="round_flag_white_48pt_3x.png"/>
             </Button.Image>
         </Button>
 
@@ -134,8 +134,8 @@
                             Command="{Binding StartRunCommand}">
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
-                                        Android="baseline_check_circle_white_48.png"
-                                        iOS="baseline_check_circle_white_48pt_3x.png"/>
+                                        Android="round_check_circle_white_48.png"
+                                        iOS="round_check_circle_white_48pt_3x.png"/>
                         </Button.Image>
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
@@ -149,8 +149,8 @@
                             Grid.Column="0">
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
-                                        Android="baseline_cancel_white_48.png"
-                                        iOS="baseline_cancel_white_48pt_3x.png"/>   
+                                        Android="round_cancel_white_48.png"
+                                        iOS="round_cancel_white_48pt_3x.png"/>   
                         </Button.Image>
                     </Button>
                 </Grid>
