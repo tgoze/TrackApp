@@ -7,11 +7,6 @@
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
              x:Class="TrackApp.Run">
     <AbsoluteLayout x:Name="layout">
-
-
-
-
-
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
                                            AnimationDuration="150"
                                            ProgressCompleted="SetAnimationDuration"
@@ -19,8 +14,8 @@
                                            ProgressColor="#1e90ff"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
-                                           IndicatorOuterRadius=".7">
-                                           IndicatorInnerRadius=".75"
+                                           IndicatorOuterRadius=".7"
+                                           IndicatorInnerRadius=".75">
             <progressBar:SfCircularProgressBar.Content>
                 <Label x:Name="TimeLabel"
                         TextColor="White"
@@ -74,7 +69,7 @@
         </Button>
 
         <ContentView x:Name="NewRunPopup" 
-             BackgroundColor="#373f51f0"
+             BackgroundColor="#373f51"
              Padding="25, 0" 
              IsVisible="false" 
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 

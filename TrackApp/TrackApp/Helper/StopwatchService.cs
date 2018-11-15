@@ -61,8 +61,8 @@ namespace TrackApp.Helper
         {
             while (true)
             {                                              
-                if (StopWatch.Elapsed.TotalSeconds % splitTimeInterval == 0 
-                    && StopWatch.Elapsed.TotalSeconds != 0)
+                if (Math.Floor(StopWatch.Elapsed.TotalSeconds) % splitTimeInterval == 0 
+                    && Math.Floor(StopWatch.Elapsed.TotalSeconds) != 0)
                 {
                     if (!WaitToBeep)
                     {

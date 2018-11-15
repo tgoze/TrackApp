@@ -15,7 +15,7 @@ namespace TrackApp
         int SplitMin = 0;
         int SplitSec = 0;
         int SplitMil = 0;
-        String startBtnSignal = "Start";
+        string startBtnSignal = "Start";
 
         public Run()
 		{
