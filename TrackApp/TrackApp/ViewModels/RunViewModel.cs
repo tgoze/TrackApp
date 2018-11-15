@@ -66,7 +66,7 @@ namespace TrackApp.ViewModels
             }
         }
 
-        public string _CurrentTime = "0:00.00"; 
+        public string _CurrentTime = "0:00:00";
         public string CurrentTime
         {
             set
@@ -98,6 +98,25 @@ namespace TrackApp.ViewModels
             ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
         }                    
+
+        private void PlayBeep()
+        {
+            DependencyService.Get<IAudio>().PlayAudioFile("beep.mp3");
+        }
+
+        private void ResetRun()
+        {
+            CurrentTime = "00:00:00";
+            CurrentProgress = 0;
+            MaxTime = 0;            
+            SplitDistanceInput = 0;
+            GoalTimeInput = "";
+            RunDistanceInput = 0;
+
+            StopWatch.Stop();
+            StopWatch.Reset();
+            cts.Cancel();
+        }         
 
         private void StartRun()
         {
