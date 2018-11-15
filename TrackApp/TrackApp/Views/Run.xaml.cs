@@ -46,6 +46,7 @@ namespace TrackApp
             } else if ("Continue".Equals(NewRunBtn.Text))
             {
                 NewRunBtn.Text = "Stop";
+                ResetRunBtn.Text = "Split";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
 
@@ -91,12 +92,6 @@ namespace TrackApp
                 TimeSpan current = new TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
                 TimeSpan split = new TimeSpan(0, 0, SplitMin, SplitSec, SplitMil);
                 TimeSpan NewSplit = current - split;
-                //decimal NewSplitMin = CurrentTimeMin - SplitMin;
-                //decimal NewSplitSec = CurrentTimeSec - SplitSec;
-                //decimal NewSplit = Convert.ToDecimal("" + NewSplitMin + NewSplitSec);
-                //decimal Current = Convert.ToDecimal("" + CurrentTimeMin + CurrentTimeSec);
-                // decimal Split = Convert.ToDecimal("" + SplitMin + SplitSec);
-                // decimal CurSplit = Current - Split;
                 SplitMin = CurrentTimeMin;
                 SplitSec = CurrentTimeSec;
                 SplitMil = CurrentTimeMil;

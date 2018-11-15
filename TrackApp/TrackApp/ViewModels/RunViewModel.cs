@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using TrackApp.Helper;
 using Xamarin.Forms;
@@ -121,7 +121,7 @@ namespace TrackApp.ViewModels
         private void ResetRun()
         {
             SwService.Reset();
-            CurrentTime = "0:00.00";
+            CurrentTime = "0:00:00";
             CurrentProgress = 0;
             MaxTime = 0;
             SplitDistanceInput = 0;
