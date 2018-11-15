@@ -5,8 +5,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <Style x:Key="CircleButtonStart" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#a9bcd0"/>
-                <Setter Property="TextColor" Value="#a9bcd0"/>
+                <Setter Property="BackgroundColor" Value="#1e90ff"/>
+                <Setter Property="TextColor" Value="#1e90ff"/>
                 <Setter Property="WidthRequest" Value="60"/>
                 <Setter Property="HeightRequest" Value="60"/>
                 <Setter Property="CornerRadius" Value="30"/>
@@ -22,6 +22,7 @@
                 <Setter Property="VerticalOptions" Value="Start"/>
             </Style>
             <Style x:Key="CircleButtonSplit" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#373f51"/>
                 <Setter Property="IsVisible" Value="False"/>
                 <Setter Property="WidthRequest" Value="60"/>
                 <Setter Property="HeightRequest" Value="60"/>

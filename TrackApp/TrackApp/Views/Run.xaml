@@ -47,6 +47,7 @@
 
         <Button x:Name="ResetRunBtn" 
                 Style="{StaticResource CircleButtonReset}"
+                BackgroundColor="#373f51"
                 AbsoluteLayout.LayoutBounds=".1,.9,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 Command="{Binding ResetRunCommand}"
