@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms; 
 using Xamarin.Forms.Xaml;
@@ -47,8 +43,7 @@ namespace TrackApp
                 NewRunBtn.Image = "round_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
-                //change Throwaway
-                //ResetRunBtn.SetBinding(Button.CommandProperty, "Throwaway");
+                
             } else
             {
                 NewRunPopup.IsVisible = true;

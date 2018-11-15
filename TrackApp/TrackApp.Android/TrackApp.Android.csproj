@@ -56,6 +56,9 @@
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
       <Version>16.3.0.29</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>16.3.0.29</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
       <Version>16.3.0.29</Version>
     </PackageReference>

@@ -7,8 +7,14 @@
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
              x:Class="TrackApp.Run">
     <AbsoluteLayout x:Name="layout">
-        <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=TwoWay}" 
-                                           Maximum="{Binding MaxTime, Mode=TwoWay}" 
+
+
+
+
+
+        <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
+                                           Maximum="{Binding MaxTime}"                                           
+                                           AnimationDuration="950"
                                            ProgressColor="#1e90ff"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
@@ -41,6 +47,7 @@
 
         <Button x:Name="ResetRunBtn" 
                 Style="{StaticResource CircleButtonReset}"
+                BackgroundColor="#373f51"
                 AbsoluteLayout.LayoutBounds=".1,.9,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 Command="{Binding ResetRunCommand}"
@@ -56,7 +63,7 @@
                 Style="{StaticResource CircleButtonSplit}"
                 AbsoluteLayout.LayoutBounds=".9,.9,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
-                Command="{Binding ResetRunCommand}"
+                
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
