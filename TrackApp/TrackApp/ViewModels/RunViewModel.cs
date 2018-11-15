@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using TrackApp.Helper;
 using Xamarin.Forms;
@@ -94,7 +94,7 @@ namespace TrackApp.ViewModels
             int.TryParse(TimeInputs[1], out int goalTimeSec);
             int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;
             
-            // Start the stopwatch with beeper                    
+                             
             NumOfSplits = RunDistanceInput / SplitDistanceInput;                        
             SplitTimeIntervalSec = goalTimeSeconds / NumOfSplits;
             MaxTime = SplitTimeIntervalSec * 1000;       
@@ -107,7 +107,7 @@ namespace TrackApp.ViewModels
         private void ResetRun()
         {
             SwService.Reset();
-            CurrentTime = "0:00.00";
+            CurrentTime = "0:00:00";
             CurrentProgress = 0;
             MaxTime = 0;
             SplitDistanceInput = 0;
