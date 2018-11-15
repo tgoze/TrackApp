@@ -5,23 +5,35 @@
     <Application.Resources>
         <ResourceDictionary>
             <Style x:Key="CircleButtonStart" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#373f51"/>
-                <Setter Property="TextColor" Value="#373f51"/>
+                <Setter Property="BackgroundColor" Value="#a9bcd0"/>
+                <Setter Property="TextColor" Value="#a9bcd0"/>
                 <Setter Property="WidthRequest" Value="60"/>
                 <Setter Property="HeightRequest" Value="60"/>
                 <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
             </Style>
             <Style x:Key="CircleButtonReset" TargetType="Button">
-                <Setter Property="BackgroundColor" Value="#9b2b2b"/>
-                <Setter Property="TextColor" Value="#9b2b2b"/>
                 <Setter Property="IsVisible" Value="False"/>
                 <Setter Property="WidthRequest" Value="60"/>
                 <Setter Property="HeightRequest" Value="60"/>
                 <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+            </Style>
+            <Style x:Key="CircleButtonSplit" TargetType="Button">
+                <Setter Property="IsVisible" Value="False"/>
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
             </Style>
             <Style x:Key="SplitField" TargetType="Label">
                 <Setter Property="IsVisible" Value="False"/>
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="Medium"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

@@ -17,8 +17,8 @@ namespace TrackApp
         int SplitMin = 0;
         int SplitSec = 0;
         int SplitMil = 0;
-        public String startBtnSignal = "Start";
-        public String resetBtnSignal = "Reset";
+        String startBtnSignal = "Start";
+
         public Run()
 		{
             InitializeComponent();
@@ -28,12 +28,10 @@ namespace TrackApp
             StartNewRunBtn.Clicked += StartRun;
             CancelNewRunBtn.Clicked += HidePopup; 
             ResetRunBtn.Clicked += ResetRun;
+            SplitRunBtn.Clicked += SplitRun;
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;
-            
-            
-            
         }
            
         private void ShowPopup(object sender, EventArgs e)
@@ -43,26 +41,17 @@ namespace TrackApp
                 startBtnSignal = "Continue";
                 NewRunBtn.Image = "baseline_play_arrow_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
-                ResetRunBtn.IsVisible = true;
-                resetBtnSignal = "Reset";
-                ResetRunBtn.Image = "baseline_replay_white_48.png";
-                ResetRunBtn.SetBinding(Button.CommandProperty, "ResetRunCommand");
-
             } else if ("Continue".Equals(startBtnSignal))
             {
                 startBtnSignal = "Stop";
                 NewRunBtn.Image = "baseline_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
-
-                ResetRunBtn.SetBinding(Button.CommandProperty, "Throwaway");
-
-
+                //change Throwaway
+                //ResetRunBtn.SetBinding(Button.CommandProperty, "Throwaway");
             } else
             {
                 NewRunPopup.IsVisible = true;
-                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-                ResetRunBtn.IsEnabled = true;
             }
                      
         }
@@ -74,56 +63,54 @@ namespace TrackApp
 
         private void ResetRun(object sender, EventArgs e)
         {
-            NewRunBtn.Image = "baseline_play_arrow_white_48.png";
             startBtnSignal = "Start";
+            NewRunBtn.Image = "baseline_play_arrow_white_48.png";
+
             ResetRunBtn.IsVisible = false;
 
-            if ("Reset".Equals(resetBtnSignal))
-            {
-                startBtnSignal = "Start";
-                resetBtnSignal = "Split";
-                ResetRunBtn.Image = "baseline_outlined_flag_white_48.png";
-                ResetRunBtn.SetBinding(Button.CommandProperty, "Throwaway");
-                ResetRunBtn.IsEnabled = false;
-                SplitMin = 0;
-                SplitSec = 0;
-                SplitMil = 0;
-                SplitField.IsVisible = false;
-            } else if ("Split".Equals(resetBtnSignal))
-            {
-                string[] CurrentTimeInputs = TimeLabel.Text.Split(':');
+            SplitRunBtn.IsVisible = false;
 
-                int.TryParse(CurrentTimeInputs[0], out int CurrentTimeMin);
-                int.TryParse(CurrentTimeInputs[1], out int CurrentTimeSec);
-                int.TryParse(CurrentTimeInputs[2], out int CurrentTimeMil);
-
-
-                TimeSpan current = new TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
-                TimeSpan split = new TimeSpan(0, 0, SplitMin, SplitSec, SplitMil);
-                TimeSpan NewSplit = current - split;
-                //decimal NewSplitMin = CurrentTimeMin - SplitMin;
-                //decimal NewSplitSec = CurrentTimeSec - SplitSec;
-                //decimal NewSplit = Convert.ToDecimal("" + NewSplitMin + NewSplitSec);
-                //decimal Current = Convert.ToDecimal("" + CurrentTimeMin + CurrentTimeSec);
-                // decimal Split = Convert.ToDecimal("" + SplitMin + SplitSec);
-                // decimal CurSplit = Current - Split;
-                SplitMin = CurrentTimeMin;
-                SplitSec = CurrentTimeSec;
-                SplitMil = CurrentTimeMil;
-                SplitField.IsVisible = true;
-                SplitField.Text = NewSplit.ToString(@"mm\:ss\:ff");
-            }
+            SplitMin = 0;
+            SplitSec = 0;
+            SplitMil = 0;
+            SplitField.IsVisible = false;
         }
 
+        private void SplitRun(object sender, EventArgs e)
+        {
+            string[] CurrentTimeInputs = TimeLabel.Text.Split(':');
+
+            int.TryParse(CurrentTimeInputs[0], out int CurrentTimeMin);
+            int.TryParse(CurrentTimeInputs[1], out int CurrentTimeSec);
+            int.TryParse(CurrentTimeInputs[2], out int CurrentTimeMil);
+
+
+            TimeSpan current = new TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
+            TimeSpan split = new TimeSpan(0, 0, SplitMin, SplitSec, SplitMil);
+            TimeSpan NewSplit = current - split;
+
+            SplitMin = CurrentTimeMin;
+            SplitSec = CurrentTimeSec;
+            SplitMil = CurrentTimeMil;
+            SplitField.IsVisible = true;
+            SplitField.Text = NewSplit.ToString(@"mm\:ss\:ff");
+        }
         private void StartRun(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
-            NewRunBtn.Image = "baseline_pause_white_48.png";
+
             startBtnSignal = "Stop";
+            NewRunBtn.Image = "baseline_pause_white_48.png";
+            NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
+
             GoalTimeInput.Value = "";
             RunDistanceInput.Value = "";
             SplitDistanceInput.Value = "";
-            ResetRunBtn.RemoveBinding(Button.CommandProperty);
+
+            ResetRunBtn.IsVisible = true;
+            ResetRunBtn.SetBinding(Button.CommandProperty, "ResetRunCommand");
+
+            SplitRunBtn.IsVisible = true;
         }
     }
 }

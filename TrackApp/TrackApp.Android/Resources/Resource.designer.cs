@@ -4059,10 +4059,10 @@ namespace TrackApp.Droid
 			public const int baseline_directions_run_white_48 = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int baseline_group_work_white_48 = 2130837592;
+			public const int baseline_flag_white_48 = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int baseline_outlined_flag_white_48 = 2130837593;
+			public const int baseline_group_work_white_48 = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
 			public const int baseline_pause_white_48 = 2130837594;

@@ -9,21 +9,20 @@
     <AbsoluteLayout x:Name="layout">
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=TwoWay}" 
                                            Maximum="{Binding MaxTime, Mode=TwoWay}" 
-                                           ProgressColor="#373f51"
+                                           ProgressColor="#1e90ff"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
                                            IndicatorInnerRadius=".75"
                                            IndicatorOuterRadius=".7">
             <progressBar:SfCircularProgressBar.Content>
                 <Label x:Name="TimeLabel"
-                        TextColor="#373f51"
+                        TextColor="White"
                         Text="{Binding CurrentTime, Mode=TwoWay}">
                 </Label>
             </progressBar:SfCircularProgressBar.Content>
         </progressBar:SfCircularProgressBar>
         
-        <Button x:Name="NewRunBtn" 
-                Grid.Row="1"
+        <Button x:Name="NewRunBtn"
                 Style="{StaticResource CircleButtonStart}"
                 AbsoluteLayout.LayoutBounds=".5,.9,.16,.1"
                 AbsoluteLayout.LayoutFlags="All">
@@ -35,17 +34,14 @@
         </Button>
 
         <Label x:Name="SplitField"
-               Grid.Row="1"
                Text="00:00:00"
                Style="{StaticResource SplitField}"
                AbsoluteLayout.LayoutBounds=".5,.65,.5,.1"
                AbsoluteLayout.LayoutFlags="All"/>
 
-
         <Button x:Name="ResetRunBtn" 
-                Grid.Row="1"
                 Style="{StaticResource CircleButtonReset}"
-                AbsoluteLayout.LayoutBounds=".9,.9,.16,.1"
+                AbsoluteLayout.LayoutBounds=".1,.9,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 Command="{Binding ResetRunCommand}"
                 >
@@ -55,9 +51,22 @@
                             iOS="baseline_replay_white_48pt_3x.png"/>
             </Button.Image>
         </Button>
-        
+
+        <Button x:Name="SplitRunBtn" 
+                Style="{StaticResource CircleButtonSplit}"
+                AbsoluteLayout.LayoutBounds=".9,.9,.16,.1"
+                AbsoluteLayout.LayoutFlags="All"
+                Command="{Binding ResetRunCommand}"
+                >
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="baseline_flag_white_48.png"
+                            iOS="baseline_flag_white_48pt_3x.pngg"/>
+            </Button.Image>
+        </Button>
+
         <ContentView x:Name="NewRunPopup" 
-             BackgroundColor="#C0808080"
+             BackgroundColor="#373f51f0"
              Padding="25, 0" 
              IsVisible="false" 
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
@@ -76,14 +85,17 @@
                         </Grid.RowDefinitions>
                         <SfInputLayout:SfTextInputLayout Grid.Row="0"
                                                          Hint="Goal Time"
-                                                         ContainerType="Outlined">
+                                                         FocusedColor="Black"
+                                                         ContainerType="Outlined"
+                                                         ContainerBackgroundColor="Aqua">
                             <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
                                                        Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
                                                        Keyboard="Numeric"
-                                                       Mask="00:00" />
+                                                       Mask="00:00"/>
                         </SfInputLayout:SfTextInputLayout>
                         <SfInputLayout:SfTextInputLayout Grid.Row="1"
                                                          Hint="Run Distance"
+                                                         FocusedColor="Black"
                                                          ContainerType="Outlined">
                             <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
                                                              FormatString="meters"
@@ -92,6 +104,7 @@
                         </SfInputLayout:SfTextInputLayout>
                         <SfInputLayout:SfTextInputLayout Grid.Row="2"
                                                          Hint="Split Distance"
+                                                         FocusedColor="Black"
                                                          ContainerType="Outlined">
                             <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
                                                              FormatString="meters"
@@ -107,9 +120,11 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="StartNewRunBtn" 
                             Style="{StaticResource CircleButtonStart}"                             
-                            Grid.Column="0"
+                            Grid.Column="1"
                             AbsoluteLayout.LayoutBounds="0,0,.16,.1"
                             AbsoluteLayout.LayoutFlags="All"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
                             Command="{Binding StartRunCommand}">
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
@@ -119,10 +134,13 @@
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
                             Style="{StaticResource CircleButtonReset}"
+                            BackgroundColor="#9b2b2b"
                             IsVisible="True"
                             AbsoluteLayout.LayoutBounds="0,0,.16,.1"
                             AbsoluteLayout.LayoutFlags="All"
-                            Grid.Column="1">
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Grid.Column="0">
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                                         Android="baseline_cancel_white_48.png"
@@ -132,6 +150,5 @@
                 </Grid>
             </StackLayout>
         </ContentView>
-
     </AbsoluteLayout>
 </ContentPage>

@@ -72,7 +72,7 @@ namespace TrackApp.ViewModels
             }
         }
 
-        public string _CurrentTime = "0:00.00";
+        public string _CurrentTime = "0:00:00";
         public string CurrentTime
         {
             set
@@ -113,10 +113,7 @@ namespace TrackApp.ViewModels
 
         private void ResetRun()
         {
-            
-            
-            CurrentTime = "00:00.00";
-           // _CurrentTime = "00.00.00";
+            CurrentTime = "00:00:00";
             CurrentProgress = 0;
             MaxTime = 0;            
             SplitDistanceInput = 0;

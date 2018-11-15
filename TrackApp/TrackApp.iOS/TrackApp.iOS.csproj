@@ -201,9 +201,6 @@
     <BundleResource Include="Resources\baseline_replay_white_48pt_3x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\baseline_outlined_flag_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\baseline_group_work_white_48pt_3x.png" />
   </ItemGroup>
   <ItemGroup>
@@ -211,5 +208,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\baseline_check_circle_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_flag_white_48pt_3x.png" />
   </ItemGroup>
 </Project>

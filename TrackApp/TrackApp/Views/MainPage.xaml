@@ -3,7 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
             xmlns:tabs="clr-namespace:TrackApp"
             x:Class="TrackApp.MainPage"            
-            BackgroundColor="White"
+            BackgroundColor="#373f51"
             BarBackgroundColor="#373f51"
             BarTextColor="White">
 
