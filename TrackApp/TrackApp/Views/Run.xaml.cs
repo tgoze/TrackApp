@@ -24,10 +24,7 @@ namespace TrackApp
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
-            SplitField.FontSize += 12;
-            
-            
-            
+            SplitField.FontSize += 12;                                    
         }
            
         private void ShowPopup(object sender, EventArgs e)

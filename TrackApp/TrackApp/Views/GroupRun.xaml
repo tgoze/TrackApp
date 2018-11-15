@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+             x:Class="TrackApp.GroupRun">
+
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <sfPopup:SfPopupLayout x:Name="popUpLayout">
+                <sfPopup:SfPopupLayout.PopupView>
+                    <sfPopup:PopupView HeightRequest="230"
+                           HeaderTitle="Modal Window"
+                           ShowFooter="False">
+                        <sfPopup:PopupView.ContentTemplate>
+                            <DataTemplate>
+                                <Label Text="Window loads under the parent window surrounded by an 
+                           overlay which prevents clicking anywhere else on the screen 
+                           apart from the control of the modal. Modal opens in the same 
+                           window. It also does not require any user action to open, and 
+                           give callbacks when closing or opening the modal."
+                           WidthRequest="260"
+                           BackgroundColor="White"
+                           HorizontalOptions="FillAndExpand"
+                           />
+                            </DataTemplate>
+                        </sfPopup:PopupView.ContentTemplate>
+                    </sfPopup:PopupView>
+                </sfPopup:SfPopupLayout.PopupView>
+                <sfPopup:SfPopupLayout.Content>
+                    <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" VerticalOptions="Start" HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="13,25,1,1" AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional" />
+                </sfPopup:SfPopupLayout.Content>
+            </sfPopup:SfPopupLayout>
+
+            <Label Text="14.52" FontSize="48"
+                   x:Name="timeLabel"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       AbsoluteLayout.LayoutBounds="5,25,1,1"   
+                       AbsoluteLayout.LayoutFlags="WidthProportional, HeightProportional"
+                       />
+
+
+            <!--<Button Text="Start"
+                       AbsoluteLayout.LayoutBounds=".15,.15,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"/>-->
+
+            <Button x:Name="NewStartBtn" Grid.Row="1"
+                            Text="Start"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds=".15,.15,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="FillAndExpand"/>
+
+            <!--<Button Text="Split"
+                       AbsoluteLayout.LayoutBounds=".85,.15,.3,.1"   
+                       AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"/>-->
+
+            <Button x:Name="NewSplitBtn" Grid.Row="1"
+                            Text="Split"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds=".85,.15,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="FillAndExpand"/>
+
+
+
+            <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress, Mode=TwoWay}" 
+                                           Maximum="{Binding MaxTime, Mode=TwoWay}" 
+                                           ProgressColor="#58a4b0"
+                                           AbsoluteLayout.LayoutBounds=".5,175,.8,.6"
+                                           AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
+                                           IndicatorInnerRadius=".77"
+                                           IndicatorOuterRadius=".7"
+                                           
+                                              >
+
+                <progressBar:SfCircularProgressBar.Content>
+
+                    <Label x:Name="TimeLabel"
+                            TextColor="#58a4b0" 
+                            Text="{Binding CurrentTime, Mode=TwoWay}"
+                            
+                            >
+                    </Label>
+
+
+
+                </progressBar:SfCircularProgressBar.Content>
+            </progressBar:SfCircularProgressBar>
+
+            <Button x:Name="Run1Btn" Grid.Row="1"
+                            Text="1"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds=".62,.30,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start"
+             />
+            <Button x:Name="Run2Btn" Grid.Row="1"
+                            Text="2"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds="1.08,.40,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start"
+             />
+
+            <Button x:Name="Run3Btn" Grid.Row="1"
+                            Text="3"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds="1.08,.70,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start"
+             />
+
+            <Button x:Name="Run4Btn" Grid.Row="1"
+                            Text="4"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds=".62,.79,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start"
+             />
+
+            <Button x:Name="Run5Btn" Grid.Row="1"
+                            Text="5"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds=".15,.70,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start"
+             />
+
+            <Button x:Name="Run6Btn" Grid.Row="1"
+                            Text="6"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30"  
+                            AbsoluteLayout.LayoutBounds=".15,.40,.3,.1"   
+                            AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional, HeightProportional"
+                            VerticalOptions="Start" 
+                            HorizontalOptions="Start"
+             />
+
+
+
+            <!--<syncfusion:SfListView x:Name="listViewX"
+             Margin="0,0,0,0"
+             
+             
+             AbsoluteLayout.LayoutBounds="0.1,0.79,1,.7"   
+             AbsoluteLayout.LayoutFlags="XProportional, YProportional, WidthProportional, HeightProportional"
+                   
+                AutoFitMode="Height"              
+                   ItemsSource="{Binding BookInfo}"
+                   ItemSize="40">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5,0,0,0"
+                              BackgroundColor="{Binding .,Converter={StaticResource IndexToColorConverter},ConverterParameter={x:Reference Name=listViewX}}"
+                              
+                              >
+                            
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.4*" />
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="0.2*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Black" FontSize="21" VerticalOptions="Center" />
+
+                            <Label Grid.Column="1" Text="00.00" FontAttributes="Bold" TextColor="Black" FontSize="21" VerticalOptions="Center" />
+                            -->
+            <!--<Button Grid.Column="2" Text="Split" TextColor="Black" FontSize="14" VerticalOptions="StartAndExpand" Padding="0"/>-->
+            <!--
+                            <Button x:Name="NewSplitBtn" Grid.Column="2"
+                            Text="Split"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            FontSize="14"
+                            Margin="5, 10, 20, 20"   
+                            AbsoluteLayout.LayoutBounds=".5,.6,.5,.1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            VerticalOptions="Start"
+                            HorizontalOptions="FillAndExpand"
+                            WidthRequest="60" HeightRequest="60" BorderRadius="30" 
+                            />
+
+                            -->
+            <!--<Button Grid.Column="2" x:Name="NewIndividualSplitBtn"
+                            Text="Split"
+                            BackgroundColor="#a9bcd0"
+                            TextColor="White"
+                            WidthRequest="60" HeightRequest="40" BorderRadius="25"  
+                            VerticalOptions="Start" 
+                            HorizontalOptions="FillAndExpand"/>-->
+
+            <!--<cardView:CardView CardViewHeightRequest="100">
+                            <cardView:CardView.CardViewContent>
+                                <StackLayout>
+                                    <Label Text="{Binding BookName}" FontAttributes="Bold" TextColor="Black" FontSize="21" VerticalOptions="Center"></Label>
+                                </StackLayout>
+                            </cardView:CardView.CardViewContent>
+                        </cardView:CardView>-->
+            <!--
+
+                        </Grid>
+
+
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>-->
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
