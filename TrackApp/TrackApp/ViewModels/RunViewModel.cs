@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using TrackApp.Helper;
 using Xamarin.Forms;
@@ -99,25 +99,6 @@ namespace TrackApp.ViewModels
             ContinueRunCommand = new Command(ContinueRun);
         }                    
 
-        private void PlayBeep()
-        {
-            DependencyService.Get<IAudio>().PlayAudioFile("beep.mp3");
-        }
-
-        private void ResetRun()
-        {
-            CurrentTime = "00:00:00";
-            CurrentProgress = 0;
-            MaxTime = 0;            
-            SplitDistanceInput = 0;
-            GoalTimeInput = "";
-            RunDistanceInput = 0;
-
-            //StopWatch.Stop();
-            //StopWatch.Reset();
-            //cts.Cancel();
-        }         
-
         private void StartRun()
         {
             
@@ -126,10 +107,10 @@ namespace TrackApp.ViewModels
             int.TryParse(TimeInputs[1], out int goalTimeSec);
             int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;
             
-            // Start the stopwatch with beeper                    
+                             
             NumOfSplits = RunDistanceInput / SplitDistanceInput;                        
             SplitTimeIntervalSec = goalTimeSeconds / NumOfSplits;
-            //MaxTime = goalTimeSeconds;
+           
             MaxTime = SplitTimeIntervalSec;
 
             SwService = new StopwatchService(SplitTimeIntervalSec);            
@@ -137,16 +118,16 @@ namespace TrackApp.ViewModels
             UpdateTime(true);
         }
 
-        //private void ResetRun()
-        //{
-        //    SwService.Reset();
-        //    CurrentTime = "0:00.00";
-        //    CurrentProgress = 0;
-        //    MaxTime = 0;
-        //    SplitDistanceInput = 0;
-        //    GoalTimeInput = "";
-        //    RunDistanceInput = 0;
-        //}
+        private void ResetRun()
+        {
+            SwService.Reset();
+            CurrentTime = "0:00:00";
+            CurrentProgress = 0;
+            MaxTime = 0;
+            SplitDistanceInput = 0;
+            GoalTimeInput = "";
+            RunDistanceInput = 0;
+        }
 
         private void StopRun()
         {            
