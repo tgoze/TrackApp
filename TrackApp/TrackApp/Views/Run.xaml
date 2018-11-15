@@ -13,16 +13,16 @@
 
 
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
-                                           Maximum="{Binding MaxTime}"                                           
+                                           Maximum="{Binding MaxTime}" Minimum="0"
+                                           ProgressCompleted="SetAnimationDuration"
                                            ProgressColor="#58a4b0"
-                                           AnimationDuration="500"
+                                           AnimationDuration="150"
                                            AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
                                            AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
                                            IndicatorInnerRadius=".77"
                                            IndicatorOuterRadius=".7"
                                            
                                               >
-            
             <progressBar:SfCircularProgressBar.Content>
                 
                     <Label x:Name="TimeLabel"
