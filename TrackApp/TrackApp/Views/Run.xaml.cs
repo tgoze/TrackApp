@@ -43,8 +43,7 @@ namespace TrackApp
                 NewRunBtn.Image = "baseline_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
-                //change Throwaway
-                //ResetRunBtn.SetBinding(Button.CommandProperty, "Throwaway");
+                
             } else
             {
                 NewRunPopup.IsVisible = true;

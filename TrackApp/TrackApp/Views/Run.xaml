@@ -62,7 +62,7 @@
                 Style="{StaticResource CircleButtonSplit}"
                 AbsoluteLayout.LayoutBounds=".9,.9,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
-                Command="{Binding ResetRunCommand}"
+                
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
