@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Web;
 
 namespace TrackApp.Models.dao
 {
@@ -20,13 +22,11 @@ namespace TrackApp.Models.dao
 
         public static User GetUser(int id)
         {
-            
-            //client1.QueryString = new NameValueCollection
-            //{
-            //    { "userId", id.ToString() }
-            //};
+            var query = HttpUtility.ParseQueryString(string.Empty);
+            query["userId"] = id.ToString();
 
-            return JsonConvert.DeserializeObject<User>(client.DownloadString(GetUserById));
+            string temp = Regex.Unescape(client1.GetStringAsync(GetUserById + "?" + query.ToString()).Result);
+            return JsonConvert.DeserializeObject<User>(temp);
         }
 
         public static User GetUser(string username)
