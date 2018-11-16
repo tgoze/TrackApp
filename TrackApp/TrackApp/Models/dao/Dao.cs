@@ -18,7 +18,7 @@ namespace TrackApp.Models.dao
         protected static string CreateUser = "CreateUser";
 
         //Read
-        protected static string GetUserById = "FindUserById";
+        protected static string GetUserById = "FindUserByUserId";
         protected static string GetUserByUsername = "FindUserByUserName";
 
         //Update
