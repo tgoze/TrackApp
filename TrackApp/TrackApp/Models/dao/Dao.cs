@@ -19,10 +19,14 @@ namespace TrackApp.Models.dao
 
         //Read
 <<<<<<< refs/remotes/origin/beta
+<<<<<<< refs/remotes/origin/beta
         protected static string GetUserById = "FindUserByUserId";
 =======
         protected static string GetUserById = "FindUserById";
 >>>>>>> Adjusted DAO to reflect changes in webservice
+=======
+        protected static string GetUserById = "FindUserByUserId";
+>>>>>>> DAO
         protected static string GetUserByUsername = "FindUserByUserName";
 
         //Update

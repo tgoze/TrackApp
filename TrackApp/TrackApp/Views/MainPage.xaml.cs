@@ -42,8 +42,12 @@ namespace TrackApp
 >>>>>>> Trying to fix timer bug
 =======
             //User user = UserDao.GetUser(1);
+<<<<<<< refs/remotes/origin/amarkovic
             List<Role> role = RoleDao.GetAllRoles();
 >>>>>>> Adjusted DAO to reflect changes in webservice
+=======
+            //List<Role> role = RoleDao.GetAllRoles();
+>>>>>>> DAO
 
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
