@@ -39,6 +39,7 @@
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.3.0.29" />
     <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="16.3.0.29" />
     <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="16.3.0.29" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="16.3.0.29" />
     <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="16.3.0.21" />
   </ItemGroup>
 
@@ -53,13 +54,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\GroupRun.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MainPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Performance.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Run.xaml">
