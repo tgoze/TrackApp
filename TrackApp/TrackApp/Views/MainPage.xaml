@@ -9,8 +9,7 @@
 
     <TabbedPage.Children>
         <tabs:Run Icon="round_directions_run_white_48.png" Title="Run"/>
-        <tabs:GroupRun Icon="baseline_group_work_white_48.png" Title="Group Run"/>
-        <tabs:Login Icon="round_person_white_48.png" Title="Login"/>
+        <tabs:History Icon="round_history_white_48.png" Title="History"/>
     </TabbedPage.Children>
     
 </TabbedPage>
