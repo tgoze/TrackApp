@@ -63,7 +63,6 @@
                 Style="{StaticResource CircleButtonSplit}"
                 AbsoluteLayout.LayoutBounds=".9,.9,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
-                
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
@@ -73,7 +72,7 @@
         </Button>
 
         <ContentView x:Name="NewRunPopup" 
-             BackgroundColor="#373f51f0"
+             BackgroundColor="#373f51"
              Padding="25, 0" 
              IsVisible="false" 
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 

@@ -66,7 +66,7 @@ namespace TrackApp.ViewModels
             }
         }
 
-        public string _CurrentTime = "0:00.00"; 
+        public string _CurrentTime = "0:00:00"; 
         public string CurrentTime
         {
             set
