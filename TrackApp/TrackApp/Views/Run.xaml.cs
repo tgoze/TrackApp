@@ -3,6 +3,8 @@
 using Xamarin.Forms; 
 using Xamarin.Forms.Xaml;
 
+using Syncfusion.XForms.ProgressBar;
+
 using TrackApp.ViewModels;
 
 namespace TrackApp
@@ -13,7 +15,7 @@ namespace TrackApp
         int SplitMin = 0;
         int SplitSec = 0;
         int SplitMil = 0;
-        String startBtnSignal = "Start";
+        string startBtnSignal = "Start";
 
         public Run()
 		{
@@ -28,6 +30,27 @@ namespace TrackApp
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;
+        }
+
+        private void SetAnimationDuration(object sender, ProgressValueEventArgs e)
+        {
+            if (e.Progress.Equals(this.progressBar.Maximum))
+            {
+                progressBar.AnimationDuration = 0;
+            }
+        }
+
+        private void SetProgressBarColors()
+        {
+            RangeColorCollection rangeColors = new RangeColorCollection
+            {
+                new RangeColor() { Color = Color.FromHex("88A0D9EF"), IsGradient = true, Start = 0, End = progressBar.Maximum * .25 },
+                new RangeColor() { Color = Color.FromHex("AA62C1E5"), IsGradient = true, Start = progressBar.Maximum * .25, End = progressBar.Maximum * .5 },
+                new RangeColor() { Color = Color.FromHex("DD20A7DB"), IsGradient = true, Start = progressBar.Maximum * .5, End = progressBar.Maximum * .75 },
+                new RangeColor() { Color = Color.FromHex("FF1C96C5"), IsGradient = true, Start = progressBar.Maximum * .75, End = progressBar.Maximum }
+            };
+
+            progressBar.RangeColors = rangeColors;
         }
            
         private void ShowPopup(object sender, EventArgs e)

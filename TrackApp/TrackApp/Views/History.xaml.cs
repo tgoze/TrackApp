@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace TrackApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Settings : ContentPage
+	public partial class History : ContentPage
 	{
-		public Settings ()
+		public History ()
 		{
 			InitializeComponent ();
 		}
