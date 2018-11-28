@@ -10,6 +10,7 @@ namespace TrackApp.Models.dao
         { }
 
 <<<<<<< refs/remotes/origin/beta
+<<<<<<< refs/remotes/origin/beta
 =======
 <<<<<<< refs/remotes/origin/amarkovic
 <<<<<<< refs/remotes/origin/amarkovic
@@ -22,10 +23,13 @@ namespace TrackApp.Models.dao
         //}
 =======
 >>>>>>> Trying to fix timer bug
+=======
+>>>>>>> Auto stash before rebase of "origin/beta"
         public static List<Role> GetAllRoles()
         {
             return JsonConvert.DeserializeObject<List<Role>>(client1.GetStringAsync(Dao.GetAllRoles).Result, new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat });
         }
+<<<<<<< refs/remotes/origin/beta
 <<<<<<< refs/remotes/origin/beta
 =======
 >>>>>>> Auto stash before merge of "ddalton" and "origin/beta"
@@ -41,12 +45,17 @@ namespace TrackApp.Models.dao
 >>>>>>> Trying to fix timer bug
 =======
 =======
+=======
+>>>>>>> Auto stash before rebase of "origin/beta"
         public static List<Role> GetAllRoles()
         {
             return JsonConvert.DeserializeObject<List<Role>>(client1.GetStringAsync(Dao.GetAllRoles).Result, new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat });
         }
+<<<<<<< refs/remotes/origin/beta
 >>>>>>> Adjusted DAO to reflect changes in webservice
 >>>>>>> Adjusted DAO to reflect changes in webservice
 
+=======
+>>>>>>> Auto stash before rebase of "origin/beta"
     }
 }
