@@ -169,7 +169,9 @@
                                                              MaximumNumberDecimalDigits="0"
                                                              Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
-                        <Picker x:Name="numberOfRunners" Title="Select # of runners" Grid.Row="3">
+                        <Picker Grid.Row="3"
+                                x:Name="NumberOfRunners" 
+                                Title="Select # of runners">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>1</x:String>
