@@ -7,13 +7,68 @@
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
              x:Class="TrackApp.Run">
     <AbsoluteLayout x:Name="layout">
+
+        <Button x:Name="SoundSettings"
+                Style="{StaticResource CircleButtonSplit}"
+                IsVisible="True"
+                AbsoluteLayout.LayoutBounds="1,.01,.16,.1"
+                AbsoluteLayout.LayoutFlags="All">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="round_speaker_phone_white_48.png"
+                            iOS="round_speaker_phone_white_48pt_3x.png"/>
+            </Button.Image>
+        </Button>
+            
+        <!--Top position-->
+        <Button x:Name="Runner1"
+                Text="1"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".5,.075"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+        
+        <!--Top-right position-->
+        <Button x:Name="Runner2"
+                Text="2"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".85,.15"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+        
+        <!--Top-left position-->
+        <Button x:Name="Runner6"
+                Text="6"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".15,.15"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom position-->
+        <Button x:Name="Runner4"
+                Text="4"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".5,.7"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-right position-->
+        <Button x:Name="Runner3"
+                Text="3"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".85,.62"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-right position-->
+        <Button x:Name="Runner5"
+                Text="5"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".15,.62"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
                                            AnimationDuration="150"
                                            ProgressCompleted="SetAnimationDuration"
                                            Maximum="{Binding MaxTime}" Minimum="0"
                                            ProgressColor="#1e90ff"
-                                           AbsoluteLayout.LayoutBounds=".5,4,.8,.6"
-                                           AbsoluteLayout.LayoutFlags="XProportional,HeightProportional,WidthProportional"
+                                           AbsoluteLayout.LayoutBounds=".5,.25,.8,.6"
+                                           AbsoluteLayout.LayoutFlags="All"
                                            IndicatorOuterRadius=".7"
                                            IndicatorInnerRadius=".75">
             <progressBar:SfCircularProgressBar.Content>
@@ -26,7 +81,7 @@
         
         <Button x:Name="NewRunBtn"
                 Style="{StaticResource CircleButtonStart}"
-                AbsoluteLayout.LayoutBounds=".5,.9,.16,.1"
+                AbsoluteLayout.LayoutBounds=".5,.95,.16,.1"
                 AbsoluteLayout.LayoutFlags="All">
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
@@ -38,13 +93,13 @@
         <Label x:Name="SplitField"
                Text="00:00:00"
                Style="{StaticResource SplitField}"
-               AbsoluteLayout.LayoutBounds=".5,.65,.5,.1"
+               AbsoluteLayout.LayoutBounds=".5,.84,.5,.1"
                AbsoluteLayout.LayoutFlags="All"/>
 
         <Button x:Name="ResetRunBtn" 
                 Style="{StaticResource CircleButtonReset}"
                 BackgroundColor="#373f51"
-                AbsoluteLayout.LayoutBounds=".1,.9,.16,.1"
+                AbsoluteLayout.LayoutBounds=".1,.95,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 Command="{Binding ResetRunCommand}"
                 >
@@ -57,7 +112,7 @@
 
         <Button x:Name="SplitRunBtn" 
                 Style="{StaticResource CircleButtonSplit}"
-                AbsoluteLayout.LayoutBounds=".9,.9,.16,.1"
+                AbsoluteLayout.LayoutBounds=".9,.95,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 >
             <Button.Image>
@@ -81,6 +136,7 @@
                              Padding="20">
                     <Grid RowSpacing="5">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
@@ -113,6 +169,18 @@
                                                              MaximumNumberDecimalDigits="0"
                                                              Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
                         </SfInputLayout:SfTextInputLayout>
+                        <Picker x:Name="numberOfRunners" Title="Select # of runners" Grid.Row="3">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>1</x:String>
+                                    <x:String>2</x:String>
+                                    <x:String>3</x:String>
+                                    <x:String>4</x:String>
+                                    <x:String>5</x:String>
+                                    <x:String>6</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
                     </Grid>
                 </StackLayout>
                 <Grid Padding="0" Margin="0" ColumnSpacing="0">
