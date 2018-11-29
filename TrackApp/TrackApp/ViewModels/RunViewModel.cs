@@ -18,7 +18,8 @@ namespace TrackApp.ViewModels
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
-        
+        public string NumberOfRunners { get; set; }
+
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
