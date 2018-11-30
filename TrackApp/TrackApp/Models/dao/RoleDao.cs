@@ -9,6 +9,7 @@ namespace TrackApp.Models.dao
         public RoleDao() : base()
         { }
 
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/beta
 <<<<<<< refs/remotes/origin/beta
 =======
@@ -47,15 +48,21 @@ namespace TrackApp.Models.dao
 =======
 =======
 >>>>>>> Auto stash before rebase of "origin/beta"
+=======
+>>>>>>> ddalton
         public static List<Role> GetAllRoles()
         {
             return JsonConvert.DeserializeObject<List<Role>>(client1.GetStringAsync(Dao.GetAllRoles).Result, new JsonSerializerSettings { DateFormatHandling = DateFormatHandling.MicrosoftDateFormat });
         }
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/beta
 >>>>>>> Adjusted DAO to reflect changes in webservice
 >>>>>>> Adjusted DAO to reflect changes in webservice
 
 =======
 >>>>>>> Auto stash before rebase of "origin/beta"
+=======
+
+>>>>>>> ddalton
     }
 }

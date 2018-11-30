@@ -18,6 +18,7 @@ namespace TrackApp.Models.dao
         protected static string CreateUser = "CreateUser";
 
         //Read
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/beta
 <<<<<<< refs/remotes/origin/beta
         protected static string GetUserById = "FindUserByUserId";
@@ -27,6 +28,9 @@ namespace TrackApp.Models.dao
 =======
         protected static string GetUserById = "FindUserByUserId";
 >>>>>>> DAO
+=======
+        protected static string GetUserById = "FindUserByUserId";
+>>>>>>> ddalton
         protected static string GetUserByUsername = "FindUserByUserName";
 
         //Update

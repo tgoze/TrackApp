@@ -22,13 +22,17 @@ namespace TrackApp.Models.dao
 
         public static User GetUser(int id)
         {
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/beta
 <<<<<<< refs/remotes/origin/beta
+=======
+>>>>>>> ddalton
             var query = HttpUtility.ParseQueryString(string.Empty);
             query["userId"] = id.ToString();
 
             string temp = Regex.Unescape(client1.GetStringAsync(GetUserById + "?" + query.ToString()).Result);
             return JsonConvert.DeserializeObject<User>(temp);
+<<<<<<< HEAD
 =======
             
             //client1.QueryString = new NameValueCollection
@@ -45,6 +49,8 @@ namespace TrackApp.Models.dao
             string temp = Regex.Unescape(client1.GetStringAsync(GetUserById + "?" + query.ToString()).Result);
             return JsonConvert.DeserializeObject<User>(temp);
 >>>>>>> DAO
+=======
+>>>>>>> ddalton
         }
 
         public static User GetUser(string username)

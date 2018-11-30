@@ -22,6 +22,7 @@ namespace TrackApp
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/beta
 <<<<<<< refs/remotes/origin/beta
             //User user = UserDao.GetUser(1);
@@ -48,6 +49,10 @@ namespace TrackApp
 =======
             //List<Role> role = RoleDao.GetAllRoles();
 >>>>>>> DAO
+=======
+            //User user = UserDao.GetUser(1);
+            //List<Role> role = RoleDao.GetAllRoles();
+>>>>>>> ddalton
 
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);

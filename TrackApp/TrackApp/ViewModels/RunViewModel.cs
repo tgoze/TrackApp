@@ -49,9 +49,12 @@ namespace TrackApp.ViewModels
             {
                 return _MaxTime;
             }
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/amarkovic
         }                    
 =======
+=======
+>>>>>>> ddalton
         }
 
         public int _NumOfSplits = 0;
@@ -146,6 +149,7 @@ namespace TrackApp.ViewModels
             SplitDistanceInput = 0;
             GoalTimeInput = "";
             RunDistanceInput = 0;
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/amarkovic
         }
 
@@ -170,6 +174,8 @@ namespace TrackApp.ViewModels
             });
         }            
 =======
+=======
+>>>>>>> ddalton
         }
 
         private void StartRun()
