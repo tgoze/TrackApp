@@ -84,7 +84,7 @@ namespace TrackApp.ViewModels
         {            
             StartRunCommand = new Command(StartRun);
             StopRunCommand = new Command(StopRun);
-            ResetRunCommand = new Command(ResetRun);
+           // ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
         }                    
 
