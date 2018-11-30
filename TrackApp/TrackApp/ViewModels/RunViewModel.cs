@@ -84,7 +84,7 @@ namespace TrackApp.ViewModels
         {            
             StartRunCommand = new Command(StartRun);
             StopRunCommand = new Command(StopRun);
-           // ResetRunCommand = new Command(ResetRun);
+            ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
         }                    
 
@@ -108,12 +108,7 @@ namespace TrackApp.ViewModels
         private void ResetRun()
         {
             SwService.Reset();
-            CurrentTime = "0:00:00";
-            CurrentProgress = 0;
-            MaxTime = 0;
-            SplitDistanceInput = 0;
-            GoalTimeInput = "";
-            RunDistanceInput = 0;
+            
         }
 
         private void StopRun()

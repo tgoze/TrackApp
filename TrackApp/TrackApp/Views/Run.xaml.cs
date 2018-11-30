@@ -121,10 +121,7 @@ namespace TrackApp
             NewRunBtn.Image = "round_pause_white_48.png";
             NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
-            //GoalTimeInput.Value = "";
-            //RunDistanceInput.Value = "";
-            //SplitDistanceInput.Value = "";
-            //NumberOfRunners.SetValue = "";
+            
 
             ResetRunBtn.IsVisible = true;
             ResetRunBtn.SetBinding(Button.CommandProperty, "ResetRunCommand");
