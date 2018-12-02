@@ -18,7 +18,7 @@ namespace TrackApp.ViewModels
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
-        public string NumberOfRunners { get; set; }
+        public string NumberOfRunnersInput { get; set; }
 
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
@@ -93,8 +93,7 @@ namespace TrackApp.ViewModels
             string[] TimeInputs = GoalTimeInput.Split(':');
             int.TryParse(TimeInputs[0], out int goalTimeMin);
             int.TryParse(TimeInputs[1], out int goalTimeSec);
-            int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;
-            
+            int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;            
                              
             NumOfSplits = RunDistanceInput / SplitDistanceInput;                        
             SplitTimeIntervalSec = goalTimeSeconds / NumOfSplits;
@@ -107,8 +106,7 @@ namespace TrackApp.ViewModels
 
         private void ResetRun()
         {
-            SwService.Reset();
-            
+            SwService.Reset();            
         }
 
         private void StopRun()

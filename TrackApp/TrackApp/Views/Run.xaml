@@ -171,7 +171,7 @@
                         </SfInputLayout:SfTextInputLayout>
                         <Picker Grid.Row="3"
                                 x:Name="NumberOfRunners" 
-                                Title="Select # of runners">
+                                Title="Number of runners">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
                                     <x:String>1</x:String>
