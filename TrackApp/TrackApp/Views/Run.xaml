@@ -146,11 +146,13 @@
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined"
                                                          ContainerBackgroundColor="Aqua">
-                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
-                                                       Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
+                            <Entry x:Name="GoalTimeInput"                                                      
+                                                       Text="{Binding GoalTimeInput}"
                                                        Keyboard="Numeric"
-                                                       Mask="00:00"/>
+                                                       Placeholder="00:00"/>
+                            
                         </SfInputLayout:SfTextInputLayout>
+                        <Label x:Name="GoalTimeInputError" TextColor="Red" Text="{Binding GoalTimeInputError}"/>
                         <SfInputLayout:SfTextInputLayout Grid.Row="1"
                                                          Hint="Run Distance"
                                                          FocusedColor="Black"
@@ -158,8 +160,9 @@
                             <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
                                                              FormatString="meters"
                                                              MaximumNumberDecimalDigits="0" 
-                                                             Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
+                                                             Value="{Binding RunDistanceInput}"/>
                         </SfInputLayout:SfTextInputLayout>
+                        <Label x:Name="RunDistanceInputError" TextColor="Red" Text="{Binding RunDistanceInputError}"/>
                         <SfInputLayout:SfTextInputLayout Grid.Row="2"
                                                          Hint="Split Distance"
                                                          FocusedColor="Black"

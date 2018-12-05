@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using TrackApp.Helper;
 using Xamarin.Forms;
 
@@ -7,16 +8,28 @@ namespace TrackApp.ViewModels
 {
     public class RunViewModel : INotifyPropertyChanged
     {
-        // Properties for stopwatch        
+             
         public int SplitTimeIntervalSec { get; set; }
         private int NumOfSplits;
         private StopwatchService SwService;       
 
-        // Properties for UI 
+        
         public event PropertyChangedEventHandler PropertyChanged;
-
+        void OnPropertyChanged([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+        
         public string GoalTimeInput { get; set; }
+
+       
         public int RunDistanceInput { get; set; }
+       
+
+
+
+
+
         public int SplitDistanceInput { get; set; }
         public string NumberOfRunners { get; set; }
 
@@ -86,7 +99,9 @@ namespace TrackApp.ViewModels
             StopRunCommand = new Command(StopRun);
             ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
-        }                    
+        }
+
+        
 
         private void StartRun()
         {            
@@ -107,7 +122,10 @@ namespace TrackApp.ViewModels
 
         private void ResetRun()
         {
+            SwService.Stop();
             SwService.Reset();
+            CurrentProgress = 0.0;
+            CurrentTime = "00:00";
             
         }
 
@@ -130,6 +148,8 @@ namespace TrackApp.ViewModels
                 
                 return continueUpdating;
             });
-        }            
+        }
+
+        
     }
 }
