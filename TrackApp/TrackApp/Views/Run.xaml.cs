@@ -131,53 +131,53 @@ namespace TrackApp
             //display individual runner split buttons
             if (NumberOfRunners.SelectedItem.Equals("2"))
             {
-                Runner1.IsVisible = false;
-                Runner2.IsVisible = false;
-                Runner3.IsVisible = true;
-                Runner3.Text = "2";
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = false;
                 Runner4.IsVisible = false;
-                Runner5.IsVisible = true;
-                Runner5.Text = "1";
+                Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
             else if (NumberOfRunners.SelectedItem.Equals("3"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
-                Runner2.IsVisible = false;
-                Runner3.IsVisible = true;
-                Runner3.Text = "3";
-                Runner4.IsVisible = false;
-                Runner5.IsVisible = true;
-                Runner5.Text = "2";
-                Runner6.IsVisible = false;
-            }
-            else if (NumberOfRunners.SelectedItem.Equals("4"))
-            {
-                Runner1.IsVisible = false;
                 Runner2.IsVisible = true;
                 Runner2.Text = "2";
                 Runner3.IsVisible = true;
                 Runner3.Text = "3";
                 Runner4.IsVisible = false;
-                Runner5.IsVisible = true;
-                Runner5.Text = "4";
-                Runner6.IsVisible = true;
-                Runner6.Text = "1";
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
+            }
+            else if (NumberOfRunners.SelectedItem.Equals("4"))
+            {
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = true;
+                Runner3.Text = "3";
+                Runner4.IsVisible = true;
+                Runner4.Text = "4";
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
             }
             else if (NumberOfRunners.SelectedItem.Equals("5"))
             {
                 Runner1.IsVisible = true;
-                Runner1.Text = "2";
+                Runner1.Text = "1";
                 Runner2.IsVisible = true;
-                Runner2.Text = "3";
+                Runner2.Text = "2";
                 Runner3.IsVisible = true;
-                Runner3.Text = "4";
-                Runner4.IsVisible = false;
+                Runner3.Text = "3";
+                Runner4.IsVisible = true;
+                Runner4.Text = "4";
                 Runner5.IsVisible = true;
                 Runner5.Text = "5";
-                Runner6.IsVisible = true;
-                Runner6.Text = "1";
+                Runner6.IsVisible = false;
             }
             else if (NumberOfRunners.SelectedItem.Equals("6"))
             {

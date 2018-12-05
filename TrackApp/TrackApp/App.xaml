@@ -40,9 +40,9 @@
                 <Setter Property="BackgroundColor" Value="#1e90ff"/>
                 <Setter Property="TextColor" Value="white"/>
                 <Setter Property="FontSize" Value="Large"/>
-                <Setter Property="WidthRequest" Value="60"/>
-                <Setter Property="HeightRequest" Value="60"/>
-                <Setter Property="CornerRadius" Value="30"/>
+                <Setter Property="WidthRequest" Value="55"/>
+                <Setter Property="HeightRequest" Value="55"/>
+                <Setter Property="CornerRadius" Value="275"/>
                 <Setter Property="HorizontalOptions" Value="Start"/>
                 <Setter Property="VerticalOptions" Value="Start"/>
                 <Setter Property="IsVisible" Value="False"/>

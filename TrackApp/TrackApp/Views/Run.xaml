@@ -20,54 +20,12 @@
             </Button.Image>
         </Button>
             
-        <!--Top position-->
-        <Button x:Name="Runner1"
-                Text="1"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".5,.075"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-        
-        <!--Top-right position-->
-        <Button x:Name="Runner2"
-                Text="2"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".85,.15"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-        
-        <!--Top-left position-->
-        <Button x:Name="Runner6"
-                Text="6"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".15,.15"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
-        <!--Bottom position-->
-        <Button x:Name="Runner4"
-                Text="4"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".5,.7"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
-        <!--Bottom-right position-->
-        <Button x:Name="Runner3"
-                Text="3"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".85,.62"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
-        <!--Bottom-right position-->
-        <Button x:Name="Runner5"
-                Text="5"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".15,.62"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
                                            AnimationDuration="150"
                                            ProgressCompleted="SetAnimationDuration"
                                            Maximum="{Binding MaxTime}" Minimum="0"
                                            ProgressColor="#1e90ff"
-                                           AbsoluteLayout.LayoutBounds=".5,.25,.8,.6"
+                                           AbsoluteLayout.LayoutBounds=".5,-0.05,.8,.6"
                                            AbsoluteLayout.LayoutFlags="All"
                                            IndicatorOuterRadius=".7"
                                            IndicatorInnerRadius=".75">
@@ -78,7 +36,49 @@
                 </Label>
             </progressBar:SfCircularProgressBar.Content>
         </progressBar:SfCircularProgressBar>
-        
+
+        <!--Bottom-bottom position-->
+        <Button x:Name="Runner5"
+                Text="5"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".5,.72"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-bottom-right position-->
+        <Button x:Name="Runner6"
+                Text="6"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".85,.64"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-bottom-left position-->
+        <Button x:Name="Runner4"
+                Text="4"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".15,.64"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom position-->
+        <Button x:Name="Runner2"
+                Text="2"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".5,.58"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-right position-->
+        <Button x:Name="Runner3"
+                Text="3"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".85,.5"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-left position-->
+        <Button x:Name="Runner1"
+                Text="1"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".15,.5"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
         <Button x:Name="NewRunBtn"
                 Style="{StaticResource CircleButtonStart}"
                 AbsoluteLayout.LayoutBounds=".5,.95,.16,.1"
