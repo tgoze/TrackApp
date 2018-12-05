@@ -12,7 +12,9 @@ namespace TrackApp.Helper
         private int SplitTimeIntervalSec;
         private CancellationTokenSource cts;
         private bool WaitToBeep;
-        public Stopwatch StopWatch { get; }                                        
+        public Stopwatch StopWatch { get; }  
+        public int SoundIndex { get; set; }
+        private string Mp3File { get; set; }
 
         public StopwatchService(int splitTimeIntervalSec)
         {
@@ -54,7 +56,7 @@ namespace TrackApp.Helper
 
         private void PlayBeep()
         {
-            DependencyService.Get<IAudio>().PlayAudioFile("beep.mp3");
+            DependencyService.Get<IAudio>().PlayAudioFile(Mp3File);
         }
 
         private async Task WatchStopwatchAsync(TimeSpan interval, int splitTimeInterval, CancellationToken cancellationToken)
@@ -75,6 +77,24 @@ namespace TrackApp.Helper
                     WaitToBeep = false;
                 }                
                 await Task.Delay(interval, cancellationToken);
+            }
+        }
+
+        internal void updateSound(int soundIndex)
+        {
+            SoundIndex = soundIndex;
+            if (SoundIndex == 1)
+            {
+                Mp3File = "wood.mp3";
+            } else if (SoundIndex == 2)
+            {
+                Mp3File = "techno.mp3";
+            } else if (SoundIndex == 3)
+            {
+                Mp3File = "beep.mp3";
+            } else
+            {
+                Mp3File = "bell.mp3";
             }
         }
     }

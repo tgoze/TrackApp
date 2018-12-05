@@ -19,6 +19,8 @@ namespace TrackApp.ViewModels
         public int RunDistanceInput { get; set; }
         public int SplitDistanceInput { get; set; }
         public string NumberOfRunners { get; set; }
+        public int SoundIndex { get; set;
+        }
 
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
@@ -89,7 +91,8 @@ namespace TrackApp.ViewModels
         }                    
 
         private void StartRun()
-        {            
+        {
+            
             string[] TimeInputs = GoalTimeInput.Split(':');
             int.TryParse(TimeInputs[0], out int goalTimeMin);
             int.TryParse(TimeInputs[1], out int goalTimeSec);
@@ -100,7 +103,8 @@ namespace TrackApp.ViewModels
             SplitTimeIntervalSec = goalTimeSeconds / NumOfSplits;
             MaxTime = SplitTimeIntervalSec * 1000;       
 
-            SwService = new StopwatchService(SplitTimeIntervalSec);            
+            SwService = new StopwatchService(SplitTimeIntervalSec);
+            SwService.updateSound(SoundIndex);
             SwService.Start();
             UpdateTime(true);
         }
@@ -118,6 +122,10 @@ namespace TrackApp.ViewModels
 
         private void ContinueRun()
         { 
+            if (SwService.SoundIndex != SoundIndex)
+            {
+                SwService.updateSound(SoundIndex);
+            }
             SwService.Continue();
         }
 

@@ -12,14 +12,30 @@
                 Style="{StaticResource CircleButtonSplit}"
                 IsVisible="True"
                 AbsoluteLayout.LayoutBounds="1,.01,.16,.1"
-                AbsoluteLayout.LayoutFlags="All">
+                AbsoluteLayout.LayoutFlags="All"
+                Clicked="OpenPicker">
+
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_speaker_phone_white_48.png"
                             iOS="round_speaker_phone_white_48pt_3x.png"/>
             </Button.Image>
         </Button>
-            
+        <Picker x:Name="SoundPicker"
+                IsVisible="False"
+                IsEnabled="False"
+                SelectedIndex="{ Binding SoundIndex, Mode=OneWayToSource}"
+                >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Bell</x:String>
+                    <x:String>Wood</x:String>
+                    <x:String>Techno</x:String>
+                    <x:String>Beep</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
         <!--Top position-->
         <Button x:Name="Runner1"
                 Text="1"
