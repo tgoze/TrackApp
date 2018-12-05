@@ -16,17 +16,20 @@ namespace TrackApp
         int SplitSec = 0;
         int SplitMil = 0;
         string startBtnSignal = "Start";
+        RunViewModel runview = new RunViewModel();
 
         public Run()
 		{
             InitializeComponent();
             
             BindingContext = new RunViewModel();
+            
             NewRunBtn.Clicked += ShowPopup;
             StartNewRunBtn.Clicked += StartRun;
             CancelNewRunBtn.Clicked += HidePopup; 
             ResetRunBtn.Clicked += ResetRun;
             SplitRunBtn.Clicked += SplitRun;
+            
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;
@@ -115,6 +118,8 @@ namespace TrackApp
         }
         private void StartRun(object sender, EventArgs e)
         {
+
+            runview.StartRunCommand.Execute(null);
             NewRunPopup.IsVisible = false;
 
             startBtnSignal = "Stop";
