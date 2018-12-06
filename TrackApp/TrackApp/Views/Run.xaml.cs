@@ -16,6 +16,9 @@ namespace TrackApp
         int SplitSec = 0;
         int SplitMil = 0;
         string startBtnSignal = "Start";
+        bool GoalText = false;
+        bool RunText = false;
+        bool SplitText = false;
         RunViewModel runview = new RunViewModel();
 
         public Run()
@@ -29,11 +32,24 @@ namespace TrackApp
             CancelNewRunBtn.Clicked += HidePopup; 
             ResetRunBtn.Clicked += ResetRun;
             SplitRunBtn.Clicked += SplitRun;
-            
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;
+            
+            
         }
+
+        private void OnTextChanged (object sender, ProgressValueEventArgs e)
+        {
+
+
+
+
+
+
+        }
+
+
 
         private void SetAnimationDuration(object sender, ProgressValueEventArgs e)
         {
@@ -116,8 +132,14 @@ namespace TrackApp
             SplitField.IsVisible = true;
             SplitField.Text = NewSplit.ToString(@"mm\:ss\:ff");
         }
+
+
+
+
         private void StartRun(object sender, EventArgs e)
         {
+
+            
 
             runview.StartRunCommand.Execute(null);
             NewRunPopup.IsVisible = false;
@@ -132,6 +154,24 @@ namespace TrackApp
             ResetRunBtn.SetBinding(Button.CommandProperty, "ResetRunCommand");
 
             SplitRunBtn.IsVisible = true;
+        }
+
+        private void GoalTimeInput_ValueChanged(object sender, Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs eventArgs)
+        {
+            if (!GoalTimeInput.Value.Equals(""))
+            {
+                GoalText = true;
+            }
+        }
+
+        private void RunDistanceInput_ValueChanged(object sender, Syncfusion.SfNumericTextBox.XForms.ValueEventArgs e)
+        {
+
+        }
+
+        private void SplitDistanceInput_ValueChanged(object sender, Syncfusion.SfNumericTextBox.XForms.ValueEventArgs e)
+        {
+
         }
     }
 }

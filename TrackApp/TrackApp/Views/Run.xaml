@@ -146,10 +146,10 @@
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined"
                                                          ContainerBackgroundColor="Aqua">
-                            <Entry x:Name="GoalTimeInput"                                                      
-                                                       Text="{Binding GoalTimeInput}"
+                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
+                                                       Value="{Binding GoalTimeInput}"
                                                        Keyboard="Numeric"
-                                                       Placeholder="00:00"/>
+                                                       MaskInputRejected="00:00"/>
                             
                         </SfInputLayout:SfTextInputLayout>
                         <Label x:Name="GoalTimeInputError" TextColor="Red" Text="{Binding GoalTimeInputError}"/>
