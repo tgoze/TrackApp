@@ -66,9 +66,7 @@ namespace TrackApp
                 SoundSettings.IsEnabled = false;
                 startBtnSignal = "Stop";
                 NewRunBtn.Image = "round_pause_white_48.png";
-                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-
-                
+                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");   
             } else
             {
                 NewRunPopup.IsVisible = true;
@@ -90,6 +88,7 @@ namespace TrackApp
 
         private void ResetRun(object sender, EventArgs e)
         {
+            NewRunBtn.SetBinding(Button.CommandProperty, "FalseFunction");
             SoundSettings.IsEnabled = true;
             startBtnSignal = "Start";
             NewRunBtn.Image = "round_play_arrow_white_48.png";

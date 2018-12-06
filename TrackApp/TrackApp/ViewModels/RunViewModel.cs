@@ -25,7 +25,8 @@ namespace TrackApp.ViewModels
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
-        public Command ContinueRunCommand { get; }       
+        public Command ContinueRunCommand { get; }    
+        public Command FalseFunction { get; }
 
         public double _MaxTime = 0;
         public double MaxTime

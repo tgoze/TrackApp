@@ -222,6 +222,7 @@
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
                             Style="{StaticResource CircleButtonReset}"
+                            
                             BackgroundColor="#9b2b2b"
                             IsVisible="True"
                             AbsoluteLayout.LayoutBounds="0,0,.16,.1"
