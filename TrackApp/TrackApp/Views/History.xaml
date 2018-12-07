@@ -4,9 +4,30 @@
              x:Class="TrackApp.History">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="We are working on it"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="HistoryLv">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="Runner number: "></Label>
+                                <Label Text="{Binding RunnerNumber}"></Label>
+                                <Label Text="{Binding TotalTime}"></Label>
+                                <ListView x:Name="Splits" ItemsSource="{Binding Splits}">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Grid>
+                                                    <Label Text="{Binding Time}"></Label>
+                                                </Grid>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
