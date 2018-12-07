@@ -10,19 +10,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\dao\**" />
     <Compile Remove="Rex\**" />
+    <EmbeddedResource Remove="Models\dao\**" />
     <EmbeddedResource Remove="Rex\**" />
+    <None Remove="Models\dao\**" />
     <None Remove="Rex\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="CustomHeightPicker.cs" />
     <Compile Remove="Models\UserValidation.cs" />
+    <Compile Remove="ViewModels\LoginViewModel.cs" />
     <Compile Remove="ViewModels\ViewModel.cs" />
+    <Compile Remove="Views\Login.xaml.cs" />
+    <Compile Remove="Views\Signup.xaml.cs" />
     <Compile Remove="Views\Signup2.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Views\Login.xaml" />
+    <EmbeddedResource Remove="Views\Signup.xaml" />
     <EmbeddedResource Remove="Views\Signup2.xaml" />
   </ItemGroup>
 
@@ -60,16 +68,10 @@
     <EmbeddedResource Update="Views\History.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Login.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Run.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Signup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

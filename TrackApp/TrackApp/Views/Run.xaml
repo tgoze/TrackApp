@@ -136,10 +136,13 @@
              AbsoluteLayout.LayoutFlags="HeightProportional,WidthProportional"
            >
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Frame CornerRadius="10"  
+       OutlineColor="Red" 
+       Padding="0">
                 <StackLayout Orientation="Vertical" 
                              BackgroundColor="#d8dbe2"
                              Padding="20">
-                    
+                        <Label FontSize="Medium">Create New Run</Label>
                        
                         <SfInputLayout:SfTextInputLayout
                                                          Hint="Goal Time"
@@ -196,6 +199,7 @@
                         </Picker.ItemsSource>
                     </Picker>-->
                 </StackLayout>
+                </Frame>
                 <Grid Padding="0" Margin="0" ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
