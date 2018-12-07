@@ -149,19 +149,31 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>16.3.0.21</Version>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Buttons">
+      <Version>16.3.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>16.3.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>16.3.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar">
+      <Version>16.3.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfDataForm">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -172,5 +184,41 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\button.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\beep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\baseline_group_work_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_cancel_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_check_circle_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_directions_run_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_flag_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_pause_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_person_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_play_arrow_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_replay_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_history_white_48pt_3x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\round_speaker_phone_white_48pt_3x.png" />
   </ItemGroup>
 </Project>

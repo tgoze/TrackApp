@@ -30,9 +30,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,28 +43,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.DataSource">
+      <Version>16.3.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfDataForm">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
-      <Version>16.3.0.21</Version>
+      <Version>16.3.0.36</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView">
+      <Version>16.3.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar">
+      <Version>16.3.0.36</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="27.0.2.1" />
@@ -104,11 +114,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TrackApp\TrackApp.csproj">
@@ -117,13 +125,52 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\raw\beep.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\button.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\rounded_shape.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\runner_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\beep.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\baseline_group_work_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_cancel_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_check_circle_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_directions_run_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_flag_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_pause_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_person_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_play_arrow_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_replay_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_history_white_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\round_speaker_phone_white_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

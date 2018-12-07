@@ -4,7 +4,6 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
 xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
-             xmlns:syncmaskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
              x:Class="TrackApp.Signup">
 
 
@@ -109,14 +108,49 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 Placeholder="Inches" 
                 Text="{Binding Inches}"
                 x:Name="InchesEntry" />-->
-                <inputLayout:SfTextInputLayout
-                Hint="Height"
-                HelperText="Enter Your Height"
-                ContainerType="Outlined"
-                >
-                    <syncmaskededit:SfMaskedEdit x:Name="HeightMaskedEdit" Mask="0'00&quot;" />
-                </inputLayout:SfTextInputLayout>
-             
+                <Label Text="Height" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Picker x:Name="Feet" Title="Feet" Grid.Column="0">
+                        <Picker.ItemsSource>
+                            <ListCollection:List x:TypeArguments="x:String">
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                            </ListCollection:List>
+
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Picker x:Name="Inches" Title="Inches" Grid.Column="1">
+                        <Picker.ItemsSource>
+                            <ListCollection:List x:TypeArguments="x:String">
+                                <x:String>0</x:String>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>
+                                <x:String>6</x:String>
+                                <x:String>7</x:String>
+                                <x:String>8</x:String>
+                                <x:String>9</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                            </ListCollection:List>
+
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Grid>
                 <Label  x:Name="HeightError" TextColor="Red" Text="" />
 
                 <inputLayout:SfTextInputLayout

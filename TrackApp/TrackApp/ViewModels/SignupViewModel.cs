@@ -213,12 +213,21 @@ namespace TrackApp.ViewModels
 
         private bool ValidateWeight(string value)
         {
-           //TODO
+            if (value.Length > 1)
+            {
+                weightError = "";
+                return true;
+            }
+            else
+            {
+                weightError = "Please enter a valid Weight";
+                return false;
+            }
         }
 
         public string WeightError
         {
-            get { return weightError; }
+            get { return lastNameError; }
         }
 
 

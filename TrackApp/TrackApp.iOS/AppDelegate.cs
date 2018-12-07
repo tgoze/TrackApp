@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Syncfusion.ListView.XForms.iOS;
 using UIKit;
 
 namespace TrackApp.iOS
@@ -27,12 +28,14 @@ namespace TrackApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-global::Xamarin.Forms.Forms.Init();
-SfPickerRenderer.Init();
-SfCheckBoxRenderer.Init();
-SfComboBoxRenderer.Init();
-SfDataFormRenderer.Init();
-SfMaskedEditRenderer.Init();
+            global::Xamarin.Forms.Forms.Init();
+            SfPickerRenderer.Init();
+            SfCheckBoxRenderer.Init();
+            SfComboBoxRenderer.Init();
+            SfDataFormRenderer.Init();
+            SfMaskedEditRenderer.Init();
+            Syncfusion.XForms.iOS.ProgressBar.SfCircularProgressBarRenderer.Init();
+            SfListViewRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
