@@ -7,21 +7,11 @@ namespace TrackApp.Models
     {
         public Run()
         {
-            Splits = new List<TimeSpan>();
+            Splits = new List<string>();
         }
 
-        public int RunnerNumer { get; set; }
-        public List<TimeSpan> Splits { get; set; }
-
-        public TimeSpan TotalTime
-        {
-            get
-            {
-                TimeSpan total = new TimeSpan();
-                foreach (TimeSpan t in Splits)
-                    total.Add(t);
-                return total;
-            }
-        }
+        public int RunnerNumber { get; set; }
+        public List<string> Splits { get; set; }
+        public string TotalTime { get; set; }
     }
 }

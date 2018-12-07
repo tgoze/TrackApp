@@ -1,11 +1,13 @@
 ﻿using System;
 
-using Xamarin.Forms; 
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using Syncfusion.XForms.ProgressBar;
 
 using TrackApp.ViewModels;
+using System.Collections.Generic;
+using TrackApp.Models;
 
 namespace TrackApp
 {
@@ -16,6 +18,9 @@ namespace TrackApp
         int SplitSec = 0;
         int SplitMil = 0;
         string startBtnSignal = "Start";
+
+        public int RunnerNumber { get; internal set; }
+        internal List<TimeSpan> Splits { get; set; }
 
         public Run()
 		{
@@ -110,9 +115,9 @@ namespace TrackApp
             int.TryParse(CurrentTimeInputs[2], out int CurrentTimeMil);
 
 
-            TimeSpan current = new TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
-            TimeSpan split = new TimeSpan(0, 0, SplitMin, SplitSec, SplitMil);
-            TimeSpan NewSplit = current - split;
+            System.TimeSpan current = new System.TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
+            System.TimeSpan split = new System.TimeSpan(0, 0, SplitMin, SplitSec, SplitMil);
+            System.TimeSpan NewSplit = current - split;
 
             SplitMin = CurrentTimeMin;
             SplitSec = CurrentTimeSec;
