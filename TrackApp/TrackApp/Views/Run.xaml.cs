@@ -158,7 +158,12 @@ namespace TrackApp
 
         private void GoalTimeInput_ValueChanged(object sender, Syncfusion.XForms.MaskedEdit.ValueChangedEventArgs eventArgs)
         {
-            if (!GoalTimeInput.Value.Equals(""))
+            if (GoalText && RunText && SplitText)
+            {
+                StartNewRunBtn.IsVisible = true;
+            }
+
+            if( GoalTimeInput.Value != null)
             {
                 GoalText = true;
             }
@@ -167,10 +172,51 @@ namespace TrackApp
         private void RunDistanceInput_ValueChanged(object sender, Syncfusion.SfNumericTextBox.XForms.ValueEventArgs e)
         {
 
+            int test = (int)SplitDistanceInput.Value;
+            if (GoalText && RunText && SplitText)
+            {
+                StartNewRunBtn.IsVisible = true;
+            }
+
+
+            if (RunDistanceInput.Value != null)
+            {
+                if ((int)SplitDistanceInput.Value >0)
+                {
+                    if ((int)RunDistanceInput.Value > (int)SplitDistanceInput.Value)
+                    {
+                        RunText = true;
+                    }
+                } else
+                {
+                    RunText = true;
+                }
+            }
         }
 
         private void SplitDistanceInput_ValueChanged(object sender, Syncfusion.SfNumericTextBox.XForms.ValueEventArgs e)
         {
+
+            if (GoalText && RunText && SplitText)
+            {
+                StartNewRunBtn.IsVisible = true;
+            }
+
+            if (SplitDistanceInput.Value != null)
+            {
+                if(RunDistanceInput.Value != null)
+                {
+                    if ((int) SplitDistanceInput.Value < (int) RunDistanceInput.Value)
+                    {
+                        SplitText = true;
+                    }
+                } else
+                {
+                    SplitText = true;
+                }
+            }
+
+
 
         }
     }

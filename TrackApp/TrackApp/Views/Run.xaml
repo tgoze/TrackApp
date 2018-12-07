@@ -148,29 +148,33 @@
                                                          ContainerBackgroundColor="Aqua">
                             <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
                                                        Value="{Binding GoalTimeInput}"
+                                                       ValueChanged="GoalTimeInput_ValueChanged"
                                                        Keyboard="Numeric"
-                                                       MaskInputRejected="00:00"/>
+                                                       Mask="00:00"/>
                             
                         </SfInputLayout:SfTextInputLayout>
-                        <Label x:Name="GoalTimeInputError" TextColor="Red" Text="{Binding GoalTimeInputError}"/>
+                        <!--<Label x:Name="GoalTimeInputError" TextColor="Red" Text="{Binding GoalTimeInputError}"/>-->
                         <SfInputLayout:SfTextInputLayout Grid.Row="1"
                                                          Hint="Run Distance"
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined">
                             <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
-                                                             FormatString="meters"
+                                                             
                                                              MaximumNumberDecimalDigits="0" 
-                                                             Value="{Binding RunDistanceInput}"/>
+                                                             Value="{Binding RunDistanceInput}"
+                                                             ValueChanged="RunDistanceInput_ValueChanged"/>
+                            
                         </SfInputLayout:SfTextInputLayout>
-                        <Label x:Name="RunDistanceInputError" TextColor="Red" Text="{Binding RunDistanceInputError}"/>
+                        <!--<Label x:Name="RunDistanceInputError" TextColor="Red" Text="{Binding RunDistanceInputError}"/>-->
                         <SfInputLayout:SfTextInputLayout Grid.Row="2"
                                                          Hint="Split Distance"
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined">
                             <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
-                                                             FormatString="meters"
+                                                             
                                                              MaximumNumberDecimalDigits="0"
-                                                             Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
+                                                             Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"
+                                                             ValueChanged="SplitDistanceInput_ValueChanged"/>
                         </SfInputLayout:SfTextInputLayout>
                         <Picker Grid.Row="3"
                                 x:Name="NumberOfRunners" 
@@ -196,6 +200,8 @@
                     <Button x:Name="StartNewRunBtn" 
                             Style="{StaticResource CircleButtonStart}"                             
                             Grid.Column="1"
+                            IsEnabled="False"
+                            IsVisible="False"
                             AbsoluteLayout.LayoutBounds="0,0,.16,.1"
                             AbsoluteLayout.LayoutFlags="All"
                             HorizontalOptions="Center"
