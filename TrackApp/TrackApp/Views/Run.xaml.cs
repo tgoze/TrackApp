@@ -57,21 +57,28 @@ namespace TrackApp
         {           
             if ("Stop".Equals(startBtnSignal))
             {
+                SoundSettings.IsEnabled = true;
                 startBtnSignal = "Continue";
                 NewRunBtn.Image = "round_play_arrow_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
             } else if ("Continue".Equals(startBtnSignal))
             {
+                SoundSettings.IsEnabled = false;
                 startBtnSignal = "Stop";
                 NewRunBtn.Image = "round_pause_white_48.png";
-                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-
-                
+                NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");   
             } else
             {
                 NewRunPopup.IsVisible = true;
             }
                      
+        }
+
+        private void OpenPicker(object sender, EventArgs e)
+        {
+
+            SoundPicker.IsEnabled = true;
+            SoundPicker.Focus();
         }
 
         private void HidePopup(object sender, EventArgs e)
@@ -81,6 +88,8 @@ namespace TrackApp
 
         private void ResetRun(object sender, EventArgs e)
         {
+            NewRunBtn.SetBinding(Button.CommandProperty, "FalseFunction");
+            SoundSettings.IsEnabled = true;
             startBtnSignal = "Start";
             NewRunBtn.Image = "round_play_arrow_white_48.png";
 
@@ -122,6 +131,8 @@ namespace TrackApp
         }
         private void StartRun(object sender, EventArgs e)
         {
+            SoundSettings.IsEnabled = false;
+
             NewRunPopup.IsVisible = false;
 
             startBtnSignal = "Stop";
