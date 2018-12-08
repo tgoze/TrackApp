@@ -36,8 +36,8 @@ namespace TrackApp.iOS
             SfMaskedEditRenderer.Init();
             Syncfusion.XForms.iOS.ProgressBar.SfCircularProgressBarRenderer.Init();
             SfListViewRenderer.Init();
-            LoadApplication(new App());
 
+            LoadApplication(new App());
             return base.FinishedLaunching(app, options);
         }
     }

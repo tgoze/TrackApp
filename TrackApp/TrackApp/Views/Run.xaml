@@ -1,22 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              xmlns:SfInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"                          
              xmlns:SfMaskedEdit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
-             x:Class="TrackApp.Run">
+             x:Class="TrackApp.Run"
+             Style="{StaticResource ContentPage}">
     <AbsoluteLayout x:Name="layout">
 
         <Button x:Name="SoundSettings"
                 Style="{StaticResource CircleButtonSplit}"
                 IsVisible="True"
-                AbsoluteLayout.LayoutBounds="1,.01,.16,.1"
+                AbsoluteLayout.LayoutBounds="1,.05,.16,.1"
                 AbsoluteLayout.LayoutFlags="All">
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_speaker_phone_white_48.png"
-                            iOS="round_speaker_phone_white_48pt_3x.png"/>
+                            iOS="round_speaker_phone_white_36pt"
+                            />
             </Button.Image>
         </Button>
             
@@ -86,7 +88,8 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_play_arrow_white_48.png"
-                            iOS="round_play_arrow_white_48pt_3x.png"/>
+                            iOS="round_play_arrow_white_48pt"
+                            />
             </Button.Image>
         </Button>
 
@@ -106,7 +109,7 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_replay_white_48.png"
-                            iOS="round_replay_white_48pt_3x.png"/>
+                            iOS="round_replay_white_48pt"/>
             </Button.Image>
         </Button>
 
@@ -118,7 +121,7 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_flag_white_48.png"
-                            iOS="round_flag_white_48pt_3x.png"/>
+                            iOS="round_flag_white_48pt"/>
             </Button.Image>
         </Button>
 
@@ -201,7 +204,7 @@
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                                         Android="round_check_circle_white_48.png"
-                                        iOS="round_check_circle_white_48pt_3x.png"/>
+                                        iOS="round_check_cricle_white_48pt"/>
                         </Button.Image>
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
@@ -216,7 +219,7 @@
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                                         Android="round_cancel_white_48.png"
-                                        iOS="round_cancel_white_48pt_3x.png"/>   
+                                        iOS="round_cancel_white_48pt"/>   
                         </Button.Image>
                     </Button>
                 </Grid>
