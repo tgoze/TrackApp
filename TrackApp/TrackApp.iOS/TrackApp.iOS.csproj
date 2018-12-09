@@ -185,6 +185,10 @@
     <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_1x.png" />
     <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_2x.png" />
     <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_3x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

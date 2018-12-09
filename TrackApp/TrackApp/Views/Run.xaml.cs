@@ -6,12 +6,13 @@ using Xamarin.Forms.Xaml;
 using Syncfusion.XForms.ProgressBar;
 
 using TrackApp.ViewModels;
+using static Xamarin.Forms.Device;
 
 namespace TrackApp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Run : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Run : ContentPage
+    {
         int SplitMin = 0;
         int SplitSec = 0;
         int SplitMil = 0;
@@ -52,21 +53,32 @@ namespace TrackApp
 
             progressBar.RangeColors = rangeColors;
         }
-           
+
         private void ShowPopup(object sender, EventArgs e)
         {           
             if ("Stop".Equals(startBtnSignal))
             {
                 startBtnSignal = "Continue";
-                NewRunBtn.Image = "round_play_arrow_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
+                if (RuntimePlatform == Device.Android)
+                {
+                    NewRunBtn.Image = "round_play_arrow_white_48.png";
+                } else if (RuntimePlatform == Device.iOS)
+                {
+                    NewRunBtn.Image = "round_play_arrow_white_48pt";
+                }
             } else if ("Continue".Equals(startBtnSignal))
             {
                 startBtnSignal = "Stop";
-                NewRunBtn.Image = "round_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-
-                
+                if (RuntimePlatform == Device.Android)
+                {
+                    NewRunBtn.Image = "round_pause_white_48.png";
+                }
+                else if (RuntimePlatform == Device.iOS)
+                {
+                    NewRunBtn.Image = "round_pause_white_48pt";
+                }
             } else
             {
                 NewRunPopup.IsVisible = true;
@@ -82,7 +94,14 @@ namespace TrackApp
         private void ResetRun(object sender, EventArgs e)
         {
             startBtnSignal = "Start";
-            NewRunBtn.Image = "round_play_arrow_white_48.png";
+            if (RuntimePlatform == Device.Android)
+            {
+                NewRunBtn.Image = "round_play_arrow_white_48.png";
+            }
+            else if (RuntimePlatform == Device.iOS)
+            {
+                NewRunBtn.Image = "round_play_arrow_white_48pt";
+            }
 
             ResetRunBtn.IsVisible = false;
 
@@ -125,11 +144,18 @@ namespace TrackApp
             NewRunPopup.IsVisible = false;
 
             startBtnSignal = "Stop";
-            NewRunBtn.Image = "round_pause_white_48.png";
+            if (RuntimePlatform == Device.Android)
+            {
+                NewRunBtn.Image = "round_pause_white_48.png";
+            }
+            else if (RuntimePlatform == Device.iOS)
+            {
+                NewRunBtn.Image = "round_pause_white_48pt";
+            }
             NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
             //display individual runner split buttons
-            if (NumberOfRunners.SelectedItem.Equals("2"))
+            if (NumberOfRunners.Value.Equals("2"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -140,7 +166,7 @@ namespace TrackApp
                 Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.SelectedItem.Equals("3"))
+            else if (NumberOfRunners.Value.Equals("3"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -152,7 +178,7 @@ namespace TrackApp
                 Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.SelectedItem.Equals("4"))
+            else if (NumberOfRunners.Value.Equals("4"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -165,7 +191,7 @@ namespace TrackApp
                 Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.SelectedItem.Equals("5"))
+            else if (NumberOfRunners.Value.Equals("5"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -179,7 +205,7 @@ namespace TrackApp
                 Runner5.Text = "5";
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.SelectedItem.Equals("6"))
+            else if (NumberOfRunners.Value.Equals("6"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
