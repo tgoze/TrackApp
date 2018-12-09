@@ -4,7 +4,7 @@
              x:Class="TrackApp.History">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="HistoryLv" ItemsSource="{Binding Runs}">
+            <ListView x:Name="HistoryLv" ItemsSource="{Binding Runs}" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -14,7 +14,7 @@
                                 <Label Text="Total time: " Grid.Column="2" Grid.Row="0"></Label>
                                 <Label Text="{Binding TotalTime}" Grid.Column="3" Grid.Row="0"></Label>
                                 <Label Text="Split times: " Grid.Column="0" Grid.Row="1"></Label>
-                                <ListView x:Name="Splits" ItemsSource="{Binding Splits}" Grid.Column="1" Grid.Row="1">
+                                <ListView x:Name="Splits" ItemsSource="{Binding Splits}" Grid.Column="1" Grid.Row="1" RowHeight="50">
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <ViewCell>
