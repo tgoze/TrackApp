@@ -155,7 +155,7 @@ namespace TrackApp
             NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
             //display individual runner split buttons
-            if (NumberOfRunners.Value.Equals("2"))
+            if (NumberOfRunners.Value.ToString().Equals("2"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -166,7 +166,7 @@ namespace TrackApp
                 Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.Value.Equals("3"))
+            else if (NumberOfRunners.Value.ToString().Equals("3"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -178,7 +178,7 @@ namespace TrackApp
                 Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.Value.Equals("4"))
+            else if (NumberOfRunners.Value.ToString().Equals("4"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -191,7 +191,7 @@ namespace TrackApp
                 Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.Value.Equals("5"))
+            else if (NumberOfRunners.Value.ToString().Equals("5"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
@@ -205,7 +205,7 @@ namespace TrackApp
                 Runner5.Text = "5";
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.Value.Equals("6"))
+            else if (NumberOfRunners.Value.ToString().Equals("6"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
