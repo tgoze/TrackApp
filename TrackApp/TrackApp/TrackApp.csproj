@@ -41,6 +41,7 @@
     <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="16.3.0.36" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="16.3.0.36" />
     <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="16.3.0.36" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="16.3.0.36" />
   </ItemGroup>
 
   <ItemGroup>

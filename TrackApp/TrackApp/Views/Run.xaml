@@ -5,6 +5,7 @@
              xmlns:SfInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"                          
              xmlns:SfMaskedEdit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             xmlns:SfNumericUpDown="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
              x:Class="TrackApp.Run"
              Style="{StaticResource ContentPage}">
     <AbsoluteLayout x:Name="layout">
@@ -132,62 +133,63 @@
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
              AbsoluteLayout.LayoutFlags="HeightProportional,WidthProportional">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                <StackLayout Orientation="Vertical" 
-                             HeightRequest="300" 
-                             WidthRequest="200" 
-                             BackgroundColor="#d8dbe2"
-                             Padding="20">
-                    <Grid RowSpacing="5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <SfInputLayout:SfTextInputLayout Grid.Row="0"
-                                                         Hint="Goal Time"
-                                                         FocusedColor="Black"
-                                                         ContainerType="Outlined"
-                                                         ContainerBackgroundColor="Aqua">
-                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
-                                                       Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
-                                                       Keyboard="Numeric"
-                                                       Mask="00:00"/>
-                        </SfInputLayout:SfTextInputLayout>
-                        <SfInputLayout:SfTextInputLayout Grid.Row="1"
-                                                         Hint="Run Distance"
+                <Frame CornerRadius="10" 
+                       BackgroundColor="#d8dbe2"
+                       Padding="0">
+                    <StackLayout Orientation="Vertical" 
+                                 WidthRequest="200" 
+                                 Padding="20">
+                        <Label FontSize="Medium">Create New Run</Label>
+                        <Grid RowSpacing="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="0"
+                                                             Hint="Goal Time"
+                                                             FocusedColor="Black"
+                                                             ContainerType="Outlined"
+                                                             ContainerBackgroundColor="Aqua">
+                                <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
+                                                           Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
+                                                           Keyboard="Numeric"
+                                                           Mask="00:00"/>
+                            </SfInputLayout:SfTextInputLayout>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="1"
+                                                             Hint="Run Distance"
+                                                             FocusedColor="Black"
+                                                             ContainerType="Outlined">
+                                <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
+                                                                 FormatString="meters"
+                                                                 MaximumNumberDecimalDigits="0" 
+                                                                 Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
+                            </SfInputLayout:SfTextInputLayout>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="2"
+                                                             Hint="Split Distance"
+                                                             FocusedColor="Black"
+                                                             ContainerType="Outlined">
+                                <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
+                                                                 FormatString="meters"
+                                                                 MaximumNumberDecimalDigits="0"
+                                                                 Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
+                            </SfInputLayout:SfTextInputLayout>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="3"
+                                                         Hint="Number of Runners"
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined">
-                            <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
-                                                             FormatString="meters"
-                                                             MaximumNumberDecimalDigits="0" 
-                                                             Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
-                        </SfInputLayout:SfTextInputLayout>
-                        <SfInputLayout:SfTextInputLayout Grid.Row="2"
-                                                         Hint="Split Distance"
-                                                         FocusedColor="Black"
-                                                         ContainerType="Outlined">
-                            <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
-                                                             FormatString="meters"
-                                                             MaximumNumberDecimalDigits="0"
-                                                             Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
-                        </SfInputLayout:SfTextInputLayout>
-                        <Picker Grid.Row="3"
-                                x:Name="NumberOfRunners" 
-                                Title="Select # of runners">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>1</x:String>
-                                    <x:String>2</x:String>
-                                    <x:String>3</x:String>
-                                    <x:String>4</x:String>
-                                    <x:String>5</x:String>
-                                    <x:String>6</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </Grid>
-                </StackLayout>
+                                <SfNumericUpDown:SfNumericUpDown x:Name="NumberOfRunners"
+                                                 Maximum="6"
+                                                 Minimum="1"
+                                                 FormatString="n"
+                                                 MaximumDecimalDigits="0"
+                                                 Value="{Binding NumberOfRunners, Mode=OneWayToSource}"
+                                                 />
+                            </SfInputLayout:SfTextInputLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
                 <Grid Padding="0" Margin="0" ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -204,7 +206,7 @@
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                                         Android="round_check_circle_white_48.png"
-                                        iOS="round_check_cricle_white_48pt"/>
+                                        iOS="round_check_circle_white_48pt"/>
                         </Button.Image>
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
