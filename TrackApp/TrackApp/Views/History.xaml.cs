@@ -28,5 +28,5 @@ namespace TrackApp
         {
             HistoryLv.ItemsSource = runs;
         }
-	}
+    }
 }

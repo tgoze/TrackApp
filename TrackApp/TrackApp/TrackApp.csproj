@@ -18,6 +18,7 @@
   <ItemGroup>
     <Compile Remove="CustomHeightPicker.cs" />
     <Compile Remove="Models\UserValidation.cs" />
+    <Compile Remove="ViewModels\HistoryViewModel.cs" />
     <Compile Remove="ViewModels\ViewModel.cs" />
     <Compile Remove="Views\Signup2.xaml.cs" />
   </ItemGroup>
