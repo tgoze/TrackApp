@@ -92,6 +92,13 @@ namespace TrackApp
             SplitSec = 0;
             SplitMil = 0;
             SplitField.IsVisible = false;
+
+            Runner1.IsVisible = false;
+            Runner2.IsVisible = false;
+            Runner3.IsVisible = false;
+            Runner4.IsVisible = false;
+            Runner5.IsVisible = false;
+            Runner6.IsVisible = false;
         }
 
         private void SplitRun(object sender, EventArgs e)
@@ -121,10 +128,80 @@ namespace TrackApp
             NewRunBtn.Image = "round_pause_white_48.png";
             NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
-            //GoalTimeInput.Value = "";
-            //RunDistanceInput.Value = "";
-            //SplitDistanceInput.Value = "";
-            //NumberOfRunners.SetValue = "";
+            //display individual runner split buttons
+            if (NumberOfRunners.SelectedItem.Equals("2"))
+            {
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = false;
+                Runner4.IsVisible = false;
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
+            }
+            else if (NumberOfRunners.SelectedItem.Equals("3"))
+            {
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = true;
+                Runner3.Text = "3";
+                Runner4.IsVisible = false;
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
+            }
+            else if (NumberOfRunners.SelectedItem.Equals("4"))
+            {
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = true;
+                Runner3.Text = "3";
+                Runner4.IsVisible = true;
+                Runner4.Text = "4";
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
+            }
+            else if (NumberOfRunners.SelectedItem.Equals("5"))
+            {
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = true;
+                Runner3.Text = "3";
+                Runner4.IsVisible = true;
+                Runner4.Text = "4";
+                Runner5.IsVisible = true;
+                Runner5.Text = "5";
+                Runner6.IsVisible = false;
+            }
+            else if (NumberOfRunners.SelectedItem.Equals("6"))
+            {
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = true;
+                Runner3.Text = "3";
+                Runner4.IsVisible = true;
+                Runner4.Text = "4";
+                Runner5.IsVisible = true;
+                Runner5.Text = "5";
+                Runner6.IsVisible = true;
+                Runner6.Text = "6";
+            }
+            else {
+                Runner1.IsVisible = false;
+                Runner2.IsVisible = false;
+                Runner3.IsVisible = false;
+                Runner4.IsVisible = false;
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
+            }
 
             ResetRunBtn.IsVisible = true;
             ResetRunBtn.SetBinding(Button.CommandProperty, "ResetRunCommand");
