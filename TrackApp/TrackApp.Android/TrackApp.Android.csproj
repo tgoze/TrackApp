@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -117,10 +116,11 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TrackApp\TrackApp.csproj">
-      <Project>{1307D320-AD44-4ABF-BF42-BBEBD94310A6}</Project>
+      <Project>{AFDE0DAD-0EC1-4CD3-91AF-B94475E58864}</Project>
       <Name>TrackApp</Name>
     </ProjectReference>
   </ItemGroup>
@@ -129,9 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\rounded_shape.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\runner_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\beep.mp3" />

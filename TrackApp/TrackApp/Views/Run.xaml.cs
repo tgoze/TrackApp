@@ -6,6 +6,7 @@ using Xamarin.Forms.Xaml;
 using Syncfusion.XForms.ProgressBar;
 
 using TrackApp.ViewModels;
+using static Xamarin.Forms.Device;
 using System.Collections.Generic;
 using TrackApp.Models;
 using System.Collections;
@@ -64,21 +65,32 @@ namespace TrackApp
 
             progressBar.RangeColors = rangeColors;
         }
-           
+
         private void ShowPopup(object sender, EventArgs e)
         {           
             if ("Stop".Equals(startBtnSignal))
             {
                 startBtnSignal = "Continue";
-                NewRunBtn.Image = "round_play_arrow_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
+                if (RuntimePlatform == Device.Android)
+                {
+                    NewRunBtn.Image = "round_play_arrow_white_48.png";
+                } else if (RuntimePlatform == Device.iOS)
+                {
+                    NewRunBtn.Image = "round_play_arrow_white_48pt";
+                }
             } else if ("Continue".Equals(startBtnSignal))
             {
                 startBtnSignal = "Stop";
-                NewRunBtn.Image = "round_pause_white_48.png";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
-
-                
+                if (RuntimePlatform == Device.Android)
+                {
+                    NewRunBtn.Image = "round_pause_white_48.png";
+                }
+                else if (RuntimePlatform == Device.iOS)
+                {
+                    NewRunBtn.Image = "round_pause_white_48pt";
+                }
             } else
             {
                 NewRunPopup.IsVisible = true;
@@ -94,7 +106,14 @@ namespace TrackApp
         private void ResetRun(object sender, EventArgs e)
         {
             startBtnSignal = "Start";
-            NewRunBtn.Image = "round_play_arrow_white_48.png";
+            if (RuntimePlatform == Device.Android)
+            {
+                NewRunBtn.Image = "round_play_arrow_white_48.png";
+            }
+            else if (RuntimePlatform == Device.iOS)
+            {
+                NewRunBtn.Image = "round_play_arrow_white_48pt";
+            }
 
             ResetRunBtn.IsVisible = false;
 
@@ -151,61 +170,68 @@ namespace TrackApp
             NewRunPopup.IsVisible = false;
 
             startBtnSignal = "Stop";
-            NewRunBtn.Image = "round_pause_white_48.png";
+            if (RuntimePlatform == Device.Android)
+            {
+                NewRunBtn.Image = "round_pause_white_48.png";
+            }
+            else if (RuntimePlatform == Device.iOS)
+            {
+                NewRunBtn.Image = "round_pause_white_48pt";
+            }
             NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
 
             //display individual runner split buttons
-            if (NumberOfRunners.SelectedItem.Equals("2"))
-            {
-                Runner1.IsVisible = false;
-                Runner2.IsVisible = false;
-                Runner3.IsVisible = true;
-                Runner3.Text = "2";
-                Runner4.IsVisible = false;
-                Runner5.IsVisible = true;
-                Runner5.Text = "1";
-                Runner6.IsVisible = false;
-            }
-            else if (NumberOfRunners.SelectedItem.Equals("3"))
+            if (NumberOfRunners.Value.ToString().Equals("2"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";
-                Runner2.IsVisible = false;
-                Runner3.IsVisible = true;
-                Runner3.Text = "3";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = false;
                 Runner4.IsVisible = false;
-                Runner5.IsVisible = true;
-                Runner5.Text = "2";
+                Runner5.IsVisible = false;
                 Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.SelectedItem.Equals("4"))
+            else if (NumberOfRunners.Value.ToString().Equals("3"))
             {
-                Runner1.IsVisible = false;
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
                 Runner2.IsVisible = true;
                 Runner2.Text = "2";
                 Runner3.IsVisible = true;
                 Runner3.Text = "3";
                 Runner4.IsVisible = false;
-                Runner5.IsVisible = true;
-                Runner5.Text = "4";
-                Runner6.IsVisible = true;
-                Runner6.Text = "1";
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.SelectedItem.Equals("5"))
+            else if (NumberOfRunners.Value.ToString().Equals("4"))
             {
                 Runner1.IsVisible = true;
-                Runner1.Text = "2";
+                Runner1.Text = "1";
                 Runner2.IsVisible = true;
-                Runner2.Text = "3";
+                Runner2.Text = "2";
                 Runner3.IsVisible = true;
-                Runner3.Text = "4";
-                Runner4.IsVisible = false;
+                Runner3.Text = "3";
+                Runner4.IsVisible = true;
+                Runner4.Text = "4";
+                Runner5.IsVisible = false;
+                Runner6.IsVisible = false;
+            }
+            else if (NumberOfRunners.Value.ToString().Equals("5"))
+            {
+                Runner1.IsVisible = true;
+                Runner1.Text = "1";
+                Runner2.IsVisible = true;
+                Runner2.Text = "2";
+                Runner3.IsVisible = true;
+                Runner3.Text = "3";
+                Runner4.IsVisible = true;
+                Runner4.Text = "4";
                 Runner5.IsVisible = true;
                 Runner5.Text = "5";
-                Runner6.IsVisible = true;
-                Runner6.Text = "1";
+                Runner6.IsVisible = false;
             }
-            else if (NumberOfRunners.SelectedItem.Equals("6"))
+            else if (NumberOfRunners.Value.ToString().Equals("6"))
             {
                 Runner1.IsVisible = true;
                 Runner1.Text = "1";

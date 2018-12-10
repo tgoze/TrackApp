@@ -1,73 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              xmlns:SfInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"                          
              xmlns:SfMaskedEdit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
-             x:Class="TrackApp.Run">
+             xmlns:SfNumericUpDown="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             x:Class="TrackApp.Run"
+             Style="{StaticResource ContentPage}">
     <AbsoluteLayout x:Name="layout">
 
         <Button x:Name="SoundSettings"
                 Style="{StaticResource CircleButtonSplit}"
                 IsVisible="True"
-                AbsoluteLayout.LayoutBounds="1,.01,.16,.1"
+                AbsoluteLayout.LayoutBounds="1,.05,.16,.1"
                 AbsoluteLayout.LayoutFlags="All">
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_speaker_phone_white_48.png"
-                            iOS="round_speaker_phone_white_48pt_3x.png"/>
+                            iOS="round_speaker_phone_white_36pt"
+                            />
             </Button.Image>
         </Button>
             
-        <!--Top position-->
-        <Button x:Name="Runner1"
-                Text="1"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".5,.075"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-        
-        <!--Top-right position-->
-        <Button x:Name="Runner2"
-                Text="2"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".85,.15"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-        
-        <!--Top-left position-->
-        <Button x:Name="Runner6"
-                Text="6"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".15,.15"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
-        <!--Bottom position-->
-        <Button x:Name="Runner4"
-                Text="4"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".5,.7"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
-        <!--Bottom-right position-->
-        <Button x:Name="Runner3"
-                Text="3"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".85,.62"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
-        <!--Bottom-right position-->
-        <Button x:Name="Runner5"
-                Text="5"
-                Style="{StaticResource IndividualSplitButton}"
-                AbsoluteLayout.LayoutBounds=".15,.62"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
-
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
                                            AnimationDuration="150"
                                            ProgressCompleted="SetAnimationDuration"
                                            Maximum="{Binding MaxTime}" Minimum="0"
                                            ProgressColor="#1e90ff"
-                                           AbsoluteLayout.LayoutBounds=".5,.25,.8,.6"
+                                           AbsoluteLayout.LayoutBounds=".5,-0.05,.8,.6"
                                            AbsoluteLayout.LayoutFlags="All"
                                            IndicatorOuterRadius=".7"
                                            IndicatorInnerRadius=".75">
@@ -78,7 +39,49 @@
                 </Label>
             </progressBar:SfCircularProgressBar.Content>
         </progressBar:SfCircularProgressBar>
-        
+
+        <!--Bottom-bottom position-->
+        <Button x:Name="Runner5"
+                Text="5"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".5,.72"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-bottom-right position-->
+        <Button x:Name="Runner6"
+                Text="6"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".85,.64"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-bottom-left position-->
+        <Button x:Name="Runner4"
+                Text="4"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".15,.64"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom position-->
+        <Button x:Name="Runner2"
+                Text="2"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".5,.58"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-right position-->
+        <Button x:Name="Runner3"
+                Text="3"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".85,.5"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
+        <!--Bottom-left position-->
+        <Button x:Name="Runner1"
+                Text="1"
+                Style="{StaticResource IndividualSplitButton}"
+                AbsoluteLayout.LayoutBounds=".15,.5"   
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+
         <Button x:Name="NewRunBtn"
                 Style="{StaticResource CircleButtonStart}"
                 AbsoluteLayout.LayoutBounds=".5,.95,.16,.1"
@@ -86,7 +89,8 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_play_arrow_white_48.png"
-                            iOS="round_play_arrow_white_48pt_3x.png"/>
+                            iOS="round_play_arrow_white_48pt"
+                            />
             </Button.Image>
         </Button>
 
@@ -106,7 +110,7 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_replay_white_48.png"
-                            iOS="round_replay_white_48pt_3x.png"/>
+                            iOS="round_replay_white_48pt"/>
             </Button.Image>
         </Button>
 
@@ -118,7 +122,7 @@
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_flag_white_48.png"
-                            iOS="round_flag_white_48pt_3x.png"/>
+                            iOS="round_flag_white_48pt"/>
             </Button.Image>
         </Button>
 
@@ -129,62 +133,63 @@
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
              AbsoluteLayout.LayoutFlags="HeightProportional,WidthProportional">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                <StackLayout Orientation="Vertical" 
-                             HeightRequest="300" 
-                             WidthRequest="200" 
-                             BackgroundColor="#d8dbe2"
-                             Padding="20">
-                    <Grid RowSpacing="5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <SfInputLayout:SfTextInputLayout Grid.Row="0"
-                                                         Hint="Goal Time"
-                                                         FocusedColor="Black"
-                                                         ContainerType="Outlined"
-                                                         ContainerBackgroundColor="Aqua">
-                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
-                                                       Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
-                                                       Keyboard="Numeric"
-                                                       Mask="00:00"/>
-                        </SfInputLayout:SfTextInputLayout>
-                        <SfInputLayout:SfTextInputLayout Grid.Row="1"
-                                                         Hint="Run Distance"
+                <Frame CornerRadius="10" 
+                       BackgroundColor="#d8dbe2"
+                       Padding="0">
+                    <StackLayout Orientation="Vertical" 
+                                 WidthRequest="200" 
+                                 Padding="20">
+                        <Label FontSize="Medium">Create New Run</Label>
+                        <Grid RowSpacing="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="0"
+                                                             Hint="Goal Time"
+                                                             FocusedColor="Black"
+                                                             ContainerType="Outlined"
+                                                             ContainerBackgroundColor="Aqua">
+                                <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
+                                                           Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
+                                                           Keyboard="Numeric"
+                                                           Mask="00:00"/>
+                            </SfInputLayout:SfTextInputLayout>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="1"
+                                                             Hint="Run Distance"
+                                                             FocusedColor="Black"
+                                                             ContainerType="Outlined">
+                                <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
+                                                                 FormatString="meters"
+                                                                 MaximumNumberDecimalDigits="0" 
+                                                                 Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
+                            </SfInputLayout:SfTextInputLayout>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="2"
+                                                             Hint="Split Distance"
+                                                             FocusedColor="Black"
+                                                             ContainerType="Outlined">
+                                <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
+                                                                 FormatString="meters"
+                                                                 MaximumNumberDecimalDigits="0"
+                                                                 Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
+                            </SfInputLayout:SfTextInputLayout>
+                            <SfInputLayout:SfTextInputLayout Grid.Row="3"
+                                                         Hint="Number of Runners"
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined">
-                            <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
-                                                             FormatString="meters"
-                                                             MaximumNumberDecimalDigits="0" 
-                                                             Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
-                        </SfInputLayout:SfTextInputLayout>
-                        <SfInputLayout:SfTextInputLayout Grid.Row="2"
-                                                         Hint="Split Distance"
-                                                         FocusedColor="Black"
-                                                         ContainerType="Outlined">
-                            <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
-                                                             FormatString="meters"
-                                                             MaximumNumberDecimalDigits="0"
-                                                             Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
-                        </SfInputLayout:SfTextInputLayout>
-                        <Picker Grid.Row="3"
-                                x:Name="NumberOfRunners" 
-                                Title="Number of runners">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>1</x:String>
-                                    <x:String>2</x:String>
-                                    <x:String>3</x:String>
-                                    <x:String>4</x:String>
-                                    <x:String>5</x:String>
-                                    <x:String>6</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                    </Grid>
-                </StackLayout>
+                                <SfNumericUpDown:SfNumericUpDown x:Name="NumberOfRunners"
+                                                 Maximum="6"
+                                                 Minimum="1"
+                                                 FormatString="n"
+                                                 MaximumDecimalDigits="0"
+                                                 Value="{Binding NumberOfRunners, Mode=OneWayToSource}"
+                                                 />
+                            </SfInputLayout:SfTextInputLayout>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
                 <Grid Padding="0" Margin="0" ColumnSpacing="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -201,7 +206,7 @@
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                                         Android="round_check_circle_white_48.png"
-                                        iOS="round_check_circle_white_48pt_3x.png"/>
+                                        iOS="round_check_circle_white_48pt"/>
                         </Button.Image>
                     </Button>
                     <Button x:Name="CancelNewRunBtn" 
@@ -216,7 +221,7 @@
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                                         Android="round_cancel_white_48.png"
-                                        iOS="round_cancel_white_48pt_3x.png"/>   
+                                        iOS="round_cancel_white_48pt"/>   
                         </Button.Image>
                     </Button>
                 </Grid>
