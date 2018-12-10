@@ -355,4 +355,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\wood.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
 </Project>

@@ -36,6 +36,12 @@ namespace TrackApp
             TimeLabel.FontSize += 28;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;
+            Runner1.Clicked += IndividualSplitRun;
+            Runner2.Clicked += IndividualSplitRun;
+            Runner3.Clicked += IndividualSplitRun;
+            Runner4.Clicked += IndividualSplitRun;
+            Runner5.Clicked += IndividualSplitRun;
+            Runner6.Clicked += IndividualSplitRun;
         }
 
         private void SetAnimationDuration(object sender, ProgressValueEventArgs e)
@@ -154,7 +160,19 @@ namespace TrackApp
             SplitMil = CurrentTimeMil;
             SplitField.IsVisible = true;
             SplitField.Text = NewSplit.ToString(@"mm\:ss\:ff");
+
+            
         }
+
+        private void IndividualSplitRun(object sender, EventArgs e)
+        {
+            Models.Run run = new Models.Run();
+            run.RunnerNumber = Int32.Parse(Runner1.Text);
+            run.Splits.Add(TimeLabel.Text);
+            run.TotalTime = "1:00";
+
+        }
+
         private void StartRun(object sender, EventArgs e)
         {
             SoundSettings.IsEnabled = false;
@@ -252,5 +270,6 @@ namespace TrackApp
 
             SplitRunBtn.IsVisible = true;
         }
+
     }
 }
