@@ -5,9 +5,32 @@
              Style="{StaticResource ContentPage}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="We are working on it"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="HistoryLv" ItemsSource="{Binding Runs}" RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Text="Runner number: " Grid.Column="0" Grid.Row="0"></Label>
+                                <Label Text="{Binding RunnerNumber}" Grid.Column="1" Grid.Row="0"></Label>
+                                <Label Text="Total time: " Grid.Column="2" Grid.Row="0"></Label>
+                                <Label Text="{Binding TotalTime}" Grid.Column="3" Grid.Row="0"></Label>
+                                <Label Text="Split times: " Grid.Column="0" Grid.Row="1"></Label>
+                                <ListView x:Name="Splits" ItemsSource="{Binding Splits}" Grid.Column="1" Grid.Row="1" RowHeight="50">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <Grid>
+                                                    <Label Text="{Binding .}" Grid.Column="0"></Label>
+                                                </Grid>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
