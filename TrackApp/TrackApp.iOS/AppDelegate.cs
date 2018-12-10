@@ -1,14 +1,19 @@
-using Syncfusion.SfPicker.XForms.iOS;
-using Syncfusion.XForms.iOS.Buttons;
-using Syncfusion.XForms.iOS.ComboBox;
-using Syncfusion.XForms.iOS.DataForm;
-using Syncfusion.XForms.iOS.MaskedEdit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using Foundation;
+using Syncfusion.SfPicker.XForms.iOS;
+using Syncfusion.XForms.iOS.ProgressBar;
+using Syncfusion.XForms.iOS.Buttons;
+using Syncfusion.XForms.iOS.ComboBox;
+using Syncfusion.XForms.iOS.DataForm;
+using Syncfusion.XForms.iOS.MaskedEdit;
 using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.TextInputLayout;
+using Syncfusion.SfNumericTextBox.XForms.iOS;
+using Syncfusion.SfNumericUpDown.XForms.iOS;
+
+using Foundation;
 using UIKit;
 
 namespace TrackApp.iOS
@@ -26,7 +31,7 @@ namespace TrackApp.iOS
         //
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             global::Xamarin.Forms.Forms.Init();
             SfPickerRenderer.Init();
@@ -34,11 +39,13 @@ namespace TrackApp.iOS
             SfComboBoxRenderer.Init();
             SfDataFormRenderer.Init();
             SfMaskedEditRenderer.Init();
-            Syncfusion.XForms.iOS.ProgressBar.SfCircularProgressBarRenderer.Init();
+            SfCircularProgressBarRenderer.Init();
             SfListViewRenderer.Init();
+            SfTextInputLayoutRenderer.Init();
+            SfNumericTextBoxRenderer.Init();
+            new SfNumericUpDownRenderer();
             LoadApplication(new App());
-
-            return base.FinishedLaunching(app, options);
+            return base.FinishedLaunching(uiApplication, launchOptions);
         }
     }
 }
