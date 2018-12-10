@@ -141,54 +141,150 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_3x.png" />
-    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_1x.png" />
-    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_2x.png" />
-    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_1x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -249,5 +345,8 @@
     <Folder Include="Assets.xcassets\PlayArrow.imageset\" />
     <Folder Include="Assets.xcassets\HistoryIcon.imageset\" />
     <Folder Include="Assets.xcassets\RunnerIcon.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
   </ItemGroup>
 </Project>

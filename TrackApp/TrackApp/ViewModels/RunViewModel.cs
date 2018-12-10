@@ -80,6 +80,12 @@ namespace TrackApp.ViewModels
             }
         }
 
+        public void IndividualSplitRun(object sender, EventArgs e)
+        {
+           
+        }
+
+
         public RunViewModel()
         {            
             StartRunCommand = new Command(StartRun);
