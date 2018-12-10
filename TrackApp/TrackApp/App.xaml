@@ -45,7 +45,7 @@
                 <Setter Property="CornerRadius" Value="30"/>
                 <Setter Property="HorizontalOptions" Value="Start"/>
                 <Setter Property="VerticalOptions" Value="Start"/>
-                <Setter Property="IsVisible" Value="True"/>
+                <Setter Property="IsVisible" Value="False"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

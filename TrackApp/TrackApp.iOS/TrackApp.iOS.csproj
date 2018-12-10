@@ -221,4 +221,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\round_speaker_phone_white_48pt_3x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+  </ItemGroup>
 </Project>
