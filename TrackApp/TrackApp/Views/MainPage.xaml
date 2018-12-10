@@ -1,15 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"           
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
             xmlns:tabs="clr-namespace:TrackApp"
-            x:Class="TrackApp.MainPage"            
+            x:Class="TrackApp.MainPage" 
             BackgroundColor="#373f51"
             BarBackgroundColor="#373f51"
             BarTextColor="White">
 
     <TabbedPage.Children>
-        <tabs:Run Icon="round_directions_run_white_48.png" Title="Run"/>
-        <tabs:History Icon="round_history_white_48.png" Title="History"/>
+        <tabs:Run Title="Run">
+            <tabs:Run.Icon>
+                <OnPlatform
+                    x:TypeArguments="FileImageSource"
+                    Android="round_directions_run_white_48.png"
+                    iOS="round_directions_run_white_24pt"/>
+            </tabs:Run.Icon>
+        </tabs:Run>
+        <tabs:History Title="History">
+            <tabs:History.Icon>
+                <OnPlatform
+                    x:TypeArguments="FileImageSource"
+                    Android="round_history_white_48.png"
+                    iOS="round_history_white_24pt"/>
+            </tabs:History.Icon>
+        </tabs:History>
     </TabbedPage.Children>
     
 </TabbedPage>

@@ -141,6 +141,54 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_directions_run_white_24pt.imageset\round_directions_run_white_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_history_white_24pt.imageset\round_history_white_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_24pt.imageset\round_play_arrow_white_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_36pt.imageset\round_play_arrow_white_36pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_24pt.imageset\round_speaker_phone_white_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_speaker_phone_white_36pt.imageset\round_speaker_phone_white_36pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_replay_white_48pt.imageset\round_replay_white_48pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_play_arrow_white_48pt.imageset\round_play_arrow_white_48pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_flag_white_48pt.imageset\round_flag_white_48pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_check_circle_white_48pt.imageset\round_check_circle_white_48pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_cancel_white_48pt.imageset\round_cancel_white_48pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_3x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -174,11 +222,20 @@
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
       <Version>16.3.0.36</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit">
+      <Version>16.3.0.29</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox">
+      <Version>16.3.0.29</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown">
+      <Version>16.3.0.29</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\TrackApp\TrackApp.csproj">
-      <Project>{1307D320-AD44-4ABF-BF42-BBEBD94310A6}</Project>
+      <Project>{AFDE0DAD-0EC1-4CD3-91AF-B94475E58864}</Project>
       <Name>TrackApp</Name>
     </ProjectReference>
   </ItemGroup>
@@ -189,37 +246,9 @@
     <BundleResource Include="Resources\beep.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\baseline_group_work_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_cancel_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_check_circle_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_directions_run_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_flag_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_pause_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_person_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_play_arrow_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_replay_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_history_white_48pt_3x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\round_speaker_phone_white_48pt_3x.png" />
+    <Folder Include="Assets.xcassets\PlayArrow.imageset\" />
+    <Folder Include="Assets.xcassets\HistoryIcon.imageset\" />
+    <Folder Include="Assets.xcassets\RunnerIcon.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\bell.mp3" />
