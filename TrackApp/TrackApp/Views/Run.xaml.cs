@@ -19,9 +19,9 @@ namespace TrackApp
         TimeSpan SplitTime;
         string startBtnSignal = "Start";
 
-        Models.Run run = new Models.Run();
-        public int RunnerNumber { get; internal set; }
-        internal List<TimeSpan> Splits { get; set; }
+        List<Models.Run> runs = new List<Models.Run>();
+        //public int RunnerNumber { get; internal set; }
+        //internal List<TimeSpan> Splits { get; set; }
 
 
         public Run()
@@ -143,9 +143,9 @@ namespace TrackApp
         private void IndividualSplitRun(object sender, EventArgs e)
         {
             var button = sender as Button;
-            run.RunnerNumber = Int32.Parse(button.Text);
-            run.Splits.Add(SplitRun(SplitTime).ToString(@"mm\:ss\:ff"));
-            run.TotalTime = TimeLabel.Text;
+            runs[int.Parse(button.Text) - 1].RunnerNumber = int.Parse(button.Text);
+            runs[int.Parse(button.Text) - 1].Splits.Add(SplitRun(SplitTime).ToString(@"mm\:ss\:ff"));
+            runs[int.Parse(button.Text) - 1].TotalTime = TimeLabel.Text;
         }
 
         private TimeSpan SplitRun(TimeSpan splitTime)
@@ -179,6 +179,13 @@ namespace TrackApp
                 NewRunBtn.Image = "round_pause_white_48pt";
             }
             NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
+
+            int CurrentNumberOfRunners = Int32.Parse(NumberOfRunners.Value.ToString());
+
+            for (int i = 1; i <= CurrentNumberOfRunners; i++)
+            {
+                runs.Add(new Models.Run());
+            }
 
             //display individual runner split buttons
             if (NumberOfRunners.Value.ToString().Equals("2"))
