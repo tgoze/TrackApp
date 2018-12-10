@@ -152,6 +152,7 @@
                             <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
                                                        Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
                                                        Keyboard="Numeric"
+                                                       PromptChar="0"
                                                        Mask="00:00"/>
                         </SfInputLayout:SfTextInputLayout>
                         <SfInputLayout:SfTextInputLayout
