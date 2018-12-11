@@ -80,7 +80,9 @@
                 Text="1"
                 Style="{StaticResource IndividualSplitButton}"
                 AbsoluteLayout.LayoutBounds=".15,.5"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                Command="{Binding SplitRunnerCommand}"
+                CommandParameter="1"/>
 
         <Button x:Name="NewRunBtn"
                 Style="{StaticResource CircleButtonStart}"

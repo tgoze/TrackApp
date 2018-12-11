@@ -156,8 +156,8 @@ namespace TrackApp
             int.TryParse(CurrentTimeInputs[1], out int CurrentTimeSec);
             int.TryParse(CurrentTimeInputs[2], out int CurrentTimeMil);
 
-            System.TimeSpan current = new System.TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
-            System.TimeSpan NewSplit = current - splitTime;
+            TimeSpan current = new TimeSpan(0, 0, CurrentTimeMin, CurrentTimeSec, CurrentTimeMil);
+            TimeSpan NewSplit = current - splitTime;
 
             // Update the global variable
             SplitTime = current;

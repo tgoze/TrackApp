@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using TrackApp.Helper;
 using Xamarin.Forms;
@@ -10,7 +11,11 @@ namespace TrackApp.ViewModels
         // Properties for stopwatch        
         public int SplitTimeIntervalSec { get; set; }
         private int NumOfSplits;
-        private StopwatchService SwService;       
+        private StopwatchService SwService;
+
+        // Properties for calculating splits
+        private List<TimeSpan> LastSplitTimes;
+        private List<Models.Run> runs = new List<Models.Run>();
 
         // Properties for UI 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -23,7 +28,8 @@ namespace TrackApp.ViewModels
         public Command StartRunCommand { get; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
-        public Command ContinueRunCommand { get; }       
+        public Command ContinueRunCommand { get; }
+        public Command SplitRunnnerCommand { get; }
 
         public double _MaxTime = 0;
         public double MaxTime
@@ -80,18 +86,13 @@ namespace TrackApp.ViewModels
             }
         }
 
-        public void IndividualSplitRun(object sender, EventArgs e)
-        {
-           
-        }
-
-
         public RunViewModel()
         {            
             StartRunCommand = new Command(StartRun);
             StopRunCommand = new Command(StopRun);
             ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
+            SplitRunnnerCommand = new Command<int>(SplitRunner);
         }                    
 
         private void StartRun()
@@ -123,6 +124,22 @@ namespace TrackApp.ViewModels
         private void ContinueRun()
         { 
             SwService.Continue();
+        }
+
+        private void SplitRunner(int runnerID)
+        {
+
+        }
+
+        private TimeSpan SplitRun(TimeSpan lastSplitTime, int runnerID)
+        {
+            TimeSpan currentTime = SwService.StopWatch.Elapsed;
+            TimeSpan newSplit = currentTime - lastSplitTime;
+
+            // Update the global variable
+            LastSplitTimes[runnerID - 1] = currentTime;
+
+            return newSplit;
         }
 
         private void UpdateTime(bool continueUpdating)
