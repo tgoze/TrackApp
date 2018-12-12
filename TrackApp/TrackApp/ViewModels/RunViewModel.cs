@@ -30,6 +30,9 @@ namespace TrackApp.ViewModels
         public Command StartRunCommand { get; private set; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
+        public Command ContinueRunCommand { get; }
+        public Command SplitRunnerCommand { get; private set; }
+        public Command SplitAllRunnersCommand { get; private set; }
         public Command FalseFunction { get; }
 
         public double _MaxTime = 0;
