@@ -59,6 +59,7 @@ namespace TrackApp
         {           
             if ("Stop".Equals(startBtnSignal))
             {
+                SoundSettings.IsEnabled = true;
                 startBtnSignal = "Continue";
                 NewRunBtn.SetBinding(Button.CommandProperty, "ContinueRunCommand");
                 if (RuntimePlatform == Device.Android)
@@ -70,6 +71,7 @@ namespace TrackApp
                 }
             } else if ("Continue".Equals(startBtnSignal))
             {
+                SoundSettings.IsEnabled = false;
                 startBtnSignal = "Stop";
                 NewRunBtn.SetBinding(Button.CommandProperty, "StopRunCommand");
                 if (RuntimePlatform == Device.Android)
@@ -87,6 +89,13 @@ namespace TrackApp
                      
         }
 
+        private void OpenPicker(object sender, EventArgs e)
+        {
+
+            SoundPicker.IsEnabled = true;
+            SoundPicker.Focus();
+        }
+
         private void HidePopup(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
@@ -94,6 +103,8 @@ namespace TrackApp
 
         private void ResetRun(object sender, EventArgs e)
         {
+            NewRunBtn.SetBinding(Button.CommandProperty, "FalseFunction");
+            SoundSettings.IsEnabled = true;
             startBtnSignal = "Start";
             if (RuntimePlatform == Device.Android)
             {
@@ -119,6 +130,8 @@ namespace TrackApp
 
         private void StartRun(object sender, EventArgs e)
         {
+            SoundSettings.IsEnabled = false;
+
             NewRunPopup.IsVisible = false;
             SplitField.IsVisible = true;
 
