@@ -133,7 +133,7 @@
                 BackgroundColor="#373f51"
                 AbsoluteLayout.LayoutBounds=".1,.95,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
-                Command="{Binding ResetRunCommand}"
+                Command="{Binding ResetRunCommand}"                
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"

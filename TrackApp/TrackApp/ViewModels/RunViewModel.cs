@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +30,7 @@ namespace TrackApp.ViewModels
 
         public Command StartRunCommand { get; private set; }
         public Command StopRunCommand { get; }
-        public Command ResetRunCommand { get; }
+        public Command ResetRunCommand { get; private set; }
         public Command ContinueRunCommand { get; }
         public Command SplitRunnerCommand { get; private set; }
         public Command SplitAllRunnersCommand { get; private set; }
@@ -130,7 +131,7 @@ namespace TrackApp.ViewModels
 
         private void ResetRun()
         {
-            SwService.Reset();
+            SwService.Reset();                         
             Runs.Clear();
             LastSplitTimes.Clear();
         }
@@ -177,6 +178,17 @@ namespace TrackApp.ViewModels
 
             SplitTime = newSplit.ToString(@"mm\:ss\.ff");
             return newSplit;
+        }
+
+        public void SaveRunData(object numberOfRunners)
+        {
+            int numRunners = int.Parse(numberOfRunners.ToString());
+            Application.Current.Properties["NumberOfRunners"] = numRunners;
+            for (int i = 1; i <= numRunners; i++)
+            {
+                var runJson = JsonConvert.SerializeObject(Runs[i]);
+                Application.Current.Properties[i.ToString()] = runJson;
+            }
         }
 
         private void UpdateTime(bool continueUpdating)
