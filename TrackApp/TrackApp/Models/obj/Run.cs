@@ -13,5 +13,6 @@ namespace TrackApp.Models
         public int RunnerNumber { get; set; }
         public List<string> Splits { get; set; }
         public string TotalTime { get; set; }
+
     }
 }

@@ -3,34 +3,64 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrackApp.History"
              Style="{StaticResource ContentPage}">
-    <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="HistoryLv" ItemsSource="{Binding Runs}" RowHeight="100">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Label Text="Runner number: " Grid.Column="0" Grid.Row="0"></Label>
-                                <Label Text="{Binding RunnerNumber}" Grid.Column="1" Grid.Row="0"></Label>
-                                <Label Text="Total time: " Grid.Column="2" Grid.Row="0"></Label>
-                                <Label Text="{Binding TotalTime}" Grid.Column="3" Grid.Row="0"></Label>
-                                <Label Text="Split times: " Grid.Column="0" Grid.Row="1"></Label>
-                                <ListView x:Name="Splits" ItemsSource="{Binding Splits}" Grid.Column="1" Grid.Row="1" RowHeight="50">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <ViewCell>
-                                                <Grid>
-                                                    <Label Text="{Binding .}" Grid.Column="0"></Label>
-                                                </Grid>
-                                            </ViewCell>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+
+    <StackLayout Margin="20">
+
+        <Label Text="Picker - Data in ItemsSource" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Picker x:Name="picker" ItemDisplayBinding="{Binding RunnerNumber}" SelectedItem="{Binding RunnerNumber, Mode=TwoWay}" Title="Select a runner:"/>
+        <!--<Picker x:Name="picker" Title="Select a runner:"/>-->
+
+
+        <StackLayout Orientation="Horizontal">
+
+            <Label Text="You chose:" />
+
+            <!--<Label x:Name="Display" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />-->
+            <Label x:Name="Display"/>
+
         </StackLayout>
-    </ContentPage.Content>
+
+    </StackLayout>
+
+    <!--<StackLayout Margin="20">
+
+        <Label Text="Picker - Data in ItemsSource" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Picker x:Name="picker" Title="Select a monkey">
+
+            <Picker.ItemsSource>
+
+                <x:Array Type="{x:Type x:String}">
+
+                    <x:String>Baboon</x:String>
+
+                    <x:String>Capuchin Monkey</x:String>
+
+                    <x:String>Blue Monkey</x:String>
+
+                    <x:String>Squirrel Monkey</x:String>
+
+                    <x:String>Golden Lion Tamarin</x:String>
+
+                    <x:String>Howler Monkey</x:String>
+
+                    <x:String>Japanese Macaque</x:String>
+
+                </x:Array>
+
+            </Picker.ItemsSource>
+
+        </Picker>
+
+        <StackLayout Orientation="Horizontal">
+
+            <Label Text="You chose:" />
+
+            <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
+
+        </StackLayout>
+
+    </StackLayout>-->
+    
 </ContentPage>
