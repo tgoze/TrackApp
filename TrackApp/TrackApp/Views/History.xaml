@@ -4,25 +4,50 @@
              x:Class="TrackApp.History"
              Style="{StaticResource ContentPage}">
 
-    <StackLayout Margin="20">
+    <!--<StackLayout Margin="20">
 
         <Label Text="Picker - Data in ItemsSource" FontAttributes="Bold" HorizontalOptions="Center" />
 
         <Picker x:Name="picker" ItemDisplayBinding="{Binding RunnerNumber}" SelectedItem="{Binding RunnerNumber, Mode=TwoWay}" Title="Select a runner:"/>
-        <!--<Picker x:Name="picker" Title="Select a runner:"/>-->
+        --><!--<Picker x:Name="picker" Title="Select a runner:"/>--><!--
 
 
         <StackLayout Orientation="Horizontal">
 
             <Label Text="You chose:" />
 
-            <!--<Label x:Name="Display" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />-->
+            --><!--<Label x:Name="Display" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />--><!--
             <Label x:Name="Display" />
-            <Button x:Name="UpdateBtn" Text="Update"></Button>
+            <Button x:Name="UpdateBtn" Command="{Binding UpdateDataCommand}" Text="Update"></Button>
 
         </StackLayout>
 
-    </StackLayout>
+    </StackLayout>-->
+
+    <ListView x:Name="Results" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" Padding="8">
+                            <Label Text="{Binding RunnerNumber, StringFormat='Runner {0:G} Total Run Time:'}" FontSize="Large" TextColor="White"/>
+                            <Label Text="{Binding TotalTime}" FontSize="Large" TextColor="White"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Padding="16">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Split Times:" FontSize="Medium" TextColor="White" />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                    
+                </ViewCell>
+                
+            </DataTemplate>
+            
+        </ListView.ItemTemplate>
+        
+        
+    </ListView>
 
     <!--<StackLayout Margin="20">
 
