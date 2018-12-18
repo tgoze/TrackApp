@@ -12,17 +12,17 @@ namespace TrackApp
 		public History()
 		{
 			InitializeComponent();
-            picker.ItemsSource = new List<Models.Run>();
-            UpdateBtn.Clicked += UpdateBtn_Clicked;
+            //picker.ItemsSource = new List<Models.Run>();
+            //UpdateBtn.Clicked += UpdateBtn_Clicked;
 		}        
 
         protected override void OnAppearing()
         {
-            picker.ItemsSource = new List<Models.Run>()
+            Results.ItemsSource = new List<Models.Run>()
             {
-                new Models.Run() { RunnerNumber = 0, Splits = new List<string>() { "12", "34" }, TotalTime = "test" }
-                , new Models.Run() { RunnerNumber = 1, Splits = new List<string>() { "56", "78" }, TotalTime = "test1" }
-                , new Models.Run() { RunnerNumber = 2, Splits = new List<string>() { "90", "00" }, TotalTime = "test2" }
+                new Models.Run() { RunnerNumber = 1, Splits = new List<string>() { "12", "34" }, TotalTime = "4:26" }
+                , new Models.Run() { RunnerNumber = 2, Splits = new List<string>() { "56", "78" }, TotalTime = "8:49" }
+                , new Models.Run() { RunnerNumber = 3, Splits = new List<string>() { "90", "00" }, TotalTime = "1:20" }
             };
             //picker.ItemsSource = new List<String>()
             //{
@@ -37,7 +37,7 @@ namespace TrackApp
                 var jsonData = Application.Current.Properties["1"] as string;
                 Models.Run run = JsonConvert.DeserializeObject<Models.Run>(jsonData);
 
-                Display.Text = run.Splits[0];
+                //Display.Text = run.Splits[0];
             }
         }
 
@@ -50,7 +50,7 @@ namespace TrackApp
         {
             Picker picker = sender as Picker;
             var selectedItem = picker.SelectedItem; // This is the model selected in the picker
-            Display.Text = "Test";
+            //Display.Text = "Test";
         }
 
     }
