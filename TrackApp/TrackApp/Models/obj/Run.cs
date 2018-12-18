@@ -3,22 +3,22 @@ using System.Collections.Generic;
 
 namespace TrackApp.Models
 {
-    class Run
+    public class Run
     {
         public Run(int runnerNumber)
         {
-            Splits = new List<string>();
+            Splits = new List<TimeSpan>();
             RunnerNumber = runnerNumber;
         }
 
         public Run()
         {
-            Splits = new List<string>();        
+            Splits = new List<TimeSpan>();        
         }
 
         public int RunnerNumber { get; set; }
-        public List<string> Splits { get; set; }
-        public string TotalTime { get; set; }
+        public List<TimeSpan> Splits { get; set; }
+        public TimeSpan TotalTime { get; set; }
 
     }
 }

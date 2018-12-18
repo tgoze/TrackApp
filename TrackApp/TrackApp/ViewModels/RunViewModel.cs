@@ -132,6 +132,7 @@ namespace TrackApp.ViewModels
         {
             // Save the run data
             int numRunners = int.Parse(numberOfRunners.ToString());
+            SplitAllRunners(numRunners);
             SaveRunData(numRunners);
 
             // Reset the data
@@ -160,7 +161,7 @@ namespace TrackApp.ViewModels
             for (int i = 1; i <= numRunners; i++)
             {
                 TimeSpan split = SplitRun(LastSplitTimes[i], i);
-                Runs[i].Splits.Add(split.ToString(@"mm\:ss\.ff"));
+                Runs[i].Splits.Add(split);
             }
         }
 
@@ -169,7 +170,7 @@ namespace TrackApp.ViewModels
             // Split time for this runner
             int.TryParse(pRunnerID, out int runnerID);
             TimeSpan split = SplitRun(LastSplitTimes[runnerID], runnerID);
-            Runs[runnerID].Splits.Add(split.ToString(@"mm\:ss\.ff"));            
+            Runs[runnerID].Splits.Add(split);            
         }
 
         private TimeSpan SplitRun(TimeSpan lastSplitTime, int runnerID)
@@ -189,6 +190,11 @@ namespace TrackApp.ViewModels
             Application.Current.Properties["NumberOfRunners"] = numberOfRunners;
             for (int i = 1; i <= numberOfRunners; i++)
             {
+                // Adds up all the splits to get the total time for the run
+                foreach(TimeSpan split in Runs[i].Splits)
+                {
+                    Runs[i].TotalTime += split;
+                }
                 var runJson = JsonConvert.SerializeObject(Runs[i]);                
                 Application.Current.Properties[i.ToString()] = runJson;
             }
