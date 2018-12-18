@@ -98,7 +98,7 @@ namespace TrackApp
         private void HidePopup(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
-        }
+        }        
 
         private void ResetRun(object sender, EventArgs e)
         {
@@ -124,14 +124,7 @@ namespace TrackApp
             Runner3.IsVisible = false;
             Runner4.IsVisible = false;
             Runner5.IsVisible = false;
-            Runner6.IsVisible = false;
-
-            var dataConf = DisplayAlert("Save Run Data", "Would you like to save the split data from this run?", "Yes", "No");
-            if (dataConf.Equals("Yes"))
-            {               
-                var runVM = this.BindingContext as RunViewModel;
-                runVM.SaveRunData(NumberOfRunners.Value);
-            }
+            Runner6.IsVisible = false;            
         }
 
         private void StartRun(object sender, EventArgs e)

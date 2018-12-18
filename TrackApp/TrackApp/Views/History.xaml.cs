@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +13,8 @@ namespace TrackApp
 		{
 			InitializeComponent();
             picker.ItemsSource = new List<Models.Run>();
-		}
+            UpdateBtn.Clicked += UpdateBtn_Clicked;
+		}        
 
         protected override void OnAppearing()
         {
@@ -25,7 +27,18 @@ namespace TrackApp
             //picker.ItemsSource = new List<String>()
             //{
             //    "Testing1", "Testing2", "Testing3"
-            //};
+            //};            
+        }
+
+        private void UpdateBtn_Clicked(object sender, EventArgs e)
+        {
+            if (Application.Current.Properties.ContainsKey("1"))
+            {
+                var jsonData = Application.Current.Properties["1"] as string;
+                Models.Run run = JsonConvert.DeserializeObject<Models.Run>(jsonData);
+
+                Display.Text = run.Splits[0];
+            }
         }
 
         public void SetRuns(List<Run> runs)

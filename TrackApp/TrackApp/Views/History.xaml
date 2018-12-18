@@ -17,7 +17,8 @@
             <Label Text="You chose:" />
 
             <!--<Label x:Name="Display" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />-->
-            <Label x:Name="Display"/>
+            <Label x:Name="Display" />
+            <Button x:Name="UpdateBtn" Text="Update"></Button>
 
         </StackLayout>
 

@@ -23,8 +23,7 @@ namespace TrackApp.ViewModels
 
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
-        public int SoundIndex { get; set;
-        }
+        public int SoundIndex { get; set; }
         public int SplitDistanceInput { get; set; }        
         public string NumberOfRunners { get; set; }
 
@@ -97,7 +96,7 @@ namespace TrackApp.ViewModels
         {            
             StartRunCommand = new Command<object>(StartRun);
             StopRunCommand = new Command(StopRun);
-            ResetRunCommand = new Command(ResetRun);
+            ResetRunCommand = new Command<object>(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
             SplitRunnerCommand = new Command<string>(SplitRunner);
             SplitAllRunnersCommand = new Command<object>(SplitAllRunners);
@@ -129,9 +128,14 @@ namespace TrackApp.ViewModels
             }                       
         }
 
-        private void ResetRun()
+        private void ResetRun(object numberOfRunners)
         {
-            SwService.Reset();                         
+            // Save the run data
+            int numRunners = int.Parse(numberOfRunners.ToString());
+            SaveRunData(numRunners);
+
+            // Reset the data
+            SwService.Reset();
             Runs.Clear();
             LastSplitTimes.Clear();
         }
@@ -180,13 +184,12 @@ namespace TrackApp.ViewModels
             return newSplit;
         }
 
-        public void SaveRunData(object numberOfRunners)
-        {
-            int numRunners = int.Parse(numberOfRunners.ToString());
-            Application.Current.Properties["NumberOfRunners"] = numRunners;
-            for (int i = 1; i <= numRunners; i++)
+        public void SaveRunData(int numberOfRunners)
+        {            
+            Application.Current.Properties["NumberOfRunners"] = numberOfRunners;
+            for (int i = 1; i <= numberOfRunners; i++)
             {
-                var runJson = JsonConvert.SerializeObject(Runs[i]);
+                var runJson = JsonConvert.SerializeObject(Runs[i]);                
                 Application.Current.Properties[i.ToString()] = runJson;
             }
         }

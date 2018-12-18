@@ -18,7 +18,7 @@ namespace TrackApp
         {
             //this.Title = "HomePage";
             Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
-            InitializeComponent();
+            InitializeComponent();            
 
             //User user = UserDao.GetUser(0);
             //List<Role> role = RoleDao.GetAllRoles();

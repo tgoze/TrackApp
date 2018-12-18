@@ -11,6 +11,11 @@ namespace TrackApp.Models
             RunnerNumber = runnerNumber;
         }
 
+        public Run()
+        {
+            Splits = new List<string>();        
+        }
+
         public int RunnerNumber { get; set; }
         public List<string> Splits { get; set; }
         public string TotalTime { get; set; }
