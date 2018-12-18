@@ -30,6 +30,7 @@ namespace TrackApp
             CancelNewRunBtn.Clicked += HidePopup; 
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 28;
+            SplitRunBtn.Clicked += ShowSplitField;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;                        
         }
@@ -101,6 +102,11 @@ namespace TrackApp
             NewRunPopup.IsVisible = false;
         }
 
+        private void ShowSplitField(object sender, EventArgs e)
+        {
+            SplitField.IsVisible = true;
+        }
+
         private void ResetRun(object sender, EventArgs e)
         {
             NewRunBtn.SetBinding(Button.CommandProperty, "FalseFunction");
@@ -133,7 +139,6 @@ namespace TrackApp
             SoundSettings.IsEnabled = false;
 
             NewRunPopup.IsVisible = false;
-            SplitField.IsVisible = true;
 
             startBtnSignal = "Stop";
             if (RuntimePlatform == Device.Android)
