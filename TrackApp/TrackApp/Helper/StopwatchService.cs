@@ -51,7 +51,7 @@ namespace TrackApp.Helper
        
         public override string ToString()
         {
-            return StopWatch.Elapsed.ToString(@"mm\:ss\:ff");
+            return StopWatch.Elapsed.ToString(@"mm\:ss\.ff");
         }
 
         private void PlayBeep()

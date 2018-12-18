@@ -19,7 +19,10 @@ namespace TrackApp
             //this.Title = "HomePage";
             Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-        
+
+            //User user = UserDao.GetUser(0);
+            //List<Role> role = RoleDao.GetAllRoles();
+
             // Sets the tabs to the bottom of the screen
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }

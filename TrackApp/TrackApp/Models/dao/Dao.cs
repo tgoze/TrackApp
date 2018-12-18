@@ -18,10 +18,23 @@ namespace TrackApp.Models.dao
         //Read
         protected static string GetUserById = "GetUserById/";
         protected static string GetUserByUsername = "GetUserByUserName/";
+
+        //Update
+        protected static string UpdateUserById = "UpdateUserById/";
+
         //Delete
         protected static string DeleteUserById = "DeleteUserById/";
 
-        protected Dao()
+        //\\//\\//\\//TEAM STRINGS\\//\\//\\//\\
+        protected static string GetTeamsByUserId = "GetTeamsByUserId/";
+
+        //\\//\\//\\//GROUP STRINGS\\//\\//\\//\\
+        protected static string GetGroupByUserId = "GetGroupsByUserId/";
+
+        //\\//\\//\\//ROLE STRINGS\\//\\//\\//\\
+        protected static string GetAllRoles = "GetAllRoles/1";
+
+        static Dao()
         {
             client.BaseAddress = Url;
         }

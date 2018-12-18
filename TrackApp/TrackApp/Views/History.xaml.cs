@@ -8,7 +8,7 @@ namespace TrackApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class History : ContentPage
 	{
-		public History ()
+		public History()
 		{
 			InitializeComponent();
             HistoryLv.ItemsSource = new List<Models.Run>();

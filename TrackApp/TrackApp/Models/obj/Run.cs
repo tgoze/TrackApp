@@ -5,9 +5,10 @@ namespace TrackApp.Models
 {
     class Run
     {
-        public Run()
+        public Run(int runnerNumber)
         {
             Splits = new List<string>();
+            RunnerNumber = runnerNumber;
         }
 
         public int RunnerNumber { get; set; }

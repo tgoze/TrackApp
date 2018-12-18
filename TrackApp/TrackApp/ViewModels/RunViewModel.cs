@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using TrackApp.Helper;
 using Xamarin.Forms;
@@ -10,21 +11,27 @@ namespace TrackApp.ViewModels
         // Properties for stopwatch        
         public int SplitTimeIntervalSec { get; set; }
         private int NumOfSplits;
-        private StopwatchService SwService;       
+        private StopwatchService SwService;
+
+        // Properties for calculating splits
+        private Dictionary<int, TimeSpan> LastSplitTimes = new Dictionary<int, TimeSpan>();
+        private Dictionary<int, Models.Run> Runs = new Dictionary<int, Models.Run>();
 
         // Properties for UI 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
-        public int SplitDistanceInput { get; set; }
-        public string NumberOfRunnersInput { get; set; }
         public int SoundIndex { get; set; }
+        public int SplitDistanceInput { get; set; }        
+        public string NumberOfRunners { get; set; }
 
-        public Command StartRunCommand { get; }
+        public Command StartRunCommand { get; private set; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
-        public Command ContinueRunCommand { get; }    
+        public Command ContinueRunCommand { get; }
+        public Command SplitRunnerCommand { get; private set; }
+        public Command SplitAllRunnersCommand { get; private set; }
         public Command FalseFunction { get; }
 
         public double _MaxTime = 0;
@@ -56,7 +63,7 @@ namespace TrackApp.ViewModels
             }
         }
 
-        public string _CurrentTime = "0:00:00"; 
+        public string _CurrentTime = "0:00.00"; 
         public string CurrentTime
         {
             set
@@ -70,35 +77,32 @@ namespace TrackApp.ViewModels
             }
         }
 
+        public string _SplitTime = "0:00.00";
         public string SplitTime 
         {
             set
             {
-                SplitTime = CurrentTime;
+                _SplitTime = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SplitTime"));
             }
             get
             {
-                return SplitTime;
+                return _SplitTime;
             }
         }
 
-        public void IndividualSplitRun(object sender, EventArgs e)
-        {
-           
-        }
-
-
         public RunViewModel()
         {            
-            StartRunCommand = new Command(StartRun);
+            StartRunCommand = new Command<object>(StartRun);
             StopRunCommand = new Command(StopRun);
             ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
+            SplitRunnerCommand = new Command<string>(SplitRunner);
+            SplitAllRunnersCommand = new Command<object>(SplitAllRunners);
         }                    
 
-        private void StartRun()
-        {
-            
+        private void StartRun(object numberOfRunners)
+        {       
             string[] TimeInputs = GoalTimeInput.Split(':');
             int.TryParse(TimeInputs[0], out int goalTimeMin);
             int.TryParse(TimeInputs[1], out int goalTimeSec);
@@ -112,11 +116,22 @@ namespace TrackApp.ViewModels
             SwService.updateSound(SoundIndex);
             SwService.Start();
             UpdateTime(true);
+
+            // Declare all the run objects based on the number of runners
+            int numRunners = int.Parse(numberOfRunners.ToString());                    
+            for (int i = 1; i <= numRunners; i++)
+            {
+                Models.Run run = new Models.Run(i);
+                Runs.Add(i, run);
+                LastSplitTimes.Add(i, new TimeSpan());
+            }                       
         }
 
         private void ResetRun()
         {
-            SwService.Reset();            
+            SwService.Reset();
+            Runs.Clear();
+            LastSplitTimes.Clear();
         }
 
         private void StopRun()
@@ -131,6 +146,36 @@ namespace TrackApp.ViewModels
                 SwService.updateSound(SoundIndex);
             }
             SwService.Continue();
+        }
+
+        private void SplitAllRunners(object numberOfRunners)
+        {            
+            int numRunners = int.Parse(numberOfRunners.ToString());
+            for (int i = 1; i <= numRunners; i++)
+            {
+                TimeSpan split = SplitRun(LastSplitTimes[i], i);
+                Runs[i].Splits.Add(split.ToString(@"mm\:ss\.ff"));
+            }
+        }
+
+        private void SplitRunner(string pRunnerID)
+        {
+            // Split time for this runner
+            int.TryParse(pRunnerID, out int runnerID);
+            TimeSpan split = SplitRun(LastSplitTimes[runnerID], runnerID);
+            Runs[runnerID].Splits.Add(split.ToString(@"mm\:ss\.ff"));            
+        }
+
+        private TimeSpan SplitRun(TimeSpan lastSplitTime, int runnerID)
+        {
+            TimeSpan currentTime = SwService.StopWatch.Elapsed;
+            TimeSpan newSplit = currentTime - lastSplitTime;
+
+            // Update the global variable
+            LastSplitTimes[runnerID] = currentTime;
+
+            SplitTime = newSplit.ToString(@"mm\:ss\.ff");
+            return newSplit;
         }
 
         private void UpdateTime(bool continueUpdating)

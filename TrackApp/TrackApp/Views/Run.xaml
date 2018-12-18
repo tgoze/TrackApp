@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                          
              xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              xmlns:SfInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"                          
              xmlns:SfMaskedEdit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
@@ -62,42 +62,54 @@
                 Text="5"
                 Style="{StaticResource IndividualSplitButton}"
                 AbsoluteLayout.LayoutBounds=".5,.72"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                Command="{Binding SplitRunnerCommand}"
+                CommandParameter="5"/>
 
         <!--Bottom-bottom-right position-->
         <Button x:Name="Runner6"
                 Text="6"
                 Style="{StaticResource IndividualSplitButton}"
                 AbsoluteLayout.LayoutBounds=".85,.64"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                Command="{Binding SplitRunnerCommand}"
+                CommandParameter="6"/>
 
         <!--Bottom-bottom-left position-->
         <Button x:Name="Runner4"
                 Text="4"
                 Style="{StaticResource IndividualSplitButton}"
                 AbsoluteLayout.LayoutBounds=".15,.64"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                Command="{Binding SplitRunnerCommand}"
+                CommandParameter="4"/>
 
         <!--Bottom position-->
         <Button x:Name="Runner2"
                 Text="2"
                 Style="{StaticResource IndividualSplitButton}"
                 AbsoluteLayout.LayoutBounds=".5,.58"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                Command="{Binding SplitRunnerCommand}"
+                CommandParameter="2"/>
 
         <!--Bottom-right position-->
         <Button x:Name="Runner3"
                 Text="3"
                 Style="{StaticResource IndividualSplitButton}"
                 AbsoluteLayout.LayoutBounds=".85,.5"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                Command="{Binding SplitRunnerCommand}"
+                CommandParameter="3"/>
 
         <!--Bottom-left position-->
         <Button x:Name="Runner1"
                 Text="1"
                 Style="{StaticResource IndividualSplitButton}"
                 AbsoluteLayout.LayoutBounds=".15,.5"   
-                AbsoluteLayout.LayoutFlags="XProportional, YProportional"/>
+                AbsoluteLayout.LayoutFlags="XProportional, YProportional"
+                Command="{Binding SplitRunnerCommand}"
+                CommandParameter="1"/>
 
         <Button x:Name="NewRunBtn"
                 Style="{StaticResource CircleButtonStart}"
@@ -112,7 +124,7 @@
         </Button>
 
         <Label x:Name="SplitField"
-               Text="00:00:00"
+               Text="{Binding SplitTime, Mode=TwoWay}"
                Style="{StaticResource SplitField}"
                AbsoluteLayout.LayoutBounds=".5,.84,.5,.1"
                AbsoluteLayout.LayoutFlags="All"/>
@@ -135,6 +147,8 @@
                 Style="{StaticResource CircleButtonSplit}"
                 AbsoluteLayout.LayoutBounds=".9,.95,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
+                Command="{Binding SplitAllRunnersCommand}"
+                CommandParameter="{Binding Source={x:Reference NumberOfRunners}, Path=Value}"
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
@@ -156,55 +170,42 @@
                     <StackLayout Orientation="Vertical" 
                                  WidthRequest="200" 
                                  Padding="20">
-                        <Label FontSize="Medium">Create New Run</Label>
-                        <Grid RowSpacing="5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <SfInputLayout:SfTextInputLayout Grid.Row="0"
-                                                             Hint="Goal Time"
-                                                             FocusedColor="Black"
-                                                             ContainerType="Outlined"
-                                                             ContainerBackgroundColor="Aqua">
-                                <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
-                                                           Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
-                                                           Keyboard="Numeric"
-                                                           Mask="00:00"/>
-                            </SfInputLayout:SfTextInputLayout>
-                            <SfInputLayout:SfTextInputLayout Grid.Row="1"
-                                                             Hint="Run Distance"
-                                                             FocusedColor="Black"
-                                                             ContainerType="Outlined">
-                                <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
-                                                                 FormatString="meters"
-                                                                 MaximumNumberDecimalDigits="0" 
-                                                                 Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
-                            </SfInputLayout:SfTextInputLayout>
-                            <SfInputLayout:SfTextInputLayout Grid.Row="2"
-                                                             Hint="Split Distance"
-                                                             FocusedColor="Black"
-                                                             ContainerType="Outlined">
-                                <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
-                                                                 FormatString="meters"
-                                                                 MaximumNumberDecimalDigits="0"
-                                                                 Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
-                            </SfInputLayout:SfTextInputLayout>
-                            <SfInputLayout:SfTextInputLayout Grid.Row="3"
-                                                         Hint="Number of Runners"
+                        <Label FontSize="Medium">Start a New Run</Label>
+                        <SfInputLayout:SfTextInputLayout Hint="Goal Time"
+                                                         FocusedColor="Black"
+                                                         ContainerType="Outlined"
+                                                         ContainerBackgroundColor="Aqua">
+                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
+                                                       Value="{Binding GoalTimeInput, Mode=OneWayToSource}"
+                                                       Keyboard="Numeric"
+                                                       Mask="00:00"/>
+                        </SfInputLayout:SfTextInputLayout>
+                        <SfInputLayout:SfTextInputLayout Hint="Run Distance"
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined">
-                                <SfNumericUpDown:SfNumericUpDown x:Name="NumberOfRunners"
-                                                 Maximum="6"
-                                                 Minimum="1"
-                                                 FormatString="n"
-                                                 MaximumDecimalDigits="0"
-                                                 Value="{Binding NumberOfRunners, Mode=OneWayToSource}"
-                                                 />
-                            </SfInputLayout:SfTextInputLayout>
-                        </Grid>
+                            <SfNumericInput:SfNumericTextBox x:Name="RunDistanceInput"
+                                                             FormatString="meters"
+                                                             MaximumNumberDecimalDigits="0" 
+                                                             Value="{Binding RunDistanceInput, Mode=OneWayToSource}"/>
+                        </SfInputLayout:SfTextInputLayout>
+                        <SfInputLayout:SfTextInputLayout Hint="Split Distance"
+                                                         FocusedColor="Black"
+                                                         ContainerType="Outlined">
+                            <SfNumericInput:SfNumericTextBox x:Name="SplitDistanceInput"
+                                                             FormatString="meters"
+                                                             MaximumNumberDecimalDigits="0"
+                                                             Value="{Binding SplitDistanceInput, Mode=OneWayToSource}"/>
+                        </SfInputLayout:SfTextInputLayout>
+                        <SfInputLayout:SfTextInputLayout Hint="Number of Runners"
+                                                         FocusedColor="Black"
+                                                         ContainerType="Outlined">
+                            <SfNumericUpDown:SfNumericUpDown x:Name="NumberOfRunners"
+                                                             Maximum="6"
+                                                             Minimum="1"
+                                                             FormatString="n"
+                                                             MaximumDecimalDigits="0"                                                
+                                                             Value="1"/>
+                        </SfInputLayout:SfTextInputLayout>
                     </StackLayout>
                 </Frame>
                 <Grid Padding="0" Margin="0" ColumnSpacing="0">
@@ -219,7 +220,8 @@
                             AbsoluteLayout.LayoutFlags="All"
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Command="{Binding StartRunCommand}">
+                            Command="{Binding StartRunCommand}"
+                            CommandParameter="{Binding Source={x:Reference NumberOfRunners}, Path=Value}">
                         <Button.Image>
                             <OnPlatform x:TypeArguments="FileImageSource"
                                         Android="round_check_circle_white_48.png"
