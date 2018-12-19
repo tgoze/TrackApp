@@ -163,6 +163,14 @@ namespace TrackApp.ViewModels
                 TimeSpan split = SplitRun(LastSplitTimes[i], i);
                 Runs[i].Splits.Add(split);
                 Runs[i].StrSplits.Add(split.ToString(@"mm\:ss\.ff"));
+                if(numRunners == 1)
+                {
+                    SplitTime = split.ToString(@"mm\:ss\.ff");
+                }
+                else
+                {
+                    SplitTime = "All Split";
+                }
             }
         }
 
@@ -171,6 +179,7 @@ namespace TrackApp.ViewModels
             // Split time for this runner
             int.TryParse(pRunnerID, out int runnerID);
             TimeSpan split = SplitRun(LastSplitTimes[runnerID], runnerID);
+            SplitTime = "#" + pRunnerID + ": " + split.ToString(@"mm\:ss\.ff");
             Runs[runnerID].Splits.Add(split);
             Runs[runnerID].StrSplits.Add(split.ToString(@"mm\:ss\.ff"));
         }
@@ -183,7 +192,6 @@ namespace TrackApp.ViewModels
             // Update the global variable
             LastSplitTimes[runnerID] = currentTime;
 
-            SplitTime = newSplit.ToString(@"mm\:ss\.ff");
             return newSplit;
         }
 
