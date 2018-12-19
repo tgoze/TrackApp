@@ -139,8 +139,8 @@
                 >
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
-                            Android="round_replay_white_48.png"
-                            iOS="round_replay_white_48pt"/>
+                            Android="round_stop_white_48.png"
+                            iOS="round_stop_white_48pt"/>
             </Button.Image>
         </Button>
 

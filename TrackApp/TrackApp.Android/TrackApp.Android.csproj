@@ -114,6 +114,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\round_view_list_white_48.png" />
     <AndroidResource Include="Resources\drawable-hdpi\round_view_list_white_24.png" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\round_stop_white_48.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-xhdpi\" />
