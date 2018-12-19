@@ -287,6 +287,10 @@
     <ImageAsset Include="Assets.xcassets\round_pause_white_48pt.imageset\round_pause_white_48pt_3x.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\round_view_list_white_36pt.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\round_view_list_white_36pt.imageset\round_view_list_white_36pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\round_view_list_white_36pt.imageset\round_view_list_white_36pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\round_view_list_white_36pt.imageset\round_view_list_white_36pt_3x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

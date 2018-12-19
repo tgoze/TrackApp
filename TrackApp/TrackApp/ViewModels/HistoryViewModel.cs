@@ -9,7 +9,7 @@ namespace TrackApp.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private Command UpdateDataCommand { get; }
+        public Command UpdateDataCommand { get; }
 
         public List<Models.Run> _Runs = new List<Models.Run>();
         public List<Models.Run> Runs
@@ -37,7 +37,7 @@ namespace TrackApp.ViewModels
             List<Models.Run> runs = new List<Models.Run>();
             if (Application.Current.Properties.ContainsKey("NumberOfRunners"))
             {
-                numberOfRunners = (int) Application.Current.Properties["NumberOfRunners"];
+                    numberOfRunners = (int) Application.Current.Properties["NumberOfRunners"];
 
                 for (int i = 1; i <= numberOfRunners; i++)
                 {

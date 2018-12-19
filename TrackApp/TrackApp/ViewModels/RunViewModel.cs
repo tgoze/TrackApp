@@ -162,6 +162,7 @@ namespace TrackApp.ViewModels
             {
                 TimeSpan split = SplitRun(LastSplitTimes[i], i);
                 Runs[i].Splits.Add(split);
+                Runs[i].StrSplits.Add(split.ToString(@"mm\:ss\.ff"));
             }
         }
 
@@ -170,7 +171,8 @@ namespace TrackApp.ViewModels
             // Split time for this runner
             int.TryParse(pRunnerID, out int runnerID);
             TimeSpan split = SplitRun(LastSplitTimes[runnerID], runnerID);
-            Runs[runnerID].Splits.Add(split);            
+            Runs[runnerID].Splits.Add(split);
+            Runs[runnerID].StrSplits.Add(split.ToString(@"mm\:ss\.ff"));
         }
 
         private TimeSpan SplitRun(TimeSpan lastSplitTime, int runnerID)
@@ -195,6 +197,7 @@ namespace TrackApp.ViewModels
                 {
                     Runs[i].TotalTime += split;
                 }
+                Runs[i].StrTotalTime = Runs[i].TotalTime.ToString(@"mm\:ss\.ff");
                 var runJson = JsonConvert.SerializeObject(Runs[i]);                
                 Application.Current.Properties[i.ToString()] = runJson;
             }
