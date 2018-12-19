@@ -31,6 +31,12 @@ namespace TrackApp
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 28;
             SplitRunBtn.Clicked += ShowSplitField;
+            Runner1.Clicked += ShowSplitField;
+            Runner2.Clicked += ShowSplitField;
+            Runner3.Clicked += ShowSplitField;
+            Runner4.Clicked += ShowSplitField;
+            Runner5.Clicked += ShowSplitField;
+            Runner6.Clicked += ShowSplitField;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;                        
         }
@@ -39,7 +45,7 @@ namespace TrackApp
         {
             if (e.Progress.Equals(this.progressBar.Maximum))
             {
-                progressBar.AnimationDuration = 0;
+                progressBar.AnimationDuration = 10;
             }
         }
 
