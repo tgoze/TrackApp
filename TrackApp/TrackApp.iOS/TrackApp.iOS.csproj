@@ -353,9 +353,6 @@
     <Folder Include="Assets.xcassets\RunnerIcon.imageset\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\bell.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -363,5 +360,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\wood.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
   </ItemGroup>
 </Project>
