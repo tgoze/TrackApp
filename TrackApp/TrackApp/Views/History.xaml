@@ -47,7 +47,15 @@
                             </StackLayout>
                             <StackLayout Orientation="Horizontal" Padding="16">
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="Split Times:" FontSize="Small" TextColor="White" />
+                                    <ListView ItemsSource="{Binding StrSplits}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <Label Text="{Binding .}" FontSize="Small" TextColor="White" />
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
                                 </StackLayout>
                             </StackLayout>
                         </StackLayout>
