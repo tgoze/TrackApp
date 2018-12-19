@@ -13,9 +13,10 @@
         <Button x:Name="SoundSettings"
                 Style="{StaticResource CircleButtonSplit}"
                 IsVisible="True"
-                AbsoluteLayout.LayoutBounds="1,.05,.16,.1"
+                AbsoluteLayout.LayoutBounds="1,.01,.16,.1"
                 AbsoluteLayout.LayoutFlags="All"
                 Clicked="OpenPicker">
+
             <Button.Image>
                 <OnPlatform x:TypeArguments="FileImageSource"
                             Android="round_speaker_phone_white_48.png"
@@ -23,6 +24,7 @@
                             />
             </Button.Image>
         </Button>
+        
         <Picker x:Name="SoundPicker"
                 IsVisible="False"
                 IsEnabled="False"
@@ -37,7 +39,6 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-
             
         <progressBar:SfCircularProgressBar x:Name="progressBar"  Progress="{Binding CurrentProgress}" 
                                            AnimationDuration="150"

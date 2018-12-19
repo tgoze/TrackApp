@@ -10,7 +10,7 @@ namespace TrackApp
         public App()
         {
             // License registered under tjgoze@gmail.com
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzU1NTRAMzEzNjJlMzMyZTMwT2lMb3pMdENaWWY2ODFUWkVCcGZOVU9tUzhNMDA3WmNUT3JFUU56bjVxUT0=");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTIxMTJAMzEzNjJlMzQyZTMwRG5mTXFaZHAwZjZQYndDeU9BaEhrZ1Q0TE5adzZFa3dlWEVrQzBhd1BxST0=");
 
             InitializeComponent();
             MainPage = new NavigationPage(new MainPage())

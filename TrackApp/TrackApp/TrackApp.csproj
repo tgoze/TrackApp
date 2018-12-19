@@ -13,12 +13,12 @@
     <Compile Remove="Rex\**" />
     <EmbeddedResource Remove="Rex\**" />
     <None Remove="Rex\**" />
+    <None Remove="Models\obj\Password.cs~HEAD" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="CustomHeightPicker.cs" />
     <Compile Remove="Models\UserValidation.cs" />
-    <Compile Remove="ViewModels\HistoryViewModel.cs" />
     <Compile Remove="ViewModels\ViewModel.cs" />
     <Compile Remove="Views\Signup2.xaml.cs" />
   </ItemGroup>
@@ -30,18 +30,18 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="16.4.0.42" />
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.3.0.36" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.SfDataForm" Version="16.4.0.42" />
-    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="16.3.0.36" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Licensing" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="16.4.0.42" />
-    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="16.3.0.36" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="16.4.0.42" />
     <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="16.4.0.42" />
   </ItemGroup>
 

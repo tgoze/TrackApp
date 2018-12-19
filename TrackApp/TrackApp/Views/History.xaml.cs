@@ -1,44 +1,32 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using TrackApp.ViewModels;
 
 namespace TrackApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class History : ContentPage
 	{
-		public History()
-		{
-			InitializeComponent();
-            //picker.ItemsSource = new List<Models.Run>();
-            //UpdateBtn.Clicked += UpdateBtn_Clicked;
-		}        
+        public History()
+        {
+            InitializeComponent();
+            BindingContext = new HistoryViewModel();
+        }
 
         protected override void OnAppearing()
         {
-            Results.ItemsSource = new List<Models.Run>()
-            {
-                new Models.Run() { RunnerNumber = 1, Splits = new List<string>() { "12", "34" }, TotalTime = "4:26" }
-                , new Models.Run() { RunnerNumber = 2, Splits = new List<string>() { "56", "78" }, TotalTime = "8:49" }
-                , new Models.Run() { RunnerNumber = 3, Splits = new List<string>() { "90", "00" }, TotalTime = "1:20" }
-            };
+            //Results.ItemsSource = new List<Models.Run>()
+            //{
+            //    new Models.Run() { RunnerNumber = 1, Splits = new List<string>() { "12", "34" }, TotalTime = "4:26" }
+            //    , new Models.Run() { RunnerNumber = 2, Splits = new List<string>() { "56", "78" }, TotalTime = "8:49" }
+            //    , new Models.Run() { RunnerNumber = 3, Splits = new List<string>() { "90", "00" }, TotalTime = "1:20" }
+            //};
             //picker.ItemsSource = new List<String>()
             //{
             //    "Testing1", "Testing2", "Testing3"
             //};            
-        }
-
-        private void UpdateBtn_Clicked(object sender, EventArgs e)
-        {
-            if (Application.Current.Properties.ContainsKey("1"))
-            {
-                var jsonData = Application.Current.Properties["1"] as string;
-                Models.Run run = JsonConvert.DeserializeObject<Models.Run>(jsonData);
-
-                //Display.Text = run.Splits[0];
-            }
         }
 
         public void SetRuns(List<Run> runs)

@@ -23,31 +23,39 @@
         </StackLayout>
 
     </StackLayout>-->
-
-    <ListView x:Name="Results" HasUnevenRows="True">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Vertical">
-                        <StackLayout Orientation="Horizontal" Padding="8">
-                            <Label Text="{Binding RunnerNumber, StringFormat='Runner {0:G} Total Run Time:'}" FontSize="Large" TextColor="White"/>
-                            <Label Text="{Binding TotalTime}" FontSize="Large" TextColor="White"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal" Padding="16">
-                            <StackLayout Orientation="Vertical">
-                                <Label Text="Split Times:" FontSize="Medium" TextColor="White" />
+    
+    <StackLayout Margin="20">
+        <Button Text="Load Run Data" 
+                Command="{Binding UpdateDataCommand}"
+                Style="{StaticResource RectangularButton}">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource"
+                            Android="round_view_list_white_24.png"
+                            iOS="round_view_list_white_36pt"/>
+            </Button.Image>
+        </Button>
+        <ListView x:Name="Results" 
+                  HasUnevenRows="True"
+                  ItemsSource="{Binding Runs}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" Padding="8">
+                                <Label Text="{Binding RunnerNumber, StringFormat='Runner {0:G} Total Run Time:'}" FontSize="Medium" TextColor="White"/>
+                                <Label Text="{Binding StrTotalTime}" FontSize="Medium" TextColor="White"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Padding="16">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="Split Times:" FontSize="Small" TextColor="White" />
+                                </StackLayout>
                             </StackLayout>
                         </StackLayout>
-                    </StackLayout>
-                    
-                </ViewCell>
-                
-            </DataTemplate>
-            
-        </ListView.ItemTemplate>
-        
-        
-    </ListView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 
     <!--<StackLayout Margin="20">
 
