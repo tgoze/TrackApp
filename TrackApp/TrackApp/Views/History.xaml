@@ -23,7 +23,7 @@
         </StackLayout>
 
     </StackLayout>-->
-    
+
     <StackLayout Margin="20">
         <Button Text="Load Run Data" 
                 Command="{Binding UpdateDataCommand}"
@@ -40,8 +40,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal" Padding="8">
+                        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+                            <StackLayout Orientation="Horizontal" Padding="8" VerticalOptions="FillAndExpand">
                                 <Label Text="{Binding RunnerNumber, StringFormat='Runner {0:G} Total Run Time:'}" FontSize="Medium" TextColor="White"/>
                                 <Label Text="{Binding StrTotalTime}" FontSize="Medium" TextColor="White"/>
                             </StackLayout>
