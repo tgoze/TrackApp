@@ -5,7 +5,10 @@
              xmlns:SfInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"                          
              xmlns:SfMaskedEdit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
              xmlns:SfNumericInput="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
-             x:Class="TrackApp.Run">
+             xmlns:SfNumericUpDown="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             xmlns:converters="clr-namespace:TrackApp.Helper"
+             x:Class="TrackApp.Run"
+             Style="{StaticResource ContentPage}">
     <AbsoluteLayout x:Name="layout">
 
         <Button x:Name="SoundSettings"
@@ -129,29 +132,36 @@
              AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
              AbsoluteLayout.LayoutFlags="HeightProportional,WidthProportional">
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                <StackLayout Orientation="Vertical" 
-                             HeightRequest="300" 
-                             WidthRequest="200" 
-                             BackgroundColor="#d8dbe2"
-                             Padding="20">
-                    <Grid RowSpacing="5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <SfInputLayout:SfTextInputLayout Grid.Row="0"
-                                                         Hint="Goal Time"
+                <Frame CornerRadius="10" 
+                       BackgroundColor="#d8dbe2"
+                       Padding="0">
+                    <StackLayout Orientation="Vertical" 
+                                 WidthRequest="200" 
+                                 Padding="20">
+                        <Label FontSize="Medium">Start a New Run</Label>
+
+                        <Label
+                            Style="{StaticResource errorDescriptionStyle}"
+                            Text="{Binding GoalTimeInput.ValidationDescriptions}"
+                            IsVisible="{Binding GoalTimeInput.IsValid, Converter={StaticResource invertBooleanConverter}}" />
+                        <SfInputLayout:SfTextInputLayout Hint="Goal Time"
                                                          FocusedColor="Black"
                                                          ContainerType="Outlined"
                                                          ContainerBackgroundColor="Aqua">
-                            <SfMaskedEdit:SfMaskedEdit x:Name="GoalTimeInput"                                                      
-                                                       Value="{Binding GoalTimeInput}"
-                                                       ValueChanged="GoalTimeInput_ValueChanged"
-                                                       Keyboard="Numeric"
-                                                       Mask="00:00"/>
-                            
+                            <SfMaskedEdit:SfMaskedEdit
+                                x:Name="GoalTimeInput"                                                      
+                                 Value="{Binding GoalTimeInput.Value}"
+                                 Keyboard="Numeric"
+                                 Mask="00:00">
+                                <SfMaskedEdit:SfMaskedEdit.Triggers>
+                                    <DataTrigger
+                                            TargetType="SfMaskedEdit:SfMaskedEdit"
+                                            Binding="Binding GoalTimeInput.IsValid"
+                                            Value="False">
+                                        <Setter Property="TextColor" Value="Red" />
+                                        </DataTrigger>
+                                    </SfMaskedEdit:SfMaskedEdit.Triggers>
+                                </SfMaskedEdit:SfMaskedEdit>
                         </SfInputLayout:SfTextInputLayout>
                         <!--<Label x:Name="GoalTimeInputError" TextColor="Red" Text="{Binding GoalTimeInputError}"/>-->
                         <SfInputLayout:SfTextInputLayout Grid.Row="1"

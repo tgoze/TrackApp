@@ -1,12 +1,14 @@
 using System;
 using System.ComponentModel;
-using System.Runtime.CompilerServices;
+using System.Windows.Input;
 using TrackApp.Helper;
+using TrackApp.Helper.Validations;
+using TrackApp.Models.obj;
 using Xamarin.Forms;
 
 namespace TrackApp.ViewModels
 {
-    public class RunViewModel : INotifyPropertyChanged
+    public class RunViewModel : BaseViewModel , INotifyPropertyChanged
     {
              
         public int SplitTimeIntervalSec { get; set; }
@@ -15,14 +17,8 @@ namespace TrackApp.ViewModels
 
         
         public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName] string name = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
-        
-        public string GoalTimeInput { get; set; }
 
-       
+        public ValidatableObject<string> GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
        
 
@@ -33,10 +29,13 @@ namespace TrackApp.ViewModels
         public int SplitDistanceInput { get; set; }
         public string NumberOfRunners { get; set; }
 
-        public Command StartRunCommand { get; }
+        public ICommand StartRunCommand { get; set; }
+        public ICommand StartNutRunCmd { get; }
         public Command StopRunCommand { get; }
         public Command ResetRunCommand { get; }
         public Command ContinueRunCommand { get; }       
+
+        Action propChangedCallBack => (StartRunCommand as Command).ChangeCanExecute;
 
         public double _MaxTime = 0;
         public double MaxTime
@@ -94,18 +93,19 @@ namespace TrackApp.ViewModels
         }
 
         public RunViewModel()
-        {            
-            StartRunCommand = new Command(StartRun);
+        {
+            StartRunCommand = new Command( () => StartRun(NumberOfRunners), () => GoalTimeInput.IsValid);
+            GoalTimeInput = new ValidatableObject<string>(propChangedCallBack, new TimeValidator());
+
+            //StartRunCommand = new Command<object>(StartRun);
             StopRunCommand = new Command(StopRun);
             ResetRunCommand = new Command(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
         }
 
-        
-
-        private void StartRun()
-        {            
-            string[] TimeInputs = GoalTimeInput.Split(':');
+        private void StartRun(object numberOfRunners)
+        {       
+            string[] TimeInputs = GoalTimeInput.Value.Split(':');
             int.TryParse(TimeInputs[0], out int goalTimeMin);
             int.TryParse(TimeInputs[1], out int goalTimeSec);
             int goalTimeSeconds = (goalTimeMin * 60) + goalTimeSec;

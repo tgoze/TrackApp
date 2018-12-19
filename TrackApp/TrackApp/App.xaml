@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TrackApp.Helper"
              x:Class="TrackApp.App">
     <Application.Resources>
         <ResourceDictionary>
+            <converters:InvertBooleanConverter x:Key="invertBooleanConverter" />
+            <Style x:Key="ContentPage" TargetType="Page">
+                <Setter Property="BackgroundColor" Value="#373f51"/>
+            </Style>
             <Style x:Key="CircleButtonStart" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#1e90ff"/>
                 <Setter Property="TextColor" Value="#1e90ff"/>
@@ -46,6 +51,18 @@
                 <Setter Property="HorizontalOptions" Value="Start"/>
                 <Setter Property="VerticalOptions" Value="Start"/>
                 <Setter Property="IsVisible" Value="True"/>
+            </Style>
+            <Style x:Key="RectangularButton" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="BackgroundColor" Value="#1e90ff"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
+            <Style TargetType="Label" x:Key="errorDescriptionStyle">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
