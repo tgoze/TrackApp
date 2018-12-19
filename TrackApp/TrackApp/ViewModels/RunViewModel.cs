@@ -16,6 +16,7 @@ namespace TrackApp.ViewModels
 
         // Properties for calculating splits
         private Dictionary<int, TimeSpan> LastSplitTimes = new Dictionary<int, TimeSpan>();
+        private Dictionary<int, int> NumSplits = new Dictionary<int, int>();
         private Dictionary<int, Models.Run> Runs = new Dictionary<int, Models.Run>();
 
         // Properties for UI 
@@ -124,7 +125,8 @@ namespace TrackApp.ViewModels
             {
                 Models.Run run = new Models.Run(i);
                 Runs.Add(i, run);
-                LastSplitTimes.Add(i, new TimeSpan());
+                LastSplitTimes.Add(i, TimeSpan.FromSeconds(0));
+                NumSplits.Add(i, 0);
             }                       
         }
 
@@ -139,6 +141,7 @@ namespace TrackApp.ViewModels
             SwService.Reset();
             Runs.Clear();
             LastSplitTimes.Clear();
+            NumSplits.Clear();
         }
 
         private void StopRun()
@@ -162,7 +165,8 @@ namespace TrackApp.ViewModels
             {
                 TimeSpan split = SplitRun(LastSplitTimes[i], i);
                 Runs[i].Splits.Add(split);
-                Runs[i].StrSplits.Add(split.ToString(@"mm\:ss\.ff"));
+                Runs[i].StrSplits.Add("#" + NumSplits[i] + " "
+                    + split.ToString(@"mm\:ss\.ff"));
                 if(numRunners == 1)
                 {
                     SplitTime = split.ToString(@"mm\:ss\.ff");
@@ -181,7 +185,8 @@ namespace TrackApp.ViewModels
             TimeSpan split = SplitRun(LastSplitTimes[runnerID], runnerID);
             SplitTime = "#" + pRunnerID + ": " + split.ToString(@"mm\:ss\.ff");
             Runs[runnerID].Splits.Add(split);
-            Runs[runnerID].StrSplits.Add(split.ToString(@"mm\:ss\.ff"));
+            Runs[runnerID].StrSplits.Add("#" + NumSplits[runnerID] + " " 
+                + split.ToString(@"mm\:ss\.ff"));
         }
 
         private TimeSpan SplitRun(TimeSpan lastSplitTime, int runnerID)
@@ -191,6 +196,7 @@ namespace TrackApp.ViewModels
 
             // Update the global variable
             LastSplitTimes[runnerID] = currentTime;
+            NumSplits[runnerID]++;
 
             return newSplit;
         }
