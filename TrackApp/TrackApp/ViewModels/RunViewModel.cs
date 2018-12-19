@@ -134,7 +134,6 @@ namespace TrackApp.ViewModels
         {
             // Save the run data
             int numRunners = int.Parse(numberOfRunners.ToString());
-            SplitAllRunners(numRunners);
             SaveRunData(numRunners);
 
             // Reset the data

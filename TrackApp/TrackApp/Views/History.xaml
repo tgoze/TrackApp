@@ -25,7 +25,7 @@
                                 <Label Text="{Binding RunnerNumber, StringFormat='Runner {0:G} Total Run Time:'}" FontSize="Medium" TextColor="White"/>
                                 <Label Text="{Binding StrTotalTime}" FontSize="Medium" TextColor="White"/>
                             </StackLayout>
-                            <Picker Title="Splits" ItemsSource="{Binding StrSplits}" BackgroundColor="#1e90ff" TextColor="White"/>
+                            <Picker Title="Splits" ItemsSource="{Binding StrSplits}" BackgroundColor="#BCBCBC" TextColor="Black"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
