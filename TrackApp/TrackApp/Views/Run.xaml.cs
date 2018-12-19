@@ -30,6 +30,13 @@ namespace TrackApp
             CancelNewRunBtn.Clicked += HidePopup; 
             ResetRunBtn.Clicked += ResetRun;
             TimeLabel.FontSize += 28;
+            SplitRunBtn.Clicked += ShowSplitField;
+            Runner1.Clicked += ShowSplitField;
+            Runner2.Clicked += ShowSplitField;
+            Runner3.Clicked += ShowSplitField;
+            Runner4.Clicked += ShowSplitField;
+            Runner5.Clicked += ShowSplitField;
+            Runner6.Clicked += ShowSplitField;
             progressBar.Minimum = 0;
             SplitField.FontSize += 12;                        
         }
@@ -38,7 +45,7 @@ namespace TrackApp
         {
             if (e.Progress.Equals(this.progressBar.Maximum))
             {
-                progressBar.AnimationDuration = 0;
+                progressBar.AnimationDuration = 10;
             }
         }
 
@@ -91,7 +98,6 @@ namespace TrackApp
 
         private void OpenPicker(object sender, EventArgs e)
         {
-
             SoundPicker.IsEnabled = true;
             SoundPicker.Focus();
         }
@@ -99,6 +105,11 @@ namespace TrackApp
         private void HidePopup(object sender, EventArgs e)
         {
             NewRunPopup.IsVisible = false;
+        }        
+
+        private void ShowSplitField(object sender, EventArgs e)
+        {
+            SplitField.IsVisible = true;
         }
 
         private void ResetRun(object sender, EventArgs e)
@@ -125,7 +136,7 @@ namespace TrackApp
             Runner3.IsVisible = false;
             Runner4.IsVisible = false;
             Runner5.IsVisible = false;
-            Runner6.IsVisible = false;
+            Runner6.IsVisible = false;            
         }
 
         private void StartRun(object sender, EventArgs e)
@@ -133,7 +144,6 @@ namespace TrackApp
             SoundSettings.IsEnabled = false;
 
             NewRunPopup.IsVisible = false;
-            SplitField.IsVisible = true;
 
             startBtnSignal = "Stop";
             if (RuntimePlatform == Device.Android)

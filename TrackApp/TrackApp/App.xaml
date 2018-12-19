@@ -50,6 +50,13 @@
                 <Setter Property="VerticalOptions" Value="Start"/>
                 <Setter Property="IsVisible" Value="false"/>
             </Style>
+            <Style x:Key="RectangularButton" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="BackgroundColor" Value="#1e90ff"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="10"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

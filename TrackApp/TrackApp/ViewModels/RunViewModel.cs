@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace TrackApp.ViewModels
 
         // Properties for calculating splits
         private Dictionary<int, TimeSpan> LastSplitTimes = new Dictionary<int, TimeSpan>();
+        private Dictionary<int, int> NumSplits = new Dictionary<int, int>();
         private Dictionary<int, Models.Run> Runs = new Dictionary<int, Models.Run>();
 
         // Properties for UI 
@@ -22,14 +24,13 @@ namespace TrackApp.ViewModels
 
         public string GoalTimeInput { get; set; }
         public int RunDistanceInput { get; set; }
-        public int SoundIndex { get; set;
-        }
+        public int SoundIndex { get; set; }
         public int SplitDistanceInput { get; set; }        
         public string NumberOfRunners { get; set; }
 
         public Command StartRunCommand { get; private set; }
         public Command StopRunCommand { get; }
-        public Command ResetRunCommand { get; }
+        public Command ResetRunCommand { get; private set; }
         public Command ContinueRunCommand { get; }
         public Command SplitRunnerCommand { get; private set; }
         public Command SplitAllRunnersCommand { get; private set; }
@@ -96,7 +97,7 @@ namespace TrackApp.ViewModels
         {            
             StartRunCommand = new Command<object>(StartRun);
             StopRunCommand = new Command(StopRun);
-            ResetRunCommand = new Command(ResetRun);
+            ResetRunCommand = new Command<object>(ResetRun);
             ContinueRunCommand = new Command(ContinueRun);
             SplitRunnerCommand = new Command<string>(SplitRunner);
             SplitAllRunnersCommand = new Command<object>(SplitAllRunners);
@@ -124,15 +125,22 @@ namespace TrackApp.ViewModels
             {
                 Models.Run run = new Models.Run(i);
                 Runs.Add(i, run);
-                LastSplitTimes.Add(i, new TimeSpan());
+                LastSplitTimes.Add(i, TimeSpan.FromSeconds(0));
+                NumSplits.Add(i, 0);
             }                       
         }
 
-        private void ResetRun()
+        private void ResetRun(object numberOfRunners)
         {
+            // Save the run data
+            int numRunners = int.Parse(numberOfRunners.ToString());
+            SaveRunData(numRunners);
+
+            // Reset the data
             SwService.Reset();
             Runs.Clear();
             LastSplitTimes.Clear();
+            NumSplits.Clear();
         }
 
         private void StopRun()
@@ -155,7 +163,17 @@ namespace TrackApp.ViewModels
             for (int i = 1; i <= numRunners; i++)
             {
                 TimeSpan split = SplitRun(LastSplitTimes[i], i);
-                Runs[i].Splits.Add(split.ToString(@"mm\:ss\.ff"));
+                Runs[i].Splits.Add(split);
+                Runs[i].StrSplits.Add("#" + NumSplits[i] + " "
+                    + split.ToString(@"mm\:ss\.ff"));
+                if(numRunners == 1)
+                {
+                    SplitTime = split.ToString(@"mm\:ss\.ff");
+                }
+                else
+                {
+                    SplitTime = "All Split";
+                }
             }
         }
 
@@ -164,7 +182,10 @@ namespace TrackApp.ViewModels
             // Split time for this runner
             int.TryParse(pRunnerID, out int runnerID);
             TimeSpan split = SplitRun(LastSplitTimes[runnerID], runnerID);
-            Runs[runnerID].Splits.Add(split.ToString(@"mm\:ss\.ff"));            
+            SplitTime = "#" + pRunnerID + ": " + split.ToString(@"mm\:ss\.ff");
+            Runs[runnerID].Splits.Add(split);
+            Runs[runnerID].StrSplits.Add("#" + NumSplits[runnerID] + " " 
+                + split.ToString(@"mm\:ss\.ff"));
         }
 
         private TimeSpan SplitRun(TimeSpan lastSplitTime, int runnerID)
@@ -174,9 +195,25 @@ namespace TrackApp.ViewModels
 
             // Update the global variable
             LastSplitTimes[runnerID] = currentTime;
+            NumSplits[runnerID]++;
 
-            SplitTime = newSplit.ToString(@"mm\:ss\.ff");
             return newSplit;
+        }
+
+        public void SaveRunData(int numberOfRunners)
+        {            
+            Application.Current.Properties["NumberOfRunners"] = numberOfRunners;
+            for (int i = 1; i <= numberOfRunners; i++)
+            {
+                // Adds up all the splits to get the total time for the run
+                foreach(TimeSpan split in Runs[i].Splits)
+                {
+                    Runs[i].TotalTime += split;
+                }
+                Runs[i].StrTotalTime = Runs[i].TotalTime.ToString(@"mm\:ss\.ff");
+                var runJson = JsonConvert.SerializeObject(Runs[i]);                
+                Application.Current.Properties[i.ToString()] = runJson;
+            }
         }
 
         private void UpdateTime(bool continueUpdating)
